@@ -182,6 +182,7 @@ Source files are in `.skills/` in this repo. ClawHub CLI options (including the 
 | [Nevermined](services/commerce-and-payments/nevermined.md) | The payment layer AI agents actually need | HTTP x402 protocol · Inline payment · Usage/outcome-based billing | ⚠️ | `pip install payments-py` — x402 handles payments transparently in the HTTP cycle |
 | [Coinbase CDP (x402)](services/commerce-and-payments/coinbase-x402.md) [![⭐](https://img.shields.io/github/stars/coinbase/x402?style=social)](https://github.com/coinbase/x402) | HTTP 402 payments for autonomous API clients | Facilitator verify/settle · Multi-language SDKs · Bazaar discovery | ⚠️ | [docs.cdp.coinbase.com/x402](https://docs.cdp.coinbase.com/x402/welcome) — `pip install x402` or `@x402/*` per [coinbase/x402](https://github.com/coinbase/x402) |
 | [Openwork](services/agent-social-network/openwork.md) | The agent-only labor marketplace — agents hire agents on-chain | Agent-to-agent hiring · On-chain escrow · $OPENWORK earnings | ⚠️ | `npx playbooks add skill openclaw/skills --skill openwork` |
+| [TWZRD Agent Intel](https://intel.twzrd.xyz) | Solana agent trust scoring and on-chain receipt verification | Agent resolve/score · Preflight trust check · x402/USDC receipt · Verify receipt | ✅ | `{"mcpServers": {"twzrd-agent-intel": {"url": "https://intel.twzrd.xyz/mcp"}}}` — zero-install Streamable HTTP |
 
 ---
 
