@@ -10,7 +10,7 @@ This note records the latest broad review pass requested by maintainers. It is i
 
 ## Applied updates
 
-- Added a Claude Code-compatible plugin marketplace at `.claude-plugin/marketplace.json`.
+- Added a Claude Code-compatible plugin marketplace at `.claude-plugin/marketplace.json`, verified against Anthropic's official plugin marketplace documentation.
 - Added a Claude Code plugin manifest at `.claude-plugin/plugin.json` that exposes the existing `.skills/` folders without duplicating skill content.
 - Added `SKILLS_HUB.md` with Claude Code, ClawHub/OpenClaw, and manual `SKILL.md` installation instructions.
 - Updated the root README and `llms.txt` so agents can discover the repository as a skills source, not only as a Markdown catalog.
@@ -23,7 +23,7 @@ These were reviewed as candidate hubs or sources. Some are already cataloged as 
 
 | Candidate | Signal observed | Current catalog action |
 |---|---|---|
-| Claude Code plugin marketplaces | Official Claude Code docs describe GitHub-hosted marketplaces that use `.claude-plugin/marketplace.json`, with users adding a source via `/plugin marketplace add owner/repo`. | Implemented this repo as a Claude Code marketplace. |
+| Claude Code plugin marketplaces | Official Claude Code docs describe GitHub-hosted marketplaces that use `.claude-plugin/marketplace.json`, with users adding a source via `/plugin marketplace add owner/repo`, installing via `/plugin install`, and reloading with `/reload-plugins`. | Implemented this repo as a Claude Code marketplace and linked the official docs from the skills-hub instructions. |
 | ClawHub | Existing catalog entry and `.skills/` publish workflow; remains the canonical OpenClaw-style skill registry path for this repo. | Kept as first-class Tool Access & Integration entry and install path. |
 | MiniMax Skills | High-signal curated `SKILL.md` packs for coding agents; already tracked in Ecosystem Hubs. | Kept as ecosystem hub. |
 | Agensi | Marketplace for AI agent skills with paid/free downloads, security scanning, broad agent compatibility, and an MCP endpoint for agent-side discovery. | Added to Ecosystem Hubs / skill-hub pointers rather than a service file pending issue review. |

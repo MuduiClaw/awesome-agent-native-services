@@ -39,7 +39,7 @@ Self-hosted and P2P entries (full write-ups under `services/`):
 
 ## This repository as a skills hub
 
-Claude Code users can add this repository as a plugin marketplace:
+Claude Code users can add this repository as a plugin marketplace when using a Claude Code version with plugin support (official docs: https://code.claude.com/docs/en/discover-plugins):
 
 ```text
 /plugin marketplace add haoruilee/awesome-agent-native-services

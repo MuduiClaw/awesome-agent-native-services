@@ -4,9 +4,10 @@ This repository is also a cross-agent skills source. Agents can install the same
 
 ## Claude Code plugin marketplace
 
-Claude Code can add this repository as a plugin marketplace because the repo root contains `.claude-plugin/marketplace.json` and the plugin manifest points at the repo's `.skills/` directory.
+Claude Code can add this repository as a plugin marketplace because the repo root contains `.claude-plugin/marketplace.json` and the plugin manifest points at the repo's `.skills/` directory. This follows Anthropic's official Claude Code plugin marketplace flow documented at <https://code.claude.com/docs/en/discover-plugins> and the plugin manifest schema documented at <https://code.claude.com/docs/en/plugins-reference>.
 
 ```text
+# If /plugin is unknown, update Claude Code first.
 /plugin marketplace add haoruilee/awesome-agent-native-services
 /plugin install awesome-agent-native-services@awesome-agent-native-services
 /reload-plugins
