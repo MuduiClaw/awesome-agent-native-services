@@ -69,6 +69,17 @@ Besides, you can install these skills through either Claude Code's plugin market
 
 Source files are in `.skills/` in this repo. See [SKILLS_HUB.md](SKILLS_HUB.md) for Claude Code, ClawHub/OpenClaw, and manual `SKILL.md` installation paths. ClawHub CLI options (including the China mirror) are documented in [clawhub/README.md](clawhub/README.md).
 
+### Skills Hub usage
+
+Use this repository's Skills Hub when you want an agent to operate the catalog directly rather than only read the Markdown index:
+
+1. **Find a service for a concrete job** — install or load `find-agent-service`, then ask: `Use find-agent-service to find an agent-native service for <task>`. The skill reads the catalog criteria and returns matching services with onboarding steps.
+2. **Vet a candidate service** — install or load `evaluate-agent-native`, then provide the service URL, docs, and repo. The skill applies the five contribution criteria before you open an issue or PR.
+3. **Prepare a contribution** — install or load `add-to-awesome-list` when adding a new service. It walks through the issue-first workflow, required service-file sections, and README/category table updates.
+4. **Use without a marketplace** — any `SKILL.md`-compatible agent can copy a folder from `.skills/` into its local skills directory, for example `cp -R .skills/find-agent-service ~/.claude/skills/`.
+
+Recommended flow for agents: start with `skill.md` for quick discovery, switch to [SKILLS_HUB.md](SKILLS_HUB.md) when you need installable workflows, and use the per-service Markdown files for source-backed details.
+
 ---
 
 ## Categories
