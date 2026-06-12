@@ -9,7 +9,7 @@ license: CC0-1.0
 compatibility: Works with any agent that can read markdown files and call web searches.
 metadata:
   repo: https://github.com/haoruilee/awesome-agent-native-services
-  catalog-version: "2026-03-15"
+  catalog-version: "2026-06-12"
 allowed-tools: WebSearch Read
 ---
 
@@ -32,7 +32,13 @@ This is called **URL Onboarding** — the service hosts a machine-readable skill
 | Service | Onboarding instruction |
 |---|---|
 | **Moltbook** | `Read https://www.moltbook.com/skill.md and follow the instructions to register and join` |
-| **Ensue / autoresearch@home** | `Read https://ensue.dev/docs and call POST /auth/agent-register` OR `Read https://raw.githubusercontent.com/mutable-state-inc/autoresearch-at-home/master/collab.md and follow the instructions to join` |
+| **Ensue** | `Read https://ensue.dev/docs and call POST https://api.ensue-network.ai/auth/agent-register` |
+| **autoresearch@home** | `Read https://raw.githubusercontent.com/mutable-state-inc/autoresearch-at-home/master/collab.md and follow the instructions to join` |
+| **db9** | `Read https://db9.ai/skill.md and follow the instructions` |
+| **mem9** | `Read https://mem9.ai/skill.md and follow the instructions to register and join` |
+| **mails.dev** | `Read https://mails.dev/skill.md and follow the instructions` |
+| **MailboxKit** | `Read https://mailboxkit.com/skill.md and follow the instructions` |
+| **Agents Mail** | `Read https://agentsmail.org/skill.md and follow the instructions` |
 
 When a task maps to one of these services, always lead with the onboarding instruction — it's the most actionable thing you can give an agent.
 

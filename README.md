@@ -44,7 +44,17 @@ If you are an AI agent and want to discover services designed for you:
 Read https://raw.githubusercontent.com/haoruilee/awesome-agent-native-services/main/skill.md then find services designed for you natively.
 ```
 
-Besides, you can install these skills:
+Besides, you can install these skills through either Claude Code's plugin marketplace flow or ClawHub/OpenClaw:
+
+**Claude Code plugin marketplace** (requires a Claude Code version with plugin support; see the [official plugin marketplace docs](https://code.claude.com/docs/en/discover-plugins)):
+
+```text
+/plugin marketplace add haoruilee/awesome-agent-native-services
+/plugin install awesome-agent-native-services@awesome-agent-native-services
+/reload-plugins
+```
+
+**ClawHub / OpenClaw:**
 
 | Skill | What it does | Install |
 |---|---|---|
@@ -52,7 +62,7 @@ Besides, you can install these skills:
 | `evaluate-agent-native` | Evaluate whether a service meets the 5 criteria | `npx clawhub@latest install evaluate-agent-native` |
 | `add-to-awesome-list` | Full contribution workflow: criteria → issue → PR | `npx clawhub@latest install add-to-awesome-list` |
 
-Source files are in `.skills/` in this repo. ClawHub CLI options (including the China mirror) are documented in [clawhub/README.md](clawhub/README.md).
+Source files are in `.skills/` in this repo. See [SKILLS_HUB.md](SKILLS_HUB.md) for Claude Code, ClawHub/OpenClaw, and manual `SKILL.md` installation paths. ClawHub CLI options (including the China mirror) are documented in [clawhub/README.md](clawhub/README.md).
 
 ---
 
@@ -62,18 +72,18 @@ Source files are in `.skills/` in this repo. ClawHub CLI options (including the 
 |---|---|---|---|
 | 1 | [Communication](#1-communication-services) | 10 | Give agents a communication identity on the internet |
 | 2 | [Browser & Web Execution](#2-browser--web-execution-services) | 19 | Remote browser and web data extraction for agents |
-| 3 | [Tool Access & Integration](#3-tool-access--integration-services) | 11 | Runtime tool discovery, auth, and execution |
+| 3 | [Tool Access & Integration](#3-tool-access--integration-services) | 13 | Runtime tool discovery, auth, and execution |
 | 4 | [Oversight & Approval](#4-oversight--approval-services) | 1 | Human-in-the-loop approval and escalation |
 | 5 | [Commerce & Payments](#5-commerce--payment-services) | 7 | Agent-native wallets, identity, and transactions |
-| 6 | [Agent Runtime & Infrastructure](#6-agent-runtime--infrastructure-services) | 22 | Execution, session isolation, secrets, and gateway |
+| 6 | [Agent Runtime & Infrastructure](#6-agent-runtime--infrastructure-services) | 23 | Execution, session isolation, secrets, and gateway |
 | 7 | [Memory & State](#7-memory--state-services) | 11 | Persistent agent memory across sessions |
 | 8 | [Search & Web Intelligence](#8-search--web-intelligence-services) | 6 | LLM-optimized web search and content retrieval |
 | 9 | [Code Execution](#9-code-execution-services) | 7 | Secure sandboxes for AI-generated code |
-| 10 | [Observability & Tracing](#10-observability--tracing-services) | 7 | Agent trajectory tracing and evaluation |
+| 10 | [Observability & Tracing](#10-observability--tracing-services) | 8 | Agent trajectory tracing and evaluation |
 | 11 | [Durable Execution & Scheduling](#11-durable-execution--scheduling-services) | 6 | Fault-tolerant long-running agent workflows |
 | 12 | [Meeting & Conversation](#12-meeting--conversation-services) | 5 | Agent presence in voice and video meetings |
 | 13 | [Voice & Phone](#13-voice--phone-services) | 5 | Agent-controlled voice calls and phone infrastructure |
-| 14 | [LLM Gateway & Routing](#14-llm-gateway--routing-services) | 7 | Per-agent budget, routing, caching, and observability for LLM calls |
+| 14 | [LLM Gateway & Routing](#14-llm-gateway--routing-services) | 8 | Per-agent budget, routing, caching, and observability for LLM calls |
 | 15 | [Agent Social & Community](#15-agent-social--community-services) | 5 | Social networks where agents are first-class participants |
 
 ---
@@ -385,13 +395,20 @@ Source files are in `.skills/` in this repo. ClawHub CLI options (including the 
 
 ## Ecosystem Hubs
 
-Organizations that provide multiple agent-native services or tools:
+Organizations, registries, and marketplaces that provide multiple agent-native services, tools, MCP servers, or `SKILL.md` sources. Some qualify as first-class catalog services; others are tracked here as high-signal ecosystem pointers pending issue-level review.
 
-| Hub | What It Provides | Notable Projects |
+| Hub | What It Provides | How Agents Start |
 |---|---|---|
-| [OpenClaw](https://github.com/openclaw) | Agent Client Protocol tooling, skills registry, agent marketplace integration | [acpx](services/agent-runtime-and-infrastructure/acpx.md) (ACP CLI), [openclaw/skills](https://github.com/openclaw/skills) (skills for Openwork, Exa, OpenViking, MemOS, E2B), [Openwork](services/agent-social-network/openwork.md) integration |
-| [ClawHub](services/tool-access-and-integration/clawhub.md) | Full entry in section **3. Tool Access & Integration**; this row links the broader OpenClaw ecosystem | [openclaw/clawhub](https://github.com/openclaw/clawhub) CLI, [`.skills/`](https://github.com/haoruilee/awesome-agent-native-services/tree/main/.skills) for this catalog, [openclaw/skills](https://github.com/openclaw/skills) |
-| [MiniMax Skills](https://github.com/MiniMax-AI/skills) [![⭐](https://img.shields.io/github/stars/MiniMax-AI/skills?style=social)](https://github.com/MiniMax-AI/skills) | Curated **development skills** for AI coding agents — structured `SKILL.md` workflows for frontend, fullstack, mobile, and document generation (Claude Code plugin, Cursor skills path, Codex / OpenCode install paths) | Per-skill folders under [`skills/`](https://github.com/MiniMax-AI/skills/tree/main/skills) with YAML-frontmatter `SKILL.md` ([contributing spec](https://github.com/MiniMax-AI/skills/blob/main/CONTRIBUTING.md)) |
+| [Awesome Agent-Native Services Skills Hub](SKILLS_HUB.md) | This repository as an [official Claude Code plugin marketplace](https://code.claude.com/docs/en/discover-plugins)-compatible source plus ClawHub/OpenClaw skills for finding, evaluating, and adding agent-native services | Claude Code: `/plugin marketplace add haoruilee/awesome-agent-native-services` → `/plugin install awesome-agent-native-services@awesome-agent-native-services`; ClawHub: `npx clawhub@latest install find-agent-service` |
+| [OpenClaw](https://github.com/openclaw) | Agent Client Protocol tooling, skills registry, agent marketplace integration | Use [acpx](services/agent-runtime-and-infrastructure/acpx.md), [openclaw/skills](https://github.com/openclaw/skills), and [Openwork](services/agent-social-network/openwork.md) integrations |
+| [ClawHub](services/tool-access-and-integration/clawhub.md) | Full entry in section **3. Tool Access & Integration**; public registry for OpenClaw-style skills and this catalog's `.skills/` packages | `npx clawhub@latest search <topic>` or install this catalog's skills from `.skills/`; see [clawhub/README.md](clawhub/README.md) for mirror settings |
+| [MiniMax Skills](https://github.com/MiniMax-AI/skills) [![⭐](https://img.shields.io/github/stars/MiniMax-AI/skills?style=social)](https://github.com/MiniMax-AI/skills) | Curated **development skills** for AI coding agents — structured `SKILL.md` workflows for frontend, fullstack, mobile, shaders, and document generation | Follow the repo README for Claude Code plugin, Cursor skills path, and Codex / OpenCode install paths |
+| [Agensi](https://www.agensi.io/) | Marketplace for paid/free AI agent skills with security scanning, broad agent compatibility, and agent-native MCP discovery | Download skills into an agent skills directory or connect MCP at `https://mcp.agensi.io/mcp` |
+| [SkillsMP](https://skillsmp.com/) | Large public `SKILL.md` index with source/repository context, occupations, creators, and API access | Search by task or repository, inspect the source repo, then install according to that skill's instructions |
+| [mdskills.ai](https://www.mdskills.ai/) | Community marketplace for skills, plugins, MCP servers, rules, and tools with quality/security review and CLI install | `npx mdskills` |
+| [sklz.city](https://sklz.city/) | MCP-native skill runtime and marketplace: import `SKILL.md` repos, add runtime primitives, publish/discover over MCP | `curl -fsSL https://sklz.city/install.sh | sh && sklz install` |
+| [SkillCrate](https://skillcrate.dev/) | Vertical, open-source skill marketplace for Amazon seller workflows; each skill is a GitHub repo with `SKILL.md` and MCP packaging | Clone a skill repo or download MCPB, then configure the MCP server / skill in the target agent |
+| [CryptoSkill](https://cryptoskill.org/) | Crypto-focused registry of skills and MCP servers for Claude Code, OpenClaw, Codex, Cursor, and SKILL.md-compatible agents | Clone/copy a skill into `.claude/skills/`, use `clawhub install`, or add hosted MCP servers with `claude mcp add` |
 
 ---
 

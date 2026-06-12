@@ -66,10 +66,11 @@ These services can be joined with a single instruction, right now, with no human
 | **mem9** | Cloud-persistent memory for agents: hybrid search, lifecycle hooks | `Read https://mem9.ai/skill.md and follow the instructions to register and join` |
 | **mails.dev** | Email for agents: @mails.dev mailbox, send/inbox, wait-for-code | `Read https://mails.dev/skill.md and follow the instructions` |
 | **MailboxKit** | Agent email in one API — REST v1, webhooks, skill.md | `Read https://mailboxkit.com/skill.md and follow the instructions` |
+| **Agents Mail** | Agent email identity: registration, inbox lifecycle, send/reply API | `Read https://agentsmail.org/skill.md and follow the instructions` |
 
 ---
 
-## Full Catalog — 15 Categories, 99+ Services
+## Full Catalog — 15 Categories, 134 Services
 
 ### 1. Communication
 *Give agents a first-class communication identity on the internet.*
@@ -299,8 +300,15 @@ These are **curated skill packs and marketplaces** — machine-readable instruct
 
 | Hub | Role | How to start |
 |---|---|---|
+| **This catalog's Skills Hub** | Install this repository as a Claude Code marketplace or as standalone ClawHub/OpenClaw skills | Claude Code plugin support: `/plugin marketplace add haoruilee/awesome-agent-native-services` → `/plugin install awesome-agent-native-services@awesome-agent-native-services` → `/reload-plugins`. Official docs: [discover plugins](https://code.claude.com/docs/en/discover-plugins). Details: [SKILLS_HUB.md](SKILLS_HUB.md) |
 | **ClawHub** | Public registry for OpenClaw-style skills — search, install, publish via CLI | `npx clawhub@latest search <topic>` — [claw-hub.net](https://claw-hub.net/) · [openclaw/clawhub](https://github.com/openclaw/clawhub) · [catalog: clawhub.md](services/tool-access-and-integration/clawhub.md). **China mirror (加速):** [mirror-cn.clawhub.com](https://mirror-cn.clawhub.com) — set `CLAWHUB_REGISTRY=https://cn.clawhub-mirror.com` or `clawhub --registry https://cn.clawhub-mirror.com …` |
 | **MiniMax Skills** | Official deep-tuned development skills for AI coding agents (frontend, fullstack, Android, iOS, shaders, office docs) | [github.com/MiniMax-AI/skills](https://github.com/MiniMax-AI/skills) — follow **Installation** in the repo README (Claude Code plugin, Cursor `skills/` path, Codex / OpenCode symlinks) |
+| **Agensi** | Paid/free AI agent skill marketplace with security scanning and MCP discovery | Download skills into the agent's skills directory or add MCP at `https://mcp.agensi.io/mcp` — [agensi.io](https://www.agensi.io/) |
+| **SkillsMP** | Public `SKILL.md` index with source context, occupation maps, creators, repositories, and API access | Search [skillsmp.com](https://skillsmp.com/), inspect the source repo, then follow the skill's install instructions |
+| **mdskills.ai** | Community marketplace for skills, plugins, MCP servers, rules, and tools | `npx mdskills` — [mdskills.ai](https://www.mdskills.ai/) |
+| **sklz.city** | MCP-native skill runtime and marketplace for importing, augmenting, and publishing skills | `curl -fsSL https://sklz.city/install.sh | sh && sklz install` — [sklz.city](https://sklz.city/) |
+| **SkillCrate** | Open-source vertical skill marketplace for Amazon seller workflows; skills ship with `SKILL.md` and MCP packaging | Browse [skillcrate.dev](https://skillcrate.dev/), clone a skill repo or download MCPB, then load it into Claude/OpenClaw-compatible agents |
+| **CryptoSkill** | Crypto skill and MCP server registry for Claude Code, OpenClaw, Codex, Cursor, and SKILL.md agents | Clone/copy skills, use `clawhub install`, or add hosted MCP servers; see [cryptoskill.org](https://cryptoskill.org/) |
 
 ---
 
@@ -330,9 +338,19 @@ Every service in this catalog satisfies all five:
 
 ## Agent Skills for This Catalog
 
-Install these skills to let your coding agent work with this catalog directly:
+Install these skills to let your coding agent work with this catalog directly.
 
+Claude Code marketplace source (requires plugin support; if `/plugin` is unavailable, update Claude Code per the official docs):
+
+```text
+/plugin marketplace add haoruilee/awesome-agent-native-services
+/plugin install awesome-agent-native-services@awesome-agent-native-services
+/reload-plugins
 ```
+
+ClawHub/OpenClaw:
+
+```bash
 npx clawhub@latest install find-agent-service
 npx clawhub@latest install evaluate-agent-native
 npx clawhub@latest install add-to-awesome-list

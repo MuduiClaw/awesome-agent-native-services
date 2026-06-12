@@ -24,7 +24,10 @@ This repository is itself agent-native. AI agents can discover services, evaluat
 ## Repository Structure
 
 - [services/](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services): 15 categories, each with `README.md` and per-service `.md` files (including [ClawHub](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/clawhub.md) under Tool Access & Integration)
-- [.skills/](https://github.com/haoruilee/awesome-agent-native-services/tree/main/.skills): ClawHub skills — `find-agent-service`, `evaluate-agent-native`, `add-to-awesome-list`
+- [.skills/](https://github.com/haoruilee/awesome-agent-native-services/tree/main/.skills): Agent skills — `find-agent-service`, `evaluate-agent-native`, `add-to-awesome-list`
+- [.claude-plugin/marketplace.json](https://github.com/haoruilee/awesome-agent-native-services/blob/main/.claude-plugin/marketplace.json): Claude Code plugin marketplace entry for installing this repo as a skills source
+- [SKILLS_HUB.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/SKILLS_HUB.md): Claude Code, ClawHub/OpenClaw, and manual installation instructions for this repo
+- [RESEARCH_AUDIT.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/RESEARCH_AUDIT.md): Latest research/freshness audit notes
 - [.github/](https://github.com/haoruilee/awesome-agent-native-services/tree/main/.github): Issue templates, PR template, publish-skills workflow
 
 Self-hosted and P2P entries (full write-ups under `services/`):
@@ -34,10 +37,28 @@ Self-hosted and P2P entries (full write-ups under `services/`):
 
 ---
 
+## This repository as a skills hub
+
+Claude Code users can add this repository as a plugin marketplace when using a Claude Code version with plugin support (official docs: https://code.claude.com/docs/en/discover-plugins):
+
+```text
+/plugin marketplace add haoruilee/awesome-agent-native-services
+/plugin install awesome-agent-native-services@awesome-agent-native-services
+/reload-plugins
+```
+
+The plugin exposes the existing `.skills/` folders as namespaced skills. ClawHub/OpenClaw users can continue installing the same skills with `npx clawhub@latest install ...`.
+
 ## Related — agent skills registries (ecosystem hubs)
 
 - [ClawHub](https://claw-hub.net/): OpenClaw skill marketplace — `npx clawhub@latest` ([openclaw/clawhub](https://github.com/openclaw/clawhub)); catalog entry: [services/tool-access-and-integration/clawhub.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/clawhub.md). China access acceleration: [mirror-cn.clawhub.com](https://mirror-cn.clawhub.com) — registry URL `https://cn.clawhub-mirror.com` via env `CLAWHUB_REGISTRY` or CLI `--registry`
 - [MiniMax Skills](https://github.com/MiniMax-AI/skills): Curated `SKILL.md` packs for AI coding agents (Claude Code, Cursor, Codex, OpenCode) — see repo README for install paths
+- [Agensi](https://www.agensi.io/): Paid/free AI agent skill marketplace with security scanning and MCP discovery (`https://mcp.agensi.io/mcp`)
+- [SkillsMP](https://skillsmp.com/): Public `SKILL.md` index with source/repository context and API access
+- [mdskills.ai](https://www.mdskills.ai/): Community marketplace for skills, plugins, MCP servers, rules, and tools — `npx mdskills`
+- [sklz.city](https://sklz.city/): MCP-native skill runtime and marketplace — `curl -fsSL https://sklz.city/install.sh | sh && sklz install`
+- [SkillCrate](https://skillcrate.dev/): Open-source Amazon seller skill marketplace with `SKILL.md` + MCP packaging
+- [CryptoSkill](https://cryptoskill.org/): Crypto skills and MCP servers for Claude Code, OpenClaw, Codex, Cursor, and SKILL.md agents
 
 ---
 
