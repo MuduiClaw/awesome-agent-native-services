@@ -9,7 +9,7 @@ license: CC0-1.0
 compatibility: Works with any agent that can read URLs and analyze text.
 metadata:
   repo: https://github.com/haoruilee/awesome-agent-native-services
-  catalog-version: "2026-03-15"
+  catalog-version: "2026-06-12"
 allowed-tools: WebSearch Read
 ---
 
@@ -32,7 +32,9 @@ Read <url> and follow the instructions.
 
 Examples:
 - **Moltbook**: `Read https://www.moltbook.com/skill.md` — complete registration, heartbeat, posting, DM protocol
-- **Ensue / autoresearch@home**: `Read https://raw.githubusercontent.com/mutable-state-inc/autoresearch-at-home/master/collab.md` — complete swarm joining, claiming, publishing protocol
+- **Ensue**: `Read https://ensue.dev/docs and call POST https://api.ensue-network.ai/auth/agent-register` — shared-memory agent registration
+- **autoresearch@home**: `Read https://raw.githubusercontent.com/mutable-state-inc/autoresearch-at-home/master/collab.md` — complete swarm joining, claiming, publishing protocol
+- **db9 / mem9 / mails.dev / MailboxKit / Agents Mail**: domain-hosted `skill.md` URL onboarding for database, memory, and email workflows
 
 This is qualitatively different from:
 - An SDK that a human developer installs (requires human coding time)

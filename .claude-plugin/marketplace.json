@@ -1,0 +1,21 @@
+{
+  "name": "awesome-agent-native-services",
+  "description": "A Claude Code plugin marketplace for skills that help agents discover and evaluate agent-native infrastructure services.",
+  "owner": {
+    "name": "Awesome Agent-Native Services maintainers"
+  },
+  "plugins": [
+    {
+      "name": "awesome-agent-native-services",
+      "displayName": "Awesome Agent-Native Services",
+      "source": "./",
+      "description": "Install the catalog skills: find-agent-service, evaluate-agent-native, and add-to-awesome-list.",
+      "repository": "https://github.com/haoruilee/awesome-agent-native-services",
+      "homepage": "https://haoruilee.github.io/awesome-agent-native-services/",
+      "license": "CC0-1.0",
+      "category": "agent-infrastructure",
+      "tags": ["agent-native", "mcp", "skills", "catalog"],
+      "keywords": ["agent-native", "mcp", "skills", "catalog", "ai-agents"]
+    }
+  ]
+}
