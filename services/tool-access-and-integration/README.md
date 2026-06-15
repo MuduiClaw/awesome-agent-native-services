@@ -29,6 +29,7 @@ Agent-native tool access services solve all three problems with primitives that 
 | [MCP Toolbox for Databases](google-mcp-toolbox.md) [![⭐](https://img.shields.io/github/stars/googleapis/mcp-toolbox?style=social)](https://github.com/googleapis/mcp-toolbox) | MCP server connecting agents to enterprise databases | `@toolbox-sdk/server`, prebuilt packs, multi-language SDKs, IAM, OTEL | ✅ |
 | [ToolHive](toolhive.md) [![⭐](https://img.shields.io/github/stars/stacklok/toolhive-studio?style=social)](https://github.com/stacklok/toolhive-studio) | Run any MCP server securely, instantly, anywhere | MCP server discovery/deploy/manage · secure container runtime | ✅ |
 | [Obot](obot.md) [![⭐](https://img.shields.io/github/stars/obot-platform/obot?style=social)](https://github.com/obot-platform/obot) | Complete MCP Platform — Hosting, Registry, Gateway, Chat Client | MCP (Streamable HTTP), REST admin API, OAuth 2.1, Helm chart | ✅ |
+| [Snyk Agent Scan](snyk-agent-scan.md) [![⭐](https://img.shields.io/github/stars/snyk/agent-scan?style=social)](https://github.com/snyk/agent-scan) | Security scanner for AI agents, MCP servers and agent skills | CLI, MCP config inspection, CI scan output | ✅ |
 
 
 

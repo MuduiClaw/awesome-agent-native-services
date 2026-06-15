@@ -21,5 +21,6 @@ permalink: /categories/tool-access-and-integration/
 | Nango | [services/tool-access-and-integration/nango.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/nango.md) |
 | Obot | [services/tool-access-and-integration/obot.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/obot.md) |
 | Smithery | [services/tool-access-and-integration/smithery.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/smithery.md) |
+| Snyk Agent Scan | [services/tool-access-and-integration/snyk-agent-scan.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/snyk-agent-scan.md) |
 | ToolHive | [services/tool-access-and-integration/toolhive.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/toolhive.md) |
 | Toolhouse | [services/tool-access-and-integration/toolhouse.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/toolhouse.md) |

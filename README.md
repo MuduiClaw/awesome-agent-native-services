@@ -82,12 +82,12 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | # | Category | Services | Description |
 |---|---|---|---|
 | 1 | [Communication](#1-communication-services) | 10 | Give agents a communication identity on the internet |
-| 2 | [Browser & Web Execution](#2-browser--web-execution-services) | 19 | Remote browser and web data extraction for agents |
-| 3 | [Tool Access & Integration](#3-tool-access--integration-services) | 13 | Runtime tool discovery, auth, and execution |
+| 2 | [Browser & Web Execution](#2-browser--web-execution-services) | 20 | Remote browser and web data extraction for agents |
+| 3 | [Tool Access & Integration](#3-tool-access--integration-services) | 14 | Runtime tool discovery, auth, and execution |
 | 4 | [Oversight & Approval](#4-oversight--approval-services) | 1 | Human-in-the-loop approval and escalation |
 | 5 | [Commerce & Payments](#5-commerce--payment-services) | 7 | Agent-native wallets, identity, and transactions |
 | 6 | [Agent Runtime & Infrastructure](#6-agent-runtime--infrastructure-services) | 23 | Execution, session isolation, secrets, and gateway |
-| 7 | [Memory & State](#7-memory--state-services) | 11 | Persistent agent memory across sessions |
+| 7 | [Memory & State](#7-memory--state-services) | 12 | Persistent agent memory across sessions |
 | 8 | [Search & Web Intelligence](#8-search--web-intelligence-services) | 6 | LLM-optimized web search and content retrieval |
 | 9 | [Code Execution](#9-code-execution-services) | 7 | Secure sandboxes for AI-generated code |
 | 10 | [Observability & Tracing](#10-observability--tracing-services) | 8 | Agent trajectory tracing and evaluation |
@@ -149,6 +149,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [Olostep](services/browser-and-web-execution/olostep.md) [![⭐](https://img.shields.io/github/stars/olostep/olostep-mcp-server?style=social)](https://github.com/olostep/olostep-mcp-server) | Web data API for AI agents | Scrape · Search · Map · Crawl · Batch · Official MCP | ✅ | API key → [docs.olostep.com](https://docs.olostep.com) — `npx -y olostep-mcp` or remote `https://mcp.olostep.com/mcp` |
 | [Lightpanda](services/browser-and-web-execution/lightpanda.md) [![⭐](https://img.shields.io/github/stars/lightpanda-io/browser?style=social)](https://github.com/lightpanda-io/browser) | Headless browser for AI agents and automation | CDP · `fetch --dump markdown` · Built-in MCP (`lightpanda mcp`) | ✅ | [Install binary or Docker](https://github.com/lightpanda-io/browser#install) → `lightpanda serve` — [MCP guide](https://lightpanda.io/docs/open-source/guides/mcp-server) |
 | [Vessel Browser](services/browser-and-web-execution/vessel-browser.md) [![⭐](https://img.shields.io/github/stars/unmodeled-tyler/vessel-browser?style=social)](https://github.com/unmodeled-tyler/vessel-browser) | Built from the ground-up for agents — durable state, action undo, MCP control, BYOK | Named durable sessions · Action undo · Checkpoints · Agent-editable bookmarks · MCP | ✅ | `npm install -g vessel-browser` then `vessel-browser --mcp` (or Linux AppImage) |
+| [CamoFox Browser](services/browser-and-web-execution/camofox.md) [![⭐](https://img.shields.io/github/stars/jo-inc/camofox-browser?style=social)](https://github.com/jo-inc/camofox-browser) | Stealth headless browser for AI agents | Stealth sessions · Server/CLI control · Credential-safe profiles · Screenshots/extraction | ⚠️ | `npm install -g camofox-browser` then start the browser server |
 
 ---
 
@@ -175,6 +176,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [ToolHive](services/tool-access-and-integration/toolhive.md) [![⭐](https://img.shields.io/github/stars/stacklok/toolhive-studio?style=social)](https://github.com/stacklok/toolhive-studio) | Run any MCP server securely, instantly, anywhere | MCP server discovery/deploy/manage · secure container runtime | ✅ | [toolhive.dev](https://toolhive.dev/) |
 | [Obot](services/tool-access-and-integration/obot.md) [![⭐](https://img.shields.io/github/stars/obot-platform/obot?style=social)](https://github.com/obot-platform/obot) | Complete MCP Platform — Hosting, Registry, Gateway, Chat Client | Hosted MCP servers · Registry · Gateway · OAuth 2.1 · RBAC | ✅ | `helm install obot obot/obot` (or Docker) — [obot.ai](https://obot.ai) |
 | [The Stall](https://github.com/thebrierfox/the-stall) [![⭐](https://img.shields.io/github/stars/thebrierfox/the-stall?style=social)](https://github.com/thebrierfox/the-stall) | 209 pay-per-call AI data capabilities via x402 MCP | Stocks/ETFs · DeFi/on-chain · Polymarket · Crypto · Global macro · Options | ✅ | POST `https://the-stall.intuitek.ai/mcp` — [the-stall.intuitek.ai](https://the-stall.intuitek.ai) · USDC on Base, no API key |
+| [Snyk Agent Scan](services/tool-access-and-integration/snyk-agent-scan.md) [![⭐](https://img.shields.io/github/stars/snyk/agent-scan?style=social)](https://github.com/snyk/agent-scan) | Security scanner for AI agents, MCP servers and agent skills | Agent component inventory · MCP inspection · Prompt/tool risk detection · CI gates | ✅ | `uvx snyk-agent-scan@latest scan` |
 
 ---
 
@@ -263,6 +265,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [LycheeMem](services/memory-and-state/lycheemem.md) [![⭐](https://img.shields.io/github/stars/LycheeMem/LycheeMem?style=social)](https://github.com/LycheeMem/LycheeMem) | Compact memory framework for LLM agents | Working/semantic/procedural stores · Token-budget compression · HTTP MCP · OpenClaw plugin | ✅ | Clone repo → `pip install -e ".[dev]"` → `python main.py` — MCP at `http://localhost:8000/mcp` |
 | [MemMachine](services/memory-and-state/memmachine.md) [![⭐](https://img.shields.io/github/stars/MemMachine/MemMachine?style=social)](https://github.com/MemMachine/MemMachine) | Universal memory layer for AI Agents | Episodic graph · Profile SQL · Working memory · LangChain/CrewAI adapters | ⚠️ | `pip install memmachine` then `Memory().add(messages, agent_id=...)` |
 | [Cognee](services/memory-and-state/cognee.md) [![⭐](https://img.shields.io/github/stars/topoteretes/cognee?style=social)](https://github.com/topoteretes/cognee) | Memory control plane for AI agents — managed world model | Auto ontology · 28+ connectors · Per-agent permissions · MCP server | ✅ | `pip install cognee` → `cognee.add(docs)` → `cognee.cognify()` → `cognee.search(...)` |
+| [Hindsight](services/memory-and-state/hindsight.md) [![⭐](https://img.shields.io/github/stars/vectorize-io/hindsight?style=social)](https://github.com/vectorize-io/hindsight) | Agent Memory That Learns | `retain()` · `recall()` · `reflect()` · Dedicated memory banks | ⚠️ | `pip install hindsight-ai` then use retain/recall/reflect in the agent loop |
 
 ---
 

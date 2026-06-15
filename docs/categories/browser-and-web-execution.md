@@ -17,6 +17,7 @@ permalink: /categories/browser-and-web-execution/
 | Bright Data Agent Browser | [services/browser-and-web-execution/bright-data-agent-browser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/bright-data-agent-browser.md) |
 | Browser Use Cloud | [services/browser-and-web-execution/browser-use-cloud.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/browser-use-cloud.md) |
 | Browserbase | [services/browser-and-web-execution/browserbase.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/browserbase.md) |
+| CamoFox Browser | [services/browser-and-web-execution/camofox.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/camofox.md) |
 | Cloudflare Browser Rendering | [services/browser-and-web-execution/cloudflare-browser-rendering.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/cloudflare-browser-rendering.md) |
 | Crawl4AI | [services/browser-and-web-execution/crawl4ai.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/crawl4ai.md) |
 | Firecrawl | [services/browser-and-web-execution/firecrawl.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/firecrawl.md) |

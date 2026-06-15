@@ -12,6 +12,7 @@ permalink: /categories/memory-and-state/
 |---|---|
 | Cognee | [services/memory-and-state/cognee.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/cognee.md) |
 | Ensue | [services/memory-and-state/ensue.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/ensue.md) |
+| Hindsight | [services/memory-and-state/hindsight.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/hindsight.md) |
 | LLM Wiki | [services/memory-and-state/llm-wiki.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/llm-wiki.md) |
 | LycheeMem | [services/memory-and-state/lycheemem.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/lycheemem.md) |
 | Mem0 | [services/memory-and-state/mem0.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/mem0.md) |
