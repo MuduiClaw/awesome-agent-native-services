@@ -34,6 +34,7 @@ The web was designed for humans sitting in front of browsers. AI agents that nee
 | [Playwright MCP](playwright-mcp.md) [![⭐](https://img.shields.io/github/stars/microsoft/playwright-mcp?style=social)](https://github.com/microsoft/playwright-mcp) | Playwright MCP server | MCP (stdio/HTTP), npm package, Docker image | ✅ |
 | [Apify](apify.md) [![⭐](https://img.shields.io/github/stars/apify/crawlee?style=social)](https://github.com/apify/crawlee) | Real-time web data for AI — Actor marketplace & API | REST API v2, JS/Python clients, webhooks, schedules | ⚠️ |
 | [Vessel Browser](vessel-browser.md) [![⭐](https://img.shields.io/github/stars/unmodeled-tyler/vessel-browser?style=social)](https://github.com/unmodeled-tyler/vessel-browser) | Built from the ground-up for agents — durable state, action undo, MCP control, BYOK | MCP (stdio), npm CLI, AppImage (Linux/Windows) | ✅ |
+| [CamoFox Browser](camofox.md) [![⭐](https://img.shields.io/github/stars/jo-inc/camofox-browser?style=social)](https://github.com/jo-inc/camofox-browser) | Stealth headless browser for AI agents | CLI/server automation, browser profiles, screenshots/extraction | ⚠️ |
 
 
 
