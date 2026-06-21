@@ -28,7 +28,7 @@ https://github.com/cloudflare/workers-sdk — Cloudflare Workers platform SDKs (
 
 ## How to Use (Agent Onboarding)
 
-**Workers Bindings or REST — run headless Chrome on Cloudflare's network.**
+**Workers Bindings, Browser Run, or REST — run headless Chrome on Cloudflare's network.**
 
 1. Enable Browser Rendering on a Cloudflare account and create a Worker with a **browser binding** per [docs](https://developers.cloudflare.com/browser-rendering/).
 2. Control the browser with **Puppeteer** or **Playwright** compatible APIs from the Worker.
@@ -64,7 +64,7 @@ See: https://agentskills.io/specification to contribute one.
 
 ## What It Does
 
-Cloudflare **Browser Rendering** provides **pooled headless Chrome** on Cloudflare's edge. Developers and **AI agents** automate navigation, screenshots, PDFs, markdown extraction, and structured extraction (including AI-assisted JSON from pages). It scales to many concurrent isolated browser instances without agents running local Chrome.
+Cloudflare **Browser Rendering** provides **pooled headless Chrome** on Cloudflare's edge. Developers and **AI agents** automate navigation, screenshots, PDFs, markdown extraction, and structured extraction (including AI-assisted JSON from pages). In the Agents SDK, the newer **Browser Run** integration exposes a durable `browser_execute` tool where the model writes code against the Chrome DevTools Protocol (CDP), can inspect rendered pages, capture screenshots, debug frontend behavior, and keep live browser sessions across pauses for login, MFA, or approval. It scales to many concurrent isolated browser instances without agents running local Chrome.
 
 ---
 
@@ -85,6 +85,7 @@ Cloudflare **Browser Rendering** provides **pooled headless Chrome** on Cloudfla
 | Primitive | Description |
 |---|---|
 | **Browser session** | Headless Chrome instance on Cloudflare infrastructure |
+| **Browser Run** | Agents SDK browser tool with durable CDP code execution, Live View URLs, optional recording, and reusable/persistent sessions |
 | **Puppeteer / Playwright APIs** | Programmatic navigation, clicks, screenshots |
 | **Screenshot / PDF / content** | Common automation outputs |
 | **AI extraction** | Natural-language or schema-guided structured data from rendered pages (per docs) |
@@ -114,6 +115,7 @@ Cloudflare **Browser Rendering** provides **pooled headless Chrome** on Cloudfla
 | Interface | Detail |
 |---|---|
 | Workers + bindings | Puppeteer/Playwright from Worker code |
+| Agents SDK Browser Run | Durable `browser_execute` tool and quick actions such as markdown/extract/links/scrape |
 | REST API | [Browser Rendering API](https://developers.cloudflare.com/api/resources/browser_rendering/) |
 | MCP | Playwright MCP per [AI guide](https://developers.cloudflare.com/browser-rendering/how-to/ai/) |
 
