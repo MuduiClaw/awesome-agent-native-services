@@ -18,7 +18,9 @@ permalink: /categories/memory-and-state/
 | Mem0 | [services/memory-and-state/mem0.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/mem0.md) |
 | mem9 | [services/memory-and-state/mem9.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/mem9.md) |
 | MemMachine | [services/memory-and-state/memmachine.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memmachine.md) |
+| Memoria | [services/memory-and-state/memoria.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memoria.md) |
 | MemOS | [services/memory-and-state/memos.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memos.md) |
 | memU | [services/memory-and-state/memu.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memu.md) |
 | OpenViking | [services/memory-and-state/openviking.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/openviking.md) |
+| Recall | [services/memory-and-state/recall.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/recall.md) |
 | Zep | [services/memory-and-state/zep.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/zep.md) |

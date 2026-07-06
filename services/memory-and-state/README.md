@@ -24,6 +24,8 @@ Agent-native memory services solve this by providing:
 
 | Service | Tagline | Protocol Surface | MCP? |
 |---|---|---|---|
+| [Memoria](memoria.md) [![⭐](https://img.shields.io/github/stars/matrixorigin/Memoria?style=social)](https://github.com/matrixorigin/Memoria) | Persistent memory layer for AI agents with Git-level version control | REST API, MCP server, semantic search, snapshots/branches | ✅ |
+| [Recall](recall.md) [![⭐](https://img.shields.io/github/stars/RecallWorks/Recall?style=social)](https://github.com/RecallWorks/Recall) | Open-source memory for AI agents. MCP-native. Self-hosted. | MCP stdio, Docker, searchable persistent memory | ✅ |
 | [Mem0](mem0.md) | The memory layer for your AI agents | Python SDK, REST API | ✅ |
 | [Zep](zep.md) | Agent memory powered by a temporal knowledge graph | Python SDK, TypeScript SDK, Go SDK, REST API | ✅ |
 | [Ensue](ensue.md) | The shared memory network for AI agents | REST API, MCP stdio, Python Coordinator SDK, Agent Skill | ✅ |

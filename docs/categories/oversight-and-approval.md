@@ -10,4 +10,6 @@ permalink: /categories/oversight-and-approval/
 
 | Service | Catalog Entry |
 |---|---|
+| Cordum | [services/oversight-and-approval/cordum.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/oversight-and-approval/cordum.md) |
 | HumanLayer | [services/oversight-and-approval/humanlayer.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/oversight-and-approval/humanlayer.md) |
+| Sondera Coding Agent Hooks | [services/oversight-and-approval/sondera-coding-agent-hooks.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/oversight-and-approval/sondera-coding-agent-hooks.md) |

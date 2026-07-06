@@ -20,6 +20,8 @@ Agent-native code execution services solve this with:
 
 | Service | Tagline | Protocol Surface | MCP? |
 |---|---|---|---|
+| [OpenSandbox](opensandbox.md) [![⭐](https://img.shields.io/github/stars/opensandbox-group/OpenSandbox?style=social)](https://github.com/opensandbox-group/OpenSandbox) | Secure, fast, extensible sandbox runtime for AI agents | Sandbox runtime, Kubernetes, MCP server | ✅ |
+| [CodeRunner](coderunner.md) [![⭐](https://img.shields.io/github/stars/instavm/coderunner?style=social)](https://github.com/instavm/coderunner) | A local sandbox for your AI agents | Apple Containers, local sandbox CLI, MCP | ✅ |
 | [E2B](e2b.md) | Cloud for AI agents — secure sandboxes for AI-generated code | Python SDK, TypeScript SDK, REST API | ❌ |
 | [Daytona](daytona.md) | Secure elastic infrastructure for running AI-generated code | Python/TS/Ruby/Go SDK, REST, Daytona CLI + MCP | ✅ |
 | [Runloop](runloop.md) | Your AI agent accelerator — Devboxes and agent benchmarks | Python/TS SDK, REST, Runloop CLI (`rli`) + MCP | ✅ |

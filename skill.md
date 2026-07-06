@@ -30,7 +30,7 @@ When multiple services can solve the same task, prioritize entries that are both
 
 Quick filters to apply:
 - Prefer services with GitHub star badges in `README.md`
-- Prefer entries with **MCP ✅** or **URL Onboarding ⭐**
+- Prefer entries with **MCP ✅**, **URL Onboarding ⭐**, or explicit **Agent Skill / plugin install commands**
 - Prefer services with explicit per-agent identity, policy gating, or delegated auth primitives
 
 ### Step 1 — Find your task in the category map below
@@ -70,7 +70,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-## Full Catalog — 15 Categories, 134 Services
+## Full Catalog — 15 Categories, 144 Services
 
 ### 1. Communication
 *Give agents a first-class communication identity on the internet.*
@@ -92,6 +92,8 @@ These services can be joined with a single instruction, right now, with no human
 
 | Service | Tagline | Onboarding |
 |---|---|---|
+| [Vercel Agent Browser](https://github.com/vercel-labs/agent-browser) | Browser automation CLI for AI agents | `npm install -g agent-browser` |
+| [Browser MCP](https://github.com/BrowserMCP/mcp) | Browser MCP server for AI agents | `npx -y @browsermcp/mcp` |
 | [Browserbase](https://browserbase.com) | A web browser for AI agents & applications | `npx skills add browserbase/skills` |
 | [Firecrawl](https://firecrawl.dev) | Turn any website into LLM-ready data | `npx skills add firecrawl/cli` |
 | [Bright Data Agent Browser](https://brightdata.com) | Cloud browser with built-in website unlocking | `npx -y @brightdata/mcp` (MCP config) |
@@ -135,6 +137,8 @@ These services can be joined with a single instruction, right now, with no human
 
 | Service | Tagline | Onboarding |
 |---|---|---|
+| [Cordum](https://github.com/cordum-io/cordum) | The open agent control plane | Deploy Cordum and connect MCP/framework agents to policy gates |
+| [Sondera Coding Agent Hooks](https://github.com/sondera-ai/sondera-coding-agent-hooks) | A reference monitor for AI coding agents | Install Rust hooks and Cedar policies around coding-agent sessions |
 | [HumanLayer](https://humanlayer.dev) | Human in the Loop for AI Agents | `pip install humanlayer` → `@hl.require_approval()` |
 
 ---
@@ -185,6 +189,8 @@ These services can be joined with a single instruction, right now, with no human
 
 | Service | Tagline | Onboarding |
 |---|---|---|
+| [Memoria](https://github.com/matrixorigin/Memoria) | Persistent memory layer for AI agents with Git-level version control | `memoria serve` or `memoria mcp` |
+| [Recall](https://www.recall.works) | Open-source memory for AI agents. MCP-native. Self-hosted. | `uvx ai-recallworks stdio` |
 | [Mem0](https://mem0.ai) | The memory layer for your AI agents | `pip install mem0ai` → `m.add(messages, user_id=...)` |
 | [Zep](https://getzep.com) | Agent memory powered by a temporal knowledge graph | `pip install zep-python` → `zep.add_session_message(...)` |
 | [Ensue](https://ensue.dev) ⭐ | The shared memory network for AI agents | `Read https://ensue.dev/docs and call POST /auth/agent-register` |
@@ -213,6 +219,8 @@ These services can be joined with a single instruction, right now, with no human
 
 | Service | Tagline | Onboarding |
 |---|---|---|
+| [OpenSandbox](https://open-sandbox.ai) | Secure, fast, extensible sandbox runtime for AI agents | Follow OpenSandbox docs and run the MCP server |
+| [CodeRunner](https://github.com/instavm/coderunner) | A local sandbox for your AI agents | Install from GitHub and run isolated agent workloads |
 | [E2B](https://e2b.dev) | Cloud for AI agents — secure sandboxes for AI-generated code | `pip install e2b-code-interpreter` → `with Sandbox() as sandbox:` |
 | [Daytona](https://daytona.io) | Secure elastic infrastructure for AI-generated code | `daytona login` → `daytona mcp init cursor` — or `pip install daytona` |
 | [Runloop](https://runloop.ai) | Your AI agent accelerator — Devboxes and benchmarks | `npm install -g @runloop/rl-cli` → `rli mcp install` — [CLI docs](https://docs.runloop.ai/docs/tools/rl-cli) |
@@ -227,6 +235,8 @@ These services can be joined with a single instruction, right now, with no human
 
 | Service | Tagline | Onboarding |
 |---|---|---|
+| [Agent Trace](https://github.com/Siddhant-K-code/agent-trace) | Observability for AI agents | Install `agent-strace` from PyPI/GitHub and wrap agent runs |
+| [agent-inspect](https://github.com/rajudandigam/agent-inspect) | Local execution trees for TypeScript AI agents | Add to a TypeScript agent project |
 | [Langfuse](https://langfuse.com) | Open-source LLM observability, tracing, and evaluation | `npx skills add https://github.com/langfuse/skills --skill langfuse-observability` |
 | [AgentEvals](https://aevals.ai) | Score agent behavior from OpenTelemetry traces (no re-runs) | `pip install agentevals-cli` → `agentevals run <trace> --eval-set <set> -m tool_trajectory_avg_score` |
 | [AgentOps](https://www.agentops.ai) | Agent session waterfalls and trace API | `pip install agentops` → `agentops.init(<API_KEY>)` |

@@ -17,6 +17,8 @@ No general-purpose approval workflow (Jira tickets, email threads, ServiceNow) w
 
 | Service | Tagline | Protocol Surface | MCP? |
 |---|---|---|---|
+| [Cordum](cordum.md) [![⭐](https://img.shields.io/github/stars/cordum-io/cordum?style=social)](https://github.com/cordum-io/cordum) | The open agent control plane | Pre-execution policy, approval gates, audit trails, MCP adapters | ✅ |
+| [Sondera Coding Agent Hooks](sondera-coding-agent-hooks.md) [![⭐](https://img.shields.io/github/stars/sondera-ai/sondera-coding-agent-hooks?style=social)](https://github.com/sondera-ai/sondera-coding-agent-hooks) | A reference monitor for AI coding agents | Rust hooks, Cedar policies, shell/file/web-request interception | ⚠️ |
 | [HumanLayer](humanlayer.md) | Human in the Loop for AI Agents | Python SDK, TypeScript SDK, REST API, Webhooks | ✅ |
 
 

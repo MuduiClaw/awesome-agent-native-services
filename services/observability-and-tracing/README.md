@@ -23,6 +23,8 @@ Agent-native observability services capture **agent trajectory** — the semanti
 
 | Service | Tagline | Protocol Surface | MCP? |
 |---|---|---|---|
+| [Agent Trace](agent-trace.md) [![⭐](https://img.shields.io/github/stars/Siddhant-K-code/agent-trace?style=social)](https://github.com/Siddhant-K-code/agent-trace) | Observability for AI agents | CLI, OpenTelemetry-style traces, cost/tool visibility | ⚠️ |
+| [agent-inspect](agent-inspect.md) [![⭐](https://img.shields.io/github/stars/rajudandigam/agent-inspect?style=social)](https://github.com/rajudandigam/agent-inspect) | Local execution trees for TypeScript AI agents | TypeScript instrumentation, terminal execution trees, run metadata | ⚠️ |
 | [LangWatch](langwatch.md) [![⭐](https://img.shields.io/github/stars/langwatch/langwatch?style=social)](https://github.com/langwatch/langwatch) | Open-source LLM Ops platform for traces and evals | SDK + API ingest, trace/eval workflows | ⚠️ |
 | [Langfuse](langfuse.md) | Open-source LLM observability, tracing, and evaluation | OpenTelemetry, Python SDK, TypeScript SDK | ✅ |
 | [AgentEvals](agentevals.md) [![⭐](https://img.shields.io/github/stars/agentevals-dev/agentevals?style=social)](https://github.com/agentevals-dev/agentevals) | Score agent behavior from OpenTelemetry traces — no re-runs | CLI, OTLP ingest, REST (with serve), MCP | ✅ |

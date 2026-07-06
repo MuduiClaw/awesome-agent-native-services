@@ -64,21 +64,25 @@ Besides, you can install these skills through either Claude Code's plugin market
 | Skill | What it does | Install |
 |---|---|---|
 | `find-agent-service` | Given a task, find the right agent-native service | `npx clawhub@latest install find-agent-service` |
+| `install-agent-service` | Convert a service/task into URL onboarding, skill, MCP, CLI, or SDK install commands | `npx clawhub@latest install install-agent-service` |
 | `evaluate-agent-native` | Evaluate whether a service meets the 5 criteria | `npx clawhub@latest install evaluate-agent-native` |
 | `add-to-awesome-list` | Full contribution workflow: criteria → issue → PR | `npx clawhub@latest install add-to-awesome-list` |
 
-Source files are in `.skills/` in this repo. See [SKILLS_HUB.md](SKILLS_HUB.md) for Claude Code, ClawHub/OpenClaw, and manual `SKILL.md` installation paths. ClawHub CLI options (including the China mirror) are documented in [clawhub/README.md](clawhub/README.md).
+Source files are in `.skills/` in this repo. See [SKILLS_HUB.md](SKILLS_HUB.md) for Claude Code, ClawHub/OpenClaw, and manual `SKILL.md` installation paths.
+
+**Install-entry workflow:** install this repo once, then ask `install-agent-service` for a concrete entry point. It ranks URL onboarding first, then Agent Skills/plugins, MCP, CLI, and SDK setup so the catalog can act as an installer/router instead of only a directory. ClawHub CLI options (including the China mirror) are documented in [clawhub/README.md](clawhub/README.md).
 
 ### Skills Hub usage
 
 Use this repository's Skills Hub when you want an agent to operate the catalog directly rather than only read the Markdown index:
 
 1. **Find a service for a concrete job** — install or load `find-agent-service`, then ask: `Use find-agent-service to find an agent-native service for <task>`. The skill reads the catalog criteria and returns matching services with onboarding steps.
-2. **Vet a candidate service** — install or load `evaluate-agent-native`, then provide the service URL, docs, and repo. The skill applies the five contribution criteria before you open an issue or PR.
-3. **Prepare a contribution** — install or load `add-to-awesome-list` when adding a new service. It walks through the issue-first workflow, required service-file sections, and README/category table updates.
-4. **Use without a marketplace** — any `SKILL.md`-compatible agent can copy a folder from `.skills/` into its local skills directory, for example `cp -R .skills/find-agent-service ~/.claude/skills/`.
+2. **Install or connect a service** — install or load `install-agent-service`, then ask: `Use install-agent-service to install/connect <service or task>`. The skill returns URL onboarding, Agent Skill/plugin, MCP, CLI, or SDK commands.
+3. **Vet a candidate service** — install or load `evaluate-agent-native`, then provide the service URL, docs, and repo. The skill applies the five contribution criteria before you open an issue or PR.
+4. **Prepare a contribution** — install or load `add-to-awesome-list` when adding a new service. It walks through the issue-first workflow, required service-file sections, and README/category table updates.
+5. **Use without a marketplace** — any `SKILL.md`-compatible agent can copy a folder from `.skills/` into its local skills directory, for example `cp -R .skills/find-agent-service ~/.claude/skills/`.
 
-Recommended flow for agents: start with `skill.md` for quick discovery, switch to [SKILLS_HUB.md](SKILLS_HUB.md) when you need installable workflows, and use the per-service Markdown files for source-backed details.
+Recommended flow for agents: start with `skill.md` for quick discovery, switch to [SKILLS_HUB.md](SKILLS_HUB.md) or `install-agent-service` when you need installable workflows, and use the per-service Markdown files for source-backed details.
 
 ---
 
@@ -87,15 +91,15 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | # | Category | Services | Description |
 |---|---|---|---|
 | 1 | [Communication](#1-communication-services) | 10 | Give agents a communication identity on the internet |
-| 2 | [Browser & Web Execution](#2-browser--web-execution-services) | 20 | Remote browser and web data extraction for agents |
+| 2 | [Browser & Web Execution](#2-browser--web-execution-services) | 22 | Remote browser and web data extraction for agents |
 | 3 | [Tool Access & Integration](#3-tool-access--integration-services) | 14 | Runtime tool discovery, auth, and execution |
-| 4 | [Oversight & Approval](#4-oversight--approval-services) | 1 | Human-in-the-loop approval and escalation |
+| 4 | [Oversight & Approval](#4-oversight--approval-services) | 3 | Human-in-the-loop approval and escalation |
 | 5 | [Commerce & Payments](#5-commerce--payment-services) | 7 | Agent-native wallets, identity, and transactions |
 | 6 | [Agent Runtime & Infrastructure](#6-agent-runtime--infrastructure-services) | 24 | Execution, session isolation, secrets, and gateway |
-| 7 | [Memory & State](#7-memory--state-services) | 12 | Persistent agent memory across sessions |
+| 7 | [Memory & State](#7-memory--state-services) | 14 | Persistent agent memory across sessions |
 | 8 | [Search & Web Intelligence](#8-search--web-intelligence-services) | 6 | LLM-optimized web search and content retrieval |
-| 9 | [Code Execution](#9-code-execution-services) | 7 | Secure sandboxes for AI-generated code |
-| 10 | [Observability & Tracing](#10-observability--tracing-services) | 8 | Agent trajectory tracing and evaluation |
+| 9 | [Code Execution](#9-code-execution-services) | 9 | Secure sandboxes for AI-generated code |
+| 10 | [Observability & Tracing](#10-observability--tracing-services) | 10 | Agent trajectory tracing and evaluation |
 | 11 | [Durable Execution & Scheduling](#11-durable-execution--scheduling-services) | 6 | Fault-tolerant long-running agent workflows |
 | 12 | [Meeting & Conversation](#12-meeting--conversation-services) | 5 | Agent presence in voice and video meetings |
 | 13 | [Voice & Phone](#13-voice--phone-services) | 5 | Agent-controlled voice calls and phone infrastructure |
@@ -135,6 +139,8 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 
 | Service | Tagline | Primitives | MCP | How to Use |
 |---|---|---|---|---|
+| [Vercel Agent Browser](services/browser-and-web-execution/agent-browser.md) [![⭐](https://img.shields.io/github/stars/vercel-labs/agent-browser?style=social)](https://github.com/vercel-labs/agent-browser) | Browser automation CLI for AI agents | Rust CLI · Chrome for Testing · scriptable browser control | ⚠️ | `npm install -g agent-browser` |
+| [Browser MCP](services/browser-and-web-execution/browser-mcp.md) [![⭐](https://img.shields.io/github/stars/BrowserMCP/mcp?style=social)](https://github.com/BrowserMCP/mcp) | Browser MCP server for AI agents | Puppeteer MCP · accessibility tree · optional vision | ✅ | `npx -y @browsermcp/mcp` |
 | [Browserbase](services/browser-and-web-execution/browserbase.md) [![⭐](https://img.shields.io/github/stars/browserbase/stagehand?style=social)](https://github.com/browserbase/stagehand) | A web browser for AI agents & applications | Remote browser session · Stagehand NL actions · Session recording · Stealth mode | ✅ | `npx skills add browserbase/skills` |
 | [Firecrawl](services/browser-and-web-execution/firecrawl.md) | Turn any website into LLM-ready data | Intent-driven extraction · LLM-ready markdown · Schema-typed JSON output | ✅ | `npx skills add firecrawl/cli` |
 | [Bright Data Agent Browser](services/browser-and-web-execution/bright-data-agent-browser.md) | Cloud browser for AI agents with built-in website unlocking | Built-in CAPTCHA/fingerprint unlocking · 150M+ proxy IPs · Parallel sessions | ✅ | Add Web MCP to config: `npx -y @brightdata/mcp` |
@@ -193,6 +199,8 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 
 | Service | Tagline | Primitives | MCP | How to Use |
 |---|---|---|---|---|
+| [Cordum](services/oversight-and-approval/cordum.md) [![⭐](https://img.shields.io/github/stars/cordum-io/cordum?style=social)](https://github.com/cordum-io/cordum) | The open agent control plane | Pre-execution policy · approval gates · audit trails | ✅ | Deploy Cordum and connect MCP/framework agents |
+| [Sondera Coding Agent Hooks](services/oversight-and-approval/sondera-coding-agent-hooks.md) [![⭐](https://img.shields.io/github/stars/sondera-ai/sondera-coding-agent-hooks?style=social)](https://github.com/sondera-ai/sondera-coding-agent-hooks) | A reference monitor for AI coding agents | Rust hooks · Cedar policies · shell/file/web interception | ⚠️ | Install hook binaries and Cedar policies |
 | [HumanLayer](services/oversight-and-approval/humanlayer.md) [![⭐](https://img.shields.io/github/stars/humanlayer/humanlayer?style=social)](https://github.com/humanlayer/humanlayer) | Human in the Loop for AI Agents | `@require_approval()` · Denial-feedback injection · Run/Call ID audit trail | ✅ | `pip install humanlayer` then decorate high-risk functions with `@hl.require_approval()` |
 
 ---
@@ -260,6 +268,8 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 
 | Service | Tagline | Primitives | MCP | How to Use |
 |---|---|---|---|---|
+| [Memoria](services/memory-and-state/memoria.md) [![⭐](https://img.shields.io/github/stars/matrixorigin/Memoria?style=social)](https://github.com/matrixorigin/Memoria) | Persistent memory layer for AI agents with Git-level version control | Snapshots · branches · REST · MCP | ✅ | `memoria serve` or `memoria mcp` |
+| [Recall](services/memory-and-state/recall.md) [![⭐](https://img.shields.io/github/stars/RecallWorks/Recall?style=social)](https://github.com/RecallWorks/Recall) | Open-source memory for AI agents. MCP-native. Self-hosted. | Persistent searchable memory · Docker · MCP stdio | ✅ | `uvx ai-recallworks stdio` |
 | [Mem0](services/memory-and-state/mem0.md) [![⭐](https://img.shields.io/github/stars/mem0ai/mem0?style=social)](https://github.com/mem0ai/mem0) | The memory layer for your AI agents | Memory extraction · Conflict resolution (ADD/UPDATE/DELETE/NOOP) · Semantic retrieval · 90% token savings | ✅ | `pip install mem0ai` then `m.add(messages, user_id=...)` |
 | [Zep](services/memory-and-state/zep.md) [![⭐](https://img.shields.io/github/stars/getzep/zep?style=social)](https://github.com/getzep/zep) | Agent memory powered by a temporal knowledge graph | Temporal knowledge graph · Automatic fact invalidation · Business data fusion · Sub-200ms retrieval | ✅ | `pip install zep-python` then `zep.add_session_message(...)` |
 | [Ensue](services/memory-and-state/ensue.md) [![⭐](https://img.shields.io/github/stars/mutable-state-inc/autoresearch-at-home?style=social)](https://github.com/mutable-state-inc/autoresearch-at-home) | The shared memory network for AI agents | Claim · Publish result · Hypothesis exchange · Insight network · Collective best · Hypergraph | ✅ | Read https://ensue.dev/docs — call `POST /auth/agent-register` to join |
@@ -300,6 +310,8 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 
 | Service | Tagline | Primitives | MCP | How to Use |
 |---|---|---|---|---|
+| [OpenSandbox](services/code-execution/opensandbox.md) [![⭐](https://img.shields.io/github/stars/opensandbox-group/OpenSandbox?style=social)](https://github.com/opensandbox-group/OpenSandbox) | Secure, fast, extensible sandbox runtime for AI agents | Sandbox runtime · Kubernetes · MCP server | ✅ | Follow OpenSandbox docs and run MCP server |
+| [CodeRunner](services/code-execution/coderunner.md) [![⭐](https://img.shields.io/github/stars/instavm/coderunner?style=social)](https://github.com/instavm/coderunner) | A local sandbox for your AI agents | Apple Containers · local sandbox · MCP | ✅ | Install from GitHub and run isolated agent workloads |
 | [E2B](services/code-execution/e2b.md) [![⭐](https://img.shields.io/github/stars/e2b-dev/e2b?style=social)](https://github.com/e2b-dev/e2b) | Cloud for AI agents — secure sandboxes for AI-generated code | Ephemeral Linux VM · ~150ms cold start · Stateful execution context · Streaming output | ✅ | `pip install e2b-code-interpreter` then `with Sandbox() as sandbox:` |
 | [Daytona](services/code-execution/daytona.md) [![⭐](https://img.shields.io/github/stars/daytonaio/daytona?style=social)](https://github.com/daytonaio/daytona) | Secure elastic infrastructure for AI-generated code | Sub-90ms sandboxes · Git/LSP/exec · Preview URLs · CLI MCP | ✅ | `brew install daytonaio/cli/daytona` → `daytona login` → `daytona mcp init cursor` — or `pip install daytona` |
 | [Runloop](services/code-execution/runloop.md) [![⭐](https://img.shields.io/github/stars/runloopai/api-client-python?style=social)](https://github.com/runloopai/api-client-python) | Your AI agent accelerator | Devbox micro-VM · Snapshot/branch disk state · Benchmark jobs · Suspend/resume | ✅ | `export RUNLOOP_API_KEY=...` → `npm install -g @runloop/rl-cli` → `rli mcp install` — [CLI docs](https://docs.runloop.ai/docs/tools/rl-cli) |
@@ -318,6 +330,8 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 
 | Service | Tagline | Primitives | MCP | How to Use |
 |---|---|---|---|---|
+| [Agent Trace](services/observability-and-tracing/agent-trace.md) [![⭐](https://img.shields.io/github/stars/Siddhant-K-code/agent-trace?style=social)](https://github.com/Siddhant-K-code/agent-trace) | Observability for AI agents | CLI · traces · cost/tool visibility | ⚠️ | Install `agent-strace` from PyPI/GitHub and wrap agent runs |
+| [agent-inspect](services/observability-and-tracing/agent-inspect.md) [![⭐](https://img.shields.io/github/stars/rajudandigam/agent-inspect?style=social)](https://github.com/rajudandigam/agent-inspect) | Local execution trees for TypeScript AI agents | TS instrumentation · execution trees · run metadata | ⚠️ | Add to a TypeScript agent project |
 | [Langfuse](services/observability-and-tracing/langfuse.md) [![⭐](https://img.shields.io/github/stars/langfuse/langfuse?style=social)](https://github.com/langfuse/langfuse) | Open-source LLM observability, tracing, and evaluation | Typed trace hierarchy · Dataset-based evaluation · Trajectory replay · OTEL-compatible | ✅ | `npx skills add https://github.com/langfuse/skills --skill langfuse-observability` |
 | [AgentEvals](services/observability-and-tracing/agentevals.md) [![⭐](https://img.shields.io/github/stars/agentevals-dev/agentevals?style=social)](https://github.com/agentevals-dev/agentevals) | Score agent behavior from OpenTelemetry traces — no re-runs | Golden eval sets · Tool trajectory matching · OTLP ingest · MCP | ✅ | `pip install agentevals-cli` → `agentevals run <trace> --eval-set <set> -m tool_trajectory_avg_score` |
 | [AgentOps](services/observability-and-tracing/agentops.md) [![⭐](https://img.shields.io/github/stars/AgentOps-AI/agentops?style=social)](https://github.com/AgentOps-AI/agentops) | Testing, debugging, and deploying AI agents and LLM apps | Session waterfall · Framework auto-instrumentation · Public trace API | ⚠️ | `pip install agentops` → `agentops.init(<API_KEY>)` |
