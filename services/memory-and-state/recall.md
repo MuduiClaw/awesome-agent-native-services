@@ -1,6 +1,6 @@
 # Recall
 
-> **"Open-source memory for AI agents. MCP-native. Self-hosted.."**
+> **"Open-source memory for AI agents. MCP-native. Self-hosted."**
 
 | | |
 |---|---|
@@ -46,7 +46,7 @@ The entry was added as a recent high-signal candidate because the official mater
 
 ## What It Does
 
-Recall provides open-source memory for AI agents. MCP-native. Self-hosted.. Its agent-facing value is to give autonomous systems a programmatic primitive that can be invoked during a task loop without requiring a human to operate a dashboard for each action.
+Recall provides open-source memory for AI agents. MCP-native. Self-hosted. Its agent-facing value is to give autonomous systems a programmatic primitive that can be invoked during a task loop without requiring a human to operate a dashboard for each action.
 
 ---
 
@@ -54,7 +54,7 @@ Recall provides open-source memory for AI agents. MCP-native. Self-hosted.. Its 
 
 | Criterion | Evidence |
 |---|---|
-| **Agent-first positioning** | Upstream tagline/README explicitly targets AI agents: "Open-source memory for AI agents. MCP-native. Self-hosted.." |
+| **Agent-first positioning** | Upstream tagline/README explicitly targets AI agents: "Open-source memory for AI agents. MCP-native. Self-hosted." |
 | **Agent-specific primitives** | MCP stdio, Docker, searchable persistent memory. |
 | **Autonomy-compatible control plane** | Agents can call the CLI/API/MCP surface repeatedly during a run after operator provisioning. |
 | **M2M integration surface** | MCP stdio, Docker, searchable persistent memory. |

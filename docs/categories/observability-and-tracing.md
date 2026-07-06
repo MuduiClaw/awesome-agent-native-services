@@ -10,10 +10,10 @@ permalink: /categories/observability-and-tracing/
 
 | Service | Catalog Entry |
 |---|---|
-| agent-inspect | [services/observability-and-tracing/agent-inspect.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/agent-inspect.md) |
-| Agent Trace | [services/observability-and-tracing/agent-trace.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/agent-trace.md) |
 | AgentEvals | [services/observability-and-tracing/agentevals.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/agentevals.md) |
+| agent-inspect | [services/observability-and-tracing/agent-inspect.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/agent-inspect.md) |
 | AgentOps | [services/observability-and-tracing/agentops.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/agentops.md) |
+| Agent Trace | [services/observability-and-tracing/agent-trace.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/agent-trace.md) |
 | Braintrust | [services/observability-and-tracing/braintrust.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/braintrust.md) |
 | Galileo | [services/observability-and-tracing/galileo.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/galileo.md) |
 | Laminar | [services/observability-and-tracing/laminar.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/laminar.md) |

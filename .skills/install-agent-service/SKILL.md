@@ -142,7 +142,7 @@ cp -R .skills/install-agent-service ~/.claude/skills/
 | Mem0 | `pip install mem0ai` |
 | Zep | `pip install zep-python` |
 | Cognee | `pip install cognee` |
-| Agent Trace | Install from PyPI/GitHub, then wrap agent runs |
+| Agent Trace | Install `agent-strace` from PyPI/GitHub, then wrap agent runs |
 | agent-inspect | Add to a TypeScript agent project |
 | Vapi | `pip install vapi-server-sdk` |
 | Pipecat | `pip install pipecat-ai` |

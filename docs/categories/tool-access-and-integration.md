@@ -16,8 +16,8 @@ permalink: /categories/tool-access-and-integration/
 | Composio | [services/tool-access-and-integration/composio.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/composio.md) |
 | Framelink MCP for Figma | [services/tool-access-and-integration/framelink-figma-mcp.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/framelink-figma-mcp.md) |
 | GitHub MCP Server | [services/tool-access-and-integration/github-mcp-server.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/github-mcp-server.md) |
-| MCP Toolbox for Databases | [services/tool-access-and-integration/google-mcp-toolbox.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/google-mcp-toolbox.md) |
 | MCP Gateway | [services/tool-access-and-integration/mcpgateway.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/mcpgateway.md) |
+| MCP Toolbox for Databases | [services/tool-access-and-integration/google-mcp-toolbox.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/google-mcp-toolbox.md) |
 | Nango | [services/tool-access-and-integration/nango.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/nango.md) |
 | Obot | [services/tool-access-and-integration/obot.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/obot.md) |
 | Smithery | [services/tool-access-and-integration/smithery.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/smithery.md) |

@@ -235,7 +235,7 @@ These services can be joined with a single instruction, right now, with no human
 
 | Service | Tagline | Onboarding |
 |---|---|---|
-| [Agent Trace](https://github.com/Siddhant-K-code/agent-trace) | Observability for AI agents | Install from PyPI/GitHub and wrap agent runs |
+| [Agent Trace](https://github.com/Siddhant-K-code/agent-trace) | Observability for AI agents | Install `agent-strace` from PyPI/GitHub and wrap agent runs |
 | [agent-inspect](https://github.com/rajudandigam/agent-inspect) | Local execution trees for TypeScript AI agents | Add to a TypeScript agent project |
 | [Langfuse](https://langfuse.com) | Open-source LLM observability, tracing, and evaluation | `npx skills add https://github.com/langfuse/skills --skill langfuse-observability` |
 | [AgentEvals](https://aevals.ai) | Score agent behavior from OpenTelemetry traces (no re-runs) | `pip install agentevals-cli` → `agentevals run <trace> --eval-set <set> -m tool_trajectory_avg_score` |

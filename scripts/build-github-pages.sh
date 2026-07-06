@@ -90,15 +90,21 @@ permalink: /categories/${slug}/
 |---|---|
 YAML
 
-    for file in "$dir"/*.md; do
-      [[ -f "$file" ]] || continue
-      base="$(basename "$file")"
-      [[ "$base" == "README.md" ]] && continue
-      service_slug="${base%.md}"
-      service_title="$(sed -n '1{s/^# //;p;q;}' "$file")"
-      [[ -n "$service_title" ]] || service_title="$service_slug"
+    while IFS=$'\t' read -r _sort_key service_title base; do
+      [[ -n "$base" ]] || continue
       echo "| ${service_title} | [services/${slug}/${base}](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/${slug}/${base}) |"
-    done
+    done < <(
+      for file in "$dir"/*.md; do
+        [[ -f "$file" ]] || continue
+        base="$(basename "$file")"
+        [[ "$base" == "README.md" ]] && continue
+        service_slug="${base%.md}"
+        service_title="$(sed -n '1{s/^# //;p;q;}' "$file")"
+        [[ -n "$service_title" ]] || service_title="$service_slug"
+        sort_key="$(printf '%s' "$service_title" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+//g')"
+        printf '%s\t%s\t%s\n' "$sort_key" "$service_title" "$base"
+      done | sort -t $'\t' -k1,1 -k3,3
+    )
   } >"$out"
 
   echo "- [${pretty}]({{ '/categories/${slug}/' | relative_url }})" >>"$CAT_ROOT/index.md"

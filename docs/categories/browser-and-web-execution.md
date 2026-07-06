@@ -10,15 +10,14 @@ permalink: /categories/browser-and-web-execution/
 
 | Service | Catalog Entry |
 |---|---|
-| Vercel Agent Browser | [services/browser-and-web-execution/agent-browser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/agent-browser.md) |
 | AgentQL | [services/browser-and-web-execution/agentql.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/agentql.md) |
 | Anchor Browser | [services/browser-and-web-execution/anchor-browser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/anchor-browser.md) |
 | Apify | [services/browser-and-web-execution/apify.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/apify.md) |
 | bb-browser | [services/browser-and-web-execution/bb-browser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/bb-browser.md) |
 | Bright Data Agent Browser | [services/browser-and-web-execution/bright-data-agent-browser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/bright-data-agent-browser.md) |
+| Browserbase | [services/browser-and-web-execution/browserbase.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/browserbase.md) |
 | Browser MCP | [services/browser-and-web-execution/browser-mcp.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/browser-mcp.md) |
 | Browser Use Cloud | [services/browser-and-web-execution/browser-use-cloud.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/browser-use-cloud.md) |
-| Browserbase | [services/browser-and-web-execution/browserbase.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/browserbase.md) |
 | CamoFox Browser | [services/browser-and-web-execution/camofox.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/camofox.md) |
 | Cloudflare Browser Rendering | [services/browser-and-web-execution/cloudflare-browser-rendering.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/cloudflare-browser-rendering.md) |
 | Crawl4AI | [services/browser-and-web-execution/crawl4ai.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/crawl4ai.md) |
@@ -31,4 +30,5 @@ permalink: /categories/browser-and-web-execution/
 | Playwright MCP | [services/browser-and-web-execution/playwright-mcp.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/playwright-mcp.md) |
 | Skyvern | [services/browser-and-web-execution/skyvern.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/skyvern.md) |
 | Steel | [services/browser-and-web-execution/steel.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/steel.md) |
+| Vercel Agent Browser | [services/browser-and-web-execution/agent-browser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/agent-browser.md) |
 | Vessel Browser | [services/browser-and-web-execution/vessel-browser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/vessel-browser.md) |

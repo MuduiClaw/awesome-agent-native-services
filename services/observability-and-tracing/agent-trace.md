@@ -26,7 +26,7 @@ https://github.com/Siddhant-K-code/agent-trace
 
 ## How to Use (Agent Onboarding)
 
-Install from PyPI/GitHub and wrap agent runs with agent-trace
+Install `agent-strace` from PyPI/GitHub and wrap agent runs
 
 The entry was added as a recent high-signal candidate because the official materials position it around AI agents and expose machine-to-machine interfaces rather than a human-only UI.
 
