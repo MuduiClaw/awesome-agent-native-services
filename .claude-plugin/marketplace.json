@@ -9,7 +9,7 @@
       "name": "awesome-agent-native-services",
       "displayName": "Awesome Agent-Native Services",
       "source": "./",
-      "description": "Install the catalog skills: find-agent-service, evaluate-agent-native, and add-to-awesome-list.",
+      "description": "Install the catalog skills: find-agent-service, install-agent-service, evaluate-agent-native, and add-to-awesome-list.",
       "repository": "https://github.com/haoruilee/awesome-agent-native-services",
       "homepage": "https://haoruilee.github.io/awesome-agent-native-services/",
       "license": "CC0-1.0",

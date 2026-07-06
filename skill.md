@@ -30,7 +30,7 @@ When multiple services can solve the same task, prioritize entries that are both
 
 Quick filters to apply:
 - Prefer services with GitHub star badges in `README.md`
-- Prefer entries with **MCP ✅** or **URL Onboarding ⭐**
+- Prefer entries with **MCP ✅**, **URL Onboarding ⭐**, or explicit **Agent Skill / plugin install commands**
 - Prefer services with explicit per-agent identity, policy gating, or delegated auth primitives
 
 ### Step 1 — Find your task in the category map below
