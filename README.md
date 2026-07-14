@@ -85,7 +85,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 
 | # | Category | Services | Description |
 |---|---|---|---|
-| 1 | [Communication](#1-communication-services) | 10 | Give agents a communication identity on the internet |
+| 1 | [Communication](#1-communication-services) | 11 | Give agents a communication identity on the internet |
 | 2 | [Browser & Web Execution](#2-browser--web-execution-services) | 22 | Remote browser and web data extraction for agents |
 | 3 | [Tool Access & Integration](#3-tool-access--integration-services) | 14 | Runtime tool discovery, auth, and execution |
 | 4 | [Oversight & Approval](#4-oversight--approval-services) | 3 | Human-in-the-loop approval and escalation |
@@ -116,6 +116,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [ATXP Email](services/communication/atxp-email.md) [![⭐](https://img.shields.io/github/stars/atxp-dev/atxp?style=social)](https://github.com/atxp-dev/atxp) | Email for AI agents | Per-agent inbox · CLI/API provisioning · Verification-code workflow | ⚠️ | Read https://atxp.email/ and follow the docs to create an agent inbox via CLI/API |
 | [AgentMail](services/communication/agentmail.md) | Email for AI agents | Agent inbox · Threaded conversation · Webhook on inbound mail · Semantic search | ✅ | `pip install agentmail` then `POST /inboxes` |
 | [Novu](services/communication/novu.md) [![⭐](https://img.shields.io/github/stars/novuhq/novu?style=social)](https://github.com/novuhq/novu) | Notification infrastructure with Agent Toolkit | Workflow-as-tool · Cross-channel delivery · HITL notification flow | ✅ | `npx skills add novuhq/skills` |
+| [Chimely](services/communication/chimely.md) [![⭐](https://img.shields.io/github/stars/dodopayments/chimely?style=social)](https://github.com/dodopayments/chimely) | Self-hostable in-app notification inbox | HTTP notification API · SSE hint plane · `<Inbox />` React component | ⚠️ | Use the HTTP API from https://chimely.dev docs to deliver in-app notifications |
 | [mails.dev](services/communication/mails-dev.md) | Email for AI Agents | @mails.dev mailbox · Send/inbox · wait-for-code · Full-text search | ⚠️ | Read https://mails.dev/skill.md and follow the instructions |
 | [OpenMail](services/communication/openmail.md) | Email API for AI agents | One inbox per agent · Webhook/WebSocket inbound · RAG-ready attachment parsing | ⚠️ | `npm install -g @openmail/cli` → `openmail setup` — [docs.openmail.sh](https://docs.openmail.sh/quickstart) |
 | [MailboxKit](services/communication/mailboxkit.md) | Email infrastructure for AI agents | Per-agent address · REST v1 · Inbound webhooks · URL Onboarding | ⚠️ | Read https://mailboxkit.com/skill.md and follow the instructions |
