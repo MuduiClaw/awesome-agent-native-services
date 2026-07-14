@@ -13,6 +13,7 @@ Human communication infrastructure (Gmail, Outlook, Slack) was built around the 
 | [ATXP Email](atxp-email.md) | Email for AI agents | CLI, API docs, per-agent inbox workflow | ⚠️ |
 | [AgentMail](agentmail.md) | Email for AI agents | REST, Python SDK, TypeScript SDK, Webhooks | ✅ |
 | [Novu](novu.md) | Open-source notification infrastructure with Agent Toolkit | Node SDK, Python SDK, REST API, Agent Skills | ✅ |
+| [Chimely](chimely.md) [![⭐](https://img.shields.io/github/stars/dodopayments/chimely?style=social)](https://github.com/dodopayments/chimely) | Self-hostable in-app notification inbox | HTTP API, Server-Sent Events, React `<Inbox />`, self-hosted Rust + Postgres + Redis | ⚠️ |
 | [mails.dev](mails-dev.md) | Email for AI Agents | CLI, REST API, TypeScript SDK | ⚠️ |
 | [OpenMail](openmail.md) | Email API for AI agents | REST API, WebSocket, Webhooks, CLI (`@openmail/cli`) | ⚠️ |
 | [MailboxKit](mailboxkit.md) | Email infrastructure for AI agents | REST API v1, Webhooks, URL Onboarding (`skill.md`) | ⚠️ |
