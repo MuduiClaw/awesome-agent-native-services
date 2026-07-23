@@ -33,27 +33,11 @@ https://api.outreachagent.dev/v1/openapi.json
 
 ```bash
 npm install @outreachagent/sdk-ts
-# or
-pip install outreachagent
 ```
 
-Then create an API key in OutreachAgent, set `OUTREACHAGENT_API_KEY`, and use the REST API, SDK, or MCP server to create an inbox, define a workflow, enroll contacts, and receive signed webhook events for replies.
+Then create an API key in OutreachAgent, set `OUTREACHAGENT_API_KEY`, and use the REST API or TypeScript SDK to create an inbox, define a workflow, enroll contacts, and receive signed webhook events for replies.
 
-For MCP-compatible clients:
-
-```json
-{
-  "mcpServers": {
-    "outreachagent": {
-      "command": "npx",
-      "args": ["@outreachagent/mcp"],
-      "env": {
-        "OUTREACHAGENT_API_KEY": "rm_live_..."
-      }
-    }
-  }
-}
-```
+The MCP server is documented but not currently installable from npm. Use the REST API or TypeScript SDK until `@outreachagent/mcp` is published.
 
 Agent-facing quick reference: https://outreachagent.dev/for-agents
 
@@ -75,11 +59,11 @@ npx skills add https://github.com/pagefarms/cold-outreach-writer.git --skill col
 
 ## MCP
 
-**Status:** ⚠️ Documented, but package availability could not be independently verified from this environment.
+**Status:** ⚠️ Documented, but not currently published to npm.
 
 | Detail | Value |
 |---|---|
-| **MCP Package** | Package documented as `@outreachagent/mcp` |
+| **MCP Package** | `@outreachagent/mcp` is documented but [returns npm `E404`](https://registry.npmjs.org/@outreachagent%2fmcp) |
 | **Transport** | stdio |
 | **Compatible Clients** | Cursor, Claude Desktop, and MCP-compatible clients |
 
@@ -99,8 +83,8 @@ The service explicitly keeps prospecting, reasoning, copy generation, and next-s
 |---|---|
 | **Agent-first positioning** | The homepage tagline is "The Cold Outbound Engine for AI Agents," and the docs say OutreachAgent is an API-first email infrastructure platform for teams building AI agents. Sources: https://outreachagent.dev/ and https://outreachagent.dev/docs/introduction |
 | **Agent-specific primitive** | Reply-aware outbound execution around agent-operated inboxes: workflow waits, retries, branches, exit-on-reply behavior, delivery events, queryable thread history, webhook routing, and deliverability guardrails. |
-| **Autonomy-compatible control plane** | Agents can create inboxes, contacts, templates, workflows, enrollments, webhook endpoints, domains, policies, approvals, send limits, and simulations through API/MCP surfaces rather than a required dashboard. |
-| **M2M integration surface** | REST API at `https://api.outreachagent.dev/v1`, OpenAPI 3.1, TypeScript and Python SDKs, signed webhooks, LLM context files, and MCP tools. |
+| **Autonomy-compatible control plane** | Agents can create inboxes, contacts, templates, workflows, enrollments, webhook endpoints, domains, policies, approvals, send limits, and simulations through API surfaces rather than a required dashboard. |
+| **M2M integration surface** | REST API at `https://api.outreachagent.dev/v1`, OpenAPI 3.1, a public TypeScript SDK, signed webhooks, and LLM context files. |
 | **Identity / delegation** | Organizations are tenant boundaries; pods isolate environments; inboxes are email identities; named API keys delegate runtime access; policies, approvals, audit logs, workflow logs, and webhook delivery logs capture attributable external actions. |
 
 ---
@@ -126,7 +110,7 @@ The service explicitly keeps prospecting, reasoning, copy generation, and next-s
 2. The agent creates a pod and one or more inbox identities for outbound work.
 3. The agent creates contacts, verifies addresses, drafts templates, and defines a workflow with stop-on-reply exit criteria.
 4. The agent simulates and previews the workflow before sending, then publishes it when constraints pass.
-5. The agent enrolls contacts and monitors delivery, bounce, reply, unsubscribe, and approval events through signed webhooks or MCP tools.
+5. The agent enrolls contacts and monitors delivery, bounce, reply, unsubscribe, and approval events through the API and signed webhooks.
 6. When a recipient replies or opts out, OutreachAgent updates thread/enrollment state and stops follow-ups according to the workflow policy.
 7. The agent queries thread history and metrics to decide the next action in its own runtime.
 
@@ -150,8 +134,7 @@ The service explicitly keeps prospecting, reasoning, copy generation, and next-s
 | REST API | `https://api.outreachagent.dev/v1` |
 | OpenAPI | https://api.outreachagent.dev/v1/openapi.json |
 | TypeScript SDK | `npm install @outreachagent/sdk-ts` |
-| Python SDK | `pip install outreachagent` |
-| MCP | `npx @outreachagent/mcp` with `OUTREACHAGENT_API_KEY` |
+| MCP | Documented as `@outreachagent/mcp`, but not currently published to npm |
 | Webhooks | Signed inbound and workflow event callbacks with retry/replay support |
 | LLM context | https://outreachagent.dev/llms-full.txt and https://outreachagent.dev/llms.txt |
 
@@ -159,7 +142,7 @@ The service explicitly keeps prospecting, reasoning, copy generation, and next-s
 
 ## Human-in-the-Loop Support
 
-OutreachAgent supports policy outcomes that can allow, block, or require approval before sends. Approval requests can be inspected and resolved through the API or MCP layer, so humans can review high-risk outbound actions without becoming mandatory for every step. Simulations, template previews, test sends, metrics, and auto-pauses provide additional operator control before and during live campaigns.
+OutreachAgent supports policy outcomes that can allow, block, or require approval before sends. Approval requests can be inspected and resolved through the API, so humans can review high-risk outbound actions without becoming mandatory for every step. Simulations, template previews, test sends, metrics, and auto-pauses provide additional operator control before and during live campaigns.
 
 ---
 
@@ -169,7 +152,7 @@ OutreachAgent supports policy outcomes that can allow, block, or require approva
 |---|---|
 | **Gmail / Outlook APIs** | They are built around human mailboxes and OAuth consent, not high-volume programmatic inbox provisioning, reply-aware outbound workflows, or agent-specific pacing and governance. |
 | **Transactional email APIs** | They send messages well, but generally do not provide agent-owned inbox identities, durable follow-up state machines, stop-on-reply semantics, signed inbound routing, approval gates, workflow simulations, and per-workflow execution logs as one agent control plane. |
-| **Marketing automation tools** | They center human dashboard configuration and campaign management, while OutreachAgent exposes the operational loop to external runtimes through API, SDK, MCP, and webhooks. |
+| **Marketing automation tools** | They center human dashboard configuration and campaign management, while OutreachAgent exposes the operational loop to external runtimes through API, SDK, and webhooks. |
 
 ---
 
