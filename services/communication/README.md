@@ -16,7 +16,7 @@ Human communication infrastructure (Gmail, Outlook, Slack) was built around the 
 | [Chimely](chimely.md) [![⭐](https://img.shields.io/github/stars/dodopayments/chimely?style=social)](https://github.com/dodopayments/chimely) | Self-hostable in-app notification inbox | HTTP API, Server-Sent Events, React `<Inbox />`, self-hosted Rust + Postgres + Redis | ⚠️ |
 | [mails.dev](mails-dev.md) | Email for AI Agents | CLI, REST API, TypeScript SDK | ⚠️ |
 | [OpenMail](openmail.md) | Email API for AI agents | REST API, WebSocket, Webhooks, CLI (`@openmail/cli`) | ⚠️ |
-| [OutreachAgent](outreachagent.md) | The Cold Outbound Engine for AI Agents | REST API, TypeScript/Python SDKs, Webhooks, MCP documented (`@outreachagent/mcp`) | ⚠️ |
+| [OutreachAgent](outreachagent.md) | The Cold Outbound Engine for AI Agents | REST API, TypeScript SDK, Webhooks; MCP documented but unpublished | ⚠️ |
 | [MailboxKit](mailboxkit.md) | Email infrastructure for AI agents | REST API v1, Webhooks, URL Onboarding (`skill.md`) | ⚠️ |
 | [Agents Mail](agents-mail.md) | Email for AI Agents | REST API, URL Onboarding (`skill.md`), `.well-known/agent.json` discovery | ⚠️ |
 | [MCP Agent Mail](mcp-agent-mail.md) | Async coordination layer for AI coding agents | MCP tools/resources, FastMCP, Git + SQLite | ✅ |
