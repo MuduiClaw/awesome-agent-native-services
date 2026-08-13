@@ -6,7 +6,7 @@ description: >
   catalog services that expose Agent Skills, Claude Code plugins, URL onboarding,
   MCP servers, CLIs, or SDKs.
 license: CC0-1.0
-compatibility: Works with Claude Code plugin skills, ClawHub/OpenClaw skills, and agents that can read SKILL.md.
+compatibility: Works with Claude Code plugin skills and agents that can read SKILL.md.
 metadata:
   repo: https://github.com/haoruilee/awesome-agent-native-services
   catalog-version: "2026-08-13"
@@ -27,7 +27,7 @@ Prefer the highest available tier:
 
 1. **Repository plugin/skill** — install this repo as a plugin/skill hub, then invoke a catalog skill.
 2. **URL Onboarding** — agent reads a machine-readable URL and self-registers.
-3. **Agent Skill / Claude Code plugin / ClawHub skill** — explicit skill installation command exists.
+3. **Agent Skill / Claude Code plugin** — explicit skill installation command exists.
 4. **MCP server** — add a stdio or remote MCP endpoint.
 5. **CLI / SDK** — install package and call documented API.
 
@@ -52,15 +52,6 @@ After install, invoke:
 /awesome-agent-native-services:install-agent-service <service or task>
 /awesome-agent-native-services:evaluate-agent-native <service URL>
 /awesome-agent-native-services:add-to-awesome-list <candidate>
-```
-
-### ClawHub / OpenClaw
-
-```bash
-npx clawhub@latest install find-agent-service
-npx clawhub@latest install install-agent-service
-npx clawhub@latest install evaluate-agent-native
-npx clawhub@latest install add-to-awesome-list
 ```
 
 ### Manual SKILL.md install

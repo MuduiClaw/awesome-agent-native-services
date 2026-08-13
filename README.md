@@ -45,7 +45,7 @@ If you are an AI agent and want to discover services designed for you:
 Read https://raw.githubusercontent.com/haoruilee/awesome-agent-native-services/main/skill.md then find services designed for you natively.
 ```
 
-Besides, you can install these skills through either Claude Code's plugin marketplace flow or ClawHub/OpenClaw:
+Besides, you can install these skills through Claude Code's plugin marketplace flow or load them directly from this repository:
 
 **Claude Code plugin marketplace** (requires a Claude Code version with plugin support; see the [official plugin marketplace docs](https://code.claude.com/docs/en/discover-plugins)):
 
@@ -55,18 +55,17 @@ Besides, you can install these skills through either Claude Code's plugin market
 /reload-plugins
 ```
 
-**ClawHub / OpenClaw:**
+**Direct `SKILL.md` install:**
 
-| Skill | What it does | Install |
-|---|---|---|
-| `find-agent-service` | Given a task, find the right agent-native service | `npx clawhub@latest install find-agent-service` |
-| `install-agent-service` | Convert a service/task into URL onboarding, skill, MCP, CLI, or SDK install commands | `npx clawhub@latest install install-agent-service` |
-| `evaluate-agent-native` | Evaluate the standard or operator-surface admission track | `npx clawhub@latest install evaluate-agent-native` |
-| `add-to-awesome-list` | Full contribution workflow: criteria → issue → PR | `npx clawhub@latest install add-to-awesome-list` |
+```bash
+git clone --depth=1 https://github.com/haoruilee/awesome-agent-native-services.git
+mkdir -p ~/.claude/skills
+cp -R awesome-agent-native-services/.skills/find-agent-service ~/.claude/skills/
+```
 
-Source files are in `.skills/` in this repo. See [SKILLS_HUB.md](SKILLS_HUB.md) for Claude Code, ClawHub/OpenClaw, and manual `SKILL.md` installation paths.
+Source files are in `.skills/` in this repo. See [SKILLS_HUB.md](SKILLS_HUB.md) for Claude Code and manual `SKILL.md` installation paths.
 
-**Install-entry workflow:** install this repo once, then ask `install-agent-service` for a concrete entry point. It ranks URL onboarding first, then Agent Skills/plugins, MCP, CLI, and SDK setup so the catalog can act as an installer/router instead of only a directory. ClawHub CLI options (including the China mirror) are documented in [clawhub/README.md](clawhub/README.md).
+**Install-entry workflow:** install this repo once, then ask `install-agent-service` for a concrete entry point. It ranks URL onboarding first, then Agent Skills/plugins, MCP, CLI, and SDK setup so the catalog can act as an installer/router instead of only a directory.
 
 ### Skills Hub usage
 
@@ -467,9 +466,9 @@ Organizations, registries, and marketplaces that provide multiple agent-native s
 
 | Hub | What It Provides | How Agents Start |
 |---|---|---|
-| [Awesome Agent-Native Services Skills Hub](SKILLS_HUB.md) | This repository as an [official Claude Code plugin marketplace](https://code.claude.com/docs/en/discover-plugins)-compatible source plus ClawHub/OpenClaw skills for finding, evaluating, and adding agent-native services | Claude Code: `/plugin marketplace add haoruilee/awesome-agent-native-services` → `/plugin install awesome-agent-native-services@awesome-agent-native-services`; ClawHub: `npx clawhub@latest install find-agent-service` |
+| [Awesome Agent-Native Services Skills Hub](SKILLS_HUB.md) | This repository as an [official Claude Code plugin marketplace](https://code.claude.com/docs/en/discover-plugins)-compatible source plus direct `SKILL.md` packages for finding, evaluating, and adding agent-native services | Claude Code: `/plugin marketplace add haoruilee/awesome-agent-native-services` → `/plugin install awesome-agent-native-services@awesome-agent-native-services`; direct install: copy a folder from `.skills/` |
 | [OpenClaw](https://github.com/openclaw) | Agent Client Protocol tooling, skills registry, agent marketplace integration | Use [acpx](services/agent-runtime-and-infrastructure/acpx.md), [openclaw/skills](https://github.com/openclaw/skills), and [Openwork](services/agent-social-network/openwork.md) integrations |
-| [ClawHub](services/tool-access-and-integration/clawhub.md) | Full entry in section **3. Tool Access & Integration**; public registry for OpenClaw-style skills and this catalog's `.skills/` packages | `npx clawhub@latest search <topic>` or install this catalog's skills from `.skills/`; see [clawhub/README.md](clawhub/README.md) for mirror settings |
+| [ClawHub](services/tool-access-and-integration/clawhub.md) | Full entry in section **3. Tool Access & Integration**; public registry for OpenClaw-style skills | `npx clawhub@latest search <topic>` |
 | [MiniMax Skills](https://github.com/MiniMax-AI/skills) [![⭐](https://img.shields.io/github/stars/MiniMax-AI/skills?style=social)](https://github.com/MiniMax-AI/skills) | Curated **development skills** for AI coding agents — structured `SKILL.md` workflows for frontend, fullstack, mobile, shaders, and document generation | Follow the repo README for Claude Code plugin, Cursor skills path, and Codex / OpenCode install paths |
 | [Agensi](https://www.agensi.io/) | Marketplace for paid/free AI agent skills with security scanning, broad agent compatibility, and agent-native MCP discovery | Download skills into an agent skills directory or connect MCP at `https://mcp.agensi.io/mcp` |
 | [SkillsMP](https://skillsmp.com/) | Large public `SKILL.md` index with source/repository context, occupations, creators, and API access | Search by task or repository, inspect the source repo, then install according to that skill's instructions |

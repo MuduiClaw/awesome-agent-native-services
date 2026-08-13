@@ -124,18 +124,6 @@ def check_local_links() -> list[str]:
     skill_directories = sorted(
         path for path in (ROOT / ".skills").iterdir() if (path / "SKILL.md").is_file()
     )
-    versions_path = ROOT / ".skills" / "versions.json"
-    try:
-        skill_versions = json.loads(versions_path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError) as error:
-        failures.append(f".skills/versions.json: invalid or missing: {error}")
-        skill_versions = {}
-    expected_skill_slugs = {directory.name for directory in skill_directories}
-    if set(skill_versions) != expected_skill_slugs:
-        failures.append(".skills/versions.json: package coverage does not match .skills/*")
-    for slug, version in skill_versions.items():
-        if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", version):
-            failures.append(f".skills/versions.json: invalid version for {slug}")
     for directory in skill_directories:
         skill_text = (directory / "SKILL.md").read_text(encoding="utf-8")
         name_match = re.search(r"^name:\s*(.+?)\s*$", skill_text, re.MULTILINE)

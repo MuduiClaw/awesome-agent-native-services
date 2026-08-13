@@ -35,7 +35,7 @@ services/
   {category}/          # e.g. communication/, memory-and-state/
     README.md          # Category overview + service table
     {service}.md       # Per-service detail (required sections)
-.skills/               # ClawHub skills (find-agent-service, etc.)
+.skills/               # Direct SKILL.md packages (find-agent-service, etc.)
 .github/               # Issue templates, PR template
 ```
 
@@ -80,16 +80,15 @@ See CONTRIBUTING.md §7 for the exact template.
 
 ## Agent Skills
 
-Install via ClawHub:
+Install through the Claude Code plugin marketplace or load the source folder directly:
 
 ```
-npx clawhub@latest install find-agent-service
-npx clawhub@latest install install-agent-service
-npx clawhub@latest install evaluate-agent-native
-npx clawhub@latest install add-to-awesome-list
+git clone --depth=1 https://github.com/haoruilee/awesome-agent-native-services.git
+mkdir -p ~/.claude/skills
+cp -R awesome-agent-native-services/.skills/find-agent-service ~/.claude/skills/
 ```
 
-ClawHub CLI options (including the China mirror): [clawhub/README.md](clawhub/README.md).
+See [SKILLS_HUB.md](SKILLS_HUB.md) for the Claude Code plugin and direct `SKILL.md` paths.
 
 ---
 

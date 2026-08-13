@@ -378,7 +378,7 @@ These are **curated skill packs and marketplaces** — machine-readable instruct
 
 | Hub | Role | How to start |
 |---|---|---|
-| **This catalog's Skills Hub** | Install this repository as a Claude Code marketplace or as standalone ClawHub/OpenClaw skills | Claude Code plugin support: `/plugin marketplace add haoruilee/awesome-agent-native-services` → `/plugin install awesome-agent-native-services@awesome-agent-native-services` → `/reload-plugins`. Official docs: [discover plugins](https://code.claude.com/docs/en/discover-plugins). Details: [SKILLS_HUB.md](SKILLS_HUB.md) |
+| **This catalog's Skills Hub** | Install this repository as a Claude Code marketplace or load standalone `SKILL.md` folders directly | Claude Code plugin support: `/plugin marketplace add haoruilee/awesome-agent-native-services` → `/plugin install awesome-agent-native-services@awesome-agent-native-services` → `/reload-plugins`. Direct install: copy a folder from `.skills/`. Official docs: [discover plugins](https://code.claude.com/docs/en/discover-plugins). Details: [SKILLS_HUB.md](SKILLS_HUB.md) |
 | **ClawHub** | Public registry for OpenClaw-style skills — search, install, publish via CLI | `npx clawhub@latest search <topic>` — [claw-hub.net](https://claw-hub.net/) · [openclaw/clawhub](https://github.com/openclaw/clawhub) · [catalog: clawhub.md](services/tool-access-and-integration/clawhub.md). **China mirror:** [mirror-cn.clawhub.com](https://mirror-cn.clawhub.com) — set `CLAWHUB_REGISTRY=https://cn.clawhub-mirror.com` or `clawhub --registry https://cn.clawhub-mirror.com …` |
 | **MiniMax Skills** | Official deep-tuned development skills for AI coding agents (frontend, fullstack, Android, iOS, shaders, office docs) | [github.com/MiniMax-AI/skills](https://github.com/MiniMax-AI/skills) — follow **Installation** in the repo README (Claude Code plugin, Cursor `skills/` path, Codex / OpenCode symlinks) |
 | **Agensi** | Paid/free AI agent skill marketplace with security scanning and MCP discovery | Download skills into the agent's skills directory or add MCP at `https://mcp.agensi.io/mcp` — [agensi.io](https://www.agensi.io/) |
@@ -429,14 +429,12 @@ Claude Code marketplace source (requires plugin support; if `/plugin` is unavail
 /reload-plugins
 ```
 
-ClawHub/OpenClaw:
+Direct `SKILL.md` install:
 
 ```bash
-npx clawhub@latest install find-agent-service
-npx clawhub@latest install evaluate-agent-native
-npx clawhub@latest install add-to-awesome-list
+git clone --depth=1 https://github.com/haoruilee/awesome-agent-native-services.git
+mkdir -p ~/.claude/skills
+cp -R awesome-agent-native-services/.skills/find-agent-service ~/.claude/skills/
 ```
-
-If ClawHub is slow to reach, use the official China mirror: [https://mirror-cn.clawhub.com](https://mirror-cn.clawhub.com) — export `CLAWHUB_REGISTRY=https://cn.clawhub-mirror.com` or add `--registry https://cn.clawhub-mirror.com` to commands above.
 
 Full catalog: https://github.com/haoruilee/awesome-agent-native-services

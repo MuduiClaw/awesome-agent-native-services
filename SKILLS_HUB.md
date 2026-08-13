@@ -22,26 +22,14 @@ After installation, Claude Code exposes these namespaced skills:
 | `evaluate-agent-native` | `/awesome-agent-native-services:evaluate-agent-native` | Apply the standard or operator-surface admission track and classify a service. |
 | `add-to-awesome-list` | `/awesome-agent-native-services:add-to-awesome-list` | Guide the issue-first contribution workflow and service-file template. |
 
-## ClawHub / OpenClaw
-
-The canonical skill source remains `.skills/`, and the existing ClawHub workflow publishes those skills for OpenClaw-compatible agents:
-
-```bash
-npx clawhub@latest install find-agent-service
-npx clawhub@latest install install-agent-service
-npx clawhub@latest install evaluate-agent-native
-npx clawhub@latest install add-to-awesome-list
-```
-
-For China access acceleration, use the mirror documented in `clawhub/README.md`.
-
 ## Manual SKILL.md-compatible agents
 
-Agents that load `SKILL.md` folders directly can copy or symlink individual folders from `.skills/` into their local skill directory. For example:
+Agents that load `SKILL.md` folders directly can clone the repository and copy or symlink individual folders from `.skills/` into their local skill directory. The catalog deliberately does not depend on a third-party skill registry for installation. For example:
 
 ```bash
+git clone --depth=1 https://github.com/haoruilee/awesome-agent-native-services.git
 mkdir -p ~/.claude/skills
-cp -R .skills/find-agent-service ~/.claude/skills/
+cp -R awesome-agent-native-services/.skills/find-agent-service ~/.claude/skills/
 ```
 
 Review any skill before installation, especially if you fetched the repository from a fork.
