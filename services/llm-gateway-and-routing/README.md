@@ -23,6 +23,7 @@ Calling an LLM directly is fine for prototyping. Running agents in production �
 | [OpenRouter](openrouter.md) | The unified interface for LLMs — one API, 300+ models | OpenAI-compatible REST, TypeScript/Python/Go/Java SDKs | ❌ |
 | [Helicone](helicone.md) | AI Gateway & LLM observability — 100+ models, unified credits | OpenAI-compatible gateway (`ai-gateway.helicone.ai`), dashboard | ❌ |
 | [Routerly](routerly.md) [![⭐](https://img.shields.io/github/stars/Inebrio/Routerly?style=social)](https://github.com/Inebrio/Routerly) | Self-hosted LLM gateway with LLM-native routing policy — no DB required | OpenAI/Anthropic-compatible HTTP, JSON config, Docker single binary | ⚠️ |
+| [SageRoute](sageroute.md) [![⭐](https://img.shields.io/github/stars/codejunkie99/sageroute?style=social)](https://github.com/codejunkie99/sageroute) | Trajectory-aware model router that escalates from execution evidence | OpenAI Responses, Anthropic Messages, session history API, Bun proxy | ❌ |
 
 
 ---

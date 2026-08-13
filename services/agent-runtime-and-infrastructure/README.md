@@ -26,6 +26,7 @@ The services in this category were purpose-built to fill this gap.
 | [Claude Peers](claude-peers.md) | Local broker + MCP so Claude Code sessions discover peers and message ad-hoc | MCP (stdio), local broker, SQLite | ✅ |
 | [acpx](acpx.md) | Headless ACP CLI — agents talk to coding agents over structured protocol, not PTY scraping | CLI, ACP protocol, SKILL.md | N/A |
 | [Codex plugin for Claude Code](codex-plugin-cc.md) | Claude Code marketplace plugin — delegate reviews and rescue work to OpenAI Codex via slash commands | Slash commands · Subagent · Background jobs · Optional review gate | N/A |
+| [OpenAI Symphony](openai-symphony.md) [![⭐](https://img.shields.io/github/stars/openai/symphony?style=social)](https://github.com/openai/symphony) | Autonomous issue-to-implementation scheduler with isolated Codex workspaces | Tracker adapters · Codex app server · WORKFLOW.md · JSON status/logs | ❌ |
 | [Cloudflare Agents SDK](cloudflare-agents-sdk.md) [![⭐](https://img.shields.io/github/stars/cloudflare/agents?style=social)](https://github.com/cloudflare/agents) | Durable, stateful AI agents on Cloudflare Workers and Durable Objects | Agents SDK, Durable Objects, MCP, Browser Run, Sandbox, Code Mode, WebSockets | ✅ |
 | [Amazon Bedrock AgentCore](amazon-bedrock-agentcore.md) | Purpose-built for deploying and scaling dynamic AI agents and tools | AWS SDK, REST API, OpenTelemetry | ❌ |
 | [Vertex AI Agent Engine](vertex-ai-agent-engine.md) | Deploy, manage, and scale AI agents in production (Google Cloud) | Vertex AI SDK, REST, OpenTelemetry, A2A | ⚠️ |

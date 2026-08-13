@@ -1,19 +1,104 @@
 ---
-title: "Llm Gateway And Routing | Agent-Native Services"
-description: "Agent-native llm gateway and routing services with onboarding links, MCP status, and official references."
+title: "LLM Gateway & Routing | Agent-Native Services"
+collection_label: "LLM Gateway & Routing"
+description: "Budget-aware model access, routing, caching, policy, and trajectory-sensitive escalation."
 permalink: /categories/llm-gateway-and-routing/
+page_kind: collection
+collection_number: "15"
+service_count: 8
 ---
 
-> Category source: [services/llm-gateway-and-routing/README.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/README.md)
+<p class="collection-source"><a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/README.md">Collection notes ↗</a></p>
 
-## Services in this category
-
-| Service | Catalog Entry |
-|---|---|
-| Agentgateway | [services/llm-gateway-and-routing/agentgateway.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/agentgateway.md) |
-| Helicone | [services/llm-gateway-and-routing/helicone.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/helicone.md) |
-| Keywords AI | [services/llm-gateway-and-routing/keywords-ai.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/keywords-ai.md) |
-| LiteLLM | [services/llm-gateway-and-routing/litellm.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/litellm.md) |
-| OpenRouter | [services/llm-gateway-and-routing/openrouter.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/openrouter.md) |
-| Portkey | [services/llm-gateway-and-routing/portkey.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/portkey.md) |
-| Routerly | [services/llm-gateway-and-routing/routerly.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/routerly.md) |
+<div class="service-grid">
+  <article class="service-card atlas-visual--01">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Agentgateway</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/agentgateway.md">Open dossier ↗</a>
+      <a href="https://github.com/agentgateway/agentgateway">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--02">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Helicone</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/helicone.md">Open dossier ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--03">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Keywords AI</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/keywords-ai.md">Open dossier ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--04">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">LiteLLM</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/litellm.md">Open dossier ↗</a>
+      <a href="https://github.com/BerriAI/litellm">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--05">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">OpenRouter</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/openrouter.md">Open dossier ↗</a>
+      <a href="https://github.com/OpenRouterTeam">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--06">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Portkey</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/portkey.md">Open dossier ↗</a>
+      <a href="https://github.com/Portkey-AI/portkey-python-sdk">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--07">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Routerly</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/routerly.md">Open dossier ↗</a>
+      <a href="https://github.com/Inebrio/Routerly">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card service-card--new atlas-visual--08">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>New · Last 30 days</span><span>agent-native</span></div>
+    <h2 class="service-card__title">SageRoute</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/sageroute.md">Open dossier ↗</a>
+      <a href="https://github.com/codejunkie99/sageroute">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+</div>
+<nav class="collection-pagination" aria-label="Adjacent collections">
+  <a href="{{ '/categories/voice-and-phone/' | relative_url }}"><small>Previous collection</small><strong>← Voice & Phone</strong></a>
+  <a href="{{ '/categories/agent-social-network/' | relative_url }}"><small>Next collection</small><strong>Agent Social & Community →</strong></a>
+</nav>

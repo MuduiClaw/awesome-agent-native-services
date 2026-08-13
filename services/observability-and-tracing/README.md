@@ -23,6 +23,7 @@ Agent-native observability services capture **agent trajectory** — the semanti
 
 | Service | Tagline | Protocol Surface | MCP? |
 |---|---|---|---|
+| [numbat](numbat.md) [![⭐](https://img.shields.io/github/stars/perplexityai/numbat?style=social)](https://github.com/perplexityai/numbat) | Endpoint visibility, local detection, pre-action blocking, and forensics for AI agents | CLI, native hooks/plugins, OTLP/HTTP, versioned NDJSON | ⚠️ observes MCP |
 | [Agent Trace](agent-trace.md) [![⭐](https://img.shields.io/github/stars/Siddhant-K-code/agent-trace?style=social)](https://github.com/Siddhant-K-code/agent-trace) | Observability for AI agents | CLI, OpenTelemetry-style traces, cost/tool visibility | ⚠️ |
 | [agent-inspect](agent-inspect.md) [![⭐](https://img.shields.io/github/stars/rajudandigam/agent-inspect?style=social)](https://github.com/rajudandigam/agent-inspect) | Local execution trees for TypeScript AI agents | TypeScript instrumentation, terminal execution trees, run metadata | ⚠️ |
 | [LangWatch](langwatch.md) [![⭐](https://img.shields.io/github/stars/langwatch/langwatch?style=social)](https://github.com/langwatch/langwatch) | Open-source LLM Ops platform for traces and evals | SDK + API ingest, trace/eval workflows | ⚠️ |
@@ -32,6 +33,7 @@ Agent-native observability services capture **agent trajectory** — the semanti
 | [Braintrust](braintrust.md) [![⭐](https://img.shields.io/github/stars/braintrustdata/autoevals?style=social)](https://github.com/braintrustdata/autoevals) | AI observability and evaluation — traces, evals, MCP for IDEs | Python/TS SDKs, OpenAI Agents trace processor, MCP (`api.braintrust.dev/mcp`) | ✅ |
 | [Galileo](galileo.md) | Agent reliability platform — observability, evals, and IDE MCP loop | Tracing + evals + Signals, MCP HTTP endpoint, Python/TS SDKs | ✅ |
 | [Laminar](laminar.md) [![⭐](https://img.shields.io/github/stars/lmnr-ai/lmnr?style=social)](https://github.com/lmnr-ai/lmnr) | Open-source observability for long-running agents — agent debugger, browser session replay, Signals | OTLP, Python/TS SDK, SQL API, Evals SDK, self-host | ⚠️ |
+| [OpenLIT](openlit.md) [![⭐](https://img.shields.io/github/stars/openlit/openlit?style=social)](https://github.com/openlit/openlit) | OpenTelemetry-native observability for LLMs and AI agents | Agent traces, tool-call spans, cost/token analytics | ✅ |
 
 
 

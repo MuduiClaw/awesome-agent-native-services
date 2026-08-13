@@ -22,6 +22,7 @@ No consumer VOIP or call center platform was designed with these requirements as
 | [LiveKit Agents](livekit-agents.md) [![⭐](https://img.shields.io/github/stars/livekit/agents?style=social)](https://github.com/livekit/agents) | Build, run, and observe realtime voice/video AI agents | Python/TS Agents SDK, WebRTC, SIP, LiveKit Cloud | ❌ |
 | [Stimm](stimm.md) [![⭐](https://img.shields.io/github/stars/stimm-ai/stimm?style=social)](https://github.com/stimm-ai/stimm) | Open-source voice agent platform — dual-agent + optimistic VUI over WebRTC | WebRTC, orchestrator API, BYO STT/LLM/TTS adapters | ⚠️ |
 | [Pipecat](pipecat.md) [![⭐](https://img.shields.io/github/stars/pipecat-ai/pipecat?style=social)](https://github.com/pipecat-ai/pipecat) | Open-source framework for real-time voice AI agents | Realtime voice pipeline, in-call tool invocation, WebRTC/SIP adapters | ⚠️ |
+| [Qwen Audio Agent](qwen-audio-agent.md) [![⭐](https://img.shields.io/github/stars/QwenAudio/qwen-audio-agent?style=social)](https://github.com/QwenAudio/qwen-audio-agent) | Realtime voice runtime that keeps agents talking while backend work continues | ACP backend bridge, local Gateway, CLI, TUI/WebUI/desktop, realtime audio | ❌ |
 
 
 ---

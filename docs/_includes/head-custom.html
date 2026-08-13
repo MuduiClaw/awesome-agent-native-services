@@ -1,28 +1,41 @@
 <meta name="robots" content="index, follow">
-<meta name="keywords" content="AI agents, agent-native services, MCP servers, model context protocol, agent infrastructure, ai agent tools, autonomous agents">
-{% if page.url == "/" or page.url == "/awesome-agent-native-services/" %}
+<meta name="keywords" content="AI agents, agent-native services, agent harness, MCP servers, model context protocol, agent infrastructure, autonomous agents">
+<meta name="application-name" content="The Agent-Native Index">
+{% if page.page_kind == "home" %}
+{% assign collection_pages = site.pages | where: "page_kind", "collection" | sort: "collection_number" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Awesome Agent-Native Services Categories",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "url": "{{ '/categories/communication/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 2, "url": "{{ '/categories/browser-and-web-execution/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 3, "url": "{{ '/categories/tool-access-and-integration/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 4, "url": "{{ '/categories/oversight-and-approval/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 5, "url": "{{ '/categories/commerce-and-payments/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 6, "url": "{{ '/categories/agent-runtime-and-infrastructure/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 7, "url": "{{ '/categories/memory-and-state/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 8, "url": "{{ '/categories/search-and-web-intelligence/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 9, "url": "{{ '/categories/code-execution/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 10, "url": "{{ '/categories/observability-and-tracing/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 11, "url": "{{ '/categories/durable-execution-and-scheduling/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 12, "url": "{{ '/categories/meeting-and-conversation/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 13, "url": "{{ '/categories/voice-and-phone/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 14, "url": "{{ '/categories/llm-gateway-and-routing/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 15, "url": "{{ '/categories/agent-social-network/' | absolute_url }}" }
-  ]
+  "@type": "CollectionPage",
+  "name": "The Agent-Native Index",
+  "description": {{ page.description | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": {{ collection_pages | size }},
+    "itemListElement": [
+      {% for collection in collection_pages %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "name": {{ collection.collection_label | default: collection.title | jsonify }},
+        "url": {{ collection.url | absolute_url | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+}
+</script>
+{% elsif page.page_kind == "collection" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ page.collection_label | default: page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "numberOfItems": {{ page.service_count | default: 0 }},
+  "isPartOf": { "@type": "WebSite", "name": "The Agent-Native Index", "url": {{ '/' | absolute_url | jsonify }} }
 }
 </script>
 {% endif %}

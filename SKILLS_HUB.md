@@ -19,7 +19,7 @@ After installation, Claude Code exposes these namespaced skills:
 |---|---|---|
 | `find-agent-service` | `/awesome-agent-native-services:find-agent-service` | Find the right agent-native service for a task and surface onboarding steps. |
 | `install-agent-service` | `/awesome-agent-native-services:install-agent-service` | Turn a task or service name into a concrete URL onboarding, skill, MCP, CLI, or SDK install path. |
-| `evaluate-agent-native` | `/awesome-agent-native-services:evaluate-agent-native` | Apply the catalog's five hard criteria and classify a service. |
+| `evaluate-agent-native` | `/awesome-agent-native-services:evaluate-agent-native` | Apply the standard or operator-surface admission track and classify a service. |
 | `add-to-awesome-list` | `/awesome-agent-native-services:add-to-awesome-list` | Guide the issue-first contribution workflow and service-file template. |
 
 ## ClawHub / OpenClaw

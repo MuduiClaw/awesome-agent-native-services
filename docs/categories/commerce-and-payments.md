@@ -1,20 +1,115 @@
 ---
-title: "Commerce And Payments | Agent-Native Services"
-description: "Agent-native commerce and payments services with onboarding links, MCP status, and official references."
+title: "Commerce & Payments | Agent-Native Services"
+collection_label: "Commerce & Payments"
+description: "Wallets, payment authorization, identity, and transactions for autonomous buyers and sellers."
 permalink: /categories/commerce-and-payments/
+page_kind: collection
+collection_number: "05"
+service_count: 9
 ---
 
-> Category source: [services/commerce-and-payments/README.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/README.md)
+<p class="collection-source"><a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/README.md">Collection notes ↗</a></p>
 
-## Services in this category
-
-| Service | Catalog Entry |
-|---|---|
-| AgentsPay | [services/commerce-and-payments/agentspay.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/agentspay.md) |
-| Circle Agent Stack | [services/commerce-and-payments/circle-agent-stack.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/circle-agent-stack.md) |
-| Coinbase Developer Platform (x402) | [services/commerce-and-payments/coinbase-x402.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/coinbase-x402.md) |
-| CyMetica AI (EventTrader) | [services/commerce-and-payments/cymetica-ai.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/cymetica-ai.md) |
-| Nevermined | [services/commerce-and-payments/nevermined.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/nevermined.md) |
-| OpenLibx402 | [services/commerce-and-payments/openlibx402.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/openlibx402.md) |
-| Payman AI | [services/commerce-and-payments/payman-ai.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/payman-ai.md) |
-| Skyfire | [services/commerce-and-payments/skyfire.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/skyfire.md) |
+<div class="service-grid">
+  <article class="service-card atlas-visual--01">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">AgentsPay</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/agentspay.md">Open dossier ↗</a>
+      <a href="https://github.com/AgentPayy/AgentPayy">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--02">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Circle Agent Stack</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/circle-agent-stack.md">Open dossier ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--03">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Coinbase Developer Platform (x402)</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/coinbase-x402.md">Open dossier ↗</a>
+      <a href="https://github.com/coinbase/x402">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--04">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">CyMetica AI (EventTrader)</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/cymetica-ai.md">Open dossier ↗</a>
+      <a href="https://github.com/eventtrader">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--05">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Nevermined</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/nevermined.md">Open dossier ↗</a>
+      <a href="https://github.com/nevermined-io/payments">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--06">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">OpenLibx402</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/openlibx402.md">Open dossier ↗</a>
+      <a href="https://github.com/openlibx402/openlibx402">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--07">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Payman AI</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/payman-ai.md">Open dossier ↗</a>
+      <a href="https://github.com/PaymanAI/payman-node">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card service-card--new atlas-visual--08">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>New · Last 30 days</span><span>agent-native</span></div>
+    <h2 class="service-card__title">SecondSign Core</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/secondsign-core.md">Open dossier ↗</a>
+      <a href="https://github.com/Bestpart-Irene/secondsign-core">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--09">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Skyfire</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/skyfire.md">Open dossier ↗</a>
+    </div>
+    </div>
+  </article>
+</div>
+<nav class="collection-pagination" aria-label="Adjacent collections">
+  <a href="{{ '/categories/oversight-and-approval/' | relative_url }}"><small>Previous collection</small><strong>← Oversight & Approval</strong></a>
+  <a href="{{ '/categories/agent-runtime-and-infrastructure/' | relative_url }}"><small>Next collection</small><strong>Agent Runtime & Infrastructure →</strong></a>
+</nav>

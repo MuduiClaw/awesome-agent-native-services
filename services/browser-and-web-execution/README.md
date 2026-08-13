@@ -37,6 +37,7 @@ The web was designed for humans sitting in front of browsers. AI agents that nee
 | [Apify](apify.md) [![⭐](https://img.shields.io/github/stars/apify/crawlee?style=social)](https://github.com/apify/crawlee) | Real-time web data for AI — Actor marketplace & API | REST API v2, JS/Python clients, webhooks, schedules | ⚠️ |
 | [Vessel Browser](vessel-browser.md) [![⭐](https://img.shields.io/github/stars/unmodeled-tyler/vessel-browser?style=social)](https://github.com/unmodeled-tyler/vessel-browser) | Built from the ground-up for agents — durable state, action undo, MCP control, BYOK | MCP (stdio), npm CLI, AppImage (Linux/Windows) | ✅ |
 | [CamoFox Browser](camofox.md) [![⭐](https://img.shields.io/github/stars/jo-inc/camofox-browser?style=social)](https://github.com/jo-inc/camofox-browser) | Stealth headless browser for AI agents | CLI/server automation, browser profiles, screenshots/extraction | ⚠️ |
+| [Moli](moli.md) [![⭐](https://img.shields.io/github/stars/lexmount/moli?style=social)](https://github.com/lexmount/moli) | Structured-first browser engine for AI agents | Rust CLI, stdio MCP, CDP, WebDriver Classic/BiDi, semantic-tree output | ✅ |
 
 
 

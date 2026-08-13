@@ -1,34 +1,271 @@
 ---
-title: "Browser And Web Execution | Agent-Native Services"
-description: "Agent-native browser and web execution services with onboarding links, MCP status, and official references."
+title: "Browser & Web Execution | Agent-Native Services"
+collection_label: "Browser & Web Execution"
+description: "Browsers, web runtimes, and authenticated sessions built for autonomous navigation."
 permalink: /categories/browser-and-web-execution/
+page_kind: collection
+collection_number: "02"
+service_count: 23
 ---
 
-> Category source: [services/browser-and-web-execution/README.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/README.md)
+<p class="collection-source"><a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/README.md">Collection notes ↗</a></p>
 
-## Services in this category
-
-| Service | Catalog Entry |
-|---|---|
-| AgentQL | [services/browser-and-web-execution/agentql.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/agentql.md) |
-| Anchor Browser | [services/browser-and-web-execution/anchor-browser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/anchor-browser.md) |
-| Apify | [services/browser-and-web-execution/apify.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/apify.md) |
-| bb-browser | [services/browser-and-web-execution/bb-browser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/bb-browser.md) |
-| Bright Data Agent Browser | [services/browser-and-web-execution/bright-data-agent-browser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/bright-data-agent-browser.md) |
-| Browserbase | [services/browser-and-web-execution/browserbase.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/browserbase.md) |
-| Browser MCP | [services/browser-and-web-execution/browser-mcp.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/browser-mcp.md) |
-| Browser Use Cloud | [services/browser-and-web-execution/browser-use-cloud.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/browser-use-cloud.md) |
-| CamoFox Browser | [services/browser-and-web-execution/camofox.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/camofox.md) |
-| Cloudflare Browser Rendering | [services/browser-and-web-execution/cloudflare-browser-rendering.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/cloudflare-browser-rendering.md) |
-| Crawl4AI | [services/browser-and-web-execution/crawl4ai.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/crawl4ai.md) |
-| Firecrawl | [services/browser-and-web-execution/firecrawl.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/firecrawl.md) |
-| Hyperbrowser | [services/browser-and-web-execution/hyperbrowser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/hyperbrowser.md) |
-| Lightpanda | [services/browser-and-web-execution/lightpanda.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/lightpanda.md) |
-| Notte | [services/browser-and-web-execution/notte.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/notte.md) |
-| Olostep | [services/browser-and-web-execution/olostep.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/olostep.md) |
-| OpenCLI | [services/browser-and-web-execution/opencli.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/opencli.md) |
-| Playwright MCP | [services/browser-and-web-execution/playwright-mcp.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/playwright-mcp.md) |
-| Skyvern | [services/browser-and-web-execution/skyvern.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/skyvern.md) |
-| Steel | [services/browser-and-web-execution/steel.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/steel.md) |
-| Vercel Agent Browser | [services/browser-and-web-execution/agent-browser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/agent-browser.md) |
-| Vessel Browser | [services/browser-and-web-execution/vessel-browser.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/vessel-browser.md) |
+<div class="service-grid">
+  <article class="service-card atlas-visual--01">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">AgentQL</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/agentql.md">Open dossier ↗</a>
+      <a href="https://github.com/tinyfish-io/agentql">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--02">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Anchor Browser</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/anchor-browser.md">Open dossier ↗</a>
+      <a href="https://github.com/anchorbrowser/AnchorBrowser-SDK-Python">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--03">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Apify</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/apify.md">Open dossier ↗</a>
+      <a href="https://github.com/apify">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--04">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">bb-browser</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/bb-browser.md">Open dossier ↗</a>
+      <a href="https://github.com/epiral/bb-browser">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--05">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Bright Data Agent Browser</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/bright-data-agent-browser.md">Open dossier ↗</a>
+      <a href="https://github.com/brightdata/ai-sdk">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--06">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Browserbase</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/browserbase.md">Open dossier ↗</a>
+      <a href="https://github.com/browserbase">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--07">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Browser MCP</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/browser-mcp.md">Open dossier ↗</a>
+      <a href="https://github.com/BrowserMCP/mcp">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--08">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Browser Use Cloud</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/browser-use-cloud.md">Open dossier ↗</a>
+      <a href="https://github.com/browser-use/browser-use">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--09">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">CamoFox Browser</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/camofox.md">Open dossier ↗</a>
+      <a href="https://github.com/jo-inc/camofox-browser">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--10">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Cloudflare Browser Rendering</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/cloudflare-browser-rendering.md">Open dossier ↗</a>
+      <a href="https://github.com/cloudflare/workers-sdk">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--11">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Crawl4AI</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/crawl4ai.md">Open dossier ↗</a>
+      <a href="https://github.com/unclecode/crawl4ai">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--12">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Firecrawl</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/firecrawl.md">Open dossier ↗</a>
+      <a href="https://github.com/mendableai/firecrawl">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--13">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Hyperbrowser</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/hyperbrowser.md">Open dossier ↗</a>
+      <a href="https://github.com/hyperbrowserai/mcp">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--14">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Lightpanda</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/lightpanda.md">Open dossier ↗</a>
+      <a href="https://github.com/lightpanda-io/browser">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card service-card--new atlas-visual--15">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>New · Last 30 days</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Moli</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/moli.md">Open dossier ↗</a>
+      <a href="https://github.com/lexmount/moli">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--16">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Notte</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/notte.md">Open dossier ↗</a>
+      <a href="https://github.com/nottelabs/notte">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--01">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Olostep</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/olostep.md">Open dossier ↗</a>
+      <a href="https://github.com/olostep/olostep-mcp-server">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--02">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">OpenCLI</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/opencli.md">Open dossier ↗</a>
+      <a href="https://github.com/jackwener/opencli">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--03">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Playwright MCP</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/playwright-mcp.md">Open dossier ↗</a>
+      <a href="https://github.com/microsoft/playwright-mcp">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--04">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Skyvern</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/skyvern.md">Open dossier ↗</a>
+      <a href="https://github.com/Skyvern-AI/skyvern">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--05">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Steel</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/steel.md">Open dossier ↗</a>
+      <a href="https://github.com/steel-dev/steel-browser">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--06">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Vercel Agent Browser</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/agent-browser.md">Open dossier ↗</a>
+      <a href="https://github.com/vercel-labs/agent-browser">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--07">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Vessel Browser</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/vessel-browser.md">Open dossier ↗</a>
+      <a href="https://github.com/unmodeled-tyler/vessel-browser">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+</div>
+<nav class="collection-pagination" aria-label="Adjacent collections">
+  <a href="{{ '/categories/communication/' | relative_url }}"><small>Previous collection</small><strong>← Communication</strong></a>
+  <a href="{{ '/categories/tool-access-and-integration/' | relative_url }}"><small>Next collection</small><strong>Tool Access & Integration →</strong></a>
+</nav>

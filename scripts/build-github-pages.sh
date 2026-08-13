@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-# Generate docs/index.md from README.md, plus category landing pages for SEO/internal links.
+# Generate the editorial GitHub Pages collection from the Markdown catalog.
 set -euo pipefail
 
-# Force C locale so glob expansion sorts identically across machines
-# (CI ubuntu-latest is C; en_US.UTF-8 collates differently around '-' / '.').
 export LC_ALL=C
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -11,9 +9,9 @@ DOCS="$ROOT/docs"
 README="$ROOT/README.md"
 INDEX="$DOCS/index.md"
 CAT_ROOT="$DOCS/categories"
-FONT="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 IMG_DIR="$DOCS/assets/images"
 IMG="$IMG_DIR/social-preview.png"
+HERO_IMG="$IMG_DIR/editorial-hero.webp"
 
 mkdir -p "$IMG_DIR"
 
@@ -22,108 +20,412 @@ if [[ ! -f "$README" ]]; then
   exit 1
 fi
 
-# Front matter for Jekyll SEO (meta description ~140–160 chars for search snippets)
-cat >"$INDEX" <<'YAML'
----
-title: "Awesome Agent-Native Services (2026) | MCP & Agent Infrastructure"
-description: "Explore top agent-native services for AI agents in 2026: MCP tools, browser automation, memory, code sandboxes, observability, and runtime infrastructure."
-image: /assets/images/social-preview.png
----
+category_label() {
+  case "$1" in
+    communication) echo "Communication" ;;
+    browser-and-web-execution) echo "Browser & Web Execution" ;;
+    tool-access-and-integration) echo "Tool Access & Integration" ;;
+    oversight-and-approval) echo "Oversight & Approval" ;;
+    commerce-and-payments) echo "Commerce & Payments" ;;
+    agent-runtime-and-infrastructure) echo "Agent Runtime & Infrastructure" ;;
+    agent-harnesses-and-control-planes) echo "Agent Harnesses & Operator Surfaces" ;;
+    memory-and-state) echo "Memory & State" ;;
+    search-and-web-intelligence) echo "Search & Web Intelligence" ;;
+    code-execution) echo "Code Execution" ;;
+    observability-and-tracing) echo "Observability & Tracing" ;;
+    durable-execution-and-scheduling) echo "Durable Execution & Scheduling" ;;
+    meeting-and-conversation) echo "Meeting & Conversation" ;;
+    voice-and-phone) echo "Voice & Phone" ;;
+    llm-gateway-and-routing) echo "LLM Gateway & Routing" ;;
+    agent-social-network) echo "Agent Social & Community" ;;
+    *) echo "$1" | tr '-' ' ' ;;
+  esac
+}
 
-YAML
-# Omit README line 1 — Jekyll theme already renders page.title as the on-page <h1>
-tail -n +2 "$README" >>"$INDEX"
+category_description() {
+  case "$1" in
+    communication) echo "Agent-owned inboxes, messaging identities, and cross-channel communication." ;;
+    browser-and-web-execution) echo "Browsers, web runtimes, and authenticated sessions built for autonomous navigation." ;;
+    tool-access-and-integration) echo "Machine-native tools, MCP surfaces, delegated credentials, and execution gateways." ;;
+    oversight-and-approval) echo "Approval, policy, escalation, and review boundaries for consequential agent actions." ;;
+    commerce-and-payments) echo "Wallets, payment authorization, identity, and transactions for autonomous buyers and sellers." ;;
+    agent-runtime-and-infrastructure) echo "Deployment substrates, isolation, identity, secrets, gateways, and production agent operations." ;;
+    agent-harnesses-and-control-planes) echo "Harnesses, control planes, and purpose-built operator surfaces for capable agents." ;;
+    memory-and-state) echo "Persistent context, structured knowledge, and cross-session state owned by agents." ;;
+    search-and-web-intelligence) echo "Search and retrieval interfaces shaped for context windows and machine reasoning." ;;
+    code-execution) echo "Secure, isolated environments for agent-generated code and reproducible artifacts." ;;
+    observability-and-tracing) echo "Trajectories, costs, evidence, attribution, evaluation, and forensic replay for agent runs." ;;
+    durable-execution-and-scheduling) echo "Fault-tolerant workflows, queues, checkpoints, triggers, and long-running agent jobs." ;;
+    meeting-and-conversation) echo "Programmatic agent presence in live meetings, shared rooms, and conversation streams." ;;
+    voice-and-phone) echo "Realtime speech, telephone identity, calls, and audio runtimes for agents." ;;
+    llm-gateway-and-routing) echo "Budget-aware model access, routing, caching, policy, and trajectory-sensitive escalation." ;;
+    agent-social-network) echo "Networks and shared spaces where agents are first-class participants and collaborators." ;;
+    *) echo "Agent-native services selected for this collection." ;;
+  esac
+}
 
-{
-  echo ""
-  echo "---"
-  echo ""
-  echo "## Explore by category pages (SEO hub)"
-  echo ""
-  echo "Navigate by category to compare services faster:"
-  echo ""
+category_order() {
+  case "$1" in
+    communication) echo 1 ;;
+    browser-and-web-execution) echo 2 ;;
+    tool-access-and-integration) echo 3 ;;
+    oversight-and-approval) echo 4 ;;
+    commerce-and-payments) echo 5 ;;
+    agent-runtime-and-infrastructure) echo 6 ;;
+    agent-harnesses-and-control-planes) echo 7 ;;
+    memory-and-state) echo 8 ;;
+    search-and-web-intelligence) echo 9 ;;
+    code-execution) echo 10 ;;
+    observability-and-tracing) echo 11 ;;
+    durable-execution-and-scheduling) echo 12 ;;
+    meeting-and-conversation) echo 13 ;;
+    voice-and-phone) echo 14 ;;
+    llm-gateway-and-routing) echo 15 ;;
+    agent-social-network) echo 16 ;;
+    *) echo 99 ;;
+  esac
+}
+
+service_count_for() {
+  find "$ROOT/services/$1" -maxdepth 1 -type f -name '*.md' ! -name README.md | wc -l | tr -d ' '
+}
+
+yaml_escape() {
+  printf '%s' "$1" | sed 's/"/\\"/g'
+}
+
+html_escape() {
+  printf '%s' "$1" | sed \
+    -e 's/&/\&amp;/g' \
+    -e 's/</\&lt;/g' \
+    -e 's/>/\&gt;/g' \
+    -e 's/"/\&quot;/g' \
+    -e "s/'/\&#39;/g"
+}
+
+strip_inline_markdown() {
+  printf '%s' "$1" | sed -E \
+    -e 's/\[([^][]+)\]\([^)]*\)/\1/g' \
+    -e 's/\*\*//g' \
+    -e 's/`//g'
+}
+
+markdown_escape_cell() {
+  printf '%s' "$1" | tr '\n' ' ' | sed 's/|/\\|/g'
+}
+
+extract_field() {
+  local file="$1"
+  local label="$2"
+  awk -F'|' -v target="$label" '
+    $0 ~ "\\*\\*" target "\\*\\*" {
+      value=$3
+      gsub(/^[[:space:]]+|[[:space:]]+$/, "", value)
+      gsub(/`/, "", value)
+      print value
+      exit
+    }
+  ' "$file"
+}
+
+extract_tagline() {
+  local file="$1"
+  awk '
+    /^> / {
+      line=$0
+      sub(/^> /, "", line)
+      gsub(/\*\*/, "", line)
+      gsub(/^"|"$/, "", line)
+      print line
+      exit
+    }
+  ' "$file" | sed -E \
+    -e 's/\[([^][]+)\]\([^)]*\)/\1/g' \
+    -e 's/`//g'
+}
+
+extract_repo_url() {
+  local file="$1"
+  local value
+  local repo_pattern='https://github\.com/[^[:space:]<]+'
+  value="$(extract_field "$file" "GitHub")"
+  if [[ "$value" =~ $repo_pattern ]]; then
+    printf '%s' "${BASH_REMATCH[0]}" | sed 's/[),·].*$//'
+  else
+    sed -nE 's#.*(https://github\.com/[^ )|<]+).*#\1#p' "$file" | head -1
+  fi
+}
+
+extract_latest_signal() {
+  strip_inline_markdown "$(extract_field "$1" "Latest-month signal")"
+}
+
+is_new_arrival() {
+  local file="$1"
+  [[ -n "$(extract_latest_signal "$file")" ]]
+}
+
+mapfile -t CATEGORY_SLUGS < <(
   for dir in "$ROOT"/services/*; do
     [[ -d "$dir" ]] || continue
     slug="$(basename "$dir")"
-    pretty="$(echo "$slug" | tr '-' ' ')"
-    pretty="$(echo "$pretty" | sed -E 's/\b([a-z])/\U\1/g')"
-    echo "- [${pretty}]({{ '/categories/${slug}/' | relative_url }})"
-  done
-  echo ""
-  echo "_Last site build time: {{ site.time | date: '%Y-%m-%d %H:%M UTC' }}_"
-} >>"$INDEX"
+    printf '%03d\t%s\n' "$(category_order "$slug")" "$slug"
+  done | sort -n -k1,1 | cut -f2
+)
 
-# Generate category landing pages (spokes)
-rm -rf "$CAT_ROOT"
-mkdir -p "$CAT_ROOT"
-cat >"$CAT_ROOT/index.md" <<'YAML'
+TOTAL_SERVICES=0
+for slug in "${CATEGORY_SLUGS[@]}"; do
+  TOTAL_SERVICES=$((TOTAL_SERVICES + $(service_count_for "$slug")))
+done
+TOTAL_COLLECTIONS="${#CATEGORY_SLUGS[@]}"
+NEW_ARRIVALS=0
+while IFS= read -r file; do
+  if is_new_arrival "$file"; then
+    NEW_ARRIVALS=$((NEW_ARRIVALS + 1))
+  fi
+done < <(find "$ROOT/services" -mindepth 2 -maxdepth 2 -type f -name '*.md' ! -name README.md | sort)
+
+cat >"$INDEX" <<YAML
 ---
-title: "Agent-Native Service Categories"
-description: "Browse agent-native services by category: communication, browser automation, MCP tools, memory, runtimes, and more."
-permalink: /categories/
+title: "The Agent-Native Index"
+description: "A curated 2026 collection of agent-native infrastructure: MCP tools, harnesses, identity, memory, sandboxes, browsers, payments, and runtimes."
+image: /assets/images/social-preview.png
+page_kind: home
+service_count: ${TOTAL_SERVICES}
+collection_count: ${TOTAL_COLLECTIONS}
+new_arrivals_count: ${NEW_ARRIVALS}
 ---
 
-This page helps search engines and humans discover the catalog through focused category landing pages.
-
+<section id="new-arrivals" aria-labelledby="new-arrivals-title">
+  <div class="section-intro">
+    <span class="section-number">01</span>
+    <h2 class="section-title" id="new-arrivals-title">New arrivals</h2>
+    <p class="section-note">13 Jul—13 Aug 2026</p>
+  </div>
+  <div class="arrival-rail" role="region" aria-label="Last 30 days additions" tabindex="0">
 YAML
 
-for dir in "$ROOT"/services/*; do
-  [[ -d "$dir" ]] || continue
-  slug="$(basename "$dir")"
-  pretty="$(echo "$slug" | tr '-' ' ')"
-  pretty="$(echo "$pretty" | sed -E 's/\b([a-z])/\U\1/g')"
-  out="$CAT_ROOT/$slug.md"
-
+arrival_visual_index=0
+while IFS= read -r record; do
+  arrival_visual_index=$((arrival_visual_index % 16 + 1))
+  file="${record#*$'\t'}"
+  slug="$(basename "$(dirname "$file")")"
+  base="$(basename "$file")"
+  title="$(sed -n '1{s/^# //;p;q;}' "$file")"
+  label="$(category_label "$slug")"
+  visual_number="$(printf '%02d' "$arrival_visual_index")"
+  title_html="$(html_escape "$title")"
+  label_html="$(html_escape "$label")"
   {
-    cat <<YAML
----
-title: "${pretty} | Agent-Native Services"
-description: "Agent-native ${pretty,,} services with onboarding links, MCP status, and official references."
-permalink: /categories/${slug}/
----
+    printf '    <a class="arrival-card atlas-visual--%s" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/%s/%s">\n' "$visual_number" "$slug" "$base"
+    echo '      <span class="arrival-card__image" aria-hidden="true"></span>'
+    echo '      <span class="arrival-card__copy">'
+    printf '        <span class="arrival-card__category">%s</span>\n' "$label_html"
+    printf '        <strong class="arrival-card__name">%s</strong>\n' "$title_html"
+    echo '        <span class="arrival-card__arrow" aria-hidden="true">↗</span>'
+    echo '      </span>'
+    echo '    </a>'
+  } >>"$INDEX"
+done < <(
+  while IFS= read -r file; do
+    if is_new_arrival "$file"; then
+      signal="$(extract_latest_signal "$file")"
+      printf '%s\t%s\n' "$signal" "$file"
+    fi
+  done < <(find "$ROOT/services" -mindepth 2 -maxdepth 2 -type f -name '*.md' ! -name README.md | sort) | sort -r
+)
 
-> Category source: [services/${slug}/README.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/${slug}/README.md)
+cat >>"$INDEX" <<HTML
+  </div>
+</section>
 
-## Services in this category
+<section id="collections" aria-labelledby="collections-title">
+  <div class="section-intro">
+    <span class="section-number">02</span>
+    <h2 class="section-title" id="collections-title">The collections</h2>
+    <p class="section-note">${TOTAL_COLLECTIONS} fields · ${TOTAL_SERVICES} dossiers</p>
+  </div>
+  <div class="collection-grid">
+HTML
 
-| Service | Catalog Entry |
-|---|---|
-YAML
-
-    while IFS=$'\t' read -r _sort_key service_title base; do
-      [[ -n "$base" ]] || continue
-      echo "| ${service_title} | [services/${slug}/${base}](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/${slug}/${base}) |"
-    done < <(
-      for file in "$dir"/*.md; do
-        [[ -f "$file" ]] || continue
-        base="$(basename "$file")"
-        [[ "$base" == "README.md" ]] && continue
-        service_slug="${base%.md}"
-        service_title="$(sed -n '1{s/^# //;p;q;}' "$file")"
-        [[ -n "$service_title" ]] || service_title="$service_slug"
-        sort_key="$(printf '%s' "$service_title" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+//g')"
-        printf '%s\t%s\t%s\n' "$sort_key" "$service_title" "$base"
-      done | sort -t $'\t' -k1,1 -k3,3
-    )
-  } >"$out"
-
-  echo "- [${pretty}]({{ '/categories/${slug}/' | relative_url }})" >>"$CAT_ROOT/index.md"
+for slug in "${CATEGORY_SLUGS[@]}"; do
+  number="$(printf '%02d' "$(category_order "$slug")")"
+  label="$(category_label "$slug")"
+  description="$(category_description "$slug")"
+  count="$(service_count_for "$slug")"
+  label_html="$(html_escape "$label")"
+  description_html="$(html_escape "$description")"
+  {
+    printf '    <a class="collection-card atlas-visual--%s" href="{{ '\''/categories/%s/'\'' | relative_url }}">\n' "$number" "$slug"
+    echo '      <span class="collection-card__image" aria-hidden="true"></span>'
+    echo '      <span class="collection-card__copy">'
+    printf '      <span class="collection-card__number">%s</span>\n' "$number"
+    printf '      <span class="collection-card__title">%s</span>\n' "$label_html"
+    printf '      <span class="collection-card__count">%s</span>\n' "$count"
+    echo '      </span>'
+    echo '    </a>'
+  } >>"$INDEX"
 done
 
-# 1200×630 Open Graph image (solid brand color + title)
-if command -v ffmpeg >/dev/null 2>&1 && [[ -f "$FONT" ]]; then
-  ffmpeg -y -f lavfi -i color=c=0x1a5f7a:s=1200x630 -vf "\
-drawtext=fontfile=${FONT}:\
-text='Awesome Agent-Native Services':fontsize=48:fontcolor=white:x=(w-text_w)/2:y=200,\
-drawtext=fontfile=${FONT}:\
-text='MCP servers, LLM tools & agent infrastructure':fontsize=32:fontcolor=white:x=(w-text_w)/2:y=290,\
-drawtext=fontfile=${FONT}:\
-text='haoruilee/awesome-agent-native-services':fontsize=24:fontcolor=0xDDEEFF:x=(w-text_w)/2:y=400\
-" -frames:v 1 "$IMG" -loglevel error
-  echo "Wrote $IMG"
+cat >>"$INDEX" <<HTML
+  </div>
+</section>
+
+<section id="for-agents" class="agent-entry-panel" aria-labelledby="agent-entry-title">
+  <p class="eyebrow">Machine entrance</p>
+  <h2 id="agent-entry-title">Enter as an agent.</h2>
+
+  <pre><code>Read https://raw.githubusercontent.com/haoruilee/awesome-agent-native-services/main/skill.md then find services designed for you natively.</code></pre>
+
+  <div class="agent-entry-panel__links">
+    <a href="https://raw.githubusercontent.com/haoruilee/awesome-agent-native-services/main/skill.md">skill.md ↗</a>
+    <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/CONTRIBUTING.md">Criteria ↗</a>
+  </div>
+</section>
+
+<section class="source-gateway" id="complete-index">
+  <span class="source-gateway__image" aria-hidden="true"></span>
+  <div>
+  <span class="section-number">03</span>
+  <h2 class="section-title">Full source.</h2>
+  <a class="source-gateway__link" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/README.md">Open ${TOTAL_SERVICES} dossiers ↗</a>
+  </div>
+</section>
+HTML
+
+# Generate collection landing pages.
+if [[ -d "$CAT_ROOT" ]]; then
+  find "$CAT_ROOT" -mindepth 1 -maxdepth 1 -type f -delete
 else
-  echo "Skipping OG image (ffmpeg or font missing); keep existing $IMG if present." >&2
+  mkdir -p "$CAT_ROOT"
 fi
 
-echo "Wrote $INDEX"
-echo "Wrote category pages under $CAT_ROOT"
+cat >"$CAT_ROOT/index.md" <<YAML
+---
+title: "Agent-Native Collections"
+description: "Browse ${TOTAL_SERVICES} agent-native services across ${TOTAL_COLLECTIONS} curated infrastructure collections."
+permalink: /categories/
+page_kind: document
+---
+
+<div class="collection-grid">
+YAML
+
+for slug in "${CATEGORY_SLUGS[@]}"; do
+  number="$(printf '%02d' "$(category_order "$slug")")"
+  label="$(category_label "$slug")"
+  description="$(category_description "$slug")"
+  count="$(service_count_for "$slug")"
+  label_html="$(html_escape "$label")"
+  description_html="$(html_escape "$description")"
+  {
+    printf '  <a class="collection-card atlas-visual--%s" href="{{ '\''/categories/%s/'\'' | relative_url }}">\n' "$number" "$slug"
+    echo '    <span class="collection-card__image" aria-hidden="true"></span>'
+    echo '    <span class="collection-card__copy">'
+    printf '    <span class="collection-card__number">%s</span>\n' "$number"
+    printf '    <span class="collection-card__title">%s</span>\n' "$label_html"
+    printf '    <span class="collection-card__count">%s</span>\n' "$count"
+    echo '    </span>'
+    echo '  </a>'
+  } >>"$CAT_ROOT/index.md"
+done
+echo '</div>' >>"$CAT_ROOT/index.md"
+
+for index in "${!CATEGORY_SLUGS[@]}"; do
+  slug="${CATEGORY_SLUGS[$index]}"
+  label="$(category_label "$slug")"
+  description="$(category_description "$slug")"
+  number="$(printf '%02d' "$(category_order "$slug")")"
+  count="$(service_count_for "$slug")"
+  out="$CAT_ROOT/$slug.md"
+  prev_index=$((index - 1))
+  next_index=$((index + 1))
+
+  cat >"$out" <<YAML
+---
+title: "$(yaml_escape "$label") | Agent-Native Services"
+collection_label: "$(yaml_escape "$label")"
+description: "$(yaml_escape "$description")"
+permalink: /categories/${slug}/
+page_kind: collection
+collection_number: "${number}"
+service_count: ${count}
+---
+
+<p class="collection-source"><a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/${slug}/README.md">Collection notes ↗</a></p>
+
+<div class="service-grid">
+YAML
+
+  service_visual_index=0
+  while IFS=$'\t' read -r _sort_key service_title base; do
+    [[ -n "$base" ]] || continue
+    service_visual_index=$((service_visual_index % 16 + 1))
+    service_visual_number="$(printf '%02d' "$service_visual_index")"
+    file="$ROOT/services/$slug/$base"
+    repo_url="$(extract_repo_url "$file")"
+    signal="$(extract_latest_signal "$file")"
+    classification="$(extract_field "$file" "Classification")"
+    service_title_html="$(html_escape "$service_title")"
+    classification_html="$(html_escape "${classification:-agent-native}")"
+    class_name="service-card"
+    badge="Curated dossier"
+    if [[ -n "$signal" ]]; then
+      class_name="service-card service-card--new"
+      badge="New · Last 30 days"
+    fi
+    {
+      printf '  <article class="%s atlas-visual--%s">\n' "$class_name" "$service_visual_number"
+      echo '    <span class="service-card__image" aria-hidden="true"></span>'
+      echo '    <div class="service-card__copy">'
+      printf '    <div class="service-card__overline"><span>%s</span><span>%s</span></div>\n' "$badge" "$classification_html"
+      printf '    <h2 class="service-card__title">%s</h2>\n' "$service_title_html"
+      echo '    <div class="service-card__actions">'
+      printf '      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/%s/%s">Open dossier ↗</a>\n' "$slug" "$base"
+      if [[ -n "$repo_url" ]]; then
+        printf '      <a href="%s">Official repo ↗</a>\n' "$repo_url"
+      fi
+      echo '    </div>'
+      echo '    </div>'
+      echo '  </article>'
+    } >>"$out"
+  done < <(
+    for file in "$ROOT/services/$slug"/*.md; do
+      [[ -f "$file" ]] || continue
+      base="$(basename "$file")"
+      [[ "$base" == README.md ]] && continue
+      service_title="$(sed -n '1{s/^# //;p;q;}' "$file")"
+      sort_key="$(printf '%s' "$service_title" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+//g')"
+      printf '%s\t%s\t%s\n' "$sort_key" "$service_title" "$base"
+    done | sort -t $'\t' -k1,1 -k3,3
+  )
+
+  echo '</div>' >>"$out"
+  echo '<nav class="collection-pagination" aria-label="Adjacent collections">' >>"$out"
+  if (( prev_index >= 0 )); then
+    prev_slug="${CATEGORY_SLUGS[$prev_index]}"
+    printf '  <a href="{{ '\''/categories/%s/'\'' | relative_url }}"><small>Previous collection</small><strong>← %s</strong></a>\n' "$prev_slug" "$(category_label "$prev_slug")" >>"$out"
+  else
+    echo '  <a href="{{ '\''/categories/'\'' | relative_url }}"><small>Collection index</small><strong>← All collections</strong></a>' >>"$out"
+  fi
+  if (( next_index < TOTAL_COLLECTIONS )); then
+    next_slug="${CATEGORY_SLUGS[$next_index]}"
+    printf '  <a href="{{ '\''/categories/%s/'\'' | relative_url }}"><small>Next collection</small><strong>%s →</strong></a>\n' "$next_slug" "$(category_label "$next_slug")" >>"$out"
+  else
+    echo '  <a href="{{ '\''/'\'' | relative_url }}#new-arrivals"><small>Return to edition</small><strong>New arrivals →</strong></a>' >>"$out"
+  fi
+  echo '</nav>' >>"$out"
+done
+
+# Branded 1200x630 Open Graph image, cropped from the editorial hero without embedded text.
+if command -v ffmpeg >/dev/null 2>&1 && [[ -f "$HERO_IMG" ]]; then
+  ffmpeg -y -i "$HERO_IMG" \
+    -vf "scale=1200:800:force_original_aspect_ratio=increase,crop=1200:630:(iw-ow)/2:(ih-oh)/2" \
+    -frames:v 1 "$IMG" -loglevel error
+  echo "Wrote $IMG"
+else
+  echo "Skipping OG image (ffmpeg or editorial hero missing); keeping existing image." >&2
+fi
+
+echo "Wrote $INDEX (${TOTAL_SERVICES} services, ${TOTAL_COLLECTIONS} collections, ${NEW_ARRIVALS} new arrivals)"
+echo "Wrote collection pages under $CAT_ROOT"

@@ -1,6 +1,6 @@
 # Contributing to Awesome Agent-Native Services
 
-This repository maintains a curated list of services **designed from the ground up for AI agents**. Quality over quantity: every entry must meet strict criteria, follow a consistent format, and remain accurate over time.
+This repository maintains a curated list of services **designed from the ground up for AI agents or for operating live agent systems**. Quality over quantity: every entry must meet a documented admission track, follow a consistent format, and remain accurate over time.
 
 ---
 
@@ -22,7 +22,19 @@ This repository maintains a curated list of services **designed from the ground 
 
 ## 1. The Five Hard Criteria
 
-A service must satisfy **all five** to be listed.
+Most services qualify by satisfying **all five** criteria below. A narrow operator-surface track is also eligible when the product is purpose-built around live AI-agent state rather than being a generic human dashboard.
+
+### Operator-Surface Track (Narrow Exception)
+
+A human-facing surface may qualify only when it:
+
+1. is explicitly built to operate or supervise AI agents, not general applications;
+2. continuously interprets agent-specific state such as rollout/session identity, context pressure, tool or subagent activity, permissions, Skills, MCP configuration, or quota windows;
+3. attributes that state to a concrete agent session or rollout;
+4. exposes a dedicated operational surface such as a CLI, wrapper, daemon, hook, or status-line protocol; and
+5. documents honestly when autonomy, machine APIs, delegated credentials, approval enforcement, Skills, or MCP are absent.
+
+Generic terminal themes, IDE skins, process monitors, and dashboards that merely relabel ordinary application telemetry do not qualify. This exception changes the interface and delegation tests for read-only operator tools; it does not admit products that were originally human-facing and later added a superficial agent tab.
 
 ### 1.1 Agent-First Positioning
 
@@ -63,7 +75,9 @@ The key question: *Can an agent complete a full task loop — including the acti
 
 ### 1.4 Machine-to-Machine Integration Surface
 
-The **primary interface** must be an SDK, REST API, MCP server, or webhook. A human-facing management dashboard is acceptable as a secondary surface but must not be required for the agent's operational flow.
+For the standard track, the **primary interface** must be an SDK, REST API, MCP server, webhook, or structured CLI. A human-facing management dashboard is acceptable as a secondary surface but must not be required for the agent's operational flow.
+
+The operator-surface track may instead use a dedicated CLI wrapper, daemon, hook, or status-line protocol, provided it continuously consumes agent-native state and is not a generic dashboard.
 
 ### 1.5 Agent Identity / Delegation Semantics
 
@@ -72,6 +86,8 @@ Where the service involves external actions (payments, sending emails, executing
 - Distinguish the **agent's own identity** from the user's identity
 - Model **delegated permissions** — what the agent is authorized to do on the user's behalf
 - Maintain an **audit trail** attributable to the specific agent
+
+Read-only operator surfaces do not need to mint delegated authority, but they must attribute displayed state to a concrete session or rollout and state clearly that observation is not authorization or enforcement.
 
 ---
 
@@ -132,6 +148,7 @@ The following categories are **not eligible** regardless of marketing language:
 | **Chat workspaces** | Designed for humans to interact with AI | ChatGPT Teams, Claude.ai, Notion AI |
 | **No-code AI platforms** | Target non-technical users building AI apps | Voiceflow, Botpress |
 | **Agent-adapted services** | Originally human-facing, agent interface added later | Resend (added MCP), Stripe (added Agent Toolkit), Twilio |
+| **Generic operator dashboards** | Show ordinary host/process telemetry without interpreting live agent-native state | Generic tmux themes, system monitors, IDE activity panels |
 
 > **Agent-adapted services** belong in the `Excluded / Boundary Cases` section of `README.md`, not the main list. They are not wrong — they are in the wrong list.
 
@@ -143,7 +160,7 @@ The following categories are **not eligible** regardless of marketing language:
 
 1. Search [open and closed issues](../../issues?q=) to see if your service has been discussed.
 2. Check the [current list](../../blob/main/README.md) — the service may already be listed.
-3. Read the [five criteria](#1-the-five-hard-criteria) honestly. If you are unsure, open an issue before writing any files.
+3. Read the [qualification tracks](#1-the-five-hard-criteria) honestly. If you are unsure, open an issue before writing any files.
 
 ### Step 2 — Open an issue
 
@@ -201,7 +218,7 @@ Required information:
 - Service name, website, official repo
 - Official tagline (exact quote from homepage)
 - Proposed category
-- Evidence for each of the five criteria (quote + source URL)
+- Evidence for each of the five criteria, or every operator-surface track requirement (quote + source URL)
 - MCP status and Agent Skills install command (if available)
 - Classification (`agent-native` / `agent-adapted` / `agent-builder`)
 - Why the obvious generic alternative does not qualify
@@ -254,7 +271,7 @@ Required information:
 - [ ] Created `services/{category}/{service-name}.md` with all required sections.
 - [ ] Added a row to `services/{category}/README.md`.
 - [ ] Added a row to the correct section of the root `README.md`.
-- [ ] Classification is `agent-native` (not `agent-adapted` or `agent-builder`).
+- [ ] Classification is `agent-native` (including the documented operator-surface track), not `agent-adapted` or `agent-builder`.
 
 ### Must-haves for update PRs
 
@@ -265,7 +282,7 @@ Required information:
 
 - Missing required sections in the service file
 - No linked issue for a new service
-- Classification as `agent-native` without meeting all five criteria
+- Classification as `agent-native` without meeting all five standard criteria or every operator-surface track requirement
 - Broken links in the submitted file
 - Undisclosed conflict of interest
 
@@ -479,6 +496,7 @@ Use existing categories wherever possible. Propose a new one only when at least 
 | `oversight-and-approval/` | Agent-initiated human approval gates, denial feedback, and escalation |
 | `commerce-and-payments/` | Agent wallets, KYA identity, autonomous payment execution |
 | `agent-runtime-and-infrastructure/` | Execution environments, session isolation, secrets, tool gateway, identity tokens, local agent-facing coding tools (e.g. semantic navigation CLI) |
+| `agent-harnesses-and-control-planes/` | Durable agent-loop harnesses, orchestration/control planes, and purpose-built operator surfaces that interpret live agent-native state |
 | `memory-and-state/` | Persistent, queryable, self-managing agent memory across sessions |
 | `search-and-web-intelligence/` | LLM-optimized web search and structured content retrieval |
 | `code-execution/` | Secure, isolated sandboxes for AI-generated code |

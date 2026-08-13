@@ -1,21 +1,127 @@
 ---
 title: "Code Execution | Agent-Native Services"
-description: "Agent-native code execution services with onboarding links, MCP status, and official references."
+collection_label: "Code Execution"
+description: "Secure, isolated environments for agent-generated code and reproducible artifacts."
 permalink: /categories/code-execution/
+page_kind: collection
+collection_number: "10"
+service_count: 10
 ---
 
-> Category source: [services/code-execution/README.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/README.md)
+<p class="collection-source"><a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/README.md">Collection notes ↗</a></p>
 
-## Services in this category
-
-| Service | Catalog Entry |
-|---|---|
-| Agent Sandbox | [services/code-execution/agent-sandbox.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/agent-sandbox.md) |
-| AIO Sandbox (agent-infra) | [services/code-execution/agent-infra-sandbox.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/agent-infra-sandbox.md) |
-| CodeRunner | [services/code-execution/coderunner.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/coderunner.md) |
-| Daytona | [services/code-execution/daytona.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/daytona.md) |
-| E2B | [services/code-execution/e2b.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/e2b.md) |
-| OpenSandbox | [services/code-execution/opensandbox.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/opensandbox.md) |
-| Riza | [services/code-execution/riza.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/riza.md) |
-| Runloop | [services/code-execution/runloop.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/runloop.md) |
-| Vercel Sandbox | [services/code-execution/vercel-sandbox.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/vercel-sandbox.md) |
+<div class="service-grid">
+  <article class="service-card atlas-visual--01">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Agent Sandbox</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/agent-sandbox.md">Open dossier ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--02">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">AIO Sandbox (agent-infra)</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/agent-infra-sandbox.md">Open dossier ↗</a>
+      <a href="https://github.com/agent-infra/sandbox">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card service-card--new atlas-visual--03">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>New · Last 30 days</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Axern</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/axern.md">Open dossier ↗</a>
+      <a href="https://github.com/cofy-x/axern">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--04">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">CodeRunner</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/coderunner.md">Open dossier ↗</a>
+      <a href="https://github.com/instavm/coderunner">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--05">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Daytona</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/daytona.md">Open dossier ↗</a>
+      <a href="https://github.com/daytonaio/daytona">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--06">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">E2B</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/e2b.md">Open dossier ↗</a>
+      <a href="https://github.com/e2b-dev/e2b">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--07">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">OpenSandbox</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/opensandbox.md">Open dossier ↗</a>
+      <a href="https://github.com/opensandbox-group/OpenSandbox">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--08">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Riza</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/riza.md">Open dossier ↗</a>
+      <a href="https://github.com/riza-io">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--09">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Runloop</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/runloop.md">Open dossier ↗</a>
+      <a href="https://github.com/runloopai/api-client-python">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--10">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Vercel Sandbox</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/vercel-sandbox.md">Open dossier ↗</a>
+      <a href="https://github.com/vercel/sandbox">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+</div>
+<nav class="collection-pagination" aria-label="Adjacent collections">
+  <a href="{{ '/categories/search-and-web-intelligence/' | relative_url }}"><small>Previous collection</small><strong>← Search & Web Intelligence</strong></a>
+  <a href="{{ '/categories/observability-and-tracing/' | relative_url }}"><small>Next collection</small><strong>Observability & Tracing →</strong></a>
+</nav>

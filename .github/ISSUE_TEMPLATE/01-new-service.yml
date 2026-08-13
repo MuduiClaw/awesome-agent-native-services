@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         ## Before you submit
-        - Read the [five hard criteria](../blob/main/CONTRIBUTING.md#the-five-hard-requirements) in CONTRIBUTING.md.
+        - Read the [qualification tracks](../blob/main/CONTRIBUTING.md#1-the-five-hard-criteria) in CONTRIBUTING.md.
         - Search [existing issues](../issues) and the [current list](../blob/main/README.md) to confirm this service is not already tracked.
         - If you are unsure whether the service qualifies, open this issue **before** writing a PR. Maintainers will give a go/no-go.
 
@@ -52,13 +52,28 @@ body:
         - Oversight & Approval Services
         - Commerce & Payment Services
         - Agent Runtime & Infrastructure Services
+        - Agent Harnesses & Operator Surfaces
         - Memory & State Services
         - Search & Web Intelligence Services
         - Code Execution Services
         - Observability & Tracing Services
         - Durable Execution & Scheduling Services
         - Meeting & Conversation Services
+        - Voice & Phone Services
+        - LLM Gateway & Routing Services
+        - Agent Social & Community Services
         - New category (explain below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: admission-track
+    attributes:
+      label: Admission track
+      description: "Use the operator-surface track only for products purpose-built to operate live AI agents."
+      options:
+        - Standard five-criteria track
+        - Operator-surface track
     validations:
       required: true
 
@@ -77,7 +92,7 @@ body:
     id: criterion-2
     attributes:
       label: "Criterion 2 — Agent-specific primitive"
-      description: "Describe the primitive(s) this service provides that have no meaningful human-facing equivalent."
+      description: "Standard track: describe agent-specific primitives. Operator track: describe live agent-specific state the surface interprets."
       placeholder: |
         Primitive: ...
         Why a human would not use this: ...
@@ -88,23 +103,25 @@ body:
     id: criterion-3
     attributes:
       label: "Criterion 3 — Autonomy-compatible control plane"
-      description: "How does the service let agents operate without per-action human confirmation? What are the constraint mechanisms?"
+      description: "Standard track: explain autonomous operation and constraints. Operator track: explain its operational role and state clearly whether it is read-only."
     validations:
       required: true
 
   - type: textarea
     id: criterion-4
     attributes:
-      label: "Criterion 4 — Machine-to-machine integration surface"
-      description: "What is the primary interface? (SDK, REST API, MCP, webhook, etc.) Is there a human-facing UI? Is it the primary or secondary surface?"
+      label: "Criterion 4 — Integration or operational surface"
+      description: "Standard track: describe SDK/API/MCP/webhook/structured CLI. Operator track: describe its dedicated CLI, wrapper, daemon, hook, or status-line protocol."
     validations:
       required: true
 
   - type: textarea
     id: criterion-5
     attributes:
-      label: "Criterion 5 — Agent identity / delegation semantics"
-      description: "If the service involves external actions, how does it distinguish agent identity, delegated user permissions, and audit trail? If it does not involve external actions, write N/A."
+      label: "Criterion 5 — Identity, attribution, and boundary"
+      description: "Standard track: describe agent identity, delegation, and audit. Operator track: show session/rollout attribution and disclose absent autonomy, enforcement, credentials, Skills, or MCP."
+    validations:
+      required: true
 
   - type: checkboxes
     id: bonus-signals
@@ -146,7 +163,8 @@ body:
       label: Classification
       description: "See CONTRIBUTING.md for definitions."
       options:
-        - agent-native (designed from inception for agents)
+        - agent-native (standard track)
+        - agent-native (operator-surface track)
         - agent-adapted (originally human-facing, agent interface added later)
         - agent-builder (for humans to build agents — not eligible for main list)
     validations:

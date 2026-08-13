@@ -1,19 +1,106 @@
 ---
-title: "Search And Web Intelligence | Agent-Native Services"
-description: "Agent-native search and web intelligence services with onboarding links, MCP status, and official references."
+title: "Search & Web Intelligence | Agent-Native Services"
+collection_label: "Search & Web Intelligence"
+description: "Search and retrieval interfaces shaped for context windows and machine reasoning."
 permalink: /categories/search-and-web-intelligence/
+page_kind: collection
+collection_number: "09"
+service_count: 8
 ---
 
-> Category source: [services/search-and-web-intelligence/README.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/README.md)
+<p class="collection-source"><a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/README.md">Collection notes ↗</a></p>
 
-## Services in this category
-
-| Service | Catalog Entry |
-|---|---|
-| Exa | [services/search-and-web-intelligence/exa.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/exa.md) |
-| Jina DeepSearch | [services/search-and-web-intelligence/jina-deepsearch.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/jina-deepsearch.md) |
-| Jina Reader | [services/search-and-web-intelligence/jina-reader.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/jina-reader.md) |
-| Linkup | [services/search-and-web-intelligence/linkup.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/linkup.md) |
-| NotHumanSearch | [services/search-and-web-intelligence/nothumansearch.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/nothumansearch.md) |
-| Parallel | [services/search-and-web-intelligence/parallel.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/parallel.md) |
-| Tavily | [services/search-and-web-intelligence/tavily.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/tavily.md) |
+<div class="service-grid">
+  <article class="service-card service-card--new atlas-visual--01">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>New · Last 30 days</span><span>agent-native</span></div>
+    <h2 class="service-card__title">contextX</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/contextx.md">Open dossier ↗</a>
+      <a href="https://github.com/KayanoLiam/ContextX">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--02">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Exa</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/exa.md">Open dossier ↗</a>
+      <a href="https://github.com/exa-labs/exa-py">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--03">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Jina DeepSearch</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/jina-deepsearch.md">Open dossier ↗</a>
+      <a href="https://github.com/jina-ai">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--04">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Jina Reader</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/jina-reader.md">Open dossier ↗</a>
+      <a href="https://github.com/jina-ai/reader">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--05">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Linkup</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/linkup.md">Open dossier ↗</a>
+      <a href="https://github.com/LinkupPlatform/python-sdk">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--06">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">NotHumanSearch</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/nothumansearch.md">Open dossier ↗</a>
+      <a href="https://github.com/modelcontextprotocol/registry">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--07">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Parallel</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/parallel.md">Open dossier ↗</a>
+      <a href="https://github.com/parallel-web/search-mcp">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--08">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Tavily</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/tavily.md">Open dossier ↗</a>
+      <a href="https://github.com/tavily-ai/tavily-python">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+</div>
+<nav class="collection-pagination" aria-label="Adjacent collections">
+  <a href="{{ '/categories/memory-and-state/' | relative_url }}"><small>Previous collection</small><strong>← Memory & State</strong></a>
+  <a href="{{ '/categories/code-execution/' | relative_url }}"><small>Next collection</small><strong>Code Execution →</strong></a>
+</nav>

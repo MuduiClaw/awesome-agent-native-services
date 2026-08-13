@@ -6,7 +6,7 @@ This file provides project context for AI agents (Cursor, Claude Code, Windsurf,
 
 ## What This Repo Is
 
-A curated list of **agent-native** services — infrastructure designed from inception for AI agents as first-class consumers. Not agent-adapted (human products with agent layers) or agent-builder (platforms for humans to build agents).
+A curated list of **agent-native** services — infrastructure designed from inception for AI agents as first-class consumers, plus a narrow track for purpose-built surfaces that operate live agent systems. Not agent-adapted (human products with agent layers) or agent-builder (platforms for humans to build agents).
 
 ---
 
@@ -70,7 +70,7 @@ See CONTRIBUTING.md §7 for the exact template.
 
 | Label | Meaning |
 |---|---|
-| `agent-native` | Designed for agents from inception — **only these in main list** |
+| `agent-native` | Designed for agents or purpose-built to operate live agent-native state — **only these in main list** |
 | `agent-adapted` | Human-facing first, agent layer added — Excluded section |
 | `agent-builder` | For humans to build agents — Excluded section |
 

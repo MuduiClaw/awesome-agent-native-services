@@ -2,15 +2,9 @@
 name: add-to-awesome-list
 description: >
   Guide a contributor through the full process of adding a new service to the
-  awesome-agent-native-services catalog: verifying criteria, checking for URL Onboarding
-  (the gold standard of agent-nativeness), opening an issue, writing the service file,
-  and submitting a PR. Use when "I want to add X to the list" or "how do I contribute?"
-license: CC0-1.0
-compatibility: Works with any agent that can read, write, and use git.
-metadata:
-  repo: https://github.com/haoruilee/awesome-agent-native-services
-  catalog-version: "2026-06-12"
-allowed-tools: WebSearch Read Write Shell
+  catalog: selecting the standard or operator-surface admission track, checking URL
+  Onboarding, opening an issue, writing the dossier, updating manifests, and preparing
+  a PR. Use for requests to add a service, harness, HUD, or operator surface.
 ---
 
 # Skill: add-to-awesome-list
@@ -19,7 +13,7 @@ Use this skill to walk a contributor through the complete process of adding a ne
 
 ## The most important thing to check first: URL Onboarding
 
-Before running through the five criteria, ask this one question:
+Before selecting an admission track, ask this one question:
 
 > **Can an agent join and start using this service by reading a single URL?**
 
@@ -59,18 +53,18 @@ Record the result for Phase 3's "How to Use" section.
 ### 1.1 Check for duplicates
 
 ```
-1. Read README.md — search for the service name in all 15 category sections.
+1. Read README.md — search for the service name in all 16 category sections.
 2. Search open issues: https://github.com/haoruilee/awesome-agent-native-services/issues?q=<service-name>
 3. If found: report the existing entry or issue URL and stop.
 ```
 
-### 1.2 Apply the five criteria
+### 1.2 Apply the correct admission track
 
 Use the `evaluate-agent-native` skill (or apply inline):
 
-For each criterion, find **evidence from the official homepage or docs** — direct quotes, not marketing copy.
+Use the standard five criteria for agent-consumed infrastructure. Use the narrow five-requirement operator-surface track only for products purpose-built to operate live AI agents. For every requirement, find **evidence from official sources**.
 
-If any criterion fails: tell the user which failed and what the correct classification is. Do not proceed.
+If any requirement in the selected track fails: tell the user which failed and what the correct classification is. Do not proceed.
 
 ### 1.3 Determine the category and interaction pattern
 
@@ -82,6 +76,7 @@ If any criterion fails: tell the user which failed and what the correct classifi
 | Human approval gates | `oversight-and-approval/` | SDK |
 | Agent wallets, payments, identity | `commerce-and-payments/` | SDK / REST |
 | Execution, secrets, identity, gateway | `agent-runtime-and-infrastructure/` | SDK |
+| Agent harness, control plane, Codex HUD, live operator surface | `agent-harnesses-and-control-planes/` | CLI / Hooks / MCP / Status line |
 | Per-agent memory | `memory-and-state/` | SDK / MCP |
 | Multi-agent shared memory / coordination | `memory-and-state/` | URL Onboarding ⭐ |
 | LLM-optimized search | `search-and-web-intelligence/` | Skill / MCP |
@@ -105,7 +100,7 @@ Required fields:
 - Service name and official website
 - Official tagline — exact quote from homepage
 - Proposed category
-- Criterion evidence — one field per criterion
+- Admission track and evidence — one field per requirement
 - **URL Onboarding instruction** — if available, provide the exact sentence
 - MCP status — is there a published MCP server?
 - Agent Skills status — is there a published SKILL.md?
@@ -244,13 +239,15 @@ What the agent gets by reading that URL: {full onboarding sequence, registration
 - **{title}** — {description}
 ```
 
+For an operator surface, keep a five-row evidence table but evaluate: agent-operations-first positioning, agent-specific live state, session attribution, dedicated operational surface, and an honest boundary around missing control, autonomy, or delegation.
+
 ### Research checklist
 
 - [ ] **URL Onboarding**: try `Read <url> and follow the instructions` — does it work?
 - [ ] **Official Website / Repo**: from GitHub or homepage
 - [ ] **Agent Skills**: check skills.sh, agentskills.io, service GitHub
 - [ ] **MCP**: check service GitHub, mcp.so, glama.ai/mcp, smithery.ai
-- [ ] **Why It Is Agent-Native**: direct quotes from official docs
+- [ ] **Why It Is Agent-Native**: direct official evidence for the selected admission track
 - [ ] **Protocol Surface**: check SDK README for install commands
 - [ ] **Use Cases**: from service's own documentation
 
@@ -310,7 +307,7 @@ git push origin add-{service-name}
 
 - [ ] All links are live
 - [ ] Official tagline is an exact quote
-- [ ] All criterion evidence cites a specific URL
+- [ ] All selected-track evidence cites a specific URL
 - [ ] "How to Use" section accurately describes the interaction pattern
 - [ ] URL Onboarding instruction tested and confirmed working (if applicable)
 - [ ] All 14 required sections present

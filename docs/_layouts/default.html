@@ -1,46 +1,105 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
     <meta charset="UTF-8">
-    {%- comment -%}
-      Short <title> for SEO (jekyll-seo-tag would duplicate page + site title, ~180+ chars).
-      Social cards still use og:title / twitter:title from page title via {% seo title=false %}.
-    {%- endcomment -%}
     {% seo title=false %}
-    <title>{{ site.seo_html_title | default: site.title | default: site.github.repository_name | escape }}</title>
+    {% if page.page_kind == "home" %}
+      <title>{{ site.seo_html_title | default: site.title | escape }}</title>
+    {% elsif page.title %}
+      <title>{{ page.title | escape }} — Agent-Native Index</title>
+    {% else %}
+      <title>{{ site.title | escape }}</title>
+    {% endif %}
     <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <meta name="theme-color" content="#151411">
+    <meta name="color-scheme" content="light">
+    {% if page.page_kind == "home" %}<link rel="preload" as="image" href="{{ '/assets/images/editorial-hero.webp' | relative_url }}" type="image/webp">{% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/catalog.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
   </head>
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
+  <body class="page-kind-{{ page.page_kind | default: 'document' }}">
+    <a id="skip-to-content" href="#content">Skip to the collection</a>
 
-    <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
+    <header class="site-masthead">
+      <div class="masthead-inner">
+        <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Agent-Native Index home">
+          <span class="wordmark-mark" aria-hidden="true">A/NS</span>
+          <span class="wordmark-name">The Agent-Native Index</span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="{{ '/' | relative_url }}#collections">Collections</a>
+          <a href="{{ '/' | relative_url }}#new-arrivals">New</a>
+          <a href="{{ '/' | relative_url }}#for-agents">Enter</a>
+          <a href="{{ site.github.repository_url | default: 'https://github.com/haoruilee/awesome-agent-native-services' }}">GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
     </header>
 
-    <main id="content" class="main-content" role="main">
-      {{ content }}
+    {% if page.page_kind == "home" %}
+      <section class="editorial-hero home-hero" aria-labelledby="page-title">
+        <figure class="hero-art" aria-hidden="true">
+          <img src="{{ '/assets/images/editorial-hero.webp' | relative_url }}" alt="" width="1536" height="1024" fetchpriority="high">
+        </figure>
+        <div class="hero-inner">
+          <p class="eyebrow">The Agent-Native Index · 08/26</p>
+          <h1 id="page-title">Built<br><em>for agents.</em></h1>
+          <p class="hero-deck">Native infrastructure. Curated monthly.</p>
+          <div class="hero-actions">
+            <a class="action-link action-link--primary" href="#collections">Explore</a>
+            <a class="action-link" href="#for-agents">Agent entry</a>
+          </div>
+          <dl class="edition-stats">
+            <div><dt>{{ page.service_count | default: '—' }}</dt><dd>Services</dd></div>
+            <div><dt>{{ page.collection_count | default: '—' }}</dt><dd>Collections</dd></div>
+            <div><dt>{{ page.new_arrivals_count | default: '—' }}</dt><dd>New / 30d</dd></div>
+          </dl>
+        </div>
+        <p class="hero-folio" aria-hidden="true">A/NS · {{ site.time | date: '%Y' }}</p>
+      </section>
+    {% elsif page.page_kind == "collection" %}
+      <section class="editorial-hero collection-hero" aria-labelledby="page-title">
+        <div class="collection-hero__art atlas-visual--{{ page.collection_number }}" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="{{ '/' | relative_url }}">Index</a><span aria-hidden="true">/</span><a href="{{ '/categories/' | relative_url }}">Collections</a>
+          </nav>
+          <p class="eyebrow">{{ page.collection_number | default: '—' }} · {{ page.service_count }}</p>
+          <h1 id="page-title">{{ page.collection_label | default: page.title }}</h1>
+          <p class="hero-deck">{{ page.description }}</p>
+        </div>
+        <p class="hero-folio" aria-hidden="true">{{ page.collection_number | default: 'A/NS' }}</p>
+      </section>
+    {% else %}
+      <section class="editorial-hero document-hero" aria-labelledby="page-title">
+        <figure class="document-hero__art" aria-hidden="true">
+          <img src="{{ '/assets/images/collection-atlas.webp' | relative_url }}" alt="" width="1254" height="1254" decoding="async">
+        </figure>
+        <div class="hero-inner">
+          <p class="eyebrow">The Agent-Native Index</p>
+          <h1 id="page-title">{{ page.title | default: site.title }}</h1>
+          {% if page.description %}<p class="hero-deck">{{ page.description }}</p>{% endif %}
+        </div>
+      </section>
+    {% endif %}
 
-      <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-        {% endif %}
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
-      </footer>
+    <main id="content" class="catalog-content">
+      {{ content }}
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-kicker">A living collection</p>
+          <p class="footer-statement">Native by design.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="{{ '/categories/' | relative_url }}">All collections</a>
+          <a href="{{ site.github.repository_url | default: 'https://github.com/haoruilee/awesome-agent-native-services' }}/blob/main/CONTRIBUTING.md">Criteria</a>
+          <a href="{{ site.github.repository_url | default: 'https://github.com/haoruilee/awesome-agent-native-services' }}">Source</a>
+        </nav>
+        <p class="footer-meta">Curated in public · CC0-1.0 · {{ site.time | date: '%Y' }}</p>
+      </div>
+    </footer>
   </body>
 </html>

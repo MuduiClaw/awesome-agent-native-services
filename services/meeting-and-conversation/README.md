@@ -22,6 +22,8 @@ Agent-native meeting services provide a unified API for bot lifecycle management
 | [Meeting BaaS](meeting-baas.md) | Meeting bots as a service — Zoom, Meet, Teams | REST API, Webhooks, TypeScript SDK, meeting-mcp | ✅ |
 | [MeetStream](meetstream.md) | Unified API for meeting bots, transcripts, and interactive AI agents | REST API, Webhooks, WebSockets | ⚠️ |
 | [Vexa](vexa.md) [![⭐](https://img.shields.io/github/stars/Vexa-ai/vexa?style=social)](https://github.com/Vexa-ai/vexa) | Open-source meeting transcription + interactive bot for Meet/Teams/Zoom | REST API, WebSocket, MCP server (17 tools), self-host | ✅ |
+| [Daily Agent Toolkit](daily-agent.md) [![⭐](https://img.shields.io/github/stars/daily-co/daily-python?style=social)](https://github.com/daily-co/daily-python) | Build realtime meeting agents on Daily | Programmatic room control, media stream hooks, bot orchestration | ⚠️ |
+| [Looped Meet](looped-meet.md) [![⭐](https://img.shields.io/github/stars/loopedautomation/meet?style=social)](https://github.com/loopedautomation/meet) | Self-hostable video meetings with first-class, full-duplex AI agent participants | TTY WebSocket/webhook brain bridge, LiveKit/WebRTC, HTTP routes, cal.com webhook | ❌ |
 
 
 ---

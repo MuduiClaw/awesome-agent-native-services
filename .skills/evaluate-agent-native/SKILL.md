@@ -1,21 +1,14 @@
 ---
 name: evaluate-agent-native
 description: >
-  Evaluate whether a service qualifies as "agent-native" using the five hard criteria
-  from the awesome-agent-native-services standard. Also checks for the bonus "URL Onboarding"
-  signal — the highest form of agent-nativeness where an agent joins the service by reading
-  one URL. Use when asked "is X agent-native?" or "should I add X to the list?"
-license: CC0-1.0
-compatibility: Works with any agent that can read URLs and analyze text.
-metadata:
-  repo: https://github.com/haoruilee/awesome-agent-native-services
-  catalog-version: "2026-06-12"
-allowed-tools: WebSearch Read
+  Evaluate catalog candidates against either the standard five agent-native criteria or
+  the narrow operator-surface track, and check URL Onboarding. Use when asked whether a
+  service, harness, HUD, status line, or control surface belongs in the catalog.
 ---
 
 # Skill: evaluate-agent-native
 
-Use this skill to rigorously evaluate whether a service qualifies as "agent-native" according to the five-criterion standard. Also check for the **URL Onboarding** signal — the strongest indicator that a service was truly built for agents from day one.
+Use this skill to select the correct admission track, collect primary-source evidence, and classify a candidate. Most services use the five-criterion standard. Purpose-built surfaces for operating live agents may use the narrow operator-surface track.
 
 ## The gold standard: URL Onboarding
 
@@ -59,9 +52,15 @@ Activate when the user asks:
 
 ---
 
-## The five hard criteria
+## Choose the admission track
 
-A service must pass **all five** to qualify as `agent-native`. Evaluate each one explicitly.
+Use the **standard track** for infrastructure an agent consumes or invokes. Use the **operator-surface track** only when the product's original and primary purpose is operating live AI agents.
+
+Do not use the exception for a generic dashboard, IDE skin, terminal theme, or process monitor that merely adds agent labels.
+
+## Standard track: five hard criteria
+
+A standard-track service must pass **all five**. Evaluate each one explicitly.
 
 ### Criterion 1 — Agent-First Positioning
 
@@ -114,6 +113,20 @@ A service must pass **all five** to qualify as `agent-native`. Evaluate each one
 
 ---
 
+## Operator-surface track
+
+An operator surface must pass **all five track requirements**:
+
+1. **Agent-operations-first:** Official positioning is explicitly about running or supervising AI agents.
+2. **Agent-specific live state:** It continuously interprets state such as rollout/session identity, context pressure, tools, subagents, permissions, Skills, MCP configuration, or quota windows.
+3. **Session attribution:** Displayed state maps to a concrete agent session, rollout, or typed agent path.
+4. **Dedicated operational surface:** It exposes a CLI, wrapper, daemon, hook, or status-line protocol purpose-built for agent operations.
+5. **Honest boundary:** It states when autonomy, machine APIs, delegated credentials, approval enforcement, Skills, or MCP are absent. Read-only observation must not be presented as orchestration or authorization.
+
+Session attach/list/stop controls strengthen the case but are not mandatory. An operator surface can be human-facing and read-only; that is the point of this narrow track.
+
+---
+
 ## Bonus signals (check all that apply)
 
 | Signal | Weight | Evidence to look for |
@@ -135,16 +148,15 @@ A service must pass **all five** to qualify as `agent-native`. Evaluate each one
 ## Classification decision tree
 
 ```
-Does the service pass all 5 criteria?
-├── YES → agent-native ✅
-│   └── Does it also have URL Onboarding?
-│       ├── YES → agent-native ⭐ (URL Onboarding — highest tier)
-│       └── NO  → agent-native (standard)
-└── NO
-    ├── Originally built for humans, agent interfaces added later?
-    │   └── YES → agent-adapted ⚠️
-    └── Helps humans BUILD agents?
-        └── YES → agent-builder ❌
+Is this infrastructure agents consume or invoke?
+├── YES → apply all five standard criteria
+│   └── PASS → agent-native (standard) ✅
+└── NO → was it purpose-built to operate live AI agents?
+    ├── YES → apply all five operator-surface requirements
+    │   └── PASS → agent-native (operator surface) ✅
+    └── NO → agent-adapted, agent-builder, or out of scope
+
+For either qualifying track, add ⭐ when URL Onboarding is real.
 ```
 
 ---
@@ -154,6 +166,7 @@ Does the service pass all 5 criteria?
 ```
 ## Evaluation: {Service Name}
 **Website:** {url}
+**Admission track:** Standard / Operator surface
 
 ### URL Onboarding Check ⭐
 **Has URL Onboarding:** YES / NO
@@ -183,6 +196,13 @@ Does the service pass all 5 criteria?
 **Result:** PASS / FAIL / PARTIAL / N/A
 **Evidence:** {identity model details}
 
+### Operator-Surface Track (complete instead of standard criteria when selected)
+1. Agent-operations-first — PASS / FAIL — {evidence}
+2. Agent-specific live state — PASS / FAIL — {evidence}
+3. Session attribution — PASS / FAIL — {evidence}
+4. Dedicated operational surface — PASS / FAIL — {evidence}
+5. Honest boundary — PASS / FAIL — {documented limitations}
+
 ---
 
 ### Bonus signals
@@ -196,7 +216,7 @@ Does the service pass all 5 criteria?
 ---
 
 ### Overall verdict
-**Classification:** agent-native ⭐ (URL Onboarding) / agent-native / agent-adapted / agent-builder
+**Classification:** agent-native ⭐ / agent-native (standard) / agent-native (operator surface) / agent-adapted / agent-builder / out of scope
 **Recommendation:** Add to main list / Add to Excluded section / Do not add
 **Confidence:** High / Medium / Low
 **Reasoning:** {one paragraph summary}
@@ -217,8 +237,12 @@ No. MCP support is a bonus signal, not a criterion. The core question is whether
 
 ### "The service has URL Onboarding but other criteria are weak."
 
-URL Onboarding is the strongest bonus signal but cannot substitute for the five hard criteria. Evaluate all five independently; URL Onboarding is an amplifier, not a replacement.
+URL Onboarding is the strongest bonus signal but cannot substitute for the selected admission track. It is an amplifier, not a replacement.
 
 ### "The service says 'for AI agents' in marketing."
 
 Check the actual primitives. URL Onboarding is a reliable signal because it requires genuine design effort — you can't fake it with a marketing blog post.
+
+### "It is a human-facing Codex HUD. Is that automatically excluded?"
+
+No. Apply the operator-surface track. A HUD qualifies only when it was purpose-built for live agents, interprets agent-specific runtime state, attributes it to concrete sessions, exposes a dedicated operational surface, and discloses its lack of control or delegated authority. A generic terminal dashboard still fails.

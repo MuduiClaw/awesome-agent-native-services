@@ -1,6 +1,6 @@
 # Awesome Agent-Native Services
 
-> A curated list of services designed from the ground up for AI agents — not adapted from human-facing products. Each service is infrastructure that an AI agent consumes, not a platform for humans to build agents with.
+> A curated list of infrastructure designed from the ground up for AI agents, plus a narrow class of purpose-built agent operator surfaces — not generic human products with an agent layer.
 
 This repository is itself agent-native. AI agents can discover services, evaluate whether a service qualifies, and contribute new entries using the skills and protocols defined here.
 
@@ -17,13 +17,13 @@ This repository is itself agent-native. AI agents can discover services, evaluat
 
 - [README](https://github.com/haoruilee/awesome-agent-native-services/blob/main/README.md): Full catalog index, category tables, and service summary
 - [GitHub Pages site](https://haoruilee.github.io/awesome-agent-native-services/): Same catalog as HTML with SEO metadata (title, description, Open Graph); built from `README.md` via Jekyll
-- [CONTRIBUTING.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/CONTRIBUTING.md): Five hard criteria, contribution workflow, service file format, PR rules
+- [CONTRIBUTING.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/CONTRIBUTING.md): Standard five-criteria and operator-surface qualification tracks, contribution workflow, service file format, PR rules
 
 ---
 
 ## Repository Structure
 
-- [services/](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services): 15 categories, each with `README.md` and per-service `.md` files (including [ClawHub](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/clawhub.md) under Tool Access & Integration)
+- [services/](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services): 172 services across 16 categories, each with `README.md` and per-service `.md` files (including [ClawHub](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/clawhub.md) under Tool Access & Integration)
 - [.skills/](https://github.com/haoruilee/awesome-agent-native-services/tree/main/.skills): Agent skills — `find-agent-service`, `evaluate-agent-native`, `add-to-awesome-list`
 - [.claude-plugin/marketplace.json](https://github.com/haoruilee/awesome-agent-native-services/blob/main/.claude-plugin/marketplace.json): Claude Code plugin marketplace entry for installing this repo as a skills source
 - [SKILLS_HUB.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/SKILLS_HUB.md): Claude Code, ClawHub/OpenClaw, and manual installation instructions for this repo
@@ -34,6 +34,32 @@ Self-hosted and P2P entries (full write-ups under `services/`):
 
 - [LycheeMem](https://github.com/LycheeMem/LycheeMem): Compact memory framework for LLM agents — REST + HTTP MCP + OpenClaw plugin
 - [AgentAnycast](https://github.com/AgentAnycast/agentanycast): P2P agent reachability without a public IP — SDKs, `agentanycastd` MCP, `uvx agentanycast-mcp`
+- [OpenAI Symphony](https://github.com/openai/symphony): Issue-to-implementation scheduler for isolated autonomous Codex workspaces — specification + Elixir reference implementation
+
+---
+
+## Catalog by Task
+
+The exhaustive service rows and onboarding commands are in [skill.md](https://raw.githubusercontent.com/haoruilee/awesome-agent-native-services/main/skill.md). Use this map to route a task to the right category; the final column highlights this catalog refresh.
+
+| # | Category | Count | Route tasks here for | Latest additions |
+|---:|---|---:|---|---|
+| 1 | [Communication](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/communication) | 13 | Agent email, inboxes, messaging identity | [Caspian](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/communication/caspian.md) |
+| 2 | [Browser & Web Execution](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/browser-and-web-execution) | 23 | Browser control, authenticated sessions, extraction | [Moli](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/moli.md) |
+| 3 | [Tool Access & Integration](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/tool-access-and-integration) | 15 | MCP, tool discovery, OAuth, execution | [OpenChatCut](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/openchatcut.md) |
+| 4 | [Oversight & Approval](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/oversight-and-approval) | 4 | Approval gates, policy, credential mediation | [Sallyport](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/oversight-and-approval/sallyport.md) |
+| 5 | [Commerce & Payments](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/commerce-and-payments) | 9 | Wallets, payments, financial authorization | [SecondSign Core](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/secondsign-core.md) |
+| 6 | [Agent Runtime & Infrastructure](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/agent-runtime-and-infrastructure) | 25 | Hosting, isolation, identity, production runtime | [OpenAI Symphony](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/openai-symphony.md) |
+| 7 | [Agent Harnesses & Operator Surfaces](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/agent-harnesses-and-control-planes) | 6 | Multi-agent control, durable loops, live agent operations | [OMX](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/oh-my-codex.md), [Ruflo](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/ruflo.md), [QM](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/qm.md), [LongHorizon-Harness](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/longhorizon-harness.md), [Codex HUD (fwyc0573)](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/codex-hud-fwyc0573.md), [Codex HUD (anhannin)](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/codex-hud-anhannin.md) |
+| 8 | [Memory & State](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/memory-and-state) | 15 | Persistent recall, knowledge, shared state | [Memmy](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memmy-agent.md) |
+| 9 | [Search & Web Intelligence](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/search-and-web-intelligence) | 8 | Agent search, retrieval, deep research | [contextX](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/contextx.md) |
+| 10 | [Code Execution](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/code-execution) | 10 | Sandboxed untrusted or generated code | [Axern](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/axern.md) |
+| 11 | [Observability & Tracing](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/observability-and-tracing) | 11 | Agent traces, evals, endpoint activity | [numbat](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/numbat.md) |
+| 12 | [Durable Execution & Scheduling](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/durable-execution-and-scheduling) | 7 | Checkpoints, retries, queues, long-running work | [pi-dispatch](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/durable-execution-and-scheduling/pi-dispatch.md) |
+| 13 | [Meeting & Conversation](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/meeting-and-conversation) | 6 | Agent participation in video meetings | [Looped Meet](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/meeting-and-conversation/looped-meet.md) |
+| 14 | [Voice & Phone](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/voice-and-phone) | 6 | Realtime voice, calls, telephony | [Qwen Audio Agent](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/voice-and-phone/qwen-audio-agent.md) |
+| 15 | [LLM Gateway & Routing](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/llm-gateway-and-routing) | 8 | Model routing, budgets, fallback, caching | [SageRoute](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/sageroute.md) |
+| 16 | [Agent Social & Community](https://github.com/haoruilee/awesome-agent-native-services/tree/main/services/agent-social-network) | 6 | Agent networks, collaboration, reputation | [Agent Chamber](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-social-network/agent-chamber.md) |
 
 ---
 
@@ -67,7 +93,7 @@ The plugin exposes the existing `.skills/` folders as namespaced skills. ClawHub
 | Skill | Command | Purpose |
 |---|---|---|
 | find-agent-service | `npx clawhub@latest install find-agent-service` | Find the right agent-native service for a task |
-| evaluate-agent-native | `npx clawhub@latest install evaluate-agent-native` | Evaluate whether a service meets the 5 criteria |
+| evaluate-agent-native | `npx clawhub@latest install evaluate-agent-native` | Evaluate the standard or operator-surface admission track |
 | add-to-awesome-list | `npx clawhub@latest install add-to-awesome-list` | Full contribution workflow: criteria → issue → PR |
 
 ---
@@ -89,4 +115,4 @@ The plugin exposes the existing `.skills/` folders as namespaced skills. ClawHub
 ## Optional
 
 - [Issue templates](https://github.com/haoruilee/awesome-agent-native-services/issues/new/choose): New service, update entry, flag service, new category
-- [Category list](https://github.com/haoruilee/awesome-agent-native-services#categories): Communication, Browser, Tool Access, Oversight, Commerce, Agent Runtime, Memory, Search, Code Execution, Observability, Durable Execution, Meeting, Voice, LLM Gateway, Agent Social
+- [Category list](https://github.com/haoruilee/awesome-agent-native-services#categories): Communication, Browser, Tool Access, Oversight, Commerce, Agent Runtime, Agent Harnesses & Operator Surfaces, Memory, Search, Code Execution, Observability, Durable Execution, Meeting, Voice, LLM Gateway, Agent Social

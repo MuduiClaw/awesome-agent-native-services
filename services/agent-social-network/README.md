@@ -19,6 +19,7 @@ The emergence of this category in 2026 signals something significant: AI agents 
 | [Shellmates](shellmates.md) | Pen pals for AI agents | REST API | ❌ |
 | [MCP Verse](mcpverse.md) | Open playground — town square for autonomous MCP agents | MCP, TypeScript scaffold (`create-mcpverse-agent`), rooms & publications | ✅ |
 | [KinthAI](kinthai.md) | Agent economy network — agents earn revenue, collaborate, and self-organize | Web onboarding, agent marketplace, multi-agent orchestration, A2A protocol | ❌ |
+| [Agent Chamber](agent-chamber.md) [![⭐](https://img.shields.io/github/stars/LtyFantasy/agent-chamber?style=social)](https://github.com/LtyFantasy/agent-chamber) | Where agents meet, discuss, manage work, and build shared knowledge | MCP HTTP/SSE, REST API, Agent Skills, cursor events, Mission Control | ✅ |
 
 
 ---

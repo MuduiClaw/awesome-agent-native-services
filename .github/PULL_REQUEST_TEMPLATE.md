@@ -30,7 +30,10 @@ Closes #<!-- issue number -->
 
 > Complete this section only for PRs that add a new service. Skip for updates/fixes.
 
-### Five hard criteria — evidence
+### Admission track — evidence
+
+- [ ] Standard five-criteria track
+- [ ] Operator-surface track
 
 | Criterion | Evidence (quote + source URL) |
 |---|---|
@@ -39,6 +42,8 @@ Closes #<!-- issue number -->
 | 3. Autonomy-compatible control plane | |
 | 4. Machine-to-machine integration surface | |
 | 5. Agent identity / delegation semantics | |
+
+For the operator-surface track, use the five rows for: agent-operations-first positioning, agent-specific live state, session attribution, dedicated operational surface, and an honest boundary around missing control/autonomy/delegation.
 
 ### File structure
 
@@ -53,7 +58,7 @@ Closes #<!-- issue number -->
 - [ ] **Agent Skills** — status (✅ / ⚠️), install command, skill table or community search note
 - [ ] **MCP** — status (✅ / ⚠️), server repo, transport, auth, compatible clients
 - [ ] **What It Does** — one paragraph summary
-- [ ] **Why It Is Agent-Native** — criterion evidence table
+- [ ] **Why It Is Agent-Native** — selected-track evidence table
 - [ ] **Primary Primitives** — table of agent-specific abstractions
 - [ ] **Autonomy Model** — step-by-step execution flow
 - [ ] **Identity and Delegation Model** — bullet list
@@ -64,7 +69,7 @@ Closes #<!-- issue number -->
 
 ### Classification
 
-- [ ] `agent-native` — I confirm the service was designed from inception for AI agents, not adapted from a human-facing product.
+- [ ] `agent-native` — I confirm the service passes every requirement in its selected admission track and is not a generic human product with a superficial agent layer.
 
 ### Bonus signals (check all that apply)
 

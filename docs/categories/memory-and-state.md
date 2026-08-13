@@ -1,26 +1,183 @@
 ---
-title: "Memory And State | Agent-Native Services"
-description: "Agent-native memory and state services with onboarding links, MCP status, and official references."
+title: "Memory & State | Agent-Native Services"
+collection_label: "Memory & State"
+description: "Persistent context, structured knowledge, and cross-session state owned by agents."
 permalink: /categories/memory-and-state/
+page_kind: collection
+collection_number: "08"
+service_count: 15
 ---
 
-> Category source: [services/memory-and-state/README.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/README.md)
+<p class="collection-source"><a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/README.md">Collection notes ↗</a></p>
 
-## Services in this category
-
-| Service | Catalog Entry |
-|---|---|
-| Cognee | [services/memory-and-state/cognee.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/cognee.md) |
-| Ensue | [services/memory-and-state/ensue.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/ensue.md) |
-| Hindsight | [services/memory-and-state/hindsight.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/hindsight.md) |
-| LLM Wiki | [services/memory-and-state/llm-wiki.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/llm-wiki.md) |
-| LycheeMem | [services/memory-and-state/lycheemem.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/lycheemem.md) |
-| Mem0 | [services/memory-and-state/mem0.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/mem0.md) |
-| mem9 | [services/memory-and-state/mem9.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/mem9.md) |
-| MemMachine | [services/memory-and-state/memmachine.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memmachine.md) |
-| Memoria | [services/memory-and-state/memoria.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memoria.md) |
-| MemOS | [services/memory-and-state/memos.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memos.md) |
-| memU | [services/memory-and-state/memu.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memu.md) |
-| OpenViking | [services/memory-and-state/openviking.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/openviking.md) |
-| Recall | [services/memory-and-state/recall.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/recall.md) |
-| Zep | [services/memory-and-state/zep.md](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/zep.md) |
+<div class="service-grid">
+  <article class="service-card atlas-visual--01">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Cognee</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/cognee.md">Open dossier ↗</a>
+      <a href="https://github.com/topoteretes/cognee">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--02">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Ensue</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/ensue.md">Open dossier ↗</a>
+      <a href="https://github.com/mutable-state-inc">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--03">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Hindsight</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/hindsight.md">Open dossier ↗</a>
+      <a href="https://github.com/vectorize-io/hindsight">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--04">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">LLM Wiki</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/llm-wiki.md">Open dossier ↗</a>
+      <a href="https://github.com/nvk/llm-wiki">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--05">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">LycheeMem</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/lycheemem.md">Open dossier ↗</a>
+      <a href="https://github.com/LycheeMem/LycheeMem">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--06">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Mem0</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/mem0.md">Open dossier ↗</a>
+      <a href="https://github.com/mem0ai/mem0">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--07">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">mem9</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/mem9.md">Open dossier ↗</a>
+      <a href="https://github.com/mem9-ai/mem9">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--08">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">MemMachine</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memmachine.md">Open dossier ↗</a>
+      <a href="https://github.com/MemMachine/MemMachine">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card service-card--new atlas-visual--09">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>New · Last 30 days</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Memmy</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memmy-agent.md">Open dossier ↗</a>
+      <a href="https://github.com/MemTensor/memmy-agent">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--10">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Memoria</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memoria.md">Open dossier ↗</a>
+      <a href="https://github.com/matrixorigin/Memoria">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--11">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">MemOS</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memos.md">Open dossier ↗</a>
+      <a href="https://github.com/MemTensor/MemOS">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--12">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">memU</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memu.md">Open dossier ↗</a>
+      <a href="https://github.com/NevaMind-AI/memU">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--13">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">OpenViking</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/openviking.md">Open dossier ↗</a>
+      <a href="https://github.com/volcengine/OpenViking">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--14">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Recall</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/recall.md">Open dossier ↗</a>
+      <a href="https://github.com/RecallWorks/Recall">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-visual--15">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Zep</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/zep.md">Open dossier ↗</a>
+      <a href="https://github.com/getzep/zep">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+</div>
+<nav class="collection-pagination" aria-label="Adjacent collections">
+  <a href="{{ '/categories/agent-harnesses-and-control-planes/' | relative_url }}"><small>Previous collection</small><strong>← Agent Harnesses & Operator Surfaces</strong></a>
+  <a href="{{ '/categories/search-and-web-intelligence/' | relative_url }}"><small>Next collection</small><strong>Search & Web Intelligence →</strong></a>
+</nav>

@@ -11,7 +11,7 @@ body:
         2. The category represents a meaningfully distinct agent-native problem domain.
         3. The category is not just a subcategory of an existing one.
 
-        Existing categories: Communication · Browser & Web Execution · Tool Access & Integration · Oversight & Approval · Commerce & Payment · Agent Runtime & Infrastructure · Memory & State · Search & Web Intelligence · Code Execution · Observability & Tracing · Durable Execution & Scheduling · Meeting & Conversation
+        Existing categories: Communication · Browser & Web Execution · Tool Access & Integration · Oversight & Approval · Commerce & Payment · Agent Runtime & Infrastructure · Agent Harnesses & Operator Surfaces · Memory & State · Search & Web Intelligence · Code Execution · Observability & Tracing · Durable Execution & Scheduling · Meeting & Conversation · Voice & Phone · LLM Gateway & Routing · Agent Social & Community
 
   - type: input
     id: category-name
@@ -41,7 +41,7 @@ body:
     id: service-1
     attributes:
       label: "Qualifying service #1"
-      description: "Provide the service name, website, and a brief argument for why it meets all five criteria."
+      description: "Provide the service name, website, and a brief argument for why it passes every requirement in its admission track."
     validations:
       required: true
 
@@ -49,7 +49,7 @@ body:
     id: service-2
     attributes:
       label: "Qualifying service #2"
-      description: "Provide the service name, website, and a brief argument for why it meets all five criteria."
+      description: "Provide the service name, website, and a brief argument for why it passes every requirement in its admission track."
     validations:
       required: true
 

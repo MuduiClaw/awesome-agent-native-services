@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Awesome Agent-Native Services">
-  <rect width="32" height="32" rx="6" fill="#157878"/>
-  <path fill="#fff" d="M8 10h3l2.2 8.2L16.2 10h2.8l2.8 8.2L24 10h3l-4.2 14h-3.2l-2.8-9.4L15 24h-3.2L8 10z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="32" fill="#151411"/>
+  <circle cx="32" cy="32" r="25.5" fill="none" stroke="#80602e" stroke-width="1"/>
+  <path d="M17 42 29.2 17h3.7L45 42h-5.3l-2.8-6.2H24.8L22 42Zm9.5-10h8.7L31 22.4Z" fill="#f3efe5"/>
+  <path d="M40.5 18h2L25 46h-2Z" fill="#b18a4f"/>
 </svg>
