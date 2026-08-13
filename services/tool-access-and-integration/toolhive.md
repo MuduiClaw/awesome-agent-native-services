@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Website** | https://toolhive.dev |
-| **Docs** | https://docs.toolhive.dev |
+| **Docs** | https://docs.stacklok.com |
 | **GitHub** | https://github.com/stacklok/toolhive-studio |
 | **Classification** | `agent-native` |
 | **Category** | [Tool Access & Integration Services](README.md) |
@@ -24,7 +24,7 @@ https://github.com/stacklok/toolhive-studio
 
 ---
 
-## ⭐ How to Use (Agent Onboarding)
+## How to Use (Agent Onboarding)
 
 ```bash
 brew tap stacklok/tap
@@ -34,7 +34,7 @@ thv --help
 
 Then discover and run MCP servers via `thv` runtime commands per docs.
 
-Docs: https://docs.toolhive.dev
+Docs: https://docs.stacklok.com
 
 ---
 

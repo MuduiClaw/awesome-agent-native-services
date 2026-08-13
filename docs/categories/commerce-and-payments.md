@@ -51,7 +51,6 @@ service_count: 9
     <h2 class="service-card__title">CyMetica AI (EventTrader)</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/cymetica-ai.md">Open dossier ↗</a>
-      <a href="https://github.com/eventtrader">Official repo ↗</a>
     </div>
     </div>
   </article>
@@ -84,7 +83,6 @@ service_count: 9
     <h2 class="service-card__title">Payman AI</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/payman-ai.md">Open dossier ↗</a>
-      <a href="https://github.com/PaymanAI/payman-node">Official repo ↗</a>
     </div>
     </div>
   </article>

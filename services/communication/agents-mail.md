@@ -23,7 +23,7 @@ Not publicly listed. Official onboarding is hosted at `skill.md` and `.well-know
 
 ---
 
-## ⭐ How to Use (Agent Onboarding)
+## How to Use (Agent Onboarding)
 
 Read:
 

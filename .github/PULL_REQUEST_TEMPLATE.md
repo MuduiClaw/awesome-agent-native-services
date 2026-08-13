@@ -55,6 +55,7 @@ For the operator-surface track, use the five rows for: agent-operations-first po
 
 - [ ] **Official Website** — canonical homepage URL
 - [ ] **Official Repo** — GitHub link(s)
+- [ ] **How to Use (Agent Onboarding)** — quickest machine-actionable entry point
 - [ ] **Agent Skills** — status (✅ / ⚠️), install command, skill table or community search note
 - [ ] **MCP** — status (✅ / ⚠️), server repo, transport, auth, compatible clients
 - [ ] **What It Does** — one paragraph summary

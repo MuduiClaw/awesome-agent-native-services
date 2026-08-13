@@ -26,6 +26,14 @@ https://github.com/NangoHQ/nango
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`$skills install @NangoHQ/sync-builder-skill`
+
+---
+
 ## Agent Skills
 
 Agent Skills are portable `SKILL.md` instruction sets following the [AgentSkills open standard](https://agentskills.io/) that teach AI coding assistants (Claude Code, Cursor, Codex, Windsurf, etc.) how to use this service correctly.

@@ -25,7 +25,7 @@ https://github.com/mem9-ai/mem9 — Open-source mem9 server and plugins
 
 ---
 
-## ⭐ How to Use (Agent Onboarding)
+## How to Use (Agent Onboarding)
 
 > **URL Onboarding — This service can be joined with a single sentence.**
 

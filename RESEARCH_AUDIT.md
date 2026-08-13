@@ -1,41 +1,65 @@
-# Research & Freshness Audit — 2026-06-12
+# Research & Freshness Audit — 2026-08-13
 
-This note records the latest broad review pass requested by maintainers. It is intentionally lightweight: the catalog remains issue-first for new service files, but this file captures high-signal ecosystem findings and freshness work already applied in this PR.
+This note records the latest catalog-wide research and freshness pass. New
+services remain issue-first; this file records the scope, evidence window, and
+maintenance work that was actually completed.
 
 ## Scope
 
-- Searched for high-signal, agent-native services and skill hubs with strong discussion or visible ecosystem adoption.
-- Reviewed the repository's current category coverage, generated-docs workflow, skill publishing workflow, and agent onboarding surfaces.
-- Prioritized updates that make the repository itself easier for coding agents to add as a source.
+- Reviewed official sources for candidates created, released, or materially
+  active from 2026-07-13 through 2026-08-13.
+- Reconciled the complete catalog inventory across `services/`, `README.md`,
+  `skill.md`, and `llms.txt`.
+- Audited website discovery, structured metadata, generated documentation,
+  machine-readable entry points, Skills publishing, and deployment workflows.
+- Rechecked the new Agent Harnesses & Operator Surfaces admission boundary,
+  including purpose-built Codex HUDs.
 
-## Applied updates
+## Applied catalog updates
 
-- Added a Claude Code-compatible plugin marketplace at `.claude-plugin/marketplace.json`, verified against Anthropic's official plugin marketplace documentation.
-- Added a Claude Code plugin manifest at `.claude-plugin/plugin.json` that exposes the existing `.skills/` folders without duplicating skill content.
-- Added `SKILLS_HUB.md` with Claude Code, ClawHub/OpenClaw, and manual `SKILL.md` installation instructions.
-- Updated the root README and `llms.txt` so agents can discover the repository as a skills source, not only as a Markdown catalog.
-- Refreshed stale category service counts in the root README.
-- Bumped skill metadata `catalog-version` values to `2026-06-12`.
+- Added 21 source-backed dossiers across existing collections and the new Agent
+  Harnesses & Operator Surfaces collection.
+- Added the latest-month collection with 20 in-window arrivals; the older
+  `anhannin/codex-hud` entry is intentionally included without a freshness badge.
+- Reconciled 172 service files across 16 collections and repaired orphaned or
+  duplicated index rows.
+- Updated category guidance to distinguish runtime substrates, durable harnesses,
+  and narrow live-agent operator surfaces.
+- Recorded licensing, pre-1.0, audit, authentication, identity, and durability
+  caveats where official sources exposed them.
 
-## High-signal ecosystem findings
+## Agent-native infrastructure audit
 
-These were reviewed as candidate hubs or sources. Some are already cataloged as first-class service entries (for example ClawHub); others are tracked as ecosystem hubs until a maintainer opens/approves a dedicated service issue.
+- Confirmed the public site was agent-readable through its homepage but lacked
+  same-origin `llms.txt` and `skill.md` endpoints before this update.
+- Added a versioned JSON catalog and JSON Schema as the deterministic ingestion
+  surface, while preserving Markdown dossiers as the editorial source material.
+- Added validation for inventory integrity, machine artifacts, local links,
+  generated pages, and public discovery endpoints.
+- Updated canonical, sitemap, robots, and machine-discovery metadata to the
+  `lihaorui.com/awesome-agent-native-services/` origin.
+- Tightened Skills publishing and deployment gates so failures cannot be silently
+  reported as successful.
 
-| Candidate | Signal observed | Current catalog action |
-|---|---|---|
-| Claude Code plugin marketplaces | Official Claude Code docs describe GitHub-hosted marketplaces that use `.claude-plugin/marketplace.json`, with users adding a source via `/plugin marketplace add owner/repo`, installing via `/plugin install`, and reloading with `/reload-plugins`. | Implemented this repo as a Claude Code marketplace and linked the official docs from the skills-hub instructions. |
-| ClawHub | Existing catalog entry and `.skills/` publish workflow; remains the canonical OpenClaw-style skill registry path for this repo. | Kept as first-class Tool Access & Integration entry and install path. |
-| MiniMax Skills | High-signal curated `SKILL.md` packs for coding agents; already tracked in Ecosystem Hubs. | Kept as ecosystem hub. |
-| Agensi | Marketplace for AI agent skills with paid/free downloads, security scanning, broad agent compatibility, and an MCP endpoint for agent-side discovery. | Added to Ecosystem Hubs / skill-hub pointers rather than a service file pending issue review. |
-| SkillsMP | Large public `SKILL.md` index with source/repository context and API access for analytics/search. | Added to Ecosystem Hubs / skill-hub pointers rather than a service file pending issue review. |
-| mdskills.ai | Community marketplace for skills, plugins, MCP servers, rules, and tools with CLI install flow and quality/security review. | Added to Ecosystem Hubs / skill-hub pointers rather than a service file pending issue review. |
-| sklz.city | MCP-native skill runtime and marketplace with import, augmentation, monetization, isolation, and security-review primitives. | Added to Ecosystem Hubs / skill-hub pointers rather than a service file pending issue review. |
-| SkillCrate | Vertical skill marketplace where each skill is a GitHub repo with `SKILL.md` and MCP server packaging for Amazon seller operations. | Added to Ecosystem Hubs / skill-hub pointers rather than a service file pending issue review. |
-| CryptoSkill | Crypto-focused registry of open-source skills and MCP servers for Claude Code, OpenClaw, Codex, and related agents. | Added to Ecosystem Hubs / skill-hub pointers rather than a service file pending issue review. |
+## Evidence and acceptance
+
+- Primary evidence came from official repositories, releases, documentation,
+  hosted protocol files, package metadata, and live endpoints.
+- Latest-month snapshots use 2026-08-13 UTC and are embedded in the affected
+  dossiers rather than inferred from this audit date.
+- Generated documentation must reproduce without diff; the public machine files
+  must pass schema/parser checks and deployment smoke tests.
+- Scheduled freshness automation treats this audit date as the catalog-wide
+  review watermark. It does not imply that every legacy claim was independently
+  reverified on this date.
 
 ## Freshness checklist for future passes
 
-1. Re-run `bash scripts/build-github-pages.sh && git diff --quiet -- docs/index.md docs/categories` after any README or `services/**` edit.
-2. Re-check services whose onboarding depends on volatile install commands (`npx`, `uvx`, hosted MCP URLs, Claude plugin marketplace commands).
-3. For newly found hubs, open an issue first unless the change is only an ecosystem pointer or obvious documentation fix.
-4. Treat skill-hub entries as boundary cases unless they provide a machine-to-machine runtime, registry API, MCP endpoint, or agent-installable source with clear provenance.
+1. Re-run the generator and contract validator after any catalog change.
+2. Re-check volatile onboarding commands, hosted MCP endpoints, releases, license
+   boundaries, and authentication requirements against official sources.
+3. Keep per-entry verification evidence explicit; do not convert this broad audit
+   date into a fabricated service-level `verified_at` value.
+4. Open an issue before admitting a new service or category unless the change is
+   an obvious factual or broken-link correction.
+5. Run a broad research pass before the freshness watermark exceeds 45 days.

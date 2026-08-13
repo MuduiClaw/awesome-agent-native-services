@@ -26,6 +26,14 @@ https://github.com/zenml-io/kitaru — Python SDK, CLI, MCP server, and framewor
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`pip install kitaru` — `@flow` / `@checkpoint` decorators
+
+---
+
 ## Agent Skills
 
 **Status:** ⚠️ No official skill published yet.

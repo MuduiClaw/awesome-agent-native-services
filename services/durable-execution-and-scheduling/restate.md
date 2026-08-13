@@ -32,6 +32,14 @@ https://github.com/restatedev/ai-examples — AI agent examples (A2A, MCP, durab
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`pip install restate-sdk` — wrap existing agent with 2-line middleware
+
+---
+
 ## Agent Skills
 
 **Status:** ⚠️ No official skill published by Restate yet.

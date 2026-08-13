@@ -24,7 +24,7 @@ https://github.com/cyberdesk-hq/cyberdesk
 
 ---
 
-## ⭐ How to Use (Agent Onboarding)
+## How to Use (Agent Onboarding)
 
 ```bash
 pip install cyberdesk

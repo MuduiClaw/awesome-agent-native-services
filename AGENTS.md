@@ -28,6 +28,8 @@ README.md              # Index: category tables, service summaries
 CONTRIBUTING.md        # Five criteria, workflow, service format
 skill.md               # Agent entry point — discover services by task
 llms.txt               # llms.txt spec — curated links for LLMs
+catalog.json            # Generated, versioned machine-readable catalog
+catalog.schema.json     # JSON Schema for catalog consumers and CI
 AGENTS.md              # This file
 services/
   {category}/          # e.g. communication/, memory-and-state/
@@ -82,6 +84,7 @@ Install via ClawHub:
 
 ```
 npx clawhub@latest install find-agent-service
+npx clawhub@latest install install-agent-service
 npx clawhub@latest install evaluate-agent-native
 npx clawhub@latest install add-to-awesome-list
 ```
@@ -95,7 +98,7 @@ ClawHub CLI options (including the China mirror): [clawhub/README.md](clawhub/RE
 Services an agent can join with one instruction:
 
 - **Moltbook**: `Read https://www.moltbook.com/skill.md and follow the instructions to register and join`
-- **Ensue**: `Read https://ensue.dev/docs and call POST https://api.ensue-network.ai/auth/agent-register`
+- **Ensue**: `Read https://raw.githubusercontent.com/mutable-state-inc/ensue-skill/main/skills/ensue-memory/SKILL.md and follow the instructions to connect`
 - **autoresearch@home**: `Read https://raw.githubusercontent.com/mutable-state-inc/autoresearch-at-home/master/collab.md and follow the instructions to join`
 - **db9**: `Read https://db9.ai/skill.md and follow the instructions`
 - **mem9**: `Read https://mem9.ai/skill.md and follow the instructions to register and join`
@@ -112,14 +115,16 @@ This is a **documentation-only** repository — there is no application server, 
 
 | Task | Command |
 |---|---|
-| Build docs from README | `bash scripts/build-github-pages.sh` |
+| Build all generated artifacts | `bash scripts/build-github-pages.sh && python3 scripts/build-machine-catalog.py` |
+| Validate the machine contract | `python3 scripts/build-machine-catalog.py --check` |
 | Start local site preview | `cd docs && bundle exec jekyll serve --host 0.0.0.0 --port 4000` |
-| Validate generated docs match committed (CI check) | `bash scripts/build-github-pages.sh && git diff --quiet -- docs/index.md docs/categories` |
+| Validate generated artifacts match committed | `bash scripts/build-github-pages.sh && python3 scripts/build-machine-catalog.py && git diff --exit-code` |
 
 ### Important notes
 
-- **CI validation workflow** (`validate-generated-docs.yml`) checks that `docs/index.md` and `docs/categories/*` match what `scripts/build-github-pages.sh` generates. If you modify `README.md` or `services/**`, you **must** re-run the build script and commit the updated docs.
-- The build script generates category pages by iterating over `services/*/` directories. File sort order depends on the filesystem locale, so generated category pages may show minor row-order differences compared to what CI produces on `ubuntu-latest`. This does not affect content correctness.
+- **CI validation workflow** (`validate-generated-docs.yml`) checks the catalog inventory, machine contract, local links, generated artifacts, and Jekyll build. If you modify `README.md`, `skill.md`, `llms.txt`, or `services/**`, regenerate and commit all affected artifacts.
+- The build scripts force deterministic ordering. Generated output must reproduce without a diff on Linux CI.
 - Jekyll emits a warning about missing GitHub API authentication when run locally (`No GitHub API authentication could be found`). This is harmless and does not affect site rendering.
 - `ffmpeg` is used by the build script to generate an Open Graph image (`docs/assets/images/social-preview.png`). It is pre-installed in the Cloud Agent VM. If missing, the script skips image generation gracefully.
-- There are no lint tools or test suites beyond the CI validation check above. "Linting" in this repo means verifying that generated docs are committed and all links are live.
+- GitHub Actions owns production deployment. Agents prepare source changes and PRs; they do not bypass required checks or directly mutate the deployed artifact.
+- If a deployed commit regresses discovery or rendering, revert that commit with `git revert <sha>` on a repair branch, validate locally, merge the repair PR, and confirm the Pages smoke-test job succeeds.

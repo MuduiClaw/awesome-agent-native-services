@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Website** | https://paymanai.com |
-| **Docs** | https://docs.paymanai.com |
+| **Docs** | https://paymanai.com/api-license |
 | **Classification** | `agent-native` |
 | **Category** | [Commerce & Payment Services](README.md) |
 | **Compliance** | SOC 2 Certified |
@@ -21,9 +21,19 @@ https://paymanai.com
 
 ## Official Repo
 
-https://github.com/PaymanAI/payman-node — Node.js / TypeScript SDK
+No current public official payment SDK repository is declared. Payman's current
+API license and product surface are published at https://paymanai.com/api-license . The former
+`PaymanAI/payman-node` and `PaymanAI/payman-python` URLs now return 404.
 
-https://github.com/PaymanAI/payman-python — Python SDK
+---
+
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+Review the current [Payman API license](https://paymanai.com/api-license), then
+request API access from Payman. No currently published official SDK package or
+public integration quickstart was verified in this audit.
 
 ---
 

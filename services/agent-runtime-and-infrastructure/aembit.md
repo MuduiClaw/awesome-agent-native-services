@@ -24,6 +24,14 @@ Documentation and integrations available via the Aembit developer portal. Core p
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+Configure Aembit access policy — agent requests JIT credentials at runtime, no code changes
+
+---
+
 ## Agent Skills
 
 **Status:** ⚠️ No official skill published by Aembit yet.

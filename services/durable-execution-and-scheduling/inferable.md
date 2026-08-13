@@ -4,8 +4,8 @@
 
 | | |
 |---|---|
-| **Website** | https://inferable.ai |
-| **Docs** | https://docs.inferable.ai |
+| **Website** | https://github.com/inferablehq/inferable |
+| **Docs** | Repository README and source tree |
 | **GitHub** | https://github.com/inferablehq/inferable |
 | **Classification** | `agent-native` |
 | **Category** | [Durable Execution & Scheduling](README.md) |
@@ -15,7 +15,8 @@
 
 ## Official Website
 
-https://inferable.ai
+The former hosted website and docs domains no longer resolve. Use the official
+open-source repository and its self-hosting material.
 
 ---
 

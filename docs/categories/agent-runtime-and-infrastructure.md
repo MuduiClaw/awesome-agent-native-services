@@ -72,7 +72,6 @@ service_count: 25
     <h2 class="service-card__title">Amazon Bedrock AgentCore</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/amazon-bedrock-agentcore.md">Open dossier ↗</a>
-      <a href="https://github.com/aws/aws-sdk-python">Official repo ↗</a>
     </div>
     </div>
   </article>

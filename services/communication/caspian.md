@@ -11,6 +11,7 @@
 | **Classification** | `agent-native` |
 | **Category** | [Communication Services](README.md) |
 | **Latest-month signal** | Repository created 2026-07-20; [`v0.1.2`](https://github.com/TryCaspian/caspian-sdk/releases/tag/v0.1.2) released 2026-07-21; [latest verified commit](https://github.com/TryCaspian/caspian-sdk/commit/56fdc8834af0d67385598ae16e7262cd75ead8a2) 2026-08-11 UTC |
+| **Verified at** | 2026-08-13 |
 | **License** | **The root repository is AGPL-3.0 according to its actual [`LICENSE`](https://github.com/TryCaspian/caspian-sdk/blob/main/LICENSE) and GitHub metadata, despite the root README's Apache-2.0 badge/text.** The [Python](https://github.com/TryCaspian/caspian-sdk/blob/main/sdks/python/LICENSE) and [TypeScript](https://github.com/TryCaspian/caspian-sdk/blob/main/sdks/typescript/LICENSE) SDK subdirectories separately carry MIT license files; verify the scope of the artifact you use. |
 
 ---

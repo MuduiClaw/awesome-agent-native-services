@@ -26,6 +26,14 @@ https://github.com/VapiAI/server-sdk-typescript — TypeScript SDK
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`pip install vapi-server-sdk` then `POST /assistant`
+
+---
+
 ## Agent Skills
 
 **Status:** ⚠️ No official skill published by Vapi yet.

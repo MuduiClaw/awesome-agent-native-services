@@ -1,23 +1,62 @@
-name: Validate generated docs
+name: Validate catalog and site
 
 on:
   pull_request:
   push:
     branches: [main]
 
-jobs:
-  check-generated-docs:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+permissions:
+  contents: read
 
-      - name: Regenerate docs artifacts
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-validation.txt
+
+      - name: Install validation dependencies
+        run: python3 -m pip install --requirement requirements-validation.txt
+
+      - name: Validate machine-readable catalog contract
+        run: python3 scripts/build-machine-catalog.py --check
+
+      - name: Regenerate rendered documentation
         run: bash scripts/build-github-pages.sh
 
-      - name: Ensure generated docs are committed
+      - name: Ensure generated artifacts are committed
         run: |
-          if ! git diff --quiet -- docs/index.md docs/categories; then
-            echo "Generated docs are out of date. Please run: bash scripts/build-github-pages.sh"
-            git --no-pager diff -- docs/index.md docs/categories
+          set -euo pipefail
+          if [[ -n "$(git status --porcelain --untracked-files=all)" ]]; then
+            echo "::error::Generated artifacts are stale. Run both generators:"
+            echo "  python3 scripts/build-machine-catalog.py"
+            echo "  bash scripts/build-github-pages.sh"
+            git --no-pager diff
             exit 1
           fi
+
+      - name: Check local links and catalog inventory
+        run: python3 scripts/check-repository-health.py --local
+
+      - name: Build Jekyll site
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          destination: ./_site
+          future: false
+
+      - name: Validate built agent endpoints
+        run: python3 scripts/check-repository-health.py --site-dir _site

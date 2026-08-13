@@ -12,6 +12,7 @@
 | **Category** | [Agent Runtime & Infrastructure Services](README.md) |
 | **License** | Apache-2.0 |
 | **Latest-month signal** | v0.0.2 released 2026-07-24; 26,543 stars and active on 2026-08-12 (snapshot 2026-08-13) |
+| **Verified at** | 2026-08-13 |
 
 ---
 

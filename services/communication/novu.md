@@ -29,6 +29,14 @@ https://github.com/novuhq/skills — Official Agent Skills
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`npx skills add novuhq/skills`
+
+---
+
 ## Agent Skills
 
 **Status:** ✅ Official skills published at [`novuhq/skills`](https://github.com/novuhq/skills)

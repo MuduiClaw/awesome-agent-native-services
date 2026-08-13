@@ -25,6 +25,14 @@ https://github.com/agentmail-to
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`pip install agentmail` then `POST /inboxes`
+
+---
+
 ## Agent Skills
 
 Agent Skills are portable `SKILL.md` instruction sets following the [AgentSkills open standard](https://agentskills.io/) that teach AI coding assistants (Claude Code, Cursor, Codex, Windsurf, etc.) how to use this service correctly.

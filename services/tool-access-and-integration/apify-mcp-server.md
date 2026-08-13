@@ -16,6 +16,16 @@ https://apify.com
 ## Official Repo
 https://github.com/apify/apify-mcp-server
 
+---
+
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+Connect the official remote MCP endpoint following the [repository README](https://github.com/apify/apify-mcp-server)
+
+---
+
 ## Agent Skills
 **Status:** ⚠️ No dedicated AgentSkills package found.
 

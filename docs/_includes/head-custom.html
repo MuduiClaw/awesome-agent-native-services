@@ -1,6 +1,10 @@
 <meta name="robots" content="index, follow">
 <meta name="keywords" content="AI agents, agent-native services, agent harness, MCP servers, model context protocol, agent infrastructure, autonomous agents">
 <meta name="application-name" content="The Agent-Native Index">
+<link rel="alternate" type="text/plain" href="{{ '/llms.txt' | relative_url }}" title="LLM-readable index">
+<link rel="alternate" type="text/markdown" href="{{ '/skill.md' | relative_url }}" title="Agent service discovery skill">
+<link rel="alternate" type="application/json" href="{{ '/catalog.json' | relative_url }}" title="Machine-readable service catalog">
+<link rel="describedby" type="application/schema+json" href="{{ '/catalog.schema.json' | relative_url }}" title="Service catalog schema">
 {% if page.page_kind == "home" %}
 {% assign collection_pages = site.pages | where: "page_kind", "collection" | sort: "collection_number" %}
 <script type="application/ld+json">

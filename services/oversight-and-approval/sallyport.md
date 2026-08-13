@@ -11,6 +11,7 @@
 | **Classification** | `agent-native` |
 | **Category** | [Oversight & Approval Services](README.md) |
 | **Latest-month signal** | Repository created 2026-07-14; [`v0.8.16`](https://github.com/OlegSotnikov/sallyport/releases/tag/v0.8.16) released 2026-07-17; [latest verified commit](https://github.com/OlegSotnikov/sallyport/commit/22a457f956fc83219968a2b37ac4a232cbdce594) 2026-07-19 UTC |
+| **Verified at** | 2026-08-13 |
 | **Status** | Free Apache-2.0 Mac app; Apple Silicon and macOS 14+ only |
 
 ---

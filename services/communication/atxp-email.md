@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Website** | https://atxp.email/ |
-| **Docs** | https://docs.atxp.dev |
+| **Docs** | https://docs.atxp.ai |
 | **GitHub** | https://github.com/atxp-dev |
 | **Classification** | `agent-native` |
 | **Category** | [Communication Services](README.md) |
@@ -24,7 +24,7 @@ https://github.com/atxp-dev
 
 ---
 
-## ⭐ How to Use (Agent Onboarding)
+## How to Use (Agent Onboarding)
 
 `Read https://atxp.email/ and follow the docs to create an agent inbox via CLI/API.`
 

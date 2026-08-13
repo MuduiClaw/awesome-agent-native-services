@@ -30,6 +30,14 @@ https://github.com/getzep/zep-js — TypeScript SDK
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`pip install zep-python` then `zep.add_session_message(...)`
+
+---
+
 ## Agent Skills
 
 **Status:** ⚠️ No official skill published by Zep yet.

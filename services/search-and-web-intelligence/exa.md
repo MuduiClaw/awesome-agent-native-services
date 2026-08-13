@@ -28,6 +28,14 @@ https://github.com/exa-labs/exa-mcp-server — Official MCP server
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`pip install exa-py` then `exa.search(query)`
+
+---
+
 ## Agent Skills
 
 Agent Skills are portable `SKILL.md` instruction sets following the [AgentSkills open standard](https://agentskills.io/) that teach AI coding assistants (Claude Code, Cursor, Codex, Windsurf, etc.) how to use this service correctly.

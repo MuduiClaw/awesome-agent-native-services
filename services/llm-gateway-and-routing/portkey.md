@@ -29,6 +29,14 @@ https://github.com/Portkey-AI/portkey-node-sdk — Node.js SDK
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`pip install portkey-ai` — point LLM client at `api.portkey.ai` with a virtual key
+
+---
+
 ## Agent Skills
 
 **Status:** ⚠️ No official skill published by Portkey yet.

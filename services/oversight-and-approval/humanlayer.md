@@ -25,6 +25,14 @@ https://github.com/humanlayer/humanlayer
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`pip install humanlayer` then decorate high-risk functions with `@hl.require_approval()`
+
+---
+
 ## Agent Skills
 
 Agent Skills are portable `SKILL.md` instruction sets following the [AgentSkills open standard](https://agentskills.io/) that teach AI coding assistants (Claude Code, Cursor, Codex, Windsurf, etc.) how to use this service correctly.

@@ -4,8 +4,8 @@
 
 | | |
 |---|---|
-| **Website** | https://mcpverse.org |
-| **Docs** | https://mcpverse.org/docs |
+| **Website** | Offline — former domain no longer resolves |
+| **Docs** | Offline — no verified replacement |
 | **GitHub** | N/A (verify vendor repo if publishing open source) |
 | **Classification** | `agent-native` |
 | **Category** | [Agent Social & Community Services](README.md) |
@@ -14,29 +14,28 @@
 
 ## Official Website
 
-https://mcpverse.org
-
-**Note:** The docs host has returned intermittent errors from some networks; if `mcpverse.org` fails, retry later or use the project’s Discord/community links from the site when available.
+The previously listed `mcpverse.org` website and documentation host no longer
+resolve. No replacement official domain has been verified.
 
 ---
 
 ## Official Repo
 
-No canonical public GitHub repository identified in this catalog entry. Agents integrate via **documented APIs** and the **`create-mcpverse-agent`** scaffold — see https://mcpverse.org/docs .
+No canonical public GitHub repository is currently identified. This entry is
+retained for historical discovery, but its former onboarding surface is offline.
 
 ---
 
 ## How to Use (Agent Onboarding)
 
-**SDK / CLI — scaffold a TypeScript agent and connect to shared rooms and publications.**
-
-Per public documentation (as indexed in early 2026):
+**Status:** ⚠️ Former onboarding is currently unavailable. The historical CLI was:
 
 ```bash
 npx create-mcpverse-agent my-bot
 ```
 
-Follow **Getting Started** on https://mcpverse.org/docs for authentication, messaging, publishing, and tool calls.
+Do not install or execute an unverified package solely from this historical
+command. Wait for a verified official domain or repository before connecting.
 
 ---
 
@@ -48,7 +47,8 @@ Follow **Getting Started** on https://mcpverse.org/docs for authentication, mess
 
 ## MCP
 
-**Status:** ✅ MCP Verse is **MCP-native** — autonomous agents participate through the **Model Context Protocol** as the interaction fabric (per project positioning).
+**Status:** ❌ Unavailable. The historical product was positioned as MCP-native,
+but no live official MCP endpoint or current configuration surface is verified.
 
 ---
 

@@ -19,7 +19,14 @@ https://nothumansearch.ai
 
 ---
 
-## Agent Onboarding (URL Onboarding)
+## Official Repo
+
+No public official source repository is currently declared. The public machine
+surfaces are the hosted OpenAPI document, `llms.txt`, REST API, and MCP endpoint.
+
+---
+
+## How to Use (Agent Onboarding)
 
 Point any agent at the `llms.txt` to discover capabilities, primitives, and the MCP endpoint in one fetch:
 
@@ -28,6 +35,14 @@ Read https://nothumansearch.ai/llms.txt and follow the instructions.
 ```
 
 No account, no SDK install, no dashboard click — the agent reads the onboarding doc and can begin calling the search, scoring, and verification tools immediately.
+
+---
+
+## Agent Skills
+
+**Status:** ⚠️ No separate official `SKILL.md` package is published. The hosted
+`llms.txt` is the official machine-readable onboarding surface and the MCP server
+provides the executable tool contract.
 
 ---
 
@@ -78,18 +93,6 @@ Where general web search returns HTML pages written for humans, NHS returns a ra
 
 ---
 
-## Why This Is Different from Generic Web Search
-
-| Alternative | Why It Is Not Sufficient for Agents |
-|---|---|
-| **Google / Bing Search API** | Indexes HTML for human readers; no filter for agent-readiness; `agentic_score` concept does not exist; results require HTML parsing before LLM use |
-| **Exa / Tavily / Jina Reader** | Return LLM-ready *web content*, but the corpus is the whole human web — not curated to sites that expose `llms.txt`, MCP, or structured APIs |
-| **Awesome-lists of MCP servers** | Static, human-maintained, not searchable over HTTP, no scoring, no live verification |
-
-NHS is to the agent web what DNS is to the human web — a discovery layer whose sole job is returning *working, agent-usable endpoints*.
-
----
-
 ## Autonomy Model
 
 1. Agent reads `https://nothumansearch.ai/llms.txt` to discover endpoints
@@ -122,6 +125,18 @@ NHS is to the agent web what DNS is to the human web — a discovery layer whose
 ## Human-in-the-Loop Support
 
 None required for search, check, or verify. Site submission is automated; curation rejections (sites without real agent signals) are also automated.
+
+---
+
+## Why Generic Alternatives Do Not Qualify
+
+| Alternative | Why It Is Not Sufficient for Agents |
+|---|---|
+| **Google / Bing Search API** | Indexes HTML for human readers; no filter for agent-readiness; `agentic_score` concept does not exist; results require HTML parsing before LLM use |
+| **Exa / Tavily / Jina Reader** | Return LLM-ready *web content*, but the corpus is the whole human web — not curated to sites that expose `llms.txt`, MCP, or structured APIs |
+| **Awesome-lists of MCP servers** | Static, human-maintained, not searchable over HTTP, no scoring, no live verification |
+
+NHS is to the agent web what DNS is to the human web — a discovery layer whose sole job is returning *working, agent-usable endpoints*.
 
 ---
 

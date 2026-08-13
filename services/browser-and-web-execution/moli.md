@@ -11,6 +11,7 @@
 | **Classification** | `agent-native` |
 | **Category** | [Browser & Web Execution](README.md) |
 | **Latest-month signal** | Repository created 2026-08-10; [`v0.1.1`](https://github.com/lexmount/moli/releases/tag/v0.1.1) released 2026-08-11; [latest verified commit](https://github.com/lexmount/moli/commit/a7c1eb0b42ce65303a2b554fdf0189016b9bd4b6) 2026-08-12 UTC |
+| **Verified at** | 2026-08-13 |
 | **Status** | Open-source engine; Apache-2.0 or MIT at the user's option; managed Lexmount Browser control plane is separate |
 
 ---

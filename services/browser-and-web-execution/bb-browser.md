@@ -30,6 +30,14 @@ https://github.com/epiral/bb-sites — Community adapter registry (one JS file p
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`npm install -g bb-browser` + Chrome extension, then `bb-browser site <platform>/<cmd>`
+
+---
+
 ## Agent Skills
 
 **Status:** ✅ Available on ClawHub

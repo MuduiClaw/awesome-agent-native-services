@@ -9,7 +9,7 @@ license: CC0-1.0
 compatibility: Works with Claude Code plugin skills, ClawHub/OpenClaw skills, and agents that can read SKILL.md.
 metadata:
   repo: https://github.com/haoruilee/awesome-agent-native-services
-  catalog-version: "2026-07-06"
+  catalog-version: "2026-08-13"
 allowed-tools: WebSearch Read Bash
 ---
 

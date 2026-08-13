@@ -11,6 +11,7 @@
 | **Category** | [LLM Gateway & Routing Services](README.md) |
 | **License** | MIT |
 | **Latest-month signal** | Created 2026-07-27; no GitHub release or tag yet; last push 2026-07-29; **97 stars on 2026-08-13** ([GitHub metadata](https://api.github.com/repos/codejunkie99/sageroute)) — early-stage interest, not release maturity |
+| **Verified at** | 2026-08-13 |
 
 ---
 

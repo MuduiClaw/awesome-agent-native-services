@@ -1,5 +1,5 @@
 ---
-name: find-agent-native-service
+name: find-agent-service
 description: >
   Read this file to discover agent-native services and purpose-built operator
   surfaces for live agents. Use the catalog to find services by task, understand
@@ -60,7 +60,7 @@ These services can be joined with a single instruction, right now, with no human
 | Service | What You Get | Onboarding Instruction |
 |---|---|---|
 | **Moltbook** | Agent social network: post, comment, vote, DM, build karma | `Read https://www.moltbook.com/skill.md and follow the instructions to register and join` |
-| **Ensue** | Shared memory network: register, claim experiments, publish hypotheses | `Read https://ensue.dev/docs and call POST https://api.ensue-network.ai/auth/agent-register` |
+| **Ensue** | Shared memory network: register, claim experiments, publish hypotheses | `Read https://raw.githubusercontent.com/mutable-state-inc/ensue-skill/main/skills/ensue-memory/SKILL.md and follow the instructions` |
 | **autoresearch@home** | Collaborative research swarm: join, claim tasks, publish results | `Read https://raw.githubusercontent.com/mutable-state-inc/autoresearch-at-home/master/collab.md and follow the instructions to join` |
 | **db9** | Serverless Postgres for agents: SQL, filesystem, vector search, HTTP-from-SQL | `Read https://db9.ai/skill.md and follow the instructions` |
 | **mem9** | Cloud-persistent memory for agents: hybrid search, lifecycle hooks | `Read https://mem9.ai/skill.md and follow the instructions to register and join` |
@@ -133,14 +133,14 @@ These services can be joined with a single instruction, right now, with no human
 | [Composio](https://composio.dev) | The tool platform built for agents | `npx skills add composiohq/skills` |
 | [Nango](https://nango.dev) | OAuth and credential layer for AI agents | `$skills install @NangoHQ/sync-builder-skill` |
 | [Toolhouse](https://toolhouse.ai) | BaaS for AI agents — tools, memory, and execution | `npm install -g toolhouse` → `th deploy` |
-| [Smithery](https://smithery.ai) | MCP registry — thousands of remote MCP servers & skills | `npx @smithery/cli@latest setup` — [docs.smithery.ai](https://docs.smithery.ai/) |
+| [Smithery](https://smithery.ai) | MCP registry — thousands of remote MCP servers & skills | `npx @smithery/cli@latest setup` — [Smithery docs](https://smithery.ai/docs) |
 | [MCP Gateway](https://mcpgateway.com) | Enterprise MCP — tools, skills, sandboxes, one API | `pip install mcpgateway-sdk` — [mcpgateway.com](https://mcpgateway.com) |
 | [ClawHub](https://claw-hub.net/) | OpenClaw skill marketplace — vector search, versioning, CLI | `npx clawhub@latest search <topic>` — [services/tool-access-and-integration/clawhub.md](services/tool-access-and-integration/clawhub.md) |
 | [Arcade](https://www.arcade.dev) | MCP tools with managed OAuth | `uv tool install arcade-mcp` → `arcade new my_server` — [docs.arcade.dev](https://docs.arcade.dev) |
 | [Framelink MCP for Figma](https://www.framelink.ai) | Give your coding agent access to your Figma data | `npx -y figma-developer-mcp --figma-api-key=… --stdio` — [quickstart](https://www.framelink.ai/docs/quickstart) |
 | [GitHub MCP Server](https://github.com/github/github-mcp-server) | AI agents read repos, issues, PRs, Actions via MCP | Remote: `https://api.githubcopilot.com/mcp/` — [README](https://github.com/github/github-mcp-server) |
 | [MCP Toolbox for Databases](https://mcp-toolbox.dev/) | MCP server for enterprise databases (Google) | `npx -y @toolbox-sdk/server --prebuilt=postgres` + env — [docs](https://mcp-toolbox.dev/) |
-| [ToolHive](https://toolhive.dev) | Secure runtime and gateway for MCP servers | Follow [docs.toolhive.dev](https://docs.toolhive.dev) to install and run MCP servers |
+| [ToolHive](https://toolhive.dev) | Secure runtime and gateway for MCP servers | Follow the [Stacklok docs](https://docs.stacklok.com) to install and run MCP servers |
 | [Obot](https://github.com/obot-platform/obot) | MCP gateway and tool runtime for agents | Deploy Obot and register/connect MCP servers |
 | [Snyk Agent Scan](https://github.com/snyk/agent-scan) | Scan agent tools and MCP configurations for risk | Install the CLI from the repo and scan the target agent configuration |
 | [OpenChatCut](https://github.com/0xsline/OpenChatCut) | Local-first agent-native video editor | `npx skills add 0xsline/OpenChatCut`, then ask the agent to set it up |
@@ -166,8 +166,8 @@ These services can be joined with a single instruction, right now, with no human
 |---|---|---|
 | [Circle Agent Stack](https://developers.circle.com/agent-stack) | Financial infrastructure for the agentic economy | Read the official Agent Stack docs and follow the quickstart |
 | [CyMetica AI](https://cymetica.com) | Autonomous agent trading and prediction markets | Read `https://cymetica.com/.well-known/agent.json` and `/.well-known/mcp.json` |
-| [OpenLibx402](https://openlibx402.xyz) | Open-source AI-native x402 integrations | Install the Python or Node SDK from [openlibx402/openlibx402](https://github.com/openlibx402/openlibx402) |
-| [Payman AI](https://paymanai.com) | Agentic AI that does the banking. Under your control. | `npm install @paymanai/payman-node` → `client_credentials` OAuth |
+| [OpenLibx402](https://github.com/openlibx402/openlibx402) | Open-source AI-native x402 integrations | Install the Python or Node SDK from [openlibx402/openlibx402](https://github.com/openlibx402/openlibx402) |
+| [Payman AI](https://paymanai.com) | Agentic AI that does the banking. Under your control. | Review the [current API license](https://paymanai.com/api-license), then request API access; no current public SDK was verified |
 | [Skyfire](https://skyfire.xyz) | Identity and payments for autonomous AI agents | Register at skyfire.xyz/product → agent wallet + KYA token |
 | [AgentsPay](https://agentspay.dev) | Crypto identity and embedded wallets for AI agents | Provision wallet at agentspay.dev → MCP-native gateway |
 | [Nevermined](https://nevermined.io) | The payment layer AI agents actually need | `pip install payments-py` → x402 inline payments |
@@ -182,7 +182,7 @@ These services can be joined with a single instruction, right now, with no human
 | Service | Tagline | Onboarding |
 |---|---|---|
 | [agentOS by Fiserv](https://www.fiserv.com/en/lp/agentos-by-fiserv.html) | Governed operating layer for banking agents | Start at the official agentOS page |
-| [ATXP](https://atxp.dev) | Wallet and paid MCP runtime for AI agents | Follow [docs.atxp.dev](https://docs.atxp.dev) for CLI, SDK, and MCP setup |
+| [ATXP](https://atxp.ai) | Wallet and paid MCP runtime for AI agents | Follow [ATXP docs](https://docs.atxp.ai) for CLI, SDK, and MCP setup |
 | [Claude Peers](https://github.com/louislva/claude-peers-mcp) | Local MCP + broker — Claude Code sessions discover peers and message ad-hoc | Clone → `bun install` → `claude mcp add` (see repo README) |
 | [acpx](https://github.com/openclaw/acpx) | Headless ACP CLI — agents talk to coding agents over structured protocol | `npm install -g acpx` → `acpx codex "fix the tests"` |
 | [Codex plugin for Claude Code](https://github.com/openai/codex-plugin-cc) | Claude Code plugin — delegate Codex reviews and rescue work via slash commands | `/plugin marketplace add openai/codex-plugin-cc` → `/plugin install codex@openai-codex` → `/codex:setup` (see repo README) |
@@ -233,7 +233,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Recall](https://www.recall.works) | Open-source memory for AI agents. MCP-native. Self-hosted. | `uvx ai-recallworks stdio` |
 | [Mem0](https://mem0.ai) | The memory layer for your AI agents | `pip install mem0ai` → `m.add(messages, user_id=...)` |
 | [Zep](https://getzep.com) | Agent memory powered by a temporal knowledge graph | `pip install zep-python` → `zep.add_session_message(...)` |
-| [Ensue](https://ensue.dev) ⭐ | The shared memory network for AI agents | `Read https://ensue.dev/docs and call POST /auth/agent-register` |
+| [Ensue](https://ensue.dev) ⭐ | The shared memory network for AI agents | `Read https://raw.githubusercontent.com/mutable-state-inc/ensue-skill/main/skills/ensue-memory/SKILL.md and follow the instructions` |
 | [OpenViking](https://github.com/volcengine/OpenViking) | The context database for AI agents | `pip install openviking` → `openviking-server` → MCP at `localhost:8000/mcp` |
 | [MemOS](https://github.com/MemTensor/MemOS) | A memory OS for LLM and AI agent systems | `pip install memos-core` → `memory.add(...)` |
 | [memU](https://github.com/NevaMind-AI/memU) | Memory for 24/7 proactive AI agents | `pip install memu` → continuous stream monitoring |
@@ -255,7 +255,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Jina DeepSearch](https://jina.ai/deepsearch) | Agentic search and deep research API | Follow the official DeepSearch API docs |
 | [Tavily](https://tavily.com) | Connect your agent to the web | `npx skills add tavily-ai/skills` |
 | [Exa](https://exa.ai) | The search engine designed for AI | `pip install exa-py` → `exa.search(query)` |
-| [Parallel](https://www.parallel.ai) | Web APIs purpose-built for AIs | `pip install parallel-web` — MCP: [parallel-web/search-mcp](https://github.com/parallel-web/search-mcp) |
+| [Parallel](https://www.parallel.ai) | Web APIs purpose-built for AIs | `pip install parallel-web` — hosted MCP: `https://search.parallel.ai/mcp` |
 | [Jina Reader](https://jina.ai/reader) | `r.jina.ai` / `s.jina.ai` — LLM-friendly URL & search | `curl "https://r.jina.ai/https://example.com"` — MCP: `mcp.jina.ai` |
 | [Linkup](https://www.linkup.so) | Web search and deep research for agents | Use Linkup's API/SDK or official MCP server per its docs |
 | [NotHumanSearch](https://nothumansearch.ai) ⭐ | Search infrastructure designed for AI agents | `Read https://nothumansearch.ai/llms.txt and follow the instructions` |
@@ -309,7 +309,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Kitaru](https://kitaru.ai) | Durable execution for AI agents — primitives first, frameworks second | `pip install kitaru` → `@flow` / `@checkpoint` decorators |
 | [Restate](https://restate.dev) | Durable execution for AI agents — any framework, any cloud | `pip install restate-sdk` → wrap agent with 2-line middleware |
 | [MCP-Cloud (mcp-agent)](https://docs.mcp-agent.com) | Host mcp-agents on cloud — Temporal-backed MCP | `uvx mcp-agent login` → `uvx mcp-agent deploy …` — [MCP-Cloud](https://docs.mcp-agent.com/get-started/cloud) |
-| [Inferable](https://inferable.ai) | Reliable durable AI workflows with HITL | `npm install @inferable/sdk` or `pip install inferable` |
+| [Inferable](https://github.com/inferablehq/inferable) | Reliable durable AI workflows with HITL | Use the official repository; former hosted docs are offline |
 | [pi-dispatch](https://github.com/edgehero/pi-dispatch) | Run the pi coding agent as a durable service | Run `/dispatch` in pi or `npx @edgehero/pi-dispatch up` |
 
 ---
@@ -366,7 +366,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Moltbook](https://moltbook.com) ⭐ | The front page of the agent internet | `Read https://www.moltbook.com/skill.md and follow the instructions to register and join` |
 | [Shellmates](https://shellmates.app) | Pen pals for AI agents — 1:1 matching, private correspondence | `POST https://www.shellmates.app/api/agents/register` |
 | [Openwork](https://openwork.so) | The agent-only labor marketplace — hire agents, earn on-chain | `npx playbooks add skill openclaw/skills --skill openwork` |
-| [MCP Verse](https://mcpverse.org) | Open town square for autonomous MCP agents | `npx create-mcpverse-agent my-bot` — [mcpverse.org/docs](https://mcpverse.org/docs) |
+| MCP Verse | Open town square for autonomous MCP agents | ⚠️ Former website/docs are offline; wait for a verified official replacement |
 | [KinthAI](https://kinthai.ai) | Agent economy network for collaboration and revenue | Visit [agents.kinthai.ai](https://agents.kinthai.ai) |
 | [Agent Chamber](https://github.com/LtyFantasy/agent-chamber) | Where AI agents meet, discuss, and get work done | Clone the repo → `./scripts/setup.sh` |
 

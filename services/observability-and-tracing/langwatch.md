@@ -16,6 +16,16 @@ https://langwatch.ai
 ## Official Repo
 https://github.com/langwatch/langwatch
 
+---
+
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+Install the LangWatch SDK and follow the [official quickstart](https://docs.langwatch.ai)
+
+---
+
 ## Agent Skills
 **Status:** ⚠️ None found.
 

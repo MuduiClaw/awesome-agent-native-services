@@ -6,8 +6,7 @@
 |---|---|
 | **Website** | https://www.parallel.ai |
 | **Docs** | https://docs.parallel.ai |
-| **GitHub** | https://github.com/parallel-web/search-mcp · https://github.com/parallel-web/task-mcp |
-| **Stars** | [![GitHub Stars](https://img.shields.io/github/stars/parallel-web/search-mcp?style=social)](https://github.com/parallel-web/search-mcp) |
+| **GitHub** | https://github.com/parallel-web/task-mcp · https://github.com/parallel-web/parallel-sdk-python |
 | **Classification** | `agent-native` |
 | **Category** | [Search & Web Intelligence Services](README.md) |
 
@@ -21,9 +20,11 @@ https://www.parallel.ai
 
 ## Official Repo
 
-https://github.com/parallel-web/search-mcp — **Search MCP**
-
 https://github.com/parallel-web/task-mcp — **Task MCP**
+
+https://github.com/parallel-web/parallel-sdk-python — **Python SDK**
+
+Search MCP is now a hosted service documented at https://docs.parallel.ai/integrations/mcp/search-mcp ; the former `parallel-web/search-mcp` repository returns 404.
 
 Additional OSS: [parallel-sdk-python](https://github.com/parallel-web/parallel-sdk-python), [parallel-sdk-typescript](https://github.com/parallel-web/parallel-sdk-typescript), [parallel-web-tools](https://github.com/parallel-web/parallel-web-tools)
 
@@ -36,7 +37,7 @@ Additional OSS: [parallel-sdk-python](https://github.com/parallel-web/parallel-s
 1. Create an API key at [platform.parallel.ai](https://platform.parallel.ai).
 2. **SDK:** `pip install parallel-web` or `npm install parallel-web` — see [Getting started](https://docs.parallel.ai/getting-started/overview).
 3. **Products** (from docs/marketing): **Search API** (fast NL web search with excerpts), **Extract** (URL → clean content), **Task API** (deep research with citations and confidence), **FindAll** (entity discovery), **Monitor** (scheduled web change tracking with webhooks), **Chat API** (OpenAI-compatible research chat).
-4. **MCP:** Install/configure [search-mcp](https://github.com/parallel-web/search-mcp) and [task-mcp](https://github.com/parallel-web/task-mcp) for IDE agents.
+4. **MCP:** Connect the hosted Search MCP at `https://search.parallel.ai/mcp` or use [task-mcp](https://github.com/parallel-web/task-mcp) for deep-research tasks.
 
 ---
 
@@ -56,7 +57,7 @@ npx clawhub@latest search parallel web
 
 | Detail | Value |
 |---|---|
-| **Search MCP** | https://github.com/parallel-web/search-mcp |
+| **Search MCP** | https://search.parallel.ai/mcp — [official docs](https://docs.parallel.ai/integrations/mcp/search-mcp) |
 | **Task MCP** | https://github.com/parallel-web/task-mcp |
 | **Compatible Clients** | Claude, Cursor, Codex, other MCP hosts |
 
@@ -120,7 +121,7 @@ Structured JSON + citations returned to agent context
 | REST | https://docs.parallel.ai |
 | Python | `parallel-web` on PyPI |
 | TypeScript | `parallel-web` on npm |
-| MCP | `parallel-web/search-mcp`, `parallel-web/task-mcp` |
+| MCP | Hosted Search MCP + `parallel-web/task-mcp` |
 
 ---
 

@@ -23,7 +23,7 @@ Not publicly listed. Official entry points are the hosted API, docs, and `skill.
 
 ---
 
-## ⭐ How to Use (Agent Onboarding)
+## How to Use (Agent Onboarding)
 
 Read:
 

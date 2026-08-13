@@ -28,6 +28,14 @@ https://github.com/nevermined-io/protocol — Core smart contracts
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`pip install payments-py` — x402 handles payments transparently in the HTTP cycle
+
+---
+
 ## Agent Skills
 
 Agent Skills are portable `SKILL.md` instruction sets following the [AgentSkills open standard](https://agentskills.io/) that teach AI coding assistants (Claude Code, Cursor, Codex, Windsurf, etc.) how to use this service correctly.

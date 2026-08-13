@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Website** | https://atxp.ai |
-| **Docs** | https://docs.atxp.dev |
+| **Docs** | https://docs.atxp.ai |
 | **GitHub** | https://github.com/atxp-dev/atxp |
 | **Classification** | `agent-native` |
 | **Category** | [Agent Runtime & Infrastructure Services](README.md) |
@@ -15,6 +15,16 @@ https://atxp.ai
 
 ## Official Repo
 https://github.com/atxp-dev/atxp
+
+---
+
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+[docs.atxp.ai](https://docs.atxp.ai) — CLI / SDK / MCP-compatible endpoints
+
+---
 
 ## Agent Skills
 **Status:** ⚠️ No official AgentSkills package found.

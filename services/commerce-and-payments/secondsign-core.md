@@ -11,6 +11,7 @@
 | **Classification** | `agent-native` |
 | **Category** | [Commerce & Payment Services](README.md) |
 | **Latest-month signal** | Repository created 2026-07-24; [`v0.2.0`](https://github.com/Bestpart-Irene/secondsign-core/releases/tag/v0.2.0) released 2026-08-01; [latest verified commit](https://github.com/Bestpart-Irene/secondsign-core/commit/fe36b03b2a3f4f5f60762d2b0d4a4ff760979856) 2026-08-13 UTC |
+| **Verified at** | 2026-08-13 |
 | **Status** | **Pre-1.0 preview.** Interfaces may change; no independent security audit; some gateway control-plane state is not restart-durable. Apache-2.0. |
 
 ---

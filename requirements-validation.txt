@@ -1,0 +1,2 @@
+jsonschema==4.26.0
+llms-txt==0.0.6

@@ -24,6 +24,14 @@ https://github.com/AgentPayy/AgentPayy — Core platform (TypeScript / Python)
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+Provision wallet at agentspay.dev, then use MCP-native gateway
+
+---
+
 ## Agent Skills
 
 Agent Skills are portable `SKILL.md` instruction sets following the [AgentSkills open standard](https://agentskills.io/) that teach AI coding assistants (Claude Code, Cursor, Codex, Windsurf, etc.) how to use this service correctly.

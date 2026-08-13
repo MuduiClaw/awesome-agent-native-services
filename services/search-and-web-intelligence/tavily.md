@@ -30,6 +30,14 @@ https://github.com/tavily-ai/tavily-js — TypeScript/JavaScript SDK
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`npx skills add tavily-ai/skills`
+
+---
+
 ## Agent Skills
 
 Agent Skills are portable `SKILL.md` instruction sets following the [AgentSkills open standard](https://agentskills.io/) that teach AI coding assistants (Claude Code, Cursor, Codex, Windsurf, etc.) how to use this service correctly.

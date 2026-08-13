@@ -27,6 +27,14 @@ https://github.com/Infisical/infisical-mcp-server — Official MCP server
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`npx -y @infisical/mcp` or deploy the agent daemon sidecar
+
+---
+
 ## Agent Skills
 
 Agent Skills are portable `SKILL.md` instruction sets following the [AgentSkills open standard](https://agentskills.io/) that teach AI coding assistants (Claude Code, Cursor, Codex, Windsurf, etc.) how to use this service correctly.

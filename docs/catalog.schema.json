@@ -1,0 +1,448 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lihaorui.com/awesome-agent-native-services/catalog.schema.json",
+  "title": "Awesome Agent-Native Services Catalog",
+  "description": "The deterministic machine-readable contract generated from the catalog's Markdown service dossiers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "catalog_version",
+    "generated_at",
+    "license",
+    "source",
+    "counts",
+    "categories",
+    "services"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://lihaorui.com/awesome-agent-native-services/catalog.schema.json"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "catalog_version": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "generated_at": {
+      "description": "Deterministic catalog snapshot date inherited from skill.md, not the local build clock.",
+      "type": "string",
+      "format": "date"
+    },
+    "license": {
+      "const": "CC0-1.0"
+    },
+    "source": {
+      "$ref": "#/$defs/source"
+    },
+    "counts": {
+      "$ref": "#/$defs/counts"
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/category"
+      }
+    },
+    "services": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/service"
+      }
+    }
+  },
+  "$defs": {
+    "http_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "nullable_http_url": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/http_url"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "nullable_date": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "branch",
+        "catalog_path",
+        "service_directory",
+        "content_digest"
+      ],
+      "properties": {
+        "repository": {
+          "$ref": "#/$defs/http_url"
+        },
+        "branch": {
+          "const": "main"
+        },
+        "catalog_path": {
+          "const": "skill.md"
+        },
+        "service_directory": {
+          "const": "services"
+        },
+        "content_digest": {
+          "$ref": "#/$defs/content_digest"
+        }
+      }
+    },
+    "content_digest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "algorithm",
+        "value",
+        "input_paths"
+      ],
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "input_paths": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^(README\\.md|skill\\.md|services/[a-z0-9-]+/(README|[a-z0-9-]+)\\.md)$"
+          }
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "categories",
+        "services"
+      ],
+      "properties": {
+        "categories": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "services": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "category": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "description",
+        "dossier",
+        "service_count"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dossier": {
+          "$ref": "#/$defs/http_url"
+        },
+        "service_count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "onboarding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "pattern",
+        "instruction",
+        "url"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "url",
+            "agent-skill",
+            "mcp",
+            "cli",
+            "sdk",
+            "api",
+            "documentation",
+            "other",
+            "unspecified"
+          ]
+        },
+        "pattern": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "instruction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "$ref": "#/$defs/nullable_http_url"
+        }
+      }
+    },
+    "integration_status": {
+      "enum": [
+        "available",
+        "optional",
+        "planned",
+        "unavailable",
+        "not-applicable",
+        "unknown"
+      ]
+    },
+    "protocol": {
+      "enum": [
+        "url-onboarding",
+        "agent-skill",
+        "mcp",
+        "rest",
+        "graphql",
+        "grpc",
+        "websocket",
+        "webhook",
+        "cli",
+        "sdk",
+        "a2a",
+        "acp",
+        "openapi",
+        "json-rpc",
+        "stdio",
+        "http",
+        "api",
+        "documentation"
+      ]
+    },
+    "service": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "slug",
+        "name",
+        "tagline",
+        "classification",
+        "status",
+        "lifecycle_status",
+        "category",
+        "website",
+        "repository",
+        "dossier",
+        "source_path",
+        "onboarding",
+        "protocols",
+        "mcp_status",
+        "agent_skill_status",
+        "latest_month_signal",
+        "verified_at",
+        "verification_sources"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*/[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tagline": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "classification": {
+          "const": "agent-native"
+        },
+        "status": {
+          "description": "Catalog membership state; this does not assert upstream service health.",
+          "const": "listed"
+        },
+        "lifecycle_status": {
+          "description": "Upstream lifecycle only when explicitly stated in the dossier; unknown is not an availability claim.",
+          "enum": [
+            "active",
+            "offline",
+            "sunset",
+            "unknown"
+          ]
+        },
+        "category": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "website": {
+          "$ref": "#/$defs/nullable_http_url"
+        },
+        "repository": {
+          "$ref": "#/$defs/nullable_http_url"
+        },
+        "dossier": {
+          "$ref": "#/$defs/http_url"
+        },
+        "source_path": {
+          "type": "string",
+          "pattern": "^services/[a-z0-9-]+/[a-z0-9-]+\\.md$"
+        },
+        "onboarding": {
+          "$ref": "#/$defs/onboarding"
+        },
+        "protocols": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/protocol"
+          }
+        },
+        "mcp_status": {
+          "$ref": "#/$defs/integration_status"
+        },
+        "agent_skill_status": {
+          "$ref": "#/$defs/integration_status"
+        },
+        "latest_month_signal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verified_at": {
+          "$ref": "#/$defs/nullable_date"
+        },
+        "verification_sources": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/http_url"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "website": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "website"
+            ]
+          },
+          "then": {
+            "properties": {
+              "lifecycle_status": {
+                "enum": [
+                  "offline",
+                  "sunset"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "verified_at": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "verified_at"
+            ]
+          },
+          "then": {
+            "properties": {
+              "verification_sources": {
+                "minItems": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "verification_sources": {
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "lifecycle_status": {
+                "const": "active"
+              }
+            },
+            "required": [
+              "lifecycle_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "verified_at": {
+                "type": "string"
+              },
+              "verification_sources": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

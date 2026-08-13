@@ -12,6 +12,7 @@
 | **Category** | [Agent Harnesses & Operator Surfaces](README.md) |
 | **License** | MIT declared in README/package metadata; no root `LICENSE` file as of snapshot |
 | **Latest-month signal** | v1.0 tagged 2026-07-28; 75 stars and active 2026-08-08 (snapshot 2026-08-13) |
+| **Verified at** | 2026-08-13 |
 
 ---
 

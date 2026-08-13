@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://haoruilee.github.io/awesome-agent-native-services/sitemap.xml
+Sitemap: https://lihaorui.com/awesome-agent-native-services/sitemap.xml

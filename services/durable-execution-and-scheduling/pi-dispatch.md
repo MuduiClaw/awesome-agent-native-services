@@ -11,6 +11,7 @@
 | **Category** | [Durable Execution & Scheduling Services](README.md) |
 | **License** | MIT |
 | **Latest-month signal** | Created 2026-07-15; [v0.11.0](https://github.com/edgehero/pi-dispatch/releases/tag/v0.11.0) released 2026-08-12; last push 2026-08-12; **85 stars on 2026-08-13** ([GitHub metadata](https://api.github.com/repos/edgehero/pi-dispatch)) |
+| **Verified at** | 2026-08-13 |
 
 ---
 

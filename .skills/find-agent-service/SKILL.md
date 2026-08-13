@@ -9,7 +9,7 @@ license: CC0-1.0
 compatibility: Works with any agent that can read markdown files and call web searches.
 metadata:
   repo: https://github.com/haoruilee/awesome-agent-native-services
-  catalog-version: "2026-06-12"
+  catalog-version: "2026-08-13"
 allowed-tools: WebSearch Read
 ---
 
@@ -67,6 +67,7 @@ Activate this skill when the user asks things like:
 | Agent needs human approval for risky actions | Oversight & Approval | HumanLayer | SDK |
 | Agent needs a wallet / to pay for things | Commerce & Payments | Payman AI, Skyfire, AgentsPay, Nevermined | SDK / REST |
 | Agent needs deployment, identity, secrets | Agent Runtime | Bedrock AgentCore, Letta, Infisical, Aembit | SDK |
+| Agent needs a durable coding harness or live operator surface | Agent Harnesses & Operator Surfaces | OMX, Ruflo, QM, LongHorizon-Harness, Codex HUD | CLI / Skill / TUI |
 | Agent needs to remember things across sessions | Memory & State | Mem0, Zep | SDK / MCP |
 | Agent needs shared memory with OTHER agents | Memory & State | **Ensue** | **URL Onboarding** ⭐ |
 | Agent needs unified context: memory + resources + skills | Memory & State | **OpenViking** | MCP / SDK |
@@ -95,13 +96,14 @@ Use the table above. Note the onboarding pattern — if it's **URL Onboarding**,
 
 The catalog is at `services/{category}/README.md`. Read it to see all services and their onboarding commands.
 
-**Category folder names (15 categories):**
+**Category folder names (16 categories):**
 - `services/communication/`
 - `services/browser-and-web-execution/`
 - `services/tool-access-and-integration/`
 - `services/oversight-and-approval/`
 - `services/commerce-and-payments/`
 - `services/agent-runtime-and-infrastructure/`
+- `services/agent-harnesses-and-control-planes/`
 - `services/memory-and-state/`
 - `services/search-and-web-intelligence/`
 - `services/code-execution/`

@@ -43,7 +43,7 @@ smithery tool list
 smithery tool call <server> <tool> '<json-args>'
 ```
 
-See [Introduction](https://docs.smithery.ai/) and [Registry: Search Servers](https://smithery.ai/docs/concepts/registry_search_servers).
+See the current [Smithery documentation](https://smithery.ai/docs) and [Connect guide](https://smithery.ai/docs/use/connect).
 
 ---
 
@@ -59,7 +59,7 @@ See [Introduction](https://docs.smithery.ai/) and [Registry: Search Servers](htt
 
 | Detail | Value |
 |---|---|
-| **MCP Docs** | https://docs.smithery.ai/ |
+| **MCP Docs** | https://smithery.ai/docs |
 | **Transport** | Remote MCP (HTTP/SSE per server) + CLI stdio bridging for local clients |
 | **Compatible Clients** | Cursor, Claude Desktop, VS Code MCP hosts, ChatGPT Apps, other MCP-compatible hosts |
 

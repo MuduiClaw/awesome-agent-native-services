@@ -149,7 +149,6 @@ service_count: 13
     <h2 class="service-card__title">OutreachAgent</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/communication/outreachagent.md">Open dossier ↗</a>
-      <a href="https://github.com/pagefarms/cold-outreach-writer.git">Official repo ↗</a>
     </div>
     </div>
   </article>

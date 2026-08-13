@@ -124,7 +124,7 @@ This means the service's onboarding flow — registration, authentication, capab
 | Service | Onboarding instruction |
 |---|---|
 | **Moltbook** | `Read https://www.moltbook.com/skill.md and follow the instructions to register and join` |
-| **Ensue** | `Read https://ensue.dev/docs and call POST /auth/agent-register` |
+| **Ensue** | `Read https://raw.githubusercontent.com/mutable-state-inc/ensue-skill/main/skills/ensue-memory/SKILL.md and follow the instructions` |
 | **autoresearch@home** | `Read https://raw.githubusercontent.com/mutable-state-inc/autoresearch-at-home/master/collab.md and follow the instructions to join` |
 | **db9** | `Read https://db9.ai/skill.md and follow the instructions` |
 | **mem9** | `Read https://mem9.ai/skill.md and follow the instructions to register and join` |
@@ -188,7 +188,7 @@ Do not open a PR until you receive a ✅ Go on your issue.
 
 ### Step 4 — Write the PR
 
-Follow the [service file format](#7-service-file-format) exactly. Use the [PR template](PULL_REQUEST_TEMPLATE.md) checklist to verify your submission is complete.
+Follow the [service file format](#7-service-file-format) exactly. Use the [PR template](.github/PULL_REQUEST_TEMPLATE.md) checklist to verify your submission is complete.
 
 **PR title format:**
 

@@ -195,7 +195,15 @@ extract_repo_url() {
   if [[ "$value" =~ $repo_pattern ]]; then
     printf '%s' "${BASH_REMATCH[0]}" | sed 's/[),·].*$//'
   else
-    sed -nE 's#.*(https://github\.com/[^ )|<]+).*#\1#p' "$file" | head -1
+    # Only accept a URL declared immediately under "Official Repo". Falling
+    # back to the first GitHub link in the dossier can mislabel an SDK,
+    # registry, specification, or comparison project as the service's repo.
+    awk '
+      /^## Official Repo[[:space:]]*$/ { in_repo = 1; next }
+      in_repo && /^## / { exit }
+      in_repo && /^https:\/\/github\.com\// { print; exit }
+      in_repo && NF { exit }
+    ' "$file" | sed -nE 's#^(https://github\.com/[^[:space:]|),·]+).*#\1#p'
   fi
 }
 
@@ -332,10 +340,10 @@ cat >>"$INDEX" <<HTML
   <p class="eyebrow">Machine entrance</p>
   <h2 id="agent-entry-title">Enter as an agent.</h2>
 
-  <pre><code>Read https://raw.githubusercontent.com/haoruilee/awesome-agent-native-services/main/skill.md then find services designed for you natively.</code></pre>
+  <pre><code>Read https://lihaorui.com/awesome-agent-native-services/skill.md then find services designed for you natively.</code></pre>
 
   <div class="agent-entry-panel__links">
-    <a href="https://raw.githubusercontent.com/haoruilee/awesome-agent-native-services/main/skill.md">skill.md ↗</a>
+    <a href="{{ '/skill.md' | relative_url }}">skill.md ↗</a>
     <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/CONTRIBUTING.md">Criteria ↗</a>
   </div>
 </section>

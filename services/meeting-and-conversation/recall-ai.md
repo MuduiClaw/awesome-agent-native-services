@@ -25,6 +25,14 @@ https://github.com/recallai — GitHub organization (SDKs and integration librar
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`POST https://api.recall.ai/api/v1/bot` with the meeting URL
+
+---
+
 ## Agent Skills
 
 Agent Skills are portable `SKILL.md` instruction sets following the [AgentSkills open standard](https://agentskills.io/) that teach AI coding assistants (Claude Code, Cursor, Codex, Windsurf, etc.) how to use this service correctly.

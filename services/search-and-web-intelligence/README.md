@@ -24,9 +24,9 @@ The services in this category were designed with these requirements as the prima
 | [Jina DeepSearch](jina-deepsearch.md) | Agentic search and deep research API for AI applications | HTTP API, LLM-ready retrieval, research synthesis | ⚠️ |
 | [Tavily](tavily.md) | Connect your agent to the web | REST API, Python SDK, LangChain/LlamaIndex/CrewAI integrations | ✅ |
 | [Exa](exa.md) | The search engine designed for AI | REST API, Python SDK, LangChain/CrewAI/LlamaIndex/Mastra integrations | ✅ |
-| [Parallel](parallel.md) [![⭐](https://img.shields.io/github/stars/parallel-web/search-mcp?style=social)](https://github.com/parallel-web/search-mcp) | The highest accuracy web search for your AI | Search/Task/FindAll/Monitor APIs · SDKs · search-mcp & task-mcp | ✅ |
+| [Parallel](parallel.md) | The highest accuracy web search for your AI | Search/Task/FindAll/Monitor APIs · SDKs · hosted Search MCP & task-mcp | ✅ |
 | [Jina Reader](jina-reader.md) [![⭐](https://img.shields.io/github/stars/jina-ai/reader?style=social)](https://github.com/jina-ai/reader) | URL and search results as LLM-friendly text | `r.jina.ai` / `s.jina.ai` · MCP · PDF & image handling | ✅ |
-| [Linkup](linkup.md) [![⭐](https://img.shields.io/github/stars/LinkupPlatform/python-sdk?style=social)](https://github.com/LinkupPlatform/python-sdk) | Search API for AI agents and LLM apps | LLM-oriented search, structured retrieval, citation-ready outputs | ⚠️ |
+| [Linkup](linkup.md) [![⭐](https://img.shields.io/github/stars/LinkupPlatform/linkup-python-sdk?style=social)](https://github.com/LinkupPlatform/linkup-python-sdk) | Search API for AI agents and LLM apps | LLM-oriented search, structured retrieval, citation-ready outputs | ⚠️ |
 | [NotHumanSearch](nothumansearch.md) | Agent-first search — the index of services designed for AI, not humans | REST API · OpenAPI 3.0 · MCP (`ai.nothumansearch/search`) · `llms.txt` onboarding | ✅ |
 
 

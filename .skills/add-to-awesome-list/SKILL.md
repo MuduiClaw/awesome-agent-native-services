@@ -5,6 +5,12 @@ description: >
   catalog: selecting the standard or operator-surface admission track, checking URL
   Onboarding, opening an issue, writing the dossier, updating manifests, and preparing
   a PR. Use for requests to add a service, harness, HUD, or operator surface.
+license: CC0-1.0
+compatibility: Works with agents that can read repository files and browse official sources.
+metadata:
+  repo: https://github.com/haoruilee/awesome-agent-native-services
+  catalog-version: "2026-08-13"
+allowed-tools: WebSearch Read Bash
 ---
 
 # Skill: add-to-awesome-list
@@ -148,7 +154,7 @@ https://github.com/...
 
 ---
 
-## ⭐ How to Use (Agent Onboarding)
+## How to Use (Agent Onboarding)
 
 <!-- CRITICAL: This section tells an agent how to START USING the service. -->
 <!-- For URL Onboarding services, this is THE most important section. -->

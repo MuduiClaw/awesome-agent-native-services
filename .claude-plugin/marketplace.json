@@ -11,7 +11,7 @@
       "source": "./",
       "description": "Install the catalog skills: find-agent-service, install-agent-service, evaluate-agent-native, and add-to-awesome-list.",
       "repository": "https://github.com/haoruilee/awesome-agent-native-services",
-      "homepage": "https://haoruilee.github.io/awesome-agent-native-services/",
+      "homepage": "https://lihaorui.com/awesome-agent-native-services/",
       "license": "CC0-1.0",
       "category": "agent-infrastructure",
       "tags": ["agent-native", "mcp", "skills", "catalog"],

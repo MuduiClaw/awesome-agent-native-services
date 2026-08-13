@@ -329,10 +329,10 @@ new_arrivals_count: 20
   <p class="eyebrow">Machine entrance</p>
   <h2 id="agent-entry-title">Enter as an agent.</h2>
 
-  <pre><code>Read https://raw.githubusercontent.com/haoruilee/awesome-agent-native-services/main/skill.md then find services designed for you natively.</code></pre>
+  <pre><code>Read https://lihaorui.com/awesome-agent-native-services/skill.md then find services designed for you natively.</code></pre>
 
   <div class="agent-entry-panel__links">
-    <a href="https://raw.githubusercontent.com/haoruilee/awesome-agent-native-services/main/skill.md">skill.md ↗</a>
+    <a href="{{ '/skill.md' | relative_url }}">skill.md ↗</a>
     <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/CONTRIBUTING.md">Criteria ↗</a>
   </div>
 </section>

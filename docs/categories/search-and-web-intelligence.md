@@ -63,7 +63,7 @@ service_count: 8
     <h2 class="service-card__title">Linkup</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/linkup.md">Open dossier ↗</a>
-      <a href="https://github.com/LinkupPlatform/python-sdk">Official repo ↗</a>
+      <a href="https://github.com/LinkupPlatform/linkup-python-sdk">Official repo ↗</a>
     </div>
     </div>
   </article>
@@ -74,7 +74,6 @@ service_count: 8
     <h2 class="service-card__title">NotHumanSearch</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/nothumansearch.md">Open dossier ↗</a>
-      <a href="https://github.com/modelcontextprotocol/registry">Official repo ↗</a>
     </div>
     </div>
   </article>
@@ -85,7 +84,7 @@ service_count: 8
     <h2 class="service-card__title">Parallel</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/parallel.md">Open dossier ↗</a>
-      <a href="https://github.com/parallel-web/search-mcp">Official repo ↗</a>
+      <a href="https://github.com/parallel-web/task-mcp">Official repo ↗</a>
     </div>
     </div>
   </article>

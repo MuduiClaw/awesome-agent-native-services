@@ -4,6 +4,12 @@ description: >
   Evaluate catalog candidates against either the standard five agent-native criteria or
   the narrow operator-surface track, and check URL Onboarding. Use when asked whether a
   service, harness, HUD, status line, or control surface belongs in the catalog.
+license: CC0-1.0
+compatibility: Works with agents that can inspect official websites, repositories, and protocol documentation.
+metadata:
+  repo: https://github.com/haoruilee/awesome-agent-native-services
+  catalog-version: "2026-08-13"
+allowed-tools: WebSearch Read
 ---
 
 # Skill: evaluate-agent-native

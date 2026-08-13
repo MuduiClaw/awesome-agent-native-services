@@ -27,6 +27,14 @@ https://github.com/dodopayments/chimely — Core platform (open-source)
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+Use the HTTP API from https://chimely.dev docs to deliver in-app notifications
+
+---
+
 ## Agent Skills
 
 **Status:** ⚠️ No dedicated Agent Skills listed

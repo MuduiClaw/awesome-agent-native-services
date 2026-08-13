@@ -30,6 +30,14 @@ https://github.com/letta-ai/letta-node — TypeScript SDK (`@letta-ai/letta-clie
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`pip install letta-client` then `client.agents.create(...)`
+
+---
+
 ## Agent Skills
 
 **Status:** ⚠️ No official skill published by Letta yet.

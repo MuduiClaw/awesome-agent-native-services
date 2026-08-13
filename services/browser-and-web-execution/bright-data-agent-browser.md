@@ -25,6 +25,14 @@ https://github.com/brightdata/ai-sdk — AI SDK for Vercel AI SDK integration
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+Add Web MCP to config: `npx -y @brightdata/mcp`
+
+---
+
 ## Agent Skills
 
 **Status:** ⚠️ No official skill published by Bright Data yet.

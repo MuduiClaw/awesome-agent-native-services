@@ -9,6 +9,7 @@
 | **GitHub** | https://github.com/KayanoLiam/ContextX |
 | **Public MCP** | `https://mcp.twitter.monster/mcp` |
 | **Latest-month signal** | [Created 2026-08-01](https://api.github.com/repos/KayanoLiam/ContextX); **no GitHub release published** as of 2026-08-13 ([Releases](https://github.com/KayanoLiam/ContextX/releases)); [active on `main` 2026-08-06](https://github.com/KayanoLiam/ContextX/commit/de64366737e4e808fc4e60b11e0321fad2b65fe2); **119 stars** on 2026-08-13 UTC ([GitHub metadata snapshot](https://api.github.com/repos/KayanoLiam/ContextX)) |
+| **Verified at** | 2026-08-13 |
 | **Classification** | `agent-native` |
 | **Category** | [Search & Web Intelligence Services](README.md) |
 | **License** | ⚠️ No repository license detected as of 2026-08-13 ([GitHub metadata](https://api.github.com/repos/KayanoLiam/ContextX)) |

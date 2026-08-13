@@ -4,17 +4,28 @@
 
 | | |
 |---|---|
-| **Website** | https://openlibx402.xyz |
+| **Website** | https://github.com/openlibx402/openlibx402 |
 | **Docs** | https://github.com/openlibx402/openlibx402 |
 | **GitHub** | https://github.com/openlibx402/openlibx402 |
 | **Classification** | `agent-native` |
 | **Category** | [Commerce & Payment Services](README.md) |
 
 ## Official Website
-https://openlibx402.xyz
+The former project domain no longer resolves. The official repository is the
+current canonical public surface.
 
 ## Official Repo
 https://github.com/openlibx402/openlibx402
+
+---
+
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+Install the Python or Node SDK from [openlibx402/openlibx402](https://github.com/openlibx402/openlibx402)
+
+---
 
 ## Agent Skills
 **Status:** ⚠️ None found.

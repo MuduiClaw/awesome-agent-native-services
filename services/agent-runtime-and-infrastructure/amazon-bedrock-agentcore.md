@@ -28,6 +28,14 @@ https://github.com/aws/aws-sdk-js-v3 (JavaScript/TypeScript)
 
 ---
 
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+`pip install boto3` — configure AgentCore runtime via AWS SDK
+
+---
+
 ## Agent Skills
 
 Agent Skills are portable `SKILL.md` instruction sets following the [AgentSkills open standard](https://agentskills.io/) that teach AI coding assistants (Claude Code, Cursor, Codex, Windsurf, etc.) how to use this service correctly.

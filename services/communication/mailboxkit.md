@@ -24,7 +24,7 @@ MailboxKit does not publish an open-source application repository; the **machine
 
 ---
 
-## ⭐ How to Use (Agent Onboarding)
+## How to Use (Agent Onboarding)
 
 > **URL Onboarding — agents can start from a hosted machine-readable skill file.**
 

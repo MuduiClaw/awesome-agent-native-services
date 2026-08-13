@@ -8,6 +8,7 @@
 | **Docs** | https://github.com/perplexityai/numbat/tree/main/docs |
 | **GitHub** | https://github.com/perplexityai/numbat |
 | **Latest-month signal** | [Created 2026-07-24](https://api.github.com/repos/perplexityai/numbat); [v0.1.2 released 2026-08-01](https://github.com/perplexityai/numbat/releases/tag/v0.1.2); [active on `main` 2026-08-10](https://github.com/perplexityai/numbat/commit/63b5a3139ca8c09d3ef3f9a75f4e40ebde4177ae); **917 stars** on 2026-08-13 UTC ([GitHub metadata snapshot](https://api.github.com/repos/perplexityai/numbat)) |
+| **Verified at** | 2026-08-13 |
 | **Classification** | `agent-native` |
 | **Category** | [Observability & Tracing Services](README.md) |
 | **License** | Apache-2.0 |

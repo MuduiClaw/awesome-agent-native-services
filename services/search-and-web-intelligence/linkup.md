@@ -6,8 +6,8 @@
 |---|---|
 | **Website** | https://www.linkup.so |
 | **Docs** | https://docs.linkup.so |
-| **GitHub** | https://github.com/LinkupPlatform/python-sdk |
-| **Stars** | [![GitHub Stars](https://img.shields.io/github/stars/LinkupPlatform/python-sdk?style=social)](https://github.com/LinkupPlatform/python-sdk) |
+| **GitHub** | https://github.com/LinkupPlatform/linkup-python-sdk |
+| **Stars** | [![GitHub Stars](https://img.shields.io/github/stars/LinkupPlatform/linkup-python-sdk?style=social)](https://github.com/LinkupPlatform/linkup-python-sdk) |
 | **Classification** | `agent-native` |
 | **Category** | [Search & Web Intelligence Services](README.md) |
 
@@ -15,7 +15,7 @@
 https://www.linkup.so
 
 ## Official Repo
-https://github.com/LinkupPlatform/python-sdk
+https://github.com/LinkupPlatform/linkup-python-sdk
 
 ## How to Use (Agent Onboarding)
 Create API credentials, call search endpoints from SDK/REST, and feed structured responses into the agent planning loop.

@@ -16,6 +16,16 @@ https://jina.ai
 ## Official Repo
 https://github.com/jina-ai
 
+---
+
+## How to Use (Agent Onboarding)
+
+**Quickest verified path:**
+
+Follow the [Jina DeepSearch API docs](https://jina.ai/deepsearch)
+
+---
+
 ## Agent Skills
 **Status:** ⚠️ None found.
 

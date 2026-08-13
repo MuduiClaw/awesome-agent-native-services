@@ -18,7 +18,9 @@ https://cymetica.com
 
 ## Official Repo
 
-https://github.com/eventtrader
+No canonical public source repository is currently available. The previously
+listed `github.com/eventtrader` organization now returns 404; use the public A2A
+and MCP manifests below as the machine integration sources.
 
 ---
 

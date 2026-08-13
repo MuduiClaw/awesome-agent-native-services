@@ -8,6 +8,7 @@
 | **Docs** | https://axern.cofy-x.space/getting-started/ |
 | **GitHub** | https://github.com/cofy-x/axern |
 | **Latest-month signal** | [Created 2026-07-28](https://api.github.com/repos/cofy-x/axern); [v0.4.1 released 2026-08-04](https://github.com/cofy-x/axern/releases/tag/v0.4.1); [active on `main` 2026-08-12](https://github.com/cofy-x/axern/commit/b3b632b28d5f73b089cd632e988a3543502d9d3b); **232 stars** on 2026-08-13 UTC ([GitHub metadata snapshot](https://api.github.com/repos/cofy-x/axern)) |
+| **Verified at** | 2026-08-13 |
 | **Classification** | `agent-native` |
 | **Category** | [Code Execution Services](README.md) |
 | **License** | Apache-2.0 |

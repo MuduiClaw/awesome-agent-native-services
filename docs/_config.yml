@@ -5,7 +5,7 @@ title: "The Agent-Native Index | Infrastructure for Autonomous Agents"
 # Used only in <title> (short for SEO). On-page <h1> still uses page title from index.md.
 seo_html_title: "The Agent-Native Index 2026 | MCP, Harnesses & AI Infrastructure"
 description: "A curated 2026 collection of agent-native infrastructure: MCP tools, harnesses, identity, memory, sandboxes, browsers, payments, and runtimes."
-url: "https://haoruilee.github.io"
+url: "https://lihaorui.com"
 baseurl: "/awesome-agent-native-services"
 lang: en-US
 author: haoruilee
@@ -21,6 +21,11 @@ theme: jekyll-theme-cayman
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# Keep machine-facing Markdown such as /skill.md byte-identical and avoid a
+# duplicate rendered /skill.html page in the sitemap.
+optional_front_matter:
+  enabled: false
 
 markdown: kramdown
 kramdown:
