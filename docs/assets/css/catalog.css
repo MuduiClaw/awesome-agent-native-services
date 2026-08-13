@@ -1260,7 +1260,8 @@ a:hover {
 }
 
 .hero-art img,
-.document-hero__art img {
+.document-hero__art img,
+.collection-hero__art img {
   width: 100%;
   height: 100%;
   display: block;
@@ -1362,9 +1363,16 @@ a:hover {
 .collection-hero__art,
 .document-hero__art {
   left: 45%;
+}
+
+.document-hero__art {
   background-image: url("../images/collection-atlas.webp");
   background-size: 400% 400%;
   background-position: var(--atlas-x, 0%) var(--atlas-y, 0%);
+}
+
+.collection-hero__art img {
+  object-position: 72% center;
 }
 
 .document-hero__art img {
@@ -1426,15 +1434,23 @@ a:hover {
 .service-card__image {
   display: block;
   overflow: hidden;
-  background-image: url("../images/collection-atlas.webp");
   background-size: 400% 400%;
   background-position: var(--atlas-x, 0%) var(--atlas-y, 0%);
   transform: translateZ(0);
   transition: filter .45s var(--ease), transform .55s var(--ease);
 }
 
+.arrival-card__image,
+.service-card__image {
+  background-image: var(--atlas-image, url("../images/arrival-atlas.webp"));
+}
+
+.collection-card__image {
+  background-image: url("../images/collection-atlas.webp");
+}
+
 .arrival-card__image {
-  aspect-ratio: 1 / 1.08;
+  aspect-ratio: 1;
 }
 
 .arrival-card__copy {
@@ -1486,6 +1502,44 @@ a:hover {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   border: 0;
+}
+
+.editorial-gallery {
+  margin: 0 0 clamp(110px, 13vw, 170px);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.editorial-gallery__item {
+  grid-column: span 4;
+  aspect-ratio: 1 / 1.08;
+  margin: 0;
+  overflow: hidden;
+  background: var(--porcelain);
+}
+
+.editorial-gallery__item--wide {
+  grid-column: span 8;
+  aspect-ratio: 2.05 / 1;
+}
+
+.editorial-gallery__item--panorama {
+  grid-column: 1 / -1;
+  aspect-ratio: 2.6 / 1;
+}
+
+.editorial-gallery img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: filter .45s var(--ease), transform .7s var(--ease);
+}
+
+.editorial-gallery__item:hover img {
+  filter: contrast(1.025) saturate(1.03);
+  transform: scale(1.012);
 }
 
 .collection-card,
@@ -1542,7 +1596,7 @@ a:hover {
   justify-content: flex-end;
   background:
     linear-gradient(90deg, rgba(14, 13, 11, .98) 0%, rgba(14, 13, 11, .82) 48%, rgba(14, 13, 11, .28) 100%),
-    url("../images/editorial-hero.webp") center / cover;
+    url("../images/editorial-runtime.webp") center / cover;
 }
 
 .agent-entry-panel::after {
@@ -1570,7 +1624,7 @@ a:hover {
 
 .source-gateway__image {
   min-height: 420px;
-  background: url("../images/editorial-hero.webp") 75% 55% / cover;
+  background: url("../images/editorial-memory.webp") 75% 55% / cover;
 }
 
 .source-gateway > div {
@@ -1615,7 +1669,7 @@ a:hover {
 }
 
 .service-card__image {
-  aspect-ratio: 1.12 / 1;
+  aspect-ratio: 1;
 }
 
 .service-card__copy {
@@ -1664,6 +1718,9 @@ a:hover {
 .atlas-visual--15 { --atlas-x: 66.667%; --atlas-y: 100%; }
 .atlas-visual--16 { --atlas-x: 100%; --atlas-y: 100%; }
 
+.atlas-sheet--arrival { --atlas-image: url("../images/arrival-atlas.webp"); }
+.atlas-sheet--service { --atlas-image: url("../images/service-atlas.webp"); }
+
 @media (max-width: 1080px) {
   .collection-grid,
   .service-grid {
@@ -1672,6 +1729,17 @@ a:hover {
 
   .collection-card__title {
     font-size: 27px;
+  }
+
+  .editorial-gallery__item {
+    grid-column: span 6;
+    aspect-ratio: 1.3 / 1;
+  }
+
+  .editorial-gallery__item--wide,
+  .editorial-gallery__item--panorama {
+    grid-column: 1 / -1;
+    aspect-ratio: 2 / 1;
   }
 }
 
@@ -1714,6 +1782,18 @@ a:hover {
   .service-grid {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .editorial-gallery {
+    gap: 10px;
+    margin-bottom: 92px;
+  }
+
+  .editorial-gallery__item,
+  .editorial-gallery__item--wide,
+  .editorial-gallery__item--panorama {
+    grid-column: 1 / -1;
+    aspect-ratio: 1.12 / 1;
   }
 
   .collection-card {

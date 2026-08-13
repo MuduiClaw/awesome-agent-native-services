@@ -12,6 +12,16 @@ CAT_ROOT="$DOCS/categories"
 IMG_DIR="$DOCS/assets/images"
 IMG="$IMG_DIR/social-preview.png"
 HERO_IMG="$IMG_DIR/editorial-hero.webp"
+ARRIVAL_ATLAS="$IMG_DIR/arrival-atlas.webp"
+SERVICE_ATLAS="$IMG_DIR/service-atlas.webp"
+EDITORIAL_IMAGES=(
+  "$IMG_DIR/editorial-network.webp"
+  "$IMG_DIR/editorial-authority.webp"
+  "$IMG_DIR/editorial-runtime.webp"
+  "$IMG_DIR/editorial-memory.webp"
+  "$IMG_DIR/editorial-resonance.webp"
+  "$IMG_DIR/editorial-routing.webp"
+)
 
 mkdir -p "$IMG_DIR"
 
@@ -19,6 +29,13 @@ if [[ ! -f "$README" ]]; then
   echo "Missing README at $README" >&2
   exit 1
 fi
+
+for asset in "$HERO_IMG" "$ARRIVAL_ATLAS" "$SERVICE_ATLAS" "${EDITORIAL_IMAGES[@]}"; do
+  if [[ ! -s "$asset" ]]; then
+    echo "Missing required editorial asset at $asset" >&2
+    exit 1
+  fi
+done
 
 category_label() {
   case "$1" in
@@ -61,6 +78,32 @@ category_description() {
     llm-gateway-and-routing) echo "Budget-aware model access, routing, caching, policy, and trajectory-sensitive escalation." ;;
     agent-social-network) echo "Networks and shared spaces where agents are first-class participants and collaborators." ;;
     *) echo "Agent-native services selected for this collection." ;;
+  esac
+}
+
+category_hero_image() {
+  case "$1" in
+    communication|browser-and-web-execution|tool-access-and-integration)
+      echo "/assets/images/editorial-network.webp"
+      ;;
+    oversight-and-approval|commerce-and-payments|agent-harnesses-and-control-planes)
+      echo "/assets/images/editorial-authority.webp"
+      ;;
+    agent-runtime-and-infrastructure|code-execution|durable-execution-and-scheduling)
+      echo "/assets/images/editorial-runtime.webp"
+      ;;
+    memory-and-state|search-and-web-intelligence|observability-and-tracing)
+      echo "/assets/images/editorial-memory.webp"
+      ;;
+    meeting-and-conversation|voice-and-phone|agent-social-network)
+      echo "/assets/images/editorial-resonance.webp"
+      ;;
+    llm-gateway-and-routing)
+      echo "/assets/images/editorial-routing.webp"
+      ;;
+    *)
+      echo "/assets/images/editorial-hero.webp"
+      ;;
   esac
 }
 
@@ -207,17 +250,22 @@ YAML
 
 arrival_visual_index=0
 while IFS= read -r record; do
-  arrival_visual_index=$((arrival_visual_index % 16 + 1))
+  arrival_visual_index=$((arrival_visual_index + 1))
   file="${record#*$'\t'}"
   slug="$(basename "$(dirname "$file")")"
   base="$(basename "$file")"
   title="$(sed -n '1{s/^# //;p;q;}' "$file")"
   label="$(category_label "$slug")"
-  visual_number="$(printf '%02d' "$arrival_visual_index")"
+  visual_number="$(printf '%02d' "$(((arrival_visual_index - 1) % 16 + 1))")"
+  if (( ((arrival_visual_index - 1) / 16) % 2 == 0 )); then
+    atlas_sheet="atlas-sheet--arrival"
+  else
+    atlas_sheet="atlas-sheet--service"
+  fi
   title_html="$(html_escape "$title")"
   label_html="$(html_escape "$label")"
   {
-    printf '    <a class="arrival-card atlas-visual--%s" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/%s/%s">\n' "$visual_number" "$slug" "$base"
+    printf '    <a class="arrival-card %s atlas-visual--%s" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/%s/%s">\n' "$atlas_sheet" "$visual_number" "$slug" "$base"
     echo '      <span class="arrival-card__image" aria-hidden="true"></span>'
     echo '      <span class="arrival-card__copy">'
     printf '        <span class="arrival-card__category">%s</span>\n' "$label_html"
@@ -237,6 +285,15 @@ done < <(
 
 cat >>"$INDEX" <<HTML
   </div>
+</section>
+
+<section id="material-studies" class="editorial-gallery" aria-label="Six material studies for agent-native infrastructure">
+  <figure class="editorial-gallery__item editorial-gallery__item--wide"><img src="{{ '/assets/images/editorial-network.webp' | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+  <figure class="editorial-gallery__item"><img src="{{ '/assets/images/editorial-authority.webp' | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+  <figure class="editorial-gallery__item"><img src="{{ '/assets/images/editorial-runtime.webp' | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+  <figure class="editorial-gallery__item"><img src="{{ '/assets/images/editorial-memory.webp' | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+  <figure class="editorial-gallery__item"><img src="{{ '/assets/images/editorial-resonance.webp' | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+  <figure class="editorial-gallery__item editorial-gallery__item--panorama"><img src="{{ '/assets/images/editorial-routing.webp' | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
 </section>
 
 <section id="collections" aria-labelledby="collections-title">
@@ -335,6 +392,7 @@ for index in "${!CATEGORY_SLUGS[@]}"; do
   slug="${CATEGORY_SLUGS[$index]}"
   label="$(category_label "$slug")"
   description="$(category_description "$slug")"
+  hero_image="$(category_hero_image "$slug")"
   number="$(printf '%02d' "$(category_order "$slug")")"
   count="$(service_count_for "$slug")"
   out="$CAT_ROOT/$slug.md"
@@ -346,6 +404,7 @@ for index in "${!CATEGORY_SLUGS[@]}"; do
 title: "$(yaml_escape "$label") | Agent-Native Services"
 collection_label: "$(yaml_escape "$label")"
 description: "$(yaml_escape "$description")"
+hero_image: "${hero_image}"
 permalink: /categories/${slug}/
 page_kind: collection
 collection_number: "${number}"
@@ -360,8 +419,13 @@ YAML
   service_visual_index=0
   while IFS=$'\t' read -r _sort_key service_title base; do
     [[ -n "$base" ]] || continue
-    service_visual_index=$((service_visual_index % 16 + 1))
-    service_visual_number="$(printf '%02d' "$service_visual_index")"
+    service_visual_index=$((service_visual_index + 1))
+    service_visual_number="$(printf '%02d' "$(((service_visual_index - 1) % 16 + 1))")"
+    if (( ((((service_visual_index - 1) / 16) + index) % 2) == 0 )); then
+      service_atlas_sheet="atlas-sheet--service"
+    else
+      service_atlas_sheet="atlas-sheet--arrival"
+    fi
     file="$ROOT/services/$slug/$base"
     repo_url="$(extract_repo_url "$file")"
     signal="$(extract_latest_signal "$file")"
@@ -375,7 +439,7 @@ YAML
       badge="New · Last 30 days"
     fi
     {
-      printf '  <article class="%s atlas-visual--%s">\n' "$class_name" "$service_visual_number"
+      printf '  <article class="%s %s atlas-visual--%s">\n' "$class_name" "$service_atlas_sheet" "$service_visual_number"
       echo '    <span class="service-card__image" aria-hidden="true"></span>'
       echo '    <div class="service-card__copy">'
       printf '    <div class="service-card__overline"><span>%s</span><span>%s</span></div>\n' "$badge" "$classification_html"

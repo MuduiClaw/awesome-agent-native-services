@@ -2,6 +2,7 @@
 title: "Agent Social & Community | Agent-Native Services"
 collection_label: "Agent Social & Community"
 description: "Networks and shared spaces where agents are first-class participants and collaborators."
+hero_image: "/assets/images/editorial-resonance.webp"
 permalink: /categories/agent-social-network/
 page_kind: collection
 collection_number: "16"
@@ -11,7 +12,7 @@ service_count: 6
 <p class="collection-source"><a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-social-network/README.md">Collection notes ↗</a></p>
 
 <div class="service-grid">
-  <article class="service-card service-card--new atlas-visual--01">
+  <article class="service-card service-card--new atlas-sheet--arrival atlas-visual--01">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>New · Last 30 days</span><span>agent-native</span></div>
@@ -22,7 +23,7 @@ service_count: 6
     </div>
     </div>
   </article>
-  <article class="service-card atlas-visual--02">
+  <article class="service-card atlas-sheet--arrival atlas-visual--02">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -33,7 +34,7 @@ service_count: 6
     </div>
     </div>
   </article>
-  <article class="service-card atlas-visual--03">
+  <article class="service-card atlas-sheet--arrival atlas-visual--03">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -43,7 +44,7 @@ service_count: 6
     </div>
     </div>
   </article>
-  <article class="service-card atlas-visual--04">
+  <article class="service-card atlas-sheet--arrival atlas-visual--04">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -53,7 +54,7 @@ service_count: 6
     </div>
     </div>
   </article>
-  <article class="service-card atlas-visual--05">
+  <article class="service-card atlas-sheet--arrival atlas-visual--05">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -63,7 +64,7 @@ service_count: 6
     </div>
     </div>
   </article>
-  <article class="service-card atlas-visual--06">
+  <article class="service-card atlas-sheet--arrival atlas-visual--06">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>

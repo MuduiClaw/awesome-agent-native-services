@@ -15,7 +15,7 @@ new_arrivals_count: 20
     <p class="section-note">13 Jul—13 Aug 2026</p>
   </div>
   <div class="arrival-rail" role="region" aria-label="Last 30 days additions" tabindex="0">
-    <a class="arrival-card atlas-visual--01" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/ruflo.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--01" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/ruflo.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Agent Harnesses &amp; Operator Surfaces</span>
@@ -23,7 +23,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--02" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/codex-hud-fwyc0573.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--02" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/codex-hud-fwyc0573.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Agent Harnesses &amp; Operator Surfaces</span>
@@ -31,7 +31,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--03" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/oh-my-codex.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--03" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/oh-my-codex.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Agent Harnesses &amp; Operator Surfaces</span>
@@ -39,7 +39,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--04" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/openai-symphony.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--04" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/openai-symphony.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Agent Runtime &amp; Infrastructure</span>
@@ -47,7 +47,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--05" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/moli.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--05" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/moli.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Browser &amp; Web Execution</span>
@@ -55,7 +55,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--06" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/secondsign-core.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--06" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/secondsign-core.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Commerce &amp; Payments</span>
@@ -63,7 +63,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--07" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/communication/caspian.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--07" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/communication/caspian.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Communication</span>
@@ -71,7 +71,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--08" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/openchatcut.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--08" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/openchatcut.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Tool Access &amp; Integration</span>
@@ -79,7 +79,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--09" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/oversight-and-approval/sallyport.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--09" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/oversight-and-approval/sallyport.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Oversight &amp; Approval</span>
@@ -87,7 +87,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--10" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/longhorizon-harness.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--10" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/longhorizon-harness.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Agent Harnesses &amp; Operator Surfaces</span>
@@ -95,7 +95,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--11" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/contextx.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--11" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/contextx.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Search &amp; Web Intelligence</span>
@@ -103,7 +103,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--12" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/qm.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--12" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/qm.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Agent Harnesses &amp; Operator Surfaces</span>
@@ -111,7 +111,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--13" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/axern.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--13" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/axern.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Code Execution</span>
@@ -119,7 +119,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--14" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-social-network/agent-chamber.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--14" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-social-network/agent-chamber.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Agent Social &amp; Community</span>
@@ -127,7 +127,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--15" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/voice-and-phone/qwen-audio-agent.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--15" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/voice-and-phone/qwen-audio-agent.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Voice &amp; Phone</span>
@@ -135,7 +135,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--16" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/sageroute.md">
+    <a class="arrival-card atlas-sheet--arrival atlas-visual--16" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/sageroute.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">LLM Gateway &amp; Routing</span>
@@ -143,7 +143,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--01" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/numbat.md">
+    <a class="arrival-card atlas-sheet--service atlas-visual--01" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/numbat.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Observability &amp; Tracing</span>
@@ -151,7 +151,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--02" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memmy-agent.md">
+    <a class="arrival-card atlas-sheet--service atlas-visual--02" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memmy-agent.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Memory &amp; State</span>
@@ -159,7 +159,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--03" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/meeting-and-conversation/looped-meet.md">
+    <a class="arrival-card atlas-sheet--service atlas-visual--03" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/meeting-and-conversation/looped-meet.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Meeting &amp; Conversation</span>
@@ -167,7 +167,7 @@ new_arrivals_count: 20
         <span class="arrival-card__arrow" aria-hidden="true">↗</span>
       </span>
     </a>
-    <a class="arrival-card atlas-visual--04" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/durable-execution-and-scheduling/pi-dispatch.md">
+    <a class="arrival-card atlas-sheet--service atlas-visual--04" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/durable-execution-and-scheduling/pi-dispatch.md">
       <span class="arrival-card__image" aria-hidden="true"></span>
       <span class="arrival-card__copy">
         <span class="arrival-card__category">Durable Execution &amp; Scheduling</span>
@@ -176,6 +176,15 @@ new_arrivals_count: 20
       </span>
     </a>
   </div>
+</section>
+
+<section id="material-studies" class="editorial-gallery" aria-label="Six material studies for agent-native infrastructure">
+  <figure class="editorial-gallery__item editorial-gallery__item--wide"><img src="{{ '/assets/images/editorial-network.webp' | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+  <figure class="editorial-gallery__item"><img src="{{ '/assets/images/editorial-authority.webp' | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+  <figure class="editorial-gallery__item"><img src="{{ '/assets/images/editorial-runtime.webp' | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+  <figure class="editorial-gallery__item"><img src="{{ '/assets/images/editorial-memory.webp' | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+  <figure class="editorial-gallery__item"><img src="{{ '/assets/images/editorial-resonance.webp' | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+  <figure class="editorial-gallery__item editorial-gallery__item--panorama"><img src="{{ '/assets/images/editorial-routing.webp' | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async"></figure>
 </section>
 
 <section id="collections" aria-labelledby="collections-title">

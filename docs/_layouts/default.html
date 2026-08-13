@@ -14,7 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#151411">
     <meta name="color-scheme" content="light">
-    {% if page.page_kind == "home" %}<link rel="preload" as="image" href="{{ '/assets/images/editorial-hero.webp' | relative_url }}" type="image/webp">{% endif %}
+    {% if page.page_kind == "home" %}
+      <link rel="preload" as="image" href="{{ '/assets/images/editorial-hero.webp' | relative_url }}" type="image/webp">
+    {% elsif page.page_kind == "collection" and page.hero_image %}
+      <link rel="preload" as="image" href="{{ page.hero_image | relative_url }}" type="image/webp">
+    {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/catalog.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
   </head>
@@ -59,7 +63,9 @@
       </section>
     {% elsif page.page_kind == "collection" %}
       <section class="editorial-hero collection-hero" aria-labelledby="page-title">
-        <div class="collection-hero__art atlas-visual--{{ page.collection_number }}" aria-hidden="true"></div>
+        <figure class="collection-hero__art" aria-hidden="true">
+          <img src="{{ page.hero_image | default: '/assets/images/editorial-hero.webp' | relative_url }}" alt="" width="1536" height="1024" fetchpriority="high">
+        </figure>
         <div class="hero-inner">
           <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="{{ '/' | relative_url }}">Index</a><span aria-hidden="true">/</span><a href="{{ '/categories/' | relative_url }}">Collections</a>
