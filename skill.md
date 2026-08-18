@@ -5,7 +5,7 @@ description: >
   surfaces for live agents. Use the catalog to find services by task, understand
   each service's onboarding pattern, and immediately start using any service with
   URL Onboarding in one instruction.
-version: "2026-08-13"
+version: "2026-08-18"
 license: CC0-1.0
 catalog: https://github.com/haoruilee/awesome-agent-native-services
 allowed-tools: WebSearch Read
@@ -70,7 +70,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-## Full Catalog — 16 Categories, 172 Services
+## Full Catalog — 16 Categories, 173 Services
 
 ### 1. Communication (13 services)
 *Give agents a first-class communication identity on the internet.*
@@ -209,7 +209,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-### 7. Agent Harnesses & Operator Surfaces (6 services)
+### 7. Agent Harnesses & Operator Surfaces (7 services)
 *Durable agent-loop control, multi-agent orchestration, and live operator surfaces tied to concrete sessions.*
 
 | Service | Tagline | Onboarding |
@@ -218,6 +218,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Ruflo](https://ruflo.ai) | Agent meta-harness for Claude Code and Codex | `npx ruflo@latest init --codex` |
 | [QM](https://qm.ycombinator.com) | Multiplayer agent harness for work | `npm exec --yes --package=@yc-software/qm@latest -- qm init . --org <slug> --target <fly-or-aws>` |
 | [LongHorizon-Harness](https://lh-harness.pages.dev) | Verified long-horizon loop for desktop and CLI agents | `uv tool install lh-harness` → `lh-harness init` → `lh-harness run --task "..." --agent codex` |
+| [Agent QA](https://vostride.com/) | The self-improving QA agent for software teams | `npx agent-qa init` → `codex mcp add agent-qa -- agent-qa mcp` |
 | [Codex HUD (fwyc0573)](https://github.com/fwyc0573/codex-hud) | Real-time statusline and multi-session HUD for Codex CLI | Clone the repo → `./bin/codex-hud-install` → launch `codex` |
 | [Codex HUD (anhannin)](https://github.com/anhannin/codex-hud) | Patched Codex status line for usage and session state | Review the patch/install script, then run `Codex-HUD/install.sh` and start a new session |
 
