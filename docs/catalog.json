@@ -1,8 +1,8 @@
 {
   "$schema": "https://lihaorui.com/awesome-agent-native-services/catalog.schema.json",
   "schema_version": "1.0.0",
-  "catalog_version": "2026-08-13",
-  "generated_at": "2026-08-13",
+  "catalog_version": "2026-08-18",
+  "generated_at": "2026-08-18",
   "license": "CC0-1.0",
   "source": {
     "repository": "https://github.com/haoruilee/awesome-agent-native-services",
@@ -11,7 +11,7 @@
     "service_directory": "services",
     "content_digest": {
       "algorithm": "sha256",
-      "value": "735d18cbe36ba029835af0181bda9143fba25da71880fcd7c6c3fd446fb153d0",
+      "value": "c11881b2e338df8041d7646e9f4eac0c3ec92c752a20372749d77f4f2a86db43",
       "input_paths": [
         "README.md",
         "skill.md",
@@ -111,6 +111,7 @@
         "services/agent-runtime-and-infrastructure/serena.md",
         "services/agent-runtime-and-infrastructure/vertex-ai-agent-engine.md",
         "services/agent-harnesses-and-control-planes/README.md",
+        "services/agent-harnesses-and-control-planes/agent-qa.md",
         "services/agent-harnesses-and-control-planes/codex-hud-anhannin.md",
         "services/agent-harnesses-and-control-planes/codex-hud-fwyc0573.md",
         "services/agent-harnesses-and-control-planes/longhorizon-harness.md",
@@ -208,7 +209,7 @@
   },
   "counts": {
     "categories": 16,
-    "services": 172
+    "services": 173
   },
   "categories": [
     {
@@ -258,7 +259,7 @@
       "name": "Agent Harnesses & Operator Surfaces",
       "description": "Systems purpose-built around running agents: either harnesses that add durable work state, orchestration, verification, and policy, or operator surfaces that expose live agent state and bounded session controls.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/README.md",
-      "service_count": 6
+      "service_count": 7
     },
     {
       "id": "memory-and-state",
@@ -3083,6 +3084,40 @@
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
+    },
+    {
+      "id": "agent-harnesses-and-control-planes/agent-qa",
+      "slug": "agent-qa",
+      "name": "Agent QA",
+      "tagline": "The self-improving QA agent for software teams.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "agent-harnesses-and-control-planes",
+      "website": "https://vostride.com/",
+      "repository": "https://github.com/vostride/agent-qa",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/agent-qa.md",
+      "source_path": "services/agent-harnesses-and-control-planes/agent-qa.md",
+      "onboarding": {
+        "type": "agent-skill",
+        "pattern": "CLI workspace + MCP + published Agent Skills",
+        "instruction": "npx agent-qa init\nnpx agent-qa dashboard --port 3470 --open\ncodex mcp add agent-qa -- agent-qa mcp\nnpx skills add vostride/agent-qa --skill agent-qa-authoring --skill agent-qa-debug-fix --skill agent-qa-result-triage",
+        "url": null
+      },
+      "protocols": [
+        "agent-skill",
+        "mcp",
+        "cli",
+        "stdio",
+        "http"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "available",
+      "latest_month_signal": "v0.1.21 published 2026-06-03; last GitHub push 2026-08-03; docs updated 2026-08-17; 899 stars (snapshot 2026-08-18)",
+      "verified_at": "2026-08-18",
+      "verification_sources": [
+        "https://github.com/vostride/agent-qa"
+      ]
     },
     {
       "id": "agent-harnesses-and-control-planes/codex-hud-anhannin",

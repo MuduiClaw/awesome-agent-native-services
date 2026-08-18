@@ -83,7 +83,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 
 ## Categories
 
-**172 services across 16 categories.**
+**173 services across 16 categories.**
 
 | # | Category | Services | Description |
 |---|---|---|---|
@@ -93,7 +93,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | 4 | [Oversight & Approval](#4-oversight--approval-services) | 4 | Human-in-the-loop approval and escalation |
 | 5 | [Commerce & Payments](#5-commerce--payment-services) | 9 | Agent-native wallets, identity, and transactions |
 | 6 | [Agent Runtime & Infrastructure](#6-agent-runtime--infrastructure-services) | 25 | Execution, session isolation, secrets, and gateway |
-| 7 | [Agent Harnesses & Operator Surfaces](#7-agent-harnesses--operator-surfaces) | 6 | Durable agent-loop control and live operator visibility |
+| 7 | [Agent Harnesses & Operator Surfaces](#7-agent-harnesses--operator-surfaces) | 7 | Durable agent-loop control and live operator visibility |
 | 8 | [Memory & State](#8-memory--state-services) | 15 | Persistent agent memory across sessions |
 | 9 | [Search & Web Intelligence](#9-search--web-intelligence-services) | 8 | LLM-optimized web search and content retrieval |
 | 10 | [Code Execution](#10-code-execution-services) | 10 | Secure sandboxes for AI-generated code |
@@ -277,6 +277,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [Ruflo](services/agent-harnesses-and-control-planes/ruflo.md) [![⭐](https://img.shields.io/github/stars/ruvnet/ruflo?style=social)](https://github.com/ruvnet/ruflo) | Agent meta-harness for Claude Code and Codex | Swarms · memory · background workers · federation · budgets | ✅ | `npx ruflo@latest init --codex` |
 | [QM](services/agent-harnesses-and-control-planes/qm.md) [![⭐](https://img.shields.io/github/stars/yc-software/qm?style=social)](https://github.com/yc-software/qm) | Multiplayer agent harness for work | Personal/shared scopes · durable sandboxes · policy · crons/watches | ⚠️ | `npm exec --yes --package=@yc-software/qm@latest -- qm init . --org <slug> --target <fly-or-aws>` |
 | [LongHorizon-Harness](services/agent-harnesses-and-control-planes/longhorizon-harness.md) [![⭐](https://img.shields.io/github/stars/AMAP-ML/LongHorizon-Harness?style=social)](https://github.com/AMAP-ML/LongHorizon-Harness) | Verified long-horizon loop for desktop and CLI agents | Manager/Executor/Auditor · checkpoints · recovery · evidence | ⚠️ | `uv tool install lh-harness` → `lh-harness init` → `lh-harness run --task "..." --agent codex` |
+| [Agent QA](services/agent-harnesses-and-control-planes/agent-qa.md) [![⭐](https://img.shields.io/github/stars/vostride/agent-qa?style=social)](https://github.com/vostride/agent-qa) | The self-improving QA agent for software teams | Live run IDs · observe/plan/execute/verify · memory · queue cancel | ✅ | `npx agent-qa init` → `codex mcp add agent-qa -- agent-qa mcp` |
 | [Codex HUD (fwyc0573)](services/agent-harnesses-and-control-planes/codex-hud-fwyc0573.md) [![⭐](https://img.shields.io/github/stars/fwyc0573/codex-hud?style=social)](https://github.com/fwyc0573/codex-hud) | Real-time statusline HUD for OpenAI Codex CLI | Context/tools/subagents · multi-session view · attach/list/kill | ⚠️ | Clone [fwyc0573/codex-hud](https://github.com/fwyc0573/codex-hud), run `./bin/codex-hud-install`, then launch `codex` |
 | [Codex HUD (anhannin)](services/agent-harnesses-and-control-planes/codex-hud-anhannin.md) [![⭐](https://img.shields.io/github/stars/anhannin/codex-hud?style=social)](https://github.com/anhannin/codex-hud) | Patched Codex status line for usage and session state | Model/project/git · rollout session · 5-hour and 7-day usage windows | ⚠️ | Clone [anhannin/codex-hud](https://github.com/anhannin/codex-hud), review the patch/install script, then run `Codex-HUD/install.sh` |
 
