@@ -1,8 +1,8 @@
 {
   "$schema": "https://lihaorui.com/awesome-agent-native-services/catalog.schema.json",
   "schema_version": "1.0.0",
-  "catalog_version": "2026-08-18",
-  "generated_at": "2026-08-18",
+  "catalog_version": "2026-08-19",
+  "generated_at": "2026-08-19",
   "license": "CC0-1.0",
   "source": {
     "repository": "https://github.com/haoruilee/awesome-agent-native-services",
@@ -11,7 +11,7 @@
     "service_directory": "services",
     "content_digest": {
       "algorithm": "sha256",
-      "value": "c11881b2e338df8041d7646e9f4eac0c3ec92c752a20372749d77f4f2a86db43",
+      "value": "414695665d51ecd39d640f5519d206566b775a824065983bfcf91544738baac1",
       "input_paths": [
         "README.md",
         "skill.md",
@@ -19,6 +19,8 @@
         "services/communication/agenticmail.md",
         "services/communication/agentmail.md",
         "services/communication/agents-mail.md",
+        "services/communication/agentteam-email.md",
+        "services/communication/atomic-mail.md",
         "services/communication/atxp-email.md",
         "services/communication/caspian.md",
         "services/communication/chimely.md",
@@ -44,6 +46,7 @@
         "services/browser-and-web-execution/crawl4ai.md",
         "services/browser-and-web-execution/firecrawl.md",
         "services/browser-and-web-execution/hyperbrowser.md",
+        "services/browser-and-web-execution/kernel.md",
         "services/browser-and-web-execution/lightpanda.md",
         "services/browser-and-web-execution/moli.md",
         "services/browser-and-web-execution/notte.md",
@@ -69,9 +72,11 @@
         "services/tool-access-and-integration/snyk-agent-scan.md",
         "services/tool-access-and-integration/toolhive.md",
         "services/tool-access-and-integration/toolhouse.md",
+        "services/tool-access-and-integration/toolport.md",
         "services/oversight-and-approval/README.md",
         "services/oversight-and-approval/cordum.md",
         "services/oversight-and-approval/humanlayer.md",
+        "services/oversight-and-approval/preloop.md",
         "services/oversight-and-approval/sallyport.md",
         "services/oversight-and-approval/sondera-coding-agent-hooks.md",
         "services/commerce-and-payments/README.md",
@@ -96,11 +101,13 @@
         "services/agent-runtime-and-infrastructure/claude-managed-agents.md",
         "services/agent-runtime-and-infrastructure/claude-peers.md",
         "services/agent-runtime-and-infrastructure/cloudflare-agents-sdk.md",
+        "services/agent-runtime-and-infrastructure/cloudflare-computer.md",
         "services/agent-runtime-and-infrastructure/codex-plugin-cc.md",
         "services/agent-runtime-and-infrastructure/cx.md",
         "services/agent-runtime-and-infrastructure/cyberdesk.md",
         "services/agent-runtime-and-infrastructure/db9.md",
         "services/agent-runtime-and-infrastructure/fiserv-agentos.md",
+        "services/agent-runtime-and-infrastructure/google-ax.md",
         "services/agent-runtime-and-infrastructure/infisical-agent-sentinel.md",
         "services/agent-runtime-and-infrastructure/letta.md",
         "services/agent-runtime-and-infrastructure/modal.md",
@@ -112,13 +119,16 @@
         "services/agent-runtime-and-infrastructure/vertex-ai-agent-engine.md",
         "services/agent-harnesses-and-control-planes/README.md",
         "services/agent-harnesses-and-control-planes/agent-qa.md",
+        "services/agent-harnesses-and-control-planes/claude-hud.md",
         "services/agent-harnesses-and-control-planes/codex-hud-anhannin.md",
         "services/agent-harnesses-and-control-planes/codex-hud-fwyc0573.md",
         "services/agent-harnesses-and-control-planes/longhorizon-harness.md",
+        "services/agent-harnesses-and-control-planes/loopx.md",
         "services/agent-harnesses-and-control-planes/oh-my-codex.md",
         "services/agent-harnesses-and-control-planes/qm.md",
         "services/agent-harnesses-and-control-planes/ruflo.md",
         "services/memory-and-state/README.md",
+        "services/memory-and-state/agentmemory.md",
         "services/memory-and-state/cognee.md",
         "services/memory-and-state/ensue.md",
         "services/memory-and-state/hindsight.md",
@@ -133,8 +143,10 @@
         "services/memory-and-state/memu.md",
         "services/memory-and-state/openviking.md",
         "services/memory-and-state/recall.md",
+        "services/memory-and-state/tencentdb-agent-memory.md",
         "services/memory-and-state/zep.md",
         "services/search-and-web-intelligence/README.md",
+        "services/search-and-web-intelligence/agent-search-mcp.md",
         "services/search-and-web-intelligence/contextx.md",
         "services/search-and-web-intelligence/exa.md",
         "services/search-and-web-intelligence/jina-deepsearch.md",
@@ -175,6 +187,7 @@
         "services/durable-execution-and-scheduling/restate.md",
         "services/durable-execution-and-scheduling/trigger-dev.md",
         "services/meeting-and-conversation/README.md",
+        "services/meeting-and-conversation/agentcall.md",
         "services/meeting-and-conversation/daily-agent.md",
         "services/meeting-and-conversation/looped-meet.md",
         "services/meeting-and-conversation/meeting-baas.md",
@@ -183,6 +196,7 @@
         "services/meeting-and-conversation/vexa.md",
         "services/voice-and-phone/README.md",
         "services/voice-and-phone/livekit-agents.md",
+        "services/voice-and-phone/patter.md",
         "services/voice-and-phone/pipecat.md",
         "services/voice-and-phone/qwen-audio-agent.md",
         "services/voice-and-phone/retell-ai.md",
@@ -199,6 +213,7 @@
         "services/llm-gateway-and-routing/sageroute.md",
         "services/agent-social-network/README.md",
         "services/agent-social-network/agent-chamber.md",
+        "services/agent-social-network/agentgram.md",
         "services/agent-social-network/kinthai.md",
         "services/agent-social-network/mcpverse.md",
         "services/agent-social-network/moltbook.md",
@@ -209,7 +224,7 @@
   },
   "counts": {
     "categories": 16,
-    "services": 173
+    "services": 188
   },
   "categories": [
     {
@@ -217,28 +232,28 @@
       "name": "Communication",
       "description": "Services that give AI agents a first-class communication identity on the internet — not a proxy to a human's mailbox or messaging account, but an identity the agent owns and operates autonomously.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/communication/README.md",
-      "service_count": 13
+      "service_count": 15
     },
     {
       "id": "browser-and-web-execution",
       "name": "Browser & Web Execution",
       "description": "Services that give AI agents a remote, managed browser runtime — so agents can navigate, interact with, and extract data from the web as an autonomous actor, without any human operating a browser on their behalf.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/README.md",
-      "service_count": 23
+      "service_count": 24
     },
     {
       "id": "tool-access-and-integration",
       "name": "Tool Access & Integration",
       "description": "Services that let AI agents discover, authenticate, and invoke external tools at runtime — without a human pre-configuring credentials or selecting which integrations to activate.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/README.md",
-      "service_count": 15
+      "service_count": 16
     },
     {
       "id": "oversight-and-approval",
       "name": "Oversight & Approval",
       "description": "Services that give AI agents a structured, programmatic way to request human approval before executing high-stakes actions — turning human oversight from an ad-hoc interruption into a first-class, auditable primitive.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/oversight-and-approval/README.md",
-      "service_count": 4
+      "service_count": 5
     },
     {
       "id": "commerce-and-payments",
@@ -252,28 +267,28 @@
       "name": "Agent Runtime & Infrastructure",
       "description": "Services that provide the secure deployment substrate, session isolation, secret management, identity, gateway, and observability required to run AI agents reliably in production — the \"operating system layer\" for autonomous agents.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/README.md",
-      "service_count": 25
+      "service_count": 27
     },
     {
       "id": "agent-harnesses-and-control-planes",
       "name": "Agent Harnesses & Operator Surfaces",
       "description": "Systems purpose-built around running agents: either harnesses that add durable work state, orchestration, verification, and policy, or operator surfaces that expose live agent state and bounded session controls.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/README.md",
-      "service_count": 7
+      "service_count": 9
     },
     {
       "id": "memory-and-state",
       "name": "Memory & State",
       "description": "Services that give AI agents persistent, queryable memory across sessions — treating memory as infrastructure rather than application logic, and managing the full lifecycle of what agents remember, forget, and retrieve.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/README.md",
-      "service_count": 15
+      "service_count": 17
     },
     {
       "id": "search-and-web-intelligence",
       "name": "Search & Web Intelligence",
       "description": "Services that give AI agents optimized, structured access to web information — returning AI-ready content tuned for LLM context windows, not raw HTML or human-readable SERPs.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/README.md",
-      "service_count": 8
+      "service_count": 9
     },
     {
       "id": "code-execution",
@@ -301,14 +316,14 @@
       "name": "Meeting & Conversation",
       "description": "Services that give AI agents a programmatic presence in voice and video conversations — letting agents join meetings, process real-time audio, and participate in synchronous communication without a human operating a client.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/meeting-and-conversation/README.md",
-      "service_count": 6
+      "service_count": 7
     },
     {
       "id": "voice-and-phone",
       "name": "Voice & Phone",
       "description": "Services that give AI agents a first-class voice and telephony identity — letting agents make and receive phone calls, conduct voice conversations, and interact via speech with no human operating a phone on their behalf.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/voice-and-phone/README.md",
-      "service_count": 6
+      "service_count": 7
     },
     {
       "id": "llm-gateway-and-routing",
@@ -322,7 +337,7 @@
       "name": "Agent Social & Community",
       "description": "Services that give AI agents a persistent public identity on the internet — allowing agents to post, comment, vote, message other agents, build reputation, and participate in communities designed exclusively for non-human actors.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-social-network/README.md",
-      "service_count": 6
+      "service_count": 7
     }
   ],
   "services": [
@@ -420,6 +435,74 @@
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
+    },
+    {
+      "id": "communication/agentteam-email",
+      "slug": "agentteam-email",
+      "name": "AgentTeam Email",
+      "tagline": "Open-source email infrastructure for AI agents.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "communication",
+      "website": "https://www.agentteam.email",
+      "repository": "https://github.com/agentteamhq/agentteam-email",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/communication/agentteam-email.md",
+      "source_path": "services/communication/agentteam-email.md",
+      "onboarding": {
+        "type": "agent-skill",
+        "pattern": "CLI + published Agent Skill",
+        "instruction": "npx --yes @agentteamhq/email@latest --version\nat-email agent connect\n# or\nat-email agent trial\nat-email agent enroll TOKEN",
+        "url": "https://github.com/agentteamhq/agentteam-email/tree/main/skills/at-email-cli"
+      },
+      "protocols": [
+        "agent-skill",
+        "cli",
+        "http"
+      ],
+      "mcp_status": "unavailable",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-08-01; docs and CLI/skill paths still published (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/agentteamhq/agentteam-email"
+      ]
+    },
+    {
+      "id": "communication/atomic-mail",
+      "slug": "atomic-mail",
+      "name": "Atomic Mail",
+      "tagline": "Not AI for your email. Email for your AI.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "communication",
+      "website": "https://atomicmail.ai/",
+      "repository": "https://github.com/Atomic-Mail/atomic-mail-agentic",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/communication/atomic-mail.md",
+      "source_path": "services/communication/atomic-mail.md",
+      "onboarding": {
+        "type": "url",
+        "pattern": "URL Onboarding ⭐ — the homepage is the join document.",
+        "instruction": "Read https://atomicmail.ai and follow the instructions to create an inbox at Atomic Mail.",
+        "url": "https://atomicmail.ai"
+      },
+      "protocols": [
+        "url-onboarding",
+        "agent-skill",
+        "mcp",
+        "rest",
+        "cli",
+        "http",
+        "api"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-08-11; homepage and client repo still document PoW signup, JMAP, MCP, and AgentSkill (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/Atomic-Mail/atomic-mail-agentic"
+      ]
     },
     {
       "id": "communication/atxp-email",
@@ -1182,6 +1265,38 @@
       "verification_sources": []
     },
     {
+      "id": "browser-and-web-execution/kernel",
+      "slug": "kernel",
+      "name": "Kernel",
+      "tagline": "you build agents. we give them the internet.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "browser-and-web-execution",
+      "website": "https://www.kernel.sh/",
+      "repository": "https://github.com/kernel/kernel-images",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/kernel.md",
+      "source_path": "services/browser-and-web-execution/kernel.md",
+      "onboarding": {
+        "type": "agent-skill",
+        "pattern": "CLI + published Agent Skill",
+        "instruction": "brew install kernel/tap/kernel\n# or\nnpm install -g @onkernel/cli\n\nkernel --version\nexport KERNEL_API_KEY=your_api_key\n# fallback: kernel login\nkernel browsers create -o json",
+        "url": "https://github.com/kernel/skills/blob/main/plugins/kernel-cli/skills/kernel-cli/SKILL.md"
+      },
+      "protocols": [
+        "agent-skill",
+        "cli",
+        "http"
+      ],
+      "mcp_status": "unavailable",
+      "agent_skill_status": "available",
+      "latest_month_signal": "kernel-images last push 2026-08-18; kernel/cli last push 2026-08-18 (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/kernel/kernel-images"
+      ]
+    },
+    {
       "id": "browser-and-web-execution/lightpanda",
       "slug": "lightpanda",
       "name": "Lightpanda",
@@ -1929,6 +2044,38 @@
       "verification_sources": []
     },
     {
+      "id": "tool-access-and-integration/toolport",
+      "slug": "toolport",
+      "name": "Toolport",
+      "tagline": "Every tool. One port.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "tool-access-and-integration",
+      "website": "https://toolport.app",
+      "repository": "https://github.com/tsouth89/toolport",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/toolport.md",
+      "source_path": "services/tool-access-and-integration/toolport.md",
+      "onboarding": {
+        "type": "mcp",
+        "pattern": "local MCP gateway (stdio) after a one-time desktop install",
+        "instruction": "1. Download the installer from https://github.com/tsouth89/toolport/releases/latest",
+        "url": "https://github.com/tsouth89/toolport/releases/latest"
+      },
+      "protocols": [
+        "mcp",
+        "stdio",
+        "http"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last GitHub push 2026-08-19 (verified the same day)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/tsouth89/toolport"
+      ]
+    },
+    {
       "id": "oversight-and-approval/cordum",
       "slug": "cordum",
       "name": "Cordum",
@@ -1987,6 +2134,39 @@
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
+    },
+    {
+      "id": "oversight-and-approval/preloop",
+      "slug": "preloop",
+      "name": "Preloop",
+      "tagline": "The Open Source Control Plane for AI Agents",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "oversight-and-approval",
+      "website": "https://preloop.ai",
+      "repository": "https://github.com/preloop/preloop",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/oversight-and-approval/preloop.md",
+      "source_path": "services/oversight-and-approval/preloop.md",
+      "onboarding": {
+        "type": "cli",
+        "pattern": "CLI that rewrites local agents onto the control plane",
+        "instruction": "curl -fsSL https://preloop.ai/install/cli | sh\npreloop signup\n# or: preloop login --url http://localhost:3000\npreloop agents discover",
+        "url": "https://preloop.ai/install/cli"
+      },
+      "protocols": [
+        "mcp",
+        "rest",
+        "cli",
+        "api"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last GitHub push 2026-08-18; CLI install and docs live (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/preloop/preloop"
+      ]
     },
     {
       "id": "oversight-and-approval/sallyport",
@@ -2663,6 +2843,37 @@
       "verification_sources": []
     },
     {
+      "id": "agent-runtime-and-infrastructure/cloudflare-computer",
+      "slug": "cloudflare-computer",
+      "name": "Cloudflare Computer",
+      "tagline": "Give your agent a computer 👾",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "agent-runtime-and-infrastructure",
+      "website": "https://github.com/cloudflare/computer",
+      "repository": "https://github.com/cloudflare/computer",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/cloudflare-computer.md",
+      "source_path": "services/agent-runtime-and-infrastructure/cloudflare-computer.md",
+      "onboarding": {
+        "type": "sdk",
+        "pattern": "SDK (Durable Object workspace)",
+        "instruction": "npm install @cloudflare/computer",
+        "url": null
+      },
+      "protocols": [
+        "sdk",
+        "api"
+      ],
+      "mcp_status": "unknown",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last GitHub push 2026-08-18; npm package @cloudflare/computer documented as preview (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/cloudflare/computer"
+      ]
+    },
+    {
       "id": "agent-runtime-and-infrastructure/codex-plugin-cc",
       "slug": "codex-plugin-cc",
       "name": "Codex plugin for Claude Code (codex-plugin-cc)",
@@ -2810,6 +3021,37 @@
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
+    },
+    {
+      "id": "agent-runtime-and-infrastructure/google-ax",
+      "slug": "google-ax",
+      "name": "Agent Executor (AX)",
+      "tagline": "An open source distributed agent runtime",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "agent-runtime-and-infrastructure",
+      "website": "https://agentexecutor.io",
+      "repository": "https://github.com/google/ax",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/google-ax.md",
+      "source_path": "services/agent-runtime-and-infrastructure/google-ax.md",
+      "onboarding": {
+        "type": "cli",
+        "pattern": "CLI + optional gRPC server",
+        "instruction": "go install github.com/google/ax/cmd/ax@latest\nax --help\n\n# Local built-in Antigravity harness (needs GEMINI_API_KEY or Vertex ADC)\nax --input \"Can you list this directory?\"\n\n# Resume\nax --conversation <id> --input \"Show me the contents of README.md\"\nax --conversation <id> --resume",
+        "url": "https://github.com/agent-substrate/substrate"
+      },
+      "protocols": [
+        "grpc",
+        "cli"
+      ],
+      "mcp_status": "unknown",
+      "agent_skill_status": "unknown",
+      "latest_month_signal": "Last GitHub push 2026-08-13; README still marks early development (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/google/ax"
+      ]
     },
     {
       "id": "agent-runtime-and-infrastructure/infisical-agent-sentinel",
@@ -3120,6 +3362,36 @@
       ]
     },
     {
+      "id": "agent-harnesses-and-control-planes/claude-hud",
+      "slug": "claude-hud",
+      "name": "Claude HUD",
+      "tagline": "A Claude Code plugin that shows what's happening",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "agent-harnesses-and-control-planes",
+      "website": "https://github.com/jarrodwatts/claude-hud",
+      "repository": "https://github.com/jarrodwatts/claude-hud",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/claude-hud.md",
+      "source_path": "services/agent-harnesses-and-control-planes/claude-hud.md",
+      "onboarding": {
+        "type": "other",
+        "pattern": "Claude Code plugin + status-line protocol",
+        "instruction": "/plugin marketplace add jarrodwatts/claude-hud\n/plugin install claude-hud\n/reload-plugins\n/claude-hud:setup",
+        "url": null
+      },
+      "protocols": [
+        "documentation"
+      ],
+      "mcp_status": "unavailable",
+      "agent_skill_status": "unknown",
+      "latest_month_signal": "Last GitHub push 2026-08-18 (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/jarrodwatts/claude-hud"
+      ]
+    },
+    {
       "id": "agent-harnesses-and-control-planes/codex-hud-anhannin",
       "slug": "codex-hud-anhannin",
       "name": "Codex HUD (anhannin)",
@@ -3206,6 +3478,38 @@
       "verified_at": "2026-08-13",
       "verification_sources": [
         "https://github.com/AMAP-ML/LongHorizon-Harness"
+      ]
+    },
+    {
+      "id": "agent-harnesses-and-control-planes/loopx",
+      "slug": "loopx",
+      "name": "LoopX",
+      "tagline": "The open, provider-neutral, stateful control plane for long-horizon agents.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "agent-harnesses-and-control-planes",
+      "website": "https://huangruiteng.github.io/loopx/",
+      "repository": "https://github.com/huangruiteng/loopx",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/loopx.md",
+      "source_path": "services/agent-harnesses-and-control-planes/loopx.md",
+      "onboarding": {
+        "type": "cli",
+        "pattern": "CLI + workflow skills",
+        "instruction": "python3 -m pip install --upgrade loopx\nloopx workflow-skills --install\nloopx doctor\ncd /path/to/your-project\nloopx connect\nloopx status",
+        "url": null
+      },
+      "protocols": [
+        "agent-skill",
+        "mcp",
+        "cli"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-08-19 (verified the same day)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/huangruiteng/loopx"
       ]
     },
     {
@@ -3304,6 +3608,42 @@
       "verified_at": "2026-08-13",
       "verification_sources": [
         "https://github.com/ruvnet/ruflo"
+      ]
+    },
+    {
+      "id": "memory-and-state/agentmemory",
+      "slug": "agentmemory",
+      "name": "agentmemory",
+      "tagline": "Your coding agent remembers everything. No more re-explaining.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "memory-and-state",
+      "website": "https://agent-memory.dev",
+      "repository": "https://github.com/rohitg00/agentmemory",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/agentmemory.md",
+      "source_path": "services/memory-and-state/agentmemory.md",
+      "onboarding": {
+        "type": "url",
+        "pattern": "URL Onboarding ⭐ + local memory server + MCP + Skills",
+        "instruction": "Retrieve and follow the instructions at: https://raw.githubusercontent.com/rohitg00/agentmemory/main/INSTALL_FOR_AGENTS.md",
+        "url": "https://raw.githubusercontent.com/rohitg00/agentmemory/main/INSTALL_FOR_AGENTS.md"
+      },
+      "protocols": [
+        "url-onboarding",
+        "agent-skill",
+        "mcp",
+        "rest",
+        "cli",
+        "stdio",
+        "http"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-08-17 (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/rohitg00/agentmemory"
       ]
     },
     {
@@ -3751,6 +4091,36 @@
       "verification_sources": []
     },
     {
+      "id": "memory-and-state/tencentdb-agent-memory",
+      "slug": "tencentdb-agent-memory",
+      "name": "TencentDB Agent Memory",
+      "tagline": "Agents remember,Humans innovate.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "memory-and-state",
+      "website": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "repository": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/tencentdb-agent-memory.md",
+      "source_path": "services/memory-and-state/tencentdb-agent-memory.md",
+      "onboarding": {
+        "type": "other",
+        "pattern": "OpenClaw plugin or Hermes gateway plugin",
+        "instruction": "openclaw plugins install @tencentdb-agent-memory/memory-tencentdb\nopenclaw gateway restart",
+        "url": null
+      },
+      "protocols": [
+        "http"
+      ],
+      "mcp_status": "unavailable",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Default branch feat/server_team; last push 2026-08-15 (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/TencentCloud/TencentDB-Agent-Memory"
+      ]
+    },
+    {
       "id": "memory-and-state/zep",
       "slug": "zep",
       "name": "Zep",
@@ -3780,6 +4150,40 @@
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
+    },
+    {
+      "id": "search-and-web-intelligence/agent-search-mcp",
+      "slug": "agent-search-mcp",
+      "name": "Agent Search MCP",
+      "tagline": "A Node.js MCP server and CLI for English and Chinese web search.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "search-and-web-intelligence",
+      "website": "https://take-a-deep-breath0.com/en/agent-search-mcp",
+      "repository": "https://github.com/lennney/agent-search-mcp",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/search-and-web-intelligence/agent-search-mcp.md",
+      "source_path": "services/search-and-web-intelligence/agent-search-mcp.md",
+      "onboarding": {
+        "type": "agent-skill",
+        "pattern": "MCP (stdio) + optional Agent Skill + fasm CLI",
+        "instruction": "{\n  \"mcpServers\": {\n    \"agent-search\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"agent-search-mcp\"]\n    }\n  }\n}",
+        "url": null
+      },
+      "protocols": [
+        "agent-skill",
+        "mcp",
+        "cli",
+        "stdio",
+        "http"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-08-17 (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/lennney/agent-search-mcp"
+      ]
     },
     {
       "id": "search-and-web-intelligence/contextx",
@@ -4914,6 +5318,40 @@
       "verification_sources": []
     },
     {
+      "id": "meeting-and-conversation/agentcall",
+      "slug": "agentcall",
+      "name": "AgentCall",
+      "tagline": "Your AI agent, in every meeting.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "meeting-and-conversation",
+      "website": "https://agentcall.dev",
+      "repository": "https://github.com/pattern-ai-labs/agentcall",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/meeting-and-conversation/agentcall.md",
+      "source_path": "services/meeting-and-conversation/agentcall.md",
+      "onboarding": {
+        "type": "agent-skill",
+        "pattern": "Agent Skill (not an SDK)",
+        "instruction": "/plugin marketplace add pattern-ai-labs/agentcall\n/plugin install join-meeting@agentcall",
+        "url": "https://github.com/pattern-ai-labs/agentcall"
+      },
+      "protocols": [
+        "agent-skill",
+        "rest",
+        "websocket",
+        "http",
+        "api"
+      ],
+      "mcp_status": "unavailable",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-08-10; site and skill install paths live (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/pattern-ai-labs/agentcall"
+      ]
+    },
+    {
       "id": "meeting-and-conversation/daily-agent",
       "slug": "daily-agent",
       "name": "Daily Agent Toolkit",
@@ -5134,6 +5572,37 @@
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
+    },
+    {
+      "id": "voice-and-phone/patter",
+      "slug": "patter",
+      "name": "Patter",
+      "tagline": "Patter is the open-source SDK that gives your AI agent a phone number.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "voice-and-phone",
+      "website": "https://getpatter.com",
+      "repository": "https://github.com/PatterAI/Patter",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/voice-and-phone/patter.md",
+      "source_path": "services/voice-and-phone/patter.md",
+      "onboarding": {
+        "type": "agent-skill",
+        "pattern": "SDK + published Agent Skills",
+        "instruction": "npx skills add patterai/skills\nnpm install getpatter\n# or\npip install getpatter",
+        "url": "https://docs.getpatter.com"
+      },
+      "protocols": [
+        "agent-skill",
+        "http"
+      ],
+      "mcp_status": "unavailable",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-08-13 (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/PatterAI/Patter"
+      ]
     },
     {
       "id": "voice-and-phone/pipecat",
@@ -5573,6 +6042,40 @@
         "https://github.com/LtyFantasy/agent-chamber/releases/tag/v1.43.0",
         "https://github.com/LtyFantasy/agent-chamber/releases/tag/v1.43.1",
         "https://api.github.com/repos/LtyFantasy/agent-chamber"
+      ]
+    },
+    {
+      "id": "agent-social-network/agentgram",
+      "slug": "agentgram",
+      "name": "AgentGram",
+      "tagline": "The Open-Source Social Network for AI Agents",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "agent-social-network",
+      "website": "https://agentgram.co",
+      "repository": "https://github.com/agentgram/agentgram",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-social-network/agentgram.md",
+      "source_path": "services/agent-social-network/agentgram.md",
+      "onboarding": {
+        "type": "mcp",
+        "pattern": "SDK + MCP",
+        "instruction": "pip install agentgram\npython -c \"from agentgram import AgentGram; AgentGram().agents.register(name='my-bot')\"",
+        "url": "https://github.com/agentgram/agentgram.git"
+      },
+      "protocols": [
+        "mcp",
+        "rest",
+        "sdk",
+        "http",
+        "api"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "unknown",
+      "latest_month_signal": "Last GitHub push 2026-08-19; homepage also markets team MCP/AX Score governance (verified 2026-08-19)",
+      "verified_at": "2026-08-19",
+      "verification_sources": [
+        "https://github.com/agentgram/agentgram"
       ]
     },
     {
