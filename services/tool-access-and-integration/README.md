@@ -31,6 +31,7 @@ Agent-native tool access services solve all three problems with primitives that 
 | [Obot](obot.md) [![⭐](https://img.shields.io/github/stars/obot-platform/obot?style=social)](https://github.com/obot-platform/obot) | Complete MCP Platform — Hosting, Registry, Gateway, Chat Client | MCP (Streamable HTTP), REST admin API, OAuth 2.1, Helm chart | ✅ |
 | [Snyk Agent Scan](snyk-agent-scan.md) [![⭐](https://img.shields.io/github/stars/snyk/agent-scan?style=social)](https://github.com/snyk/agent-scan) | Security scanner for AI agents, MCP servers and agent skills | CLI, MCP config inspection, CI scan output | ✅ |
 | [OpenChatCut](openchatcut.md) [![⭐](https://img.shields.io/github/stars/0xsline/OpenChatCut?style=social)](https://github.com/0xsline/OpenChatCut) | Local-first agent-native video editor with real editable timelines | Agent Skill, Streamable HTTP MCP, isolated draft sessions, EditorCore tools | ✅ |
+| [Toolport](toolport.md) [![⭐](https://img.shields.io/github/stars/tsouth89/toolport?style=social)](https://github.com/tsouth89/toolport) | Every tool. One port. | stdio `toolport-gateway`, lazy meta-tools, per-client profiles, OS keychain | ✅ |
 
 
 

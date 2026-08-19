@@ -24,6 +24,7 @@ Agent-native meeting services provide a unified API for bot lifecycle management
 | [Vexa](vexa.md) [![⭐](https://img.shields.io/github/stars/Vexa-ai/vexa?style=social)](https://github.com/Vexa-ai/vexa) | Open-source meeting transcription + interactive bot for Meet/Teams/Zoom | REST API, WebSocket, MCP server (17 tools), self-host | ✅ |
 | [Daily Agent Toolkit](daily-agent.md) [![⭐](https://img.shields.io/github/stars/daily-co/daily-python?style=social)](https://github.com/daily-co/daily-python) | Build realtime meeting agents on Daily | Programmatic room control, media stream hooks, bot orchestration | ⚠️ |
 | [Looped Meet](looped-meet.md) [![⭐](https://img.shields.io/github/stars/loopedautomation/meet?style=social)](https://github.com/loopedautomation/meet) | Self-hostable video meetings with first-class, full-duplex AI agent participants | TTY WebSocket/webhook brain bridge, LiveKit/WebRTC, HTTP routes, cal.com webhook | ❌ |
+| [AgentCall](agentcall.md) [![⭐](https://img.shields.io/github/stars/pattern-ai-labs/agentcall?style=social)](https://github.com/pattern-ai-labs/agentcall) | Your AI agent, in every meeting. | join-meeting Skill, REST/WSS, Meet/Zoom/Teams voice bot | ⚠️ |
 
 
 ---

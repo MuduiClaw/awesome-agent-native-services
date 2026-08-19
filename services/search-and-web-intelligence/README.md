@@ -28,6 +28,7 @@ The services in this category were designed with these requirements as the prima
 | [Jina Reader](jina-reader.md) [![⭐](https://img.shields.io/github/stars/jina-ai/reader?style=social)](https://github.com/jina-ai/reader) | URL and search results as LLM-friendly text | `r.jina.ai` / `s.jina.ai` · MCP · PDF & image handling | ✅ |
 | [Linkup](linkup.md) [![⭐](https://img.shields.io/github/stars/LinkupPlatform/linkup-python-sdk?style=social)](https://github.com/LinkupPlatform/linkup-python-sdk) | Search API for AI agents and LLM apps | LLM-oriented search, structured retrieval, citation-ready outputs | ⚠️ |
 | [NotHumanSearch](nothumansearch.md) | Agent-first search — the index of services designed for AI, not humans | REST API · OpenAPI 3.0 · MCP (`ai.nothumansearch/search`) · `llms.txt` onboarding | ✅ |
+| [Agent Search MCP](agent-search-mcp.md) [![⭐](https://img.shields.io/github/stars/lennney/agent-search-mcp?style=social)](https://github.com/lennney/agent-search-mcp) | Free-first Chinese and English web search with inspectable evidence | MCP stdio/HTTP, `fasm` CLI, evidence packet, Agent Skill | ✅ |
 
 
 ---

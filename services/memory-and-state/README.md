@@ -39,6 +39,8 @@ Agent-native memory services solve this by providing:
 | [MemMachine](memmachine.md) [![⭐](https://img.shields.io/github/stars/MemMachine/MemMachine?style=social)](https://github.com/MemMachine/MemMachine) | Universal memory layer — episodic graph + profile SQL + working memory | Python SDK, LangChain/CrewAI adapters, REST API | ⚠️ |
 | [Cognee](cognee.md) [![⭐](https://img.shields.io/github/stars/topoteretes/cognee?style=social)](https://github.com/topoteretes/cognee) | Memory control plane for AI agents — managed world model with auto ontology | Python SDK, 28+ connectors, MCP server, framework adapters | ✅ |
 | [Hindsight](hindsight.md) [![⭐](https://img.shields.io/github/stars/vectorize-io/hindsight?style=social)](https://github.com/vectorize-io/hindsight) | Agent Memory That Learns | Python SDK, open-source memory service, cookbook examples | ⚠️ |
+| [agentmemory](agentmemory.md) [![⭐](https://img.shields.io/github/stars/rohitg00/agentmemory?style=social)](https://github.com/rohitg00/agentmemory) | Your coding agent remembers everything. No more re-explaining. | Local memory server, MCP, Skills, INSTALL_FOR_AGENTS.md | ✅ |
+| [TencentDB Agent Memory](tencentdb-agent-memory.md) [![⭐](https://img.shields.io/github/stars/TencentCloud/TencentDB-Agent-Memory?style=social)](https://github.com/TencentCloud/TencentDB-Agent-Memory) | Agents remember,Humans innovate. | OpenClaw plugin, Hermes Gateway, layered + symbolic memory | ⚠️ |
 
 
 

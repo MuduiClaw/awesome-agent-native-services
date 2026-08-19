@@ -23,6 +23,8 @@ Human communication infrastructure (Gmail, Outlook, Slack) was built around the 
 | [MCP Agent Mail (Rust)](mcp-agent-mail-rust.md) | "Gmail for coding agents" with high-performance MCP runtime | MCP tools/resources, local HTTP runtime, TUI + robot CLI | ✅ |
 | [AgenticMail](agenticmail.md) [![⭐](https://img.shields.io/github/stars/agenticmail/agenticmail?style=social)](https://github.com/agenticmail/agenticmail) | Email & SMS infrastructure for AI agents | REST API (75+ endpoints), self-hosted Stalwart + Google Voice bridge, Webhooks | ⚠️ |
 | [Caspian](caspian.md) [![⭐](https://img.shields.io/github/stars/TryCaspian/caspian-sdk?style=social)](https://github.com/TryCaspian/caspian-sdk) | One agent communication identity across human channels | URL onboarding, Python/TypeScript SDKs, CLI, REST events, Webhooks | ⚠️ |
+| [Atomic Mail](atomic-mail.md) [![⭐](https://img.shields.io/github/stars/Atomic-Mail/atomic-mail-agentic?style=social)](https://github.com/Atomic-Mail/atomic-mail-agentic) | Not AI for your email. Email for your AI. | Homepage onboarding, JMAP, local/hosted MCP, AgentSkill | ✅ |
+| [AgentTeam Email](agentteam-email.md) [![⭐](https://img.shields.io/github/stars/agentteamhq/agentteam-email?style=social)](https://github.com/agentteamhq/agentteam-email) | Open-source email infrastructure for AI agents | `at-email` CLI, Agent Skill, self-host Compose/Helm, draft review | ⚠️ |
 
 
 

@@ -35,6 +35,8 @@ Operator surfaces are an explicit narrow exception to the catalog's usual machin
 | [Agent QA](agent-qa.md) [![⭐](https://img.shields.io/github/stars/vostride/agent-qa?style=social)](https://github.com/vostride/agent-qa) | The self-improving QA agent for software teams | Live run IDs · observe/plan/execute/verify · file-backed memory · queue cancel | CLI · dashboard · MCP · Skills |
 | [Codex HUD (fwyc0573)](codex-hud-fwyc0573.md) [![⭐](https://img.shields.io/github/stars/fwyc0573/codex-hud?style=social)](https://github.com/fwyc0573/codex-hud) | Real-time statusline HUD for OpenAI Codex CLI | Live context/tools/subagents · multi-session view · attach/list/kill | tmux wrapper CLI · Codex rollout/config readers |
 | [Codex HUD (anhannin)](codex-hud-anhannin.md) [![⭐](https://img.shields.io/github/stars/anhannin/codex-hud?style=social)](https://github.com/anhannin/codex-hud) | Patched Codex status line for usage and session state | Model/project/git · 5-hour and 7-day usage windows | `status_line_command` · rollout JSONL reader |
+| [Claude HUD](claude-hud.md) [![⭐](https://img.shields.io/github/stars/jarrodwatts/claude-hud?style=social)](https://github.com/jarrodwatts/claude-hud) | A Claude Code plugin that shows what's happening | Context/usage · tools · subagents · todos | Claude Code plugin · statusline stdin/stdout |
+| [LoopX](loopx.md) [![⭐](https://img.shields.io/github/stars/huangruiteng/loopx?style=social)](https://github.com/huangruiteng/loopx) | The open, provider-neutral, stateful control plane for long-horizon agents | Objectives · gates · evidence · quota · claims/leases | CLI · workflow skills · host adapters |
 
 ## Criteria Reminder
 
