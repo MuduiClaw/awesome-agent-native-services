@@ -54,12 +54,14 @@ These services can be joined with a single instruction, right now, with no human
 | **mails.dev** | Email for agents: @mails.dev mailbox, send/inbox, wait-for-code | `Read https://mails.dev/skill.md and follow the instructions` |
 | **MailboxKit** | Agent email in one API — REST v1, webhooks, skill.md | `Read https://mailboxkit.com/skill.md and follow the instructions` |
 | **Agents Mail** | Agent email identity: registration, inbox lifecycle, send/reply API | `Read https://agentsmail.org/skill.md and follow the instructions` |
+| **Atomic Mail** | Agent-owned `@atomicmail.ai` inbox over JMAP | `Read https://atomicmail.ai and follow the instructions to create an inbox` |
+| **agentmemory** | Persistent coding-agent memory server, MCP, and skills | `Read https://raw.githubusercontent.com/rohitg00/agentmemory/main/INSTALL_FOR_AGENTS.md and follow the instructions` |
 
 ---
 
-## Full Catalog — 16 Categories, 173 Services
+## Full Catalog — 16 Categories, 188 Services
 
-### 1. Communication (13 services)
+### 1. Communication (15 services)
 *Give agents a first-class communication identity on the internet.*
 
 | Service | Tagline | Onboarding |
@@ -77,10 +79,12 @@ These services can be joined with a single instruction, right now, with no human
 | [MCP Agent Mail (Rust)](https://github.com/Dicklesworthstone/mcp_agent_mail_rust) | "Gmail for coding agents" with MCP tools/resources | Install script from repo README, then run `am` |
 | [AgenticMail](https://github.com/agenticmail/agenticmail) | Email and SMS infrastructure for AI agents | Clone the repo and run `docker compose up -d` |
 | [Caspian](https://api.trycaspianai.com) ⭐ | One agent identity across human communication channels | `Read https://api.trycaspianai.com/SKILL.md and follow it end to end` |
+| [Atomic Mail](https://atomicmail.ai) ⭐ | Not AI for your email. Email for your AI. | `Read https://atomicmail.ai and follow the instructions to create an inbox` |
+| [AgentTeam Email](https://www.agentteam.email) | Open-source email infrastructure for AI agents | `npx --yes @agentteamhq/email@latest` then `at-email agent connect` |
 
 ---
 
-### 2. Browser & Web Execution (23 services)
+### 2. Browser & Web Execution (24 services)
 *Remote browser and web data extraction for agents.*
 
 | Service | Tagline | Onboarding |
@@ -108,10 +112,11 @@ These services can be joined with a single instruction, right now, with no human
 | [Vessel Browser](https://github.com/unmodeled-tyler/vessel-browser) | Durable agent browser with action undo | `npm install -g vessel-browser` → `vessel-browser --mcp` |
 | [CamoFox Browser](https://github.com/jo-inc/camofox-browser) | Stealth headless browser for AI agents | `npm install -g camofox-browser` then start the browser server |
 | [Moli](https://github.com/lexmount/moli) | Structured-first browser engine for AI agents | Build the Rust workspace, then run `moli fetch`, `moli serve`, or `moli mcp` |
+| [Kernel](https://www.kernel.sh) | you build agents. we give them the internet. | `brew install kernel/tap/kernel` or `npm install -g @onkernel/cli`, then `kernel browsers create -o json` |
 
 ---
 
-### 3. Tool Access & Integration (15 services)
+### 3. Tool Access & Integration (16 services)
 *Runtime tool discovery, auth, and execution without human pre-configuration.*
 
 | Service | Tagline | Onboarding |
@@ -131,10 +136,11 @@ These services can be joined with a single instruction, right now, with no human
 | [Obot](https://github.com/obot-platform/obot) | MCP gateway and tool runtime for agents | Deploy Obot and register/connect MCP servers |
 | [Snyk Agent Scan](https://github.com/snyk/agent-scan) | Scan agent tools and MCP configurations for risk | Install the CLI from the repo and scan the target agent configuration |
 | [OpenChatCut](https://github.com/0xsline/OpenChatCut) | Local-first agent-native video editor | `npx skills add 0xsline/OpenChatCut`, then ask the agent to set it up |
+| [Toolport](https://toolport.app) | Every tool. One port. | Install from GitHub Releases, add servers, connect each AI client to `toolport-gateway` |
 
 ---
 
-### 4. Oversight & Approval (4 services)
+### 4. Oversight & Approval (5 services)
 *Structured, programmatic human approval before high-stakes actions.*
 
 | Service | Tagline | Onboarding |
@@ -143,6 +149,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Sondera Coding Agent Hooks](https://github.com/sondera-ai/sondera-coding-agent-hooks) | A reference monitor for AI coding agents | Install Rust hooks and Cedar policies around coding-agent sessions |
 | [HumanLayer](https://humanlayer.dev) | Human in the Loop for AI Agents | `pip install humanlayer` → `@hl.require_approval()` |
 | [Sallyport](https://github.com/OlegSotnikov/sallyport) | Credential gate for agents touching production | `brew install --cask olegsotnikov/tap/sallyport`, then add `sp mcp` to the agent |
+| [Preloop](https://preloop.ai) | The Open Source Control Plane for AI Agents | Install the CLI from https://preloop.ai then `preloop signup` and `preloop agents discover` |
 
 ---
 
@@ -163,7 +170,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-### 6. Agent Runtime & Infrastructure (25 services)
+### 6. Agent Runtime & Infrastructure (27 services)
 *Secure execution, session isolation, secrets, identity, and gateway for production agents.*
 
 | Service | Tagline | Onboarding |
@@ -193,10 +200,12 @@ These services can be joined with a single instruction, right now, with no human
 | [Modal](https://modal.com) | Serverless AI infra — GPUs, sandboxes, batch | `pip install modal` → `modal setup` — [modal.com/docs](https://modal.com/docs) |
 | [Cyberdesk](https://github.com/cyberdesk-hq/cyberdesk) | Open-source virtual desktops for AI agents | `pip install cyberdesk` — [docs.cyberdesk.io](https://docs.cyberdesk.io) |
 | [Polos](https://github.com/polos-dev/polos) | Agent runtime with sandbox, durable workflow, and HITL | `pip install polos` or `npm install polos` |
+| [Cloudflare Computer](https://github.com/cloudflare/computer) | Give your agent a computer | `npm install @cloudflare/computer` then attach `withWorkspace` to a Durable Object (preview only) |
+| [Agent Executor (AX)](https://github.com/google/ax) | An open source distributed agent runtime | `go install github.com/google/ax/cmd/ax@latest` then `ax --input "…"` |
 
 ---
 
-### 7. Agent Harnesses & Operator Surfaces (7 services)
+### 7. Agent Harnesses & Operator Surfaces (9 services)
 *Durable agent-loop control, multi-agent orchestration, and live operator surfaces tied to concrete sessions.*
 
 | Service | Tagline | Onboarding |
@@ -208,10 +217,12 @@ These services can be joined with a single instruction, right now, with no human
 | [Agent QA](https://vostride.com/) | The self-improving QA agent for software teams | `npx agent-qa init` → `codex mcp add agent-qa -- agent-qa mcp` |
 | [Codex HUD (fwyc0573)](https://github.com/fwyc0573/codex-hud) | Real-time statusline and multi-session HUD for Codex CLI | Clone the repo → `./bin/codex-hud-install` → launch `codex` |
 | [Codex HUD (anhannin)](https://github.com/anhannin/codex-hud) | Patched Codex status line for usage and session state | Review the patch/install script, then run `Codex-HUD/install.sh` and start a new session |
+| [Claude HUD](https://github.com/jarrodwatts/claude-hud) | A Claude Code plugin that shows what's happening | `/plugin marketplace add jarrodwatts/claude-hud` then `/plugin install claude-hud` and `/claude-hud:setup` |
+| [LoopX](https://huangruiteng.github.io/loopx/) | Stateful control plane for long-horizon agents | `python3 -m pip install --upgrade loopx` then `loopx workflow-skills --install` and `loopx connect` |
 
 ---
 
-### 8. Memory & State (15 services)
+### 8. Memory & State (17 services)
 *Persistent, queryable memory across sessions — memory as infrastructure, not application logic.*
 
 | Service | Tagline | Onboarding |
@@ -231,10 +242,12 @@ These services can be joined with a single instruction, right now, with no human
 | [MemMachine](https://github.com/MemMachine/MemMachine) | Long-term memory for AI agents | Install from the official repository and follow its server/client quickstart |
 | [Cognee](https://github.com/topoteretes/cognee) | Knowledge engine and memory for AI agents | `pip install cognee` and follow the official quickstart |
 | [Hindsight](https://github.com/vectorize-io/hindsight) | Agent memory with structured recall and reflection | Install/deploy from the official repository and connect its API/MCP surface |
+| [agentmemory](https://agent-memory.dev) ⭐ | Your coding agent remembers everything | `Read https://raw.githubusercontent.com/rohitg00/agentmemory/main/INSTALL_FOR_AGENTS.md and follow the instructions` |
+| [TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) | Agents remember,Humans innovate. | `openclaw plugins install @tencentdb-agent-memory/memory-tencentdb` |
 
 ---
 
-### 9. Search & Web Intelligence (8 services)
+### 9. Search & Web Intelligence (9 services)
 *LLM-optimized web search returning structured content tuned for context windows.*
 
 | Service | Tagline | Onboarding |
@@ -247,6 +260,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Jina Reader](https://jina.ai/reader) | `r.jina.ai` / `s.jina.ai` — LLM-friendly URL & search | `curl "https://r.jina.ai/https://example.com"` — MCP: `mcp.jina.ai` |
 | [Linkup](https://www.linkup.so) | Web search and deep research for agents | Use Linkup's API/SDK or official MCP server per its docs |
 | [NotHumanSearch](https://nothumansearch.ai) ⭐ | Search infrastructure designed for AI agents | `Read https://nothumansearch.ai/llms.txt and follow the instructions` |
+| [Agent Search MCP](https://github.com/lennney/agent-search-mcp) | Free-first web search with inspectable evidence | `npx -y agent-search-mcp` — optional `npx skills add lennney/agent-search-mcp --skill agent-search` |
 
 ---
 
@@ -302,7 +316,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-### 13. Meeting & Conversation (6 services)
+### 13. Meeting & Conversation (7 services)
 *Programmatic agent presence in voice and video meetings.*
 
 | Service | Tagline | Onboarding |
@@ -313,10 +327,11 @@ These services can be joined with a single instruction, right now, with no human
 | [Vexa](https://vexa.ai) | Open-source meeting transcription and interactive bot | Clone [Vexa-ai/vexa](https://github.com/Vexa-ai/vexa) → `docker compose up -d` |
 | [Daily Agent Toolkit](https://github.com/daily-co/daily-python) | Build realtime meeting agents on Daily | `pip install daily-python` then integrate the room/bot lifecycle APIs |
 | [Looped Meet](https://meet.looped.sh) | Dial your agent into your next meeting | Clone [loopedautomation/meet](https://github.com/loopedautomation/meet), configure secrets, then `docker compose up` |
+| [AgentCall](https://agentcall.dev) | Your AI agent, in every meeting. | `/plugin marketplace add pattern-ai-labs/agentcall` then `/plugin install join-meeting@agentcall` |
 
 ---
 
-### 14. Voice & Phone (6 services)
+### 14. Voice & Phone (7 services)
 *Agent-controlled voice calls and telephony infrastructure.*
 
 | Service | Tagline | Onboarding |
@@ -327,6 +342,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Stimm](https://github.com/stimm-ai/stimm) | Open-source ultra-low-latency voice agent platform | Clone the repo and follow its provider setup |
 | [Pipecat](https://github.com/pipecat-ai/pipecat) | Open-source framework for real-time voice AI agents | `pip install pipecat-ai` then compose the STT/LLM/TTS pipeline |
 | [Qwen Audio Agent](https://github.com/QwenAudio/qwen-audio-agent) | Realtime voice runtime that keeps agents present | `npm install -g qwen-audio-agent` → `qwenaudio config` → `qwenaudio` |
+| [Patter](https://getpatter.com) | Open-source SDK that gives your AI agent a phone number | `npx skills add patterai/skills` then `npm install getpatter` or `pip install getpatter` |
 
 ---
 
@@ -346,7 +362,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-### 16. Agent Social & Community (6 services)
+### 16. Agent Social & Community (7 services)
 *Social networks where AI agents are first-class participants.*
 
 | Service | Tagline | Onboarding |
@@ -357,6 +373,7 @@ These services can be joined with a single instruction, right now, with no human
 | MCP Verse | Open town square for autonomous MCP agents | ⚠️ Former website/docs are offline; wait for a verified official replacement |
 | [KinthAI](https://kinthai.ai) | Agent economy network for collaboration and revenue | Visit [agents.kinthai.ai](https://agents.kinthai.ai) |
 | [Agent Chamber](https://github.com/LtyFantasy/agent-chamber) | Where AI agents meet, discuss, and get work done | Clone the repo → `./scripts/setup.sh` |
+| [AgentGram](https://agentgram.co) | The Open-Source Social Network for AI Agents | `pip install agentgram` then register via the SDK — MCP: `npx @agentgram/mcp-server` |
 
 ---
 

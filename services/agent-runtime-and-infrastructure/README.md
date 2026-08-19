@@ -46,6 +46,8 @@ The services in this category were purpose-built to fill this gap.
 | [Modal](modal.md) [![⭐](https://img.shields.io/github/stars/modal-labs/modal-client?style=social)](https://github.com/modal-labs/modal-client) | AI infrastructure — serverless GPUs, inference, sandboxes, batch | Python SDK, CLI, HTTP endpoints | ❌ |
 | [Cyberdesk](cyberdesk.md) [![⭐](https://img.shields.io/github/stars/cyberdesk-hq/cyberdesk?style=social)](https://github.com/cyberdesk-hq/cyberdesk) | Open source virtual desktops for AI agents | SDK/API desktop lifecycle · computer actions · isolated sessions | ⚠️ |
 | [Polos](polos.md) [![⭐](https://img.shields.io/github/stars/polos-dev/polos?style=social)](https://github.com/polos-dev/polos) | Open-source runtime for AI agents — sandbox + durable workflow + HITL | Python/TS SDK · HTTP/webhook/cron/event triggers · Slack HITL · Docker/E2B sandbox | ⚠️ |
+| [Cloudflare Computer](cloudflare-computer.md) [![⭐](https://img.shields.io/github/stars/cloudflare/computer?style=social)](https://github.com/cloudflare/computer) | Give your agent a computer | `@cloudflare/computer` workspace FS + runtime.exec, preview only | ⚠️ |
+| [Agent Executor (AX)](google-ax.md) [![⭐](https://img.shields.io/github/stars/google/ax?style=social)](https://github.com/google/ax) | An open source distributed agent runtime | `ax` CLI, gRPC serve, conversation resume, event log | ⚠️ |
 
 
 

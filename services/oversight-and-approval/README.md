@@ -21,6 +21,7 @@ No general-purpose approval workflow (Jira tickets, email threads, ServiceNow) w
 | [Sondera Coding Agent Hooks](sondera-coding-agent-hooks.md) [![⭐](https://img.shields.io/github/stars/sondera-ai/sondera-coding-agent-hooks?style=social)](https://github.com/sondera-ai/sondera-coding-agent-hooks) | A reference monitor for AI coding agents | Rust hooks, Cedar policies, shell/file/web-request interception | ⚠️ |
 | [HumanLayer](humanlayer.md) | Human in the Loop for AI Agents | Python SDK, TypeScript SDK, REST API, Webhooks | ✅ |
 | [Sallyport](sallyport.md) [![⭐](https://img.shields.io/github/stars/OlegSotnikov/sallyport?style=social)](https://github.com/OlegSotnikov/sallyport) | Let your agent touch prod. Keep the keys. | MCP gate, HTTP/SSH execution, session/per-call approval, signed audit journal | ✅ |
+| [Preloop](preloop.md) [![⭐](https://img.shields.io/github/stars/preloop/preloop?style=social)](https://github.com/preloop/preloop) | The Open Source Control Plane for AI Agents | MCP firewall, CEL approvals, model gateway, session audit, CLI discover | ✅ |
 
 
 ---
