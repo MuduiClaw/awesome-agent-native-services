@@ -34,6 +34,7 @@ Agent-native observability services capture **agent trajectory** — the semanti
 | [Galileo](galileo.md) | Agent reliability platform — observability, evals, and IDE MCP loop | Tracing + evals + Signals, MCP HTTP endpoint, Python/TS SDKs | ✅ |
 | [Laminar](laminar.md) [![⭐](https://img.shields.io/github/stars/lmnr-ai/lmnr?style=social)](https://github.com/lmnr-ai/lmnr) | Open-source observability for long-running agents — agent debugger, browser session replay, Signals | OTLP, Python/TS SDK, SQL API, Evals SDK, self-host | ⚠️ |
 | [OpenLIT](openlit.md) [![⭐](https://img.shields.io/github/stars/openlit/openlit?style=social)](https://github.com/openlit/openlit) | OpenTelemetry-native observability for LLMs and AI agents | Agent traces, tool-call spans, cost/token analytics | ✅ |
+| [AgentSight](agentsight.md) [![⭐](https://img.shields.io/github/stars/eunomia-bpf/agentsight?style=social)](https://github.com/eunomia-bpf/agentsight) | Lightweight system-level observability for AI Agents | CLI wrapper, eBPF record, session DBs, OTLP GenAI | ⚠️ |
 
 
 

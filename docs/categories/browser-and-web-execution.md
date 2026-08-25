@@ -6,7 +6,7 @@ hero_image: "/assets/images/editorial-network.webp"
 permalink: /categories/browser-and-web-execution/
 page_kind: collection
 collection_number: "02"
-service_count: 24
+service_count: 25
 ---
 
 <p class="collection-source"><a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/README.md">Collection notes ↗</a></p>
@@ -243,7 +243,18 @@ service_count: 24
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--service atlas-visual--06">
+  <article class="service-card service-card--new atlas-sheet--service atlas-visual--06">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>New · Last 30 days</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Stealth Browser MCP</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/stealth-browser-mcp.md">Open dossier ↗</a>
+      <a href="https://github.com/vibheksoni/stealth-browser-mcp">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-sheet--service atlas-visual--07">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -254,7 +265,7 @@ service_count: 24
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--service atlas-visual--07">
+  <article class="service-card atlas-sheet--service atlas-visual--08">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -265,7 +276,7 @@ service_count: 24
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--service atlas-visual--08">
+  <article class="service-card atlas-sheet--service atlas-visual--09">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>

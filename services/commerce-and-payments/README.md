@@ -27,6 +27,8 @@ No legacy payment processor was designed with these requirements. The services i
 | [Nevermined](nevermined.md) | The payment layer AI agents actually need | HTTP x402 Protocol, REST API | ❌ |
 | [Coinbase CDP (x402)](coinbase-x402.md) [![⭐](https://img.shields.io/github/stars/coinbase/x402?style=social)](https://github.com/coinbase/x402) | HTTP-native x402 payments — facilitator, SDKs, Bazaar discovery | HTTP x402, TypeScript/Python/Go SDKs, CDP REST | ❌ |
 | [SecondSign Core](secondsign-core.md) [![⭐](https://img.shields.io/github/stars/Bestpart-Irene/secondsign-core?style=social)](https://github.com/Bestpart-Irene/secondsign-core) | Independent transaction co-signer for financial AI agents | Python API, mTLS gateway/approver channels, execute-once rail, hash-chained receipts | ⚠️ |
+| [UCP](ucp.md) [![⭐](https://img.shields.io/github/stars/Universal-Commerce-Protocol/ucp?style=social)](https://github.com/Universal-Commerce-Protocol/ucp) | The common language for platforms, agents, and businesses | REST/JSON-RPC, MCP, A2A, `ucp-schema`, checkout capabilities | ⚠️ |
+| [AP2](ap2.md) [![⭐](https://img.shields.io/github/stars/google-agentic-commerce/AP2?style=social)](https://github.com/google-agentic-commerce/AP2) | An open protocol for the emerging Agent Economy | VDC mandates, Python/Go/Android samples, A2A/UCP extension | ⚠️ |
 
 
 ---

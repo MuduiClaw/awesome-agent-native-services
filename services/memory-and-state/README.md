@@ -41,6 +41,8 @@ Agent-native memory services solve this by providing:
 | [Hindsight](hindsight.md) [![⭐](https://img.shields.io/github/stars/vectorize-io/hindsight?style=social)](https://github.com/vectorize-io/hindsight) | Agent Memory That Learns | Python SDK, open-source memory service, cookbook examples | ⚠️ |
 | [agentmemory](agentmemory.md) [![⭐](https://img.shields.io/github/stars/rohitg00/agentmemory?style=social)](https://github.com/rohitg00/agentmemory) | Your coding agent remembers everything. No more re-explaining. | Local memory server, MCP, Skills, INSTALL_FOR_AGENTS.md | ✅ |
 | [TencentDB Agent Memory](tencentdb-agent-memory.md) [![⭐](https://img.shields.io/github/stars/TencentCloud/TencentDB-Agent-Memory?style=social)](https://github.com/TencentCloud/TencentDB-Agent-Memory) | Agents remember,Humans innovate. | OpenClaw plugin, Hermes Gateway, layered + symbolic memory | ⚠️ |
+| [MemPalace](mempalace.md) [![⭐](https://img.shields.io/github/stars/MemPalace/mempalace?style=social)](https://github.com/MemPalace/mempalace) | The best-benchmarked open-source AI memory system. And it's free. | CLI, stdio MCP, Python API, verbatim palace + graph | ✅ |
+| [MemSearch](memsearch.md) [![⭐](https://img.shields.io/github/stars/zilliztech/memsearch?style=social)](https://github.com/zilliztech/memsearch) | Cross-platform semantic memory for AI coding agents | CLI, Python API, Claude/Codex/DSH/OpenClaw/OpenCode plugins | ⚠️ |
 
 
 

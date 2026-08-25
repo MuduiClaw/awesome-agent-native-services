@@ -1,6 +1,6 @@
 ---
 title: "Agent-Native Collections"
-description: "Browse 190 agent-native services across 16 curated infrastructure collections."
+description: "Browse 201 agent-native services across 16 curated infrastructure collections."
 permalink: /categories/
 page_kind: document
 ---
@@ -19,7 +19,7 @@ page_kind: document
     <span class="collection-card__copy">
     <span class="collection-card__number">02</span>
     <span class="collection-card__title">Browser &amp; Web Execution</span>
-    <span class="collection-card__count">24</span>
+    <span class="collection-card__count">25</span>
     </span>
   </a>
   <a class="collection-card atlas-visual--03" href="{{ '/categories/tool-access-and-integration/' | relative_url }}">
@@ -27,7 +27,7 @@ page_kind: document
     <span class="collection-card__copy">
     <span class="collection-card__number">03</span>
     <span class="collection-card__title">Tool Access &amp; Integration</span>
-    <span class="collection-card__count">17</span>
+    <span class="collection-card__count">19</span>
     </span>
   </a>
   <a class="collection-card atlas-visual--04" href="{{ '/categories/oversight-and-approval/' | relative_url }}">
@@ -43,7 +43,7 @@ page_kind: document
     <span class="collection-card__copy">
     <span class="collection-card__number">05</span>
     <span class="collection-card__title">Commerce &amp; Payments</span>
-    <span class="collection-card__count">9</span>
+    <span class="collection-card__count">11</span>
     </span>
   </a>
   <a class="collection-card atlas-visual--06" href="{{ '/categories/agent-runtime-and-infrastructure/' | relative_url }}">
@@ -51,7 +51,7 @@ page_kind: document
     <span class="collection-card__copy">
     <span class="collection-card__number">06</span>
     <span class="collection-card__title">Agent Runtime &amp; Infrastructure</span>
-    <span class="collection-card__count">27</span>
+    <span class="collection-card__count">28</span>
     </span>
   </a>
   <a class="collection-card atlas-visual--07" href="{{ '/categories/agent-harnesses-and-control-planes/' | relative_url }}">
@@ -59,7 +59,7 @@ page_kind: document
     <span class="collection-card__copy">
     <span class="collection-card__number">07</span>
     <span class="collection-card__title">Agent Harnesses &amp; Operator Surfaces</span>
-    <span class="collection-card__count">9</span>
+    <span class="collection-card__count">10</span>
     </span>
   </a>
   <a class="collection-card atlas-visual--08" href="{{ '/categories/memory-and-state/' | relative_url }}">
@@ -67,7 +67,7 @@ page_kind: document
     <span class="collection-card__copy">
     <span class="collection-card__number">08</span>
     <span class="collection-card__title">Memory &amp; State</span>
-    <span class="collection-card__count">17</span>
+    <span class="collection-card__count">19</span>
     </span>
   </a>
   <a class="collection-card atlas-visual--09" href="{{ '/categories/search-and-web-intelligence/' | relative_url }}">
@@ -83,7 +83,7 @@ page_kind: document
     <span class="collection-card__copy">
     <span class="collection-card__number">10</span>
     <span class="collection-card__title">Code Execution</span>
-    <span class="collection-card__count">10</span>
+    <span class="collection-card__count">11</span>
     </span>
   </a>
   <a class="collection-card atlas-visual--11" href="{{ '/categories/observability-and-tracing/' | relative_url }}">
@@ -91,7 +91,7 @@ page_kind: document
     <span class="collection-card__copy">
     <span class="collection-card__number">11</span>
     <span class="collection-card__title">Observability &amp; Tracing</span>
-    <span class="collection-card__count">11</span>
+    <span class="collection-card__count">12</span>
     </span>
   </a>
   <a class="collection-card atlas-visual--12" href="{{ '/categories/durable-execution-and-scheduling/' | relative_url }}">

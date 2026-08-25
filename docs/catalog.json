@@ -11,7 +11,7 @@
     "service_directory": "services",
     "content_digest": {
       "algorithm": "sha256",
-      "value": "bff7b5c679641fb8ee17c925bd0e2ba14d28b86e2db9c408f79e3fc39e6d6bd7",
+      "value": "ecad0f3e36c634b61c8ed0f201333a037022db385a0aa71c0c23675fc85ae646",
       "input_paths": [
         "README.md",
         "skill.md",
@@ -54,6 +54,7 @@
         "services/browser-and-web-execution/opencli.md",
         "services/browser-and-web-execution/playwright-mcp.md",
         "services/browser-and-web-execution/skyvern.md",
+        "services/browser-and-web-execution/stealth-browser-mcp.md",
         "services/browser-and-web-execution/steel.md",
         "services/browser-and-web-execution/vessel-browser.md",
         "services/tool-access-and-integration/README.md",
@@ -61,9 +62,11 @@
         "services/tool-access-and-integration/arcade.md",
         "services/tool-access-and-integration/clawhub.md",
         "services/tool-access-and-integration/composio.md",
+        "services/tool-access-and-integration/contextforge.md",
         "services/tool-access-and-integration/framelink-figma-mcp.md",
         "services/tool-access-and-integration/github-mcp-server.md",
         "services/tool-access-and-integration/google-mcp-toolbox.md",
+        "services/tool-access-and-integration/mcp-gateway-registry.md",
         "services/tool-access-and-integration/mcpgateway.md",
         "services/tool-access-and-integration/nango.md",
         "services/tool-access-and-integration/obot.md",
@@ -82,6 +85,7 @@
         "services/oversight-and-approval/sondera-coding-agent-hooks.md",
         "services/commerce-and-payments/README.md",
         "services/commerce-and-payments/agentspay.md",
+        "services/commerce-and-payments/ap2.md",
         "services/commerce-and-payments/circle-agent-stack.md",
         "services/commerce-and-payments/coinbase-x402.md",
         "services/commerce-and-payments/cymetica-ai.md",
@@ -90,9 +94,11 @@
         "services/commerce-and-payments/payman-ai.md",
         "services/commerce-and-payments/secondsign-core.md",
         "services/commerce-and-payments/skyfire.md",
+        "services/commerce-and-payments/ucp.md",
         "services/agent-runtime-and-infrastructure/README.md",
         "services/agent-runtime-and-infrastructure/acpx.md",
         "services/agent-runtime-and-infrastructure/aembit.md",
+        "services/agent-runtime-and-infrastructure/agent-substrate.md",
         "services/agent-runtime-and-infrastructure/agentanycast.md",
         "services/agent-runtime-and-infrastructure/agentuity.md",
         "services/agent-runtime-and-infrastructure/amazon-bedrock-agentcore.md",
@@ -123,6 +129,7 @@
         "services/agent-harnesses-and-control-planes/claude-hud.md",
         "services/agent-harnesses-and-control-planes/codex-hud-anhannin.md",
         "services/agent-harnesses-and-control-planes/codex-hud-fwyc0573.md",
+        "services/agent-harnesses-and-control-planes/deepseek-harness.md",
         "services/agent-harnesses-and-control-planes/longhorizon-harness.md",
         "services/agent-harnesses-and-control-planes/loopx.md",
         "services/agent-harnesses-and-control-planes/oh-my-codex.md",
@@ -141,6 +148,8 @@
         "services/memory-and-state/memmy-agent.md",
         "services/memory-and-state/memoria.md",
         "services/memory-and-state/memos.md",
+        "services/memory-and-state/mempalace.md",
+        "services/memory-and-state/memsearch.md",
         "services/memory-and-state/memu.md",
         "services/memory-and-state/openviking.md",
         "services/memory-and-state/recall.md",
@@ -163,6 +172,7 @@
         "services/code-execution/coderunner.md",
         "services/code-execution/daytona.md",
         "services/code-execution/e2b.md",
+        "services/code-execution/kubernetes-agent-sandbox.md",
         "services/code-execution/opensandbox.md",
         "services/code-execution/riza.md",
         "services/code-execution/runloop.md",
@@ -172,6 +182,7 @@
         "services/observability-and-tracing/agent-trace.md",
         "services/observability-and-tracing/agentevals.md",
         "services/observability-and-tracing/agentops.md",
+        "services/observability-and-tracing/agentsight.md",
         "services/observability-and-tracing/braintrust.md",
         "services/observability-and-tracing/galileo.md",
         "services/observability-and-tracing/laminar.md",
@@ -226,7 +237,7 @@
   },
   "counts": {
     "categories": 16,
-    "services": 190
+    "services": 201
   },
   "categories": [
     {
@@ -241,14 +252,14 @@
       "name": "Browser & Web Execution",
       "description": "Services that give AI agents a remote, managed browser runtime — so agents can navigate, interact with, and extract data from the web as an autonomous actor, without any human operating a browser on their behalf.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/README.md",
-      "service_count": 24
+      "service_count": 25
     },
     {
       "id": "tool-access-and-integration",
       "name": "Tool Access & Integration",
       "description": "Services that let AI agents discover, authenticate, and invoke external tools at runtime — without a human pre-configuring credentials or selecting which integrations to activate.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/README.md",
-      "service_count": 17
+      "service_count": 19
     },
     {
       "id": "oversight-and-approval",
@@ -262,28 +273,28 @@
       "name": "Commerce & Payments",
       "description": "Services that give AI agents a verified financial identity and the ability to transact in the real economy — paying for services, moving money, and being recognized as a legitimate, accountable economic actor.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/README.md",
-      "service_count": 9
+      "service_count": 11
     },
     {
       "id": "agent-runtime-and-infrastructure",
       "name": "Agent Runtime & Infrastructure",
       "description": "Services that provide the secure deployment substrate, session isolation, secret management, identity, gateway, and observability required to run AI agents reliably in production — the \"operating system layer\" for autonomous agents.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/README.md",
-      "service_count": 27
+      "service_count": 28
     },
     {
       "id": "agent-harnesses-and-control-planes",
       "name": "Agent Harnesses & Operator Surfaces",
       "description": "Systems purpose-built around running agents: either harnesses that add durable work state, orchestration, verification, and policy, or operator surfaces that expose live agent state and bounded session controls.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/README.md",
-      "service_count": 9
+      "service_count": 10
     },
     {
       "id": "memory-and-state",
       "name": "Memory & State",
       "description": "Services that give AI agents persistent, queryable memory across sessions — treating memory as infrastructure rather than application logic, and managing the full lifecycle of what agents remember, forget, and retrieve.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/README.md",
-      "service_count": 17
+      "service_count": 19
     },
     {
       "id": "search-and-web-intelligence",
@@ -297,14 +308,14 @@
       "name": "Code Execution",
       "description": "Services that give AI agents a secure, isolated runtime for executing generated code — without human-side sandbox setup, without risking the host environment, and with output formatted for direct LLM consumption.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/README.md",
-      "service_count": 10
+      "service_count": 11
     },
     {
       "id": "observability-and-tracing",
       "name": "Observability & Tracing",
       "description": "Services that give teams structured visibility into agent execution — capturing the full trajectory of an agent's reasoning, tool calls, memory accesses, and outputs in a semantic format that humans can inspect and improve upon.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/README.md",
-      "service_count": 11
+      "service_count": 12
     },
     {
       "id": "durable-execution-and-scheduling",
@@ -1521,6 +1532,40 @@
       "verification_sources": []
     },
     {
+      "id": "browser-and-web-execution/stealth-browser-mcp",
+      "slug": "stealth-browser-mcp",
+      "name": "Stealth Browser MCP",
+      "tagline": "Stealth browser automation for MCP-compatible AI agents.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "browser-and-web-execution",
+      "website": "https://github.com/vibheksoni/stealth-browser-mcp",
+      "repository": "https://github.com/vibheksoni/stealth-browser-mcp",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/stealth-browser-mcp.md",
+      "source_path": "services/browser-and-web-execution/stealth-browser-mcp.md",
+      "onboarding": {
+        "type": "mcp",
+        "pattern": "MCP",
+        "instruction": "git clone https://github.com/vibheksoni/stealth-browser-mcp.git\ncd stealth-browser-mcp\npython -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt",
+        "url": "https://github.com/vibheksoni/stealth-browser-mcp.git"
+      },
+      "protocols": [
+        "agent-skill",
+        "mcp",
+        "cli",
+        "stdio",
+        "http"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-07-24 (repo metadata). Quieter than neighboring browser rows — verify master before depending on a weekly release cadence",
+      "verified_at": "2026-08-25",
+      "verification_sources": [
+        "https://api.github.com/repos/vibheksoni/stealth-browser-mcp"
+      ]
+    },
+    {
       "id": "browser-and-web-execution/steel",
       "slug": "steel",
       "name": "Steel",
@@ -1702,6 +1747,45 @@
       "verification_sources": []
     },
     {
+      "id": "tool-access-and-integration/contextforge",
+      "slug": "contextforge",
+      "name": "ContextForge",
+      "tagline": "An open source registry and proxy that federates MCP, A2A, and REST/gRPC APIs with centralized governance, discovery, and observability. Optimizes Agent & Tool calling, and supports plugins.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "tool-access-and-integration",
+      "website": "https://ibm.github.io/mcp-context-forge/",
+      "repository": "https://github.com/IBM/mcp-context-forge",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/contextforge.md",
+      "source_path": "services/tool-access-and-integration/contextforge.md",
+      "onboarding": {
+        "type": "mcp",
+        "pattern": "CLI + MCP gateway",
+        "instruction": "# Generate secrets, then start the gateway (official README TLDR)\npython3 -m mcpgateway.scripts.init_secrets\nexport JWT_SECRET_KEY=\"$(grep '^JWT_SECRET_KEY=' .env.secrets | cut -d= -f2)\"\nexport AUTH_ENCRYPTION_SECRET=\"$(grep '^AUTH_ENCRYPTION_SECRET=' .env.secrets | cut -d= -f2)\"\nJWT_SECRET_KEY=\"$JWT_SECRET_KEY\" \\\nAUTH_ENCRYPTION_SECRET=\"$AUTH_ENCRYPTION_SECRET\" \\\nMCPGATEWAY_UI_ENABLED=true \\\nMCPGATEWAY_ADMIN_API_ENABLED=true \\\nPLATFORM_ADMIN_EMAIL=admin@example.com \\\nuvx --from mcp-contextforge-gateway mcpgateway --host 0.0.0.0 --port 4444",
+        "url": "http://localhost:4444"
+      },
+      "protocols": [
+        "mcp",
+        "rest",
+        "grpc",
+        "websocket",
+        "cli",
+        "a2a",
+        "json-rpc",
+        "stdio",
+        "http",
+        "api"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last GitHub push 2026-08-25 (repo metadata); PyPI mcp-contextforge-gateway; image ghcr.io/ibm/mcp-context-forge",
+      "verified_at": "2026-08-25",
+      "verification_sources": [
+        "https://api.github.com/repos/IBM/mcp-context-forge"
+      ]
+    },
+    {
       "id": "tool-access-and-integration/framelink-figma-mcp",
       "slug": "framelink-figma-mcp",
       "name": "Framelink MCP for Figma",
@@ -1791,6 +1875,43 @@
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
+    },
+    {
+      "id": "tool-access-and-integration/mcp-gateway-registry",
+      "slug": "mcp-gateway-registry",
+      "name": "MCP Gateway & Registry",
+      "tagline": "Unified Agent & MCP Server Registry – Gateway for AI Development Tools",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "tool-access-and-integration",
+      "website": "https://agentic-community.github.io/mcp-gateway-registry/",
+      "repository": "https://github.com/agentic-community/mcp-gateway-registry",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/mcp-gateway-registry.md",
+      "source_path": "services/tool-access-and-integration/mcp-gateway-registry.md",
+      "onboarding": {
+        "type": "mcp",
+        "pattern": "CLI + MCP gateway",
+        "instruction": "git clone https://github.com/agentic-community/mcp-gateway-registry.git\ncd mcp-gateway-registry\ncp .env.example .env\n# Set required secrets (KEYCLOAK_ADMIN_PASSWORD, SECRET_KEY, …) — see docs/configuration.md\n./build_and_run.sh --prebuilt",
+        "url": "https://github.com/agentic-community/mcp-gateway-registry.git"
+      },
+      "protocols": [
+        "agent-skill",
+        "mcp",
+        "rest",
+        "cli",
+        "a2a",
+        "openapi",
+        "http",
+        "api"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-08-25 (repo metadata)",
+      "verified_at": "2026-08-25",
+      "verification_sources": [
+        "https://api.github.com/repos/agentic-community/mcp-gateway-registry"
+      ]
     },
     {
       "id": "tool-access-and-integration/mcpgateway",
@@ -2299,6 +2420,38 @@
       "verification_sources": []
     },
     {
+      "id": "commerce-and-payments/ap2",
+      "slug": "ap2",
+      "name": "Agent Payments Protocol (AP2)",
+      "tagline": "An open protocol for the emerging Agent Economy.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "commerce-and-payments",
+      "website": "https://ap2-protocol.org",
+      "repository": "https://github.com/google-agentic-commerce/AP2",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/ap2.md",
+      "source_path": "services/commerce-and-payments/ap2.md",
+      "onboarding": {
+        "type": "sdk",
+        "pattern": "SDK + scenario samples",
+        "instruction": "# Types package (PyPI later; official install is from git)\nuv pip install git+https://github.com/google-agentic-commerce/AP2.git@main",
+        "url": "https://github.com/google-agentic-commerce/AP2.git@main"
+      },
+      "protocols": [
+        "sdk",
+        "a2a",
+        "http"
+      ],
+      "mcp_status": "unknown",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last *code* push 2026-06-17 (repo metadata); docs/site still served. Quieter than neighboring commerce repos — disclose before treating samples as weekly-fresh",
+      "verified_at": "2026-08-25",
+      "verification_sources": [
+        "https://api.github.com/repos/google-agentic-commerce/AP2"
+      ]
+    },
+    {
       "id": "commerce-and-payments/circle-agent-stack",
       "slug": "circle-agent-stack",
       "name": "Circle Agent Stack",
@@ -2544,6 +2697,42 @@
       "verification_sources": []
     },
     {
+      "id": "commerce-and-payments/ucp",
+      "slug": "ucp",
+      "name": "Universal Commerce Protocol (UCP)",
+      "tagline": "The common language for platforms, agents, and businesses.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "commerce-and-payments",
+      "website": "https://ucp.dev",
+      "repository": "https://github.com/Universal-Commerce-Protocol/ucp",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/ucp.md",
+      "source_path": "services/commerce-and-payments/ucp.md",
+      "onboarding": {
+        "type": "sdk",
+        "pattern": "SDK + protocol spec",
+        "instruction": "# Schema tool agents use to resolve ucp_* annotations at runtime\ncargo install ucp-schema\n\n# Spec + docs checkout\ngit clone https://github.com/Universal-Commerce-Protocol/ucp.git",
+        "url": "https://github.com/Universal-Commerce-Protocol/ucp.git"
+      },
+      "protocols": [
+        "mcp",
+        "rest",
+        "cli",
+        "sdk",
+        "a2a",
+        "json-rpc",
+        "http"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last GitHub push 2026-08-25 (repo metadata); spec + docs repo",
+      "verified_at": "2026-08-25",
+      "verification_sources": [
+        "https://api.github.com/repos/Universal-Commerce-Protocol/ucp"
+      ]
+    },
+    {
       "id": "agent-runtime-and-infrastructure/acpx",
       "slug": "acpx",
       "name": "acpx",
@@ -2603,6 +2792,39 @@
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
+    },
+    {
+      "id": "agent-runtime-and-infrastructure/agent-substrate",
+      "slug": "agent-substrate",
+      "name": "Agent Substrate",
+      "tagline": "A performant, high density runtime environment for large scale agent deployments.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "agent-runtime-and-infrastructure",
+      "website": "https://github.com/agent-substrate/substrate",
+      "repository": "https://github.com/agent-substrate/substrate",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/agent-substrate.md",
+      "source_path": "services/agent-runtime-and-infrastructure/agent-substrate.md",
+      "onboarding": {
+        "type": "cli",
+        "pattern": "CLI + Kubernetes control plane",
+        "instruction": "# Local kind path from the official README (development only)\nhack/create-kind-cluster.sh\nhack/install-ate-kind.sh --deploy-ate-system\nhack/install-ate-kind.sh --deploy-demo-counter\ngo install ./cmd/kubectl-ate\n\nkubectl ate create atespace demo\nkubectl ate create actor my-counter-1 -a demo --template=ate-demo-counter/counter\nkubectl port-forward -n ate-system svc/atenet-router 8000:80",
+        "url": null
+      },
+      "protocols": [
+        "grpc",
+        "cli",
+        "http",
+        "api"
+      ],
+      "mcp_status": "unknown",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last GitHub push 2026-08-25 (repo metadata); early development, APIs expected to change",
+      "verified_at": "2026-08-25",
+      "verification_sources": [
+        "https://api.github.com/repos/agent-substrate/substrate"
+      ]
     },
     {
       "id": "agent-runtime-and-infrastructure/agentanycast",
@@ -3486,6 +3708,40 @@
       ]
     },
     {
+      "id": "agent-harnesses-and-control-planes/deepseek-harness",
+      "slug": "deepseek-harness",
+      "name": "DeepSeek Harness (dsh)",
+      "tagline": "Everything is a Plugin.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "agent-harnesses-and-control-planes",
+      "website": "https://deepseek.com/harness",
+      "repository": "https://github.com/deepseek-ai/deepseek-harness",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/deepseek-harness.md",
+      "source_path": "services/agent-harnesses-and-control-planes/deepseek-harness.md",
+      "onboarding": {
+        "type": "cli",
+        "pattern": "CLI + Web UI (developer preview)",
+        "instruction": "npx @deepseek-ai/dsh web",
+        "url": "http://127.0.0.1:3080"
+      },
+      "protocols": [
+        "cli",
+        "sdk",
+        "acp",
+        "json-rpc",
+        "http"
+      ],
+      "mcp_status": "unavailable",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last GitHub push 2026-08-21 (repo metadata); developer-preview release with public Web UI entry (npx @deepseek-ai/dsh web)",
+      "verified_at": "2026-08-25",
+      "verification_sources": [
+        "https://api.github.com/repos/deepseek-ai/deepseek-harness"
+      ]
+    },
+    {
       "id": "agent-harnesses-and-control-planes/longhorizon-harness",
       "slug": "longhorizon-harness",
       "name": "LongHorizon-Harness",
@@ -4030,6 +4286,73 @@
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
+    },
+    {
+      "id": "memory-and-state/mempalace",
+      "slug": "mempalace",
+      "name": "MemPalace",
+      "tagline": "The best-benchmarked open-source AI memory system. And it's free.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "memory-and-state",
+      "website": "https://mempalaceofficial.com",
+      "repository": "https://github.com/MemPalace/mempalace",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/mempalace.md",
+      "source_path": "services/memory-and-state/mempalace.md",
+      "onboarding": {
+        "type": "mcp",
+        "pattern": "CLI + MCP",
+        "instruction": "uv tool install mempalace\nmempalace init ~/projects/myapp\nmempalace mine ~/projects/myapp\nmempalace search \"why did we switch to GraphQL\"\nmempalace wake-up",
+        "url": null
+      },
+      "protocols": [
+        "mcp",
+        "cli",
+        "stdio",
+        "http",
+        "api"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last GitHub push 2026-08-25 (repo metadata); default branch develop; PyPI package mempalace",
+      "verified_at": "2026-08-25",
+      "verification_sources": [
+        "https://api.github.com/repos/MemPalace/mempalace"
+      ]
+    },
+    {
+      "id": "memory-and-state/memsearch",
+      "slug": "memsearch",
+      "name": "MemSearch",
+      "tagline": "Cross-platform semantic memory for AI coding agents.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "memory-and-state",
+      "website": "https://zilliztech.github.io/memsearch/",
+      "repository": "https://github.com/zilliztech/memsearch",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/memsearch.md",
+      "source_path": "services/memory-and-state/memsearch.md",
+      "onboarding": {
+        "type": "cli",
+        "pattern": "CLI + platform plugins",
+        "instruction": "# CLI / library (ONNX embeddings, no API key)\nuv tool install \"memsearch[onnx]\"\n\nmemsearch index ./memory/\nmemsearch search \"how to configure Redis?\" --top-k 5",
+        "url": null
+      },
+      "protocols": [
+        "agent-skill",
+        "mcp",
+        "cli",
+        "api"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-08-23 (repo metadata); DeepSeek Harness plugin documented",
+      "verified_at": "2026-08-25",
+      "verification_sources": [
+        "https://api.github.com/repos/zilliztech/memsearch"
+      ]
     },
     {
       "id": "memory-and-state/memu",
@@ -4669,6 +4992,38 @@
       "verification_sources": []
     },
     {
+      "id": "code-execution/kubernetes-agent-sandbox",
+      "slug": "kubernetes-agent-sandbox",
+      "name": "Agent Sandbox (Kubernetes SIG)",
+      "tagline": "Agent Sandbox provides a secure and isolated execution layer to safely deploy autonomous AI agents on Kubernetes that generate and run untrusted code at scale.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "code-execution",
+      "website": "https://agent-sandbox.sigs.k8s.io",
+      "repository": "https://github.com/kubernetes-sigs/agent-sandbox",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/kubernetes-agent-sandbox.md",
+      "source_path": "services/code-execution/kubernetes-agent-sandbox.md",
+      "onboarding": {
+        "type": "sdk",
+        "pattern": "SDK + Kubernetes CRDs",
+        "instruction": "pip install k8s-agent-sandbox",
+        "url": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/clients/python/agentic-sandbox-client/README.md"
+      },
+      "protocols": [
+        "sdk",
+        "http",
+        "api"
+      ],
+      "mcp_status": "unavailable",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last GitHub push 2026-08-25 (repo metadata); Python package k8s-agent-sandbox; SIG Apps CRD",
+      "verified_at": "2026-08-25",
+      "verification_sources": [
+        "https://api.github.com/repos/kubernetes-sigs/agent-sandbox"
+      ]
+    },
+    {
       "id": "code-execution/opensandbox",
       "slug": "opensandbox",
       "name": "OpenSandbox",
@@ -4916,6 +5271,37 @@
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
+    },
+    {
+      "id": "observability-and-tracing/agentsight",
+      "slug": "agentsight",
+      "name": "AgentSight",
+      "tagline": "lightweight system-level observability for AI Agents",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "observability-and-tracing",
+      "website": "https://eunomia.dev/agentsight/",
+      "repository": "https://github.com/eunomia-bpf/agentsight",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/agentsight.md",
+      "source_path": "services/observability-and-tracing/agentsight.md",
+      "onboarding": {
+        "type": "cli",
+        "pattern": "CLI wrapper (operator-surface track)",
+        "instruction": "cargo install agentsight\n# or: brew tap eunomia-bpf/tap && brew install eunomia-bpf/tap/agentsight\n\nagentsight top\nsudo agentsight record -- claude",
+        "url": null
+      },
+      "protocols": [
+        "cli",
+        "http"
+      ],
+      "mcp_status": "unknown",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last GitHub push 2026-08-25 (repo metadata); docs updated 2026-08-24",
+      "verified_at": "2026-08-25",
+      "verification_sources": [
+        "https://api.github.com/repos/eunomia-bpf/agentsight"
+      ]
     },
     {
       "id": "observability-and-tracing/braintrust",

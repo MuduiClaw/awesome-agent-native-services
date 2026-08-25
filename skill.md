@@ -72,7 +72,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-## Full Catalog — 16 Categories, 190 Services
+## Full Catalog — 16 Categories, 201 Services
 
 ### 1. Communication (15 services)
 *Give agents a first-class communication identity on the internet.*
@@ -97,7 +97,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-### 2. Browser & Web Execution (24 services)
+### 2. Browser & Web Execution (25 services)
 *Remote browser and web data extraction for agents.*
 
 | Service | Tagline | Onboarding |
@@ -126,10 +126,11 @@ These services can be joined with a single instruction, right now, with no human
 | [CamoFox Browser](https://github.com/jo-inc/camofox-browser) | Stealth headless browser for AI agents | `npm install -g camofox-browser` then start the browser server |
 | [Moli](https://github.com/lexmount/moli) | Structured-first browser engine for AI agents | Build the Rust workspace, then run `moli fetch`, `moli serve`, or `moli mcp` |
 | [Kernel](https://www.kernel.sh) | you build agents. we give them the internet. | `brew install kernel/tap/kernel` or `npm install -g @onkernel/cli`, then `kernel browsers create -o json` |
+| [Stealth Browser MCP](https://github.com/vibheksoni/stealth-browser-mcp) | Stealth browser automation for MCP-compatible AI agents | Clone repo → `pip install -r requirements.txt` → `claude mcp add-json stealth-browser-mcp` |
 
 ---
 
-### 3. Tool Access & Integration (17 services)
+### 3. Tool Access & Integration (19 services)
 *Runtime tool discovery, auth, and execution without human pre-configuration.*
 
 | Service | Tagline | Onboarding |
@@ -151,6 +152,8 @@ These services can be joined with a single instruction, right now, with no human
 | [OpenChatCut](https://github.com/0xsline/OpenChatCut) | Local-first agent-native video editor | `npx skills add 0xsline/OpenChatCut`, then ask the agent to set it up |
 | [Toolport](https://toolport.app) | Every tool. One port. | Install from GitHub Releases, add servers, connect each AI client to `toolport-gateway` |
 | [SandBase CLI](https://github.com/sandbaseai/cli) | Give your AI agent superpowers. One command. 2,000+ AI models. | GitHub `v0.1.17` tarball `connect`, then `npx skills add sandbaseai/cli --skill sandbase` |
+| [ContextForge](https://ibm.github.io/mcp-context-forge/) | Registry and proxy that federates MCP, A2A, and REST/gRPC | `uvx --from mcp-contextforge-gateway mcpgateway --host 0.0.0.0 --port 4444` |
+| [MCP Gateway & Registry](https://agentic-community.github.io/mcp-gateway-registry/) | Unified Agent & MCP Server Registry | `git clone https://github.com/agentic-community/mcp-gateway-registry && ./build_and_run.sh --prebuilt` |
 
 ---
 
@@ -167,7 +170,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-### 5. Commerce & Payments (9 services)
+### 5. Commerce & Payments (11 services)
 *Verified financial identity and real-economy transactions for agents.*
 
 | Service | Tagline | Onboarding |
@@ -181,10 +184,12 @@ These services can be joined with a single instruction, right now, with no human
 | [Nevermined](https://nevermined.io) | The payment layer AI agents actually need | `pip install payments-py` → x402 inline payments |
 | [Coinbase CDP (x402)](https://docs.cdp.coinbase.com/x402/welcome) | HTTP-native payments for autonomous API clients | [docs.cdp.coinbase.com/x402](https://docs.cdp.coinbase.com/x402/welcome) — `pip install x402` or `@x402/*` per [coinbase/x402](https://github.com/coinbase/x402) |
 | [SecondSign Core](https://github.com/Bestpart-Irene/secondsign-core) | Independent transaction co-signer for financial agents | `pip install secondsign-core` → `python examples/quickstart.py` (pre-1.0 evaluation) |
+| [UCP](https://ucp.dev) | The common language for platforms, agents, and businesses | Read [ucp.dev](https://ucp.dev) then `cargo install ucp-schema` |
+| [AP2](https://ap2-protocol.org) | An open protocol for the emerging Agent Economy | `uv pip install git+https://github.com/google-agentic-commerce/AP2.git@main` |
 
 ---
 
-### 6. Agent Runtime & Infrastructure (27 services)
+### 6. Agent Runtime & Infrastructure (28 services)
 *Secure execution, session isolation, secrets, identity, and gateway for production agents.*
 
 | Service | Tagline | Onboarding |
@@ -216,10 +221,11 @@ These services can be joined with a single instruction, right now, with no human
 | [Polos](https://github.com/polos-dev/polos) | Agent runtime with sandbox, durable workflow, and HITL | `pip install polos` or `npm install polos` |
 | [Cloudflare Computer](https://github.com/cloudflare/computer) | Give your agent a computer | `npm install @cloudflare/computer` then attach `withWorkspace` to a Durable Object (preview only) |
 | [Agent Executor (AX)](https://github.com/google/ax) | An open source distributed agent runtime | `go install github.com/google/ax/cmd/ax@latest` then `ax --input "…"` |
+| [Agent Substrate](https://github.com/agent-substrate/substrate) | High-density Kubernetes runtime for large-scale agent deployments | `hack/install-ate-kind.sh --deploy-ate-system` then `kubectl ate create actor` |
 
 ---
 
-### 7. Agent Harnesses & Operator Surfaces (9 services)
+### 7. Agent Harnesses & Operator Surfaces (10 services)
 *Durable agent-loop control, multi-agent orchestration, and live operator surfaces tied to concrete sessions.*
 
 | Service | Tagline | Onboarding |
@@ -233,10 +239,11 @@ These services can be joined with a single instruction, right now, with no human
 | [Codex HUD (anhannin)](https://github.com/anhannin/codex-hud) | Patched Codex status line for usage and session state | Review the patch/install script, then run `Codex-HUD/install.sh` and start a new session |
 | [Claude HUD](https://github.com/jarrodwatts/claude-hud) | A Claude Code plugin that shows what's happening | `/plugin marketplace add jarrodwatts/claude-hud` then `/plugin install claude-hud` and `/claude-hud:setup` |
 | [LoopX](https://huangruiteng.github.io/loopx/) | Stateful control plane for long-horizon agents | `python3 -m pip install --upgrade loopx` then `loopx workflow-skills --install` and `loopx connect` |
+| [DeepSeek Harness (dsh)](https://deepseek.com/harness) | Everything is a Plugin. | `npx @deepseek-ai/dsh web` |
 
 ---
 
-### 8. Memory & State (17 services)
+### 8. Memory & State (19 services)
 *Persistent, queryable memory across sessions — memory as infrastructure, not application logic.*
 
 | Service | Tagline | Onboarding |
@@ -258,6 +265,8 @@ These services can be joined with a single instruction, right now, with no human
 | [Hindsight](https://github.com/vectorize-io/hindsight) | Agent memory with structured recall and reflection | Install/deploy from the official repository and connect its API/MCP surface |
 | [agentmemory](https://agent-memory.dev) ⭐ | Your coding agent remembers everything | `Read https://raw.githubusercontent.com/rohitg00/agentmemory/main/INSTALL_FOR_AGENTS.md and follow the instructions` |
 | [TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) | Agents remember,Humans innovate. | `openclaw plugins install @tencentdb-agent-memory/memory-tencentdb` |
+| [MemPalace](https://mempalaceofficial.com) | The best-benchmarked open-source AI memory system. And it's free. | `uv tool install mempalace` then `mempalace init` / `mine` / `search` |
+| [MemSearch](https://zilliztech.github.io/memsearch/) | Cross-platform semantic memory for AI coding agents | `uv tool install "memsearch[onnx]"` or Claude Code `/plugin marketplace add zilliztech/memsearch` |
 
 ---
 
@@ -278,7 +287,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-### 10. Code Execution (10 services)
+### 10. Code Execution (11 services)
 *Secure isolated runtimes for AI-generated code with LLM-formatted output.*
 
 | Service | Tagline | Onboarding |
@@ -293,10 +302,11 @@ These services can be joined with a single instruction, right now, with no human
 | [AIO Sandbox](https://github.com/agent-infra/sandbox) | Browser + shell + VS Code + Jupyter + MCP in one Docker sandbox | `docker run -p 8080:8080 ghcr.io/agent-infra/sandbox:latest` — MCP `http://localhost:8080/mcp` |
 | [Riza](https://riza.io) | AI writes code. Riza runs it. | `uv add rizaio` → `riza.command.exec(...)` — [docs.riza.io](https://docs.riza.io) |
 | [Agent Sandbox](https://agentsandbox.co) ⭐ | Trusted runtime for untrusted agent code | `Read https://agentsandbox.co/skill.md and follow the instructions` or `pip install agentsandbox-sdk` |
+| [Agent Sandbox (Kubernetes SIG)](https://agent-sandbox.sigs.k8s.io) | Secure isolated execution layer for autonomous agents on Kubernetes | `pip install k8s-agent-sandbox` then `SandboxClient().create_sandbox(...)` |
 
 ---
 
-### 11. Observability & Tracing (11 services)
+### 11. Observability & Tracing (12 services)
 *Full trajectory tracing, evaluation datasets, and cost attribution for agent runs.*
 
 | Service | Tagline | Onboarding |
@@ -312,6 +322,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Galileo](https://galileo.ai) | Agent reliability platform with observability and evals | Add MCP URL `https://api.galileo.ai/mcp/http/mcp` with a Galileo API key |
 | [Laminar](https://github.com/lmnr-ai/lmnr) | Open-source observability for long-running agents | `pip install lmnr` → `Laminar.initialize()` |
 | [OpenLIT](https://github.com/openlit/openlit) | OpenTelemetry-native observability for LLMs and agents | `pip install openlit` then configure OpenTelemetry export |
+| [AgentSight](https://eunomia.dev/agentsight/) | Lightweight system-level observability for AI Agents | `cargo install agentsight` then `agentsight top` or `sudo agentsight record -- claude` |
 
 ---
 
