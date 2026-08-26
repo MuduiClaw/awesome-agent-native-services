@@ -51,7 +51,7 @@ ax serve --config ax.yaml
 ax --input "Hello agents!" --server localhost:8494
 ```
 
-Kubernetes on [Agent Substrate](https://github.com/agent-substrate/substrate) is the documented production-oriented deploy path (`manifests/README.md`). This catalog does **not** add Agent Substrate itself (open issue #101).
+Kubernetes on [Agent Substrate](agent-substrate.md) (`https://github.com/agent-substrate/substrate`) is the documented production-oriented deploy path (`manifests/README.md`). AX is the harness runtime; Substrate is the separate K8s compute control plane.
 
 ---
 

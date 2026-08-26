@@ -83,21 +83,21 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 
 ## Categories
 
-**190 services across 16 categories.**
+**201 services across 16 categories.**
 
 | # | Category | Services | Description |
 |---|---|---|---|
 | 1 | [Communication](#1-communication-services) | 15 | Give agents a communication identity on the internet |
-| 2 | [Browser & Web Execution](#2-browser--web-execution-services) | 24 | Remote browser and web data extraction for agents |
-| 3 | [Tool Access & Integration](#3-tool-access--integration-services) | 17 | Runtime tool discovery, auth, and execution |
+| 2 | [Browser & Web Execution](#2-browser--web-execution-services) | 25 | Remote browser and web data extraction for agents |
+| 3 | [Tool Access & Integration](#3-tool-access--integration-services) | 19 | Runtime tool discovery, auth, and execution |
 | 4 | [Oversight & Approval](#4-oversight--approval-services) | 5 | Human-in-the-loop approval and escalation |
-| 5 | [Commerce & Payments](#5-commerce--payment-services) | 9 | Agent-native wallets, identity, and transactions |
-| 6 | [Agent Runtime & Infrastructure](#6-agent-runtime--infrastructure-services) | 27 | Execution, session isolation, secrets, and gateway |
-| 7 | [Agent Harnesses & Operator Surfaces](#7-agent-harnesses--operator-surfaces) | 9 | Durable agent-loop control and live operator visibility |
-| 8 | [Memory & State](#8-memory--state-services) | 17 | Persistent agent memory across sessions |
+| 5 | [Commerce & Payments](#5-commerce--payment-services) | 11 | Agent-native wallets, identity, and transactions |
+| 6 | [Agent Runtime & Infrastructure](#6-agent-runtime--infrastructure-services) | 28 | Execution, session isolation, secrets, and gateway |
+| 7 | [Agent Harnesses & Operator Surfaces](#7-agent-harnesses--operator-surfaces) | 10 | Durable agent-loop control and live operator visibility |
+| 8 | [Memory & State](#8-memory--state-services) | 19 | Persistent agent memory across sessions |
 | 9 | [Search & Web Intelligence](#9-search--web-intelligence-services) | 9 | LLM-optimized web search and content retrieval |
-| 10 | [Code Execution](#10-code-execution-services) | 10 | Secure sandboxes for AI-generated code |
-| 11 | [Observability & Tracing](#11-observability--tracing-services) | 11 | Agent trajectory tracing and evaluation |
+| 10 | [Code Execution](#10-code-execution-services) | 11 | Secure sandboxes for AI-generated code |
+| 11 | [Observability & Tracing](#11-observability--tracing-services) | 12 | Agent trajectory tracing and evaluation |
 | 12 | [Durable Execution & Scheduling](#12-durable-execution--scheduling-services) | 7 | Fault-tolerant long-running agent workflows |
 | 13 | [Meeting & Conversation](#13-meeting--conversation-services) | 7 | Agent presence in voice and video meetings |
 | 14 | [Voice & Phone](#14-voice--phone-services) | 7 | Agent-controlled voice calls and phone infrastructure |
@@ -166,6 +166,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [CamoFox Browser](services/browser-and-web-execution/camofox.md) [![⭐](https://img.shields.io/github/stars/jo-inc/camofox-browser?style=social)](https://github.com/jo-inc/camofox-browser) | Stealth headless browser for AI agents | Stealth sessions · Server/CLI control · Credential-safe profiles · Screenshots/extraction | ⚠️ | `npm install -g camofox-browser` then start the browser server |
 | [Moli](services/browser-and-web-execution/moli.md) [![⭐](https://img.shields.io/github/stars/lexmount/moli?style=social)](https://github.com/lexmount/moli) | Structured-first browser engine for AI agents | Semantic tree · stable node IDs · CDP/WebDriver · screenshots · stdio MCP | ✅ | Build the Rust workspace, then run `moli fetch`, `moli serve`, or `moli mcp` |
 | [Kernel](services/browser-and-web-execution/kernel.md) [![⭐](https://img.shields.io/github/stars/kernel/kernel-images?style=social)](https://github.com/kernel/kernel-images) | you build agents. we give them the internet. | Sandboxed Chromium · managed auth · live view/replay · CLI + kernel-cli skill | ⚠️ | `brew install kernel/tap/kernel` or `npm install -g @onkernel/cli`, then `kernel browsers create -o json` |
+| [Stealth Browser MCP](services/browser-and-web-execution/stealth-browser-mcp.md) [![⭐](https://img.shields.io/github/stars/vibheksoni/stealth-browser-mcp?style=social)](https://github.com/vibheksoni/stealth-browser-mcp) | Stealth browser automation for MCP-compatible AI agents | nodriver + CDP · 97 MCP tools · dynamic network hooks · element cloning | ✅ | Clone [vibheksoni/stealth-browser-mcp](https://github.com/vibheksoni/stealth-browser-mcp), `pip install -r requirements.txt`, then `claude mcp add-json stealth-browser-mcp` |
 
 ---
 
@@ -196,6 +197,8 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [OpenChatCut](services/tool-access-and-integration/openchatcut.md) [![⭐](https://img.shields.io/github/stars/0xsline/OpenChatCut?style=social)](https://github.com/0xsline/OpenChatCut) | Local-first agent-native video editor with editable timelines | Agent Skill · Streamable HTTP MCP · isolated drafts · EditorCore tools | ✅ | `npx skills add 0xsline/OpenChatCut`, then ask the agent: `Set up OpenChatCut` |
 | [Toolport](services/tool-access-and-integration/toolport.md) [![⭐](https://img.shields.io/github/stars/tsouth89/toolport?style=social)](https://github.com/tsouth89/toolport) | Every tool. One port. | Lazy MCP meta-tools · per-client profiles · tool integrity · keychain secrets | ✅ | Install from [GitHub Releases](https://github.com/tsouth89/toolport/releases/latest), add servers, then connect each AI client to `toolport-gateway` |
 | [SandBase CLI](services/tool-access-and-integration/sandbase-cli.md) [![⭐](https://img.shields.io/github/stars/sandbaseai/cli?style=social)](https://github.com/sandbaseai/cli) | Give your AI agent superpowers. One command. 2,000+ AI models. | Local MCP bridge · discover/inspect/run · client-scoped credentials · Agent Skill | ✅ | Immutable `v0.1.17` tarball: `npx -y https://github.com/sandbaseai/cli/releases/download/v0.1.17/sandbaseai-cli-0.1.17.tgz connect`, then `npx skills add sandbaseai/cli --skill sandbase` |
+| [ContextForge](services/tool-access-and-integration/contextforge.md) [![⭐](https://img.shields.io/github/stars/IBM/mcp-context-forge?style=social)](https://github.com/IBM/mcp-context-forge) | Registry and proxy that federates MCP, A2A, and REST/gRPC | Federated MCP · A2A routing · gRPC-to-MCP · UAID · OTEL | ✅ | `uvx --from mcp-contextforge-gateway mcpgateway --host 0.0.0.0 --port 4444` — or `docker pull ghcr.io/ibm/mcp-context-forge:latest` |
+| [MCP Gateway & Registry](services/tool-access-and-integration/mcp-gateway-registry.md) [![⭐](https://img.shields.io/github/stars/agentic-community/mcp-gateway-registry?style=social)](https://github.com/agentic-community/mcp-gateway-registry) | Unified Agent & MCP Server Registry – Gateway for AI Development Tools | IdP gateway · virtual MCP · A2A registry · 3LO egress · audit | ✅ | `git clone https://github.com/agentic-community/mcp-gateway-registry && ./build_and_run.sh --prebuilt` |
 
 ---
 
@@ -232,6 +235,8 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [Coinbase CDP (x402)](services/commerce-and-payments/coinbase-x402.md) [![⭐](https://img.shields.io/github/stars/coinbase/x402?style=social)](https://github.com/coinbase/x402) | HTTP 402 payments for autonomous API clients | Facilitator verify/settle · Multi-language SDKs · Bazaar discovery | ⚠️ | [docs.cdp.coinbase.com/x402](https://docs.cdp.coinbase.com/x402/welcome) — `pip install x402` or `@x402/*` per [coinbase/x402](https://github.com/coinbase/x402) |
 | [CyMetica AI (EventTrader)](services/commerce-and-payments/cymetica-ai.md) | Agentically engineered financial platform with autonomous AI trading agents | A2A envelopes · MCP descriptor · prediction markets · market-making loops | ✅ | Read `https://cymetica.com/.well-known/agent.json` and `https://cymetica.com/.well-known/mcp.json` |
 | [SecondSign Core](services/commerce-and-payments/secondsign-core.md) [![⭐](https://img.shields.io/github/stars/Bestpart-Irene/secondsign-core?style=social)](https://github.com/Bestpart-Irene/secondsign-core) | Independent transaction co-signer for financial AI agents | Policy engine · mTLS gateway/approver · execute-once rail · hash-chained receipts | ⚠️ | `pip install secondsign-core` then `python examples/quickstart.py` (pre-1.0 evaluation) |
+| [UCP](services/commerce-and-payments/ucp.md) [![⭐](https://img.shields.io/github/stars/Universal-Commerce-Protocol/ucp?style=social)](https://github.com/Universal-Commerce-Protocol/ucp) | The common language for platforms, agents, and businesses | Capability profiles · checkout sessions · OAuth linking · AP2 payments | ⚠️ | Read [ucp.dev](https://ucp.dev) then `cargo install ucp-schema` — samples/SDKs under [Universal-Commerce-Protocol](https://github.com/orgs/Universal-Commerce-Protocol/repositories) |
+| [AP2](services/commerce-and-payments/ap2.md) [![⭐](https://img.shields.io/github/stars/google-agentic-commerce/AP2?style=social)](https://github.com/google-agentic-commerce/AP2) | An open protocol for the emerging Agent Economy | Checkout/payment mandates · VDC chain · A2A/UCP extension | ⚠️ | `uv pip install git+https://github.com/google-agentic-commerce/AP2.git@main` — last code push 2026-06-17 |
 
 ---
 
@@ -270,6 +275,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [Polos](services/agent-runtime-and-infrastructure/polos.md) [![⭐](https://img.shields.io/github/stars/polos-dev/polos?style=social)](https://github.com/polos-dev/polos) | Open-source runtime for AI agents — sandbox + durable workflow + HITL | Docker/E2B sandbox · Durable steps with prompt cache · HTTP/cron/webhook/event triggers · Slack HITL | ⚠️ | `pip install polos` (or `npm install polos`) — see [README](https://github.com/polos-dev/polos) |
 | [Cloudflare Computer](services/agent-runtime-and-infrastructure/cloudflare-computer.md) [![⭐](https://img.shields.io/github/stars/cloudflare/computer?style=social)](https://github.com/cloudflare/computer) | Give your agent a computer | Durable Object workspace FS · runtime.exec backends · preview APIs | ⚠️ | `npm install @cloudflare/computer` then `withWorkspace` on a Durable Object — preview only |
 | [Agent Executor (AX)](services/agent-runtime-and-infrastructure/google-ax.md) [![⭐](https://img.shields.io/github/stars/google/ax?style=social)](https://github.com/google/ax) | An open source distributed agent runtime | Conversation resume · event log · isolated harnesses · `ax` CLI | ⚠️ | `go install github.com/google/ax/cmd/ax@latest` then `ax --input "…"` |
+| [Agent Substrate](services/agent-runtime-and-infrastructure/agent-substrate.md) [![⭐](https://img.shields.io/github/stars/agent-substrate/substrate?style=social)](https://github.com/agent-substrate/substrate) | High-density Kubernetes runtime for large-scale agent deployments | Actors · WorkerPools · suspend/resume · atenet routing | ⚠️ | `hack/install-ate-kind.sh --deploy-ate-system` then `kubectl ate create actor` — early-dev, not a supported Google product |
 
 ---
 
@@ -290,6 +296,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [Codex HUD (anhannin)](services/agent-harnesses-and-control-planes/codex-hud-anhannin.md) [![⭐](https://img.shields.io/github/stars/anhannin/codex-hud?style=social)](https://github.com/anhannin/codex-hud) | Patched Codex status line for usage and session state | Model/project/git · rollout session · 5-hour and 7-day usage windows | ⚠️ | Clone [anhannin/codex-hud](https://github.com/anhannin/codex-hud), review the patch/install script, then run `Codex-HUD/install.sh` |
 | [Claude HUD](services/agent-harnesses-and-control-planes/claude-hud.md) [![⭐](https://img.shields.io/github/stars/jarrodwatts/claude-hud?style=social)](https://github.com/jarrodwatts/claude-hud) | A Claude Code plugin that shows what's happening | Context/usage bars · tools · subagents · todos · statusline | ⚠️ | `/plugin marketplace add jarrodwatts/claude-hud` then `/plugin install claude-hud` and `/claude-hud:setup` |
 | [LoopX](services/agent-harnesses-and-control-planes/loopx.md) [![⭐](https://img.shields.io/github/stars/huangruiteng/loopx?style=social)](https://github.com/huangruiteng/loopx) | The open, provider-neutral, stateful control plane for long-horizon agents | Objectives · gates · todos/evidence · quota · claims/leases | ⚠️ | `python3 -m pip install --upgrade loopx` then `loopx workflow-skills --install` and `loopx connect` |
+| [DeepSeek Harness (dsh)](services/agent-harnesses-and-control-planes/deepseek-harness.md) [![⭐](https://img.shields.io/github/stars/deepseek-ai/deepseek-harness?style=social)](https://github.com/deepseek-ai/deepseek-harness) | Everything is a Plugin. | Cordis plugins · session log · Trajectory · PTC/Code Mode | ⚠️ | `npx @deepseek-ai/dsh web` |
 
 ---
 
@@ -320,6 +327,8 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [Hindsight](services/memory-and-state/hindsight.md) [![⭐](https://img.shields.io/github/stars/vectorize-io/hindsight?style=social)](https://github.com/vectorize-io/hindsight) | Agent Memory That Learns | `retain()` · `recall()` · `reflect()` · Dedicated memory banks | ⚠️ | `pip install hindsight-ai` then use retain/recall/reflect in the agent loop |
 | [agentmemory](services/memory-and-state/agentmemory.md) [![⭐](https://img.shields.io/github/stars/rohitg00/agentmemory?style=social)](https://github.com/rohitg00/agentmemory) | Your coding agent remembers everything. No more re-explaining. | Shared memory server · MCP/hooks · 17 skills · INSTALL_FOR_AGENTS.md | ✅ | Read https://raw.githubusercontent.com/rohitg00/agentmemory/main/INSTALL_FOR_AGENTS.md and follow the instructions |
 | [TencentDB Agent Memory](services/memory-and-state/tencentdb-agent-memory.md) [![⭐](https://img.shields.io/github/stars/TencentCloud/TencentDB-Agent-Memory?style=social)](https://github.com/TencentCloud/TencentDB-Agent-Memory) | Agents remember,Humans innovate. | Symbolic Mermaid canvas · L0–L3 layering · OpenClaw/Hermes plugins | ⚠️ | `openclaw plugins install @tencentdb-agent-memory/memory-tencentdb` then enable `memory-tencentdb` |
+| [MemPalace](services/memory-and-state/mempalace.md) [![⭐](https://img.shields.io/github/stars/MemPalace/mempalace?style=social)](https://github.com/MemPalace/mempalace) | The best-benchmarked open-source AI memory system. And it's free. | Verbatim drawers · wings/rooms · pluggable backends · 44 MCP tools | ✅ | `uv tool install mempalace` then `mempalace init` / `mine` / `search` |
+| [MemSearch](services/memory-and-state/memsearch.md) [![⭐](https://img.shields.io/github/stars/zilliztech/memsearch?style=social)](https://github.com/zilliztech/memsearch) | Cross-platform semantic memory for AI coding agents | Markdown + Milvus hybrid search · progressive recall · harness plugins | ⚠️ | `uv tool install "memsearch[onnx]"` or `/plugin marketplace add zilliztech/memsearch` |
 
 ---
 
@@ -361,6 +370,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [AIO Sandbox](services/code-execution/agent-infra-sandbox.md) [![⭐](https://img.shields.io/github/stars/agent-infra/sandbox?style=social)](https://github.com/agent-infra/sandbox) | All-in-one Docker sandbox for AI agents | Browser + shell + files + VS Code + Jupyter + MCP · Shared filesystem | ✅ | `docker run -p 8080:8080 ghcr.io/agent-infra/sandbox:latest` — MCP `http://localhost:8080/mcp` |
 | [Agent Sandbox](services/code-execution/agent-sandbox.md) | The trusted runtime for untrusted code | Hosted code sessions · Dependency install · Files/artifacts API · URL onboarding | ⚠️ | Read https://agentsandbox.co/skill.md and follow the instructions |
 | [Riza](services/code-execution/riza.md) | AI writes code. Riza runs it. | Command Exec API · Tools API · Secrets · MCP · Self-hosting | ✅ | `uv add rizaio` then `riza.command.exec(...)` — [docs.riza.io](https://docs.riza.io/) |
+| [Agent Sandbox (Kubernetes SIG)](services/code-execution/kubernetes-agent-sandbox.md) [![⭐](https://img.shields.io/github/stars/kubernetes-sigs/agent-sandbox?style=social)](https://github.com/kubernetes-sigs/agent-sandbox) | Secure isolated execution layer for autonomous agents on Kubernetes | Sandbox CRD · WarmPool/Claim · RuntimeClass · Python/Go SDKs | ⚠️ | `pip install k8s-agent-sandbox` then `SandboxClient().create_sandbox(...)` — not hosted agentsandbox.co |
 
 ---
 
@@ -383,6 +393,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [Galileo](services/observability-and-tracing/galileo.md) | Agent reliability platform — observability, evals, and IDE MCP | Signals (root-cause insights) · synthetic datasets · experiments · MCP tools | ✅ | Add MCP URL `https://api.galileo.ai/mcp/http/mcp` with `Galileo-API-Key` header — [setup docs](https://docs.galileo.ai/getting-started/mcp/setup-galileo-mcp) |
 | [Laminar](services/observability-and-tracing/laminar.md) [![⭐](https://img.shields.io/github/stars/lmnr-ai/lmnr?style=social)](https://github.com/lmnr-ai/lmnr) | Open-source observability for long-running agents | Agent debugger (rerun at step N) · Browser session replay · Signals · SQL over traces · Apache 2.0 self-host | ⚠️ | `pip install lmnr` then `Laminar.initialize()` — self-host: `git clone https://github.com/lmnr-ai/lmnr && docker compose up -d` |
 | [OpenLIT](services/observability-and-tracing/openlit.md) [![⭐](https://img.shields.io/github/stars/openlit/openlit?style=social)](https://github.com/openlit/openlit) | OpenTelemetry-native observability for LLMs and AI agents | Agent traces · Tool-call spans · Cost/token analytics | ✅ | `pip install openlit` then configure OpenTelemetry export |
+| [AgentSight](services/observability-and-tracing/agentsight.md) [![⭐](https://img.shields.io/github/stars/eunomia-bpf/agentsight?style=social)](https://github.com/eunomia-bpf/agentsight) | Lightweight system-level observability for AI Agents | eBPF `record` · session DBs · `top`/`vis` · OTLP GenAI | ⚠️ | `cargo install agentsight` then `agentsight top` or `sudo agentsight record -- claude` |
 
 ---
 
