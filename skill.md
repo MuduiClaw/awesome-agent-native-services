@@ -5,7 +5,7 @@ description: >
   surfaces for live agents. Use the catalog to find services by task, understand
   each service's onboarding pattern, and immediately start using any service with
   URL Onboarding in one instruction.
-version: "2026-08-25"
+version: "2026-08-27"
 license: CC0-1.0
 catalog: https://github.com/haoruilee/awesome-agent-native-services
 allowed-tools: WebSearch Read
@@ -72,7 +72,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-## Full Catalog — 16 Categories, 201 Services
+## Full Catalog — 16 Categories, 206 Services
 
 ### 1. Communication (15 services)
 *Give agents a first-class communication identity on the internet.*
@@ -170,7 +170,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-### 5. Commerce & Payments (11 services)
+### 5. Commerce & Payments (12 services)
 *Verified financial identity and real-economy transactions for agents.*
 
 | Service | Tagline | Onboarding |
@@ -186,6 +186,7 @@ These services can be joined with a single instruction, right now, with no human
 | [SecondSign Core](https://github.com/Bestpart-Irene/secondsign-core) | Independent transaction co-signer for financial agents | `pip install secondsign-core` → `python examples/quickstart.py` (pre-1.0 evaluation) |
 | [UCP](https://ucp.dev) | The common language for platforms, agents, and businesses | Read [ucp.dev](https://ucp.dev) then `cargo install ucp-schema` |
 | [AP2](https://ap2-protocol.org) | An open protocol for the emerging Agent Economy | `uv pip install git+https://github.com/google-agentic-commerce/AP2.git@main` |
+| [MPP](https://mpp.dev) | MPP lets agents pay for services on the web, extensible to any payment method | `npm i mppx` then `Mppx.create({ methods: [tempo({ account })] })` |
 
 ---
 
@@ -243,7 +244,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-### 8. Memory & State (19 services)
+### 8. Memory & State (21 services)
 *Persistent, queryable memory across sessions — memory as infrastructure, not application logic.*
 
 | Service | Tagline | Onboarding |
@@ -267,6 +268,8 @@ These services can be joined with a single instruction, right now, with no human
 | [TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) | Agents remember,Humans innovate. | `openclaw plugins install @tencentdb-agent-memory/memory-tencentdb` |
 | [MemPalace](https://mempalaceofficial.com) | The best-benchmarked open-source AI memory system. And it's free. | `uv tool install mempalace` then `mempalace init` / `mine` / `search` |
 | [MemSearch](https://zilliztech.github.io/memsearch/) | Cross-platform semantic memory for AI coding agents | `uv tool install "memsearch[onnx]"` or Claude Code `/plugin marketplace add zilliztech/memsearch` |
+| [Claude-Mem](https://claude-mem.ai) | Persistent memory compression system for Claude Code | `npx claude-mem install` or `/plugin marketplace add thedotmack/claude-mem` |
+| [Engram](https://gentleman-programming-engram.mintlify.app/introduction) | Persistent memory for AI coding agents | `brew install gentleman-programming/tap/engram` then `engram setup <agent>` |
 
 ---
 
@@ -287,7 +290,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-### 10. Code Execution (11 services)
+### 10. Code Execution (13 services)
 *Secure isolated runtimes for AI-generated code with LLM-formatted output.*
 
 | Service | Tagline | Onboarding |
@@ -303,6 +306,8 @@ These services can be joined with a single instruction, right now, with no human
 | [Riza](https://riza.io) | AI writes code. Riza runs it. | `uv add rizaio` → `riza.command.exec(...)` — [docs.riza.io](https://docs.riza.io) |
 | [Agent Sandbox](https://agentsandbox.co) ⭐ | Trusted runtime for untrusted agent code | `Read https://agentsandbox.co/skill.md and follow the instructions` or `pip install agentsandbox-sdk` |
 | [Agent Sandbox (Kubernetes SIG)](https://agent-sandbox.sigs.k8s.io) | Secure isolated execution layer for autonomous agents on Kubernetes | `pip install k8s-agent-sandbox` then `SandboxClient().create_sandbox(...)` |
+| [Clawk](https://github.com/clawkwork/clawk) | Give a coding agent its own disposable Linux machine, not yours | `brew install clawkwork/tap/clawk` then `cd <repo> && clawk` (pre-1.0) |
+| [Dormice](https://github.com/BitMiracle-AI/Dormice) | The SQLite of agent sandboxes — self-hosted, idle costs nothing | install.sh then `npx skills add BitMiracle-AI/Dormice` (early-dev) |
 
 ---
 

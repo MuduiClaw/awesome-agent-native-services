@@ -31,6 +31,8 @@ Agent-native code execution services solve this with:
 | [Agent Sandbox](agent-sandbox.md) | The trusted runtime for untrusted code | REST API, Python SDK, URL onboarding (`skill.md`) | ⚠️ |
 | [Riza](riza.md) | AI writes code. Riza runs it. | REST API, Python/TypeScript/Go SDKs, MCP server, self-hosting | ✅ |
 | [Agent Sandbox (Kubernetes SIG)](kubernetes-agent-sandbox.md) [![⭐](https://img.shields.io/github/stars/kubernetes-sigs/agent-sandbox?style=social)](https://github.com/kubernetes-sigs/agent-sandbox) | Secure isolated execution layer for autonomous agents on Kubernetes | Sandbox CRD, WarmPool/Claim, Python/Go SDKs, RuntimeClass | ⚠️ |
+| [Clawk](clawk.md) [![⭐](https://img.shields.io/github/stars/clawkwork/clawk?style=social)](https://github.com/clawkwork/clawk) | Give a coding agent its own disposable Linux machine, not yours | Local hypervisor VM, DNS-aware egress allow-list, JSON CLI | ⚠️ |
+| [Dormice](dormice.md) [![⭐](https://img.shields.io/github/stars/BitMiracle-AI/Dormice?style=social)](https://github.com/BitMiracle-AI/Dormice) | The SQLite of agent sandboxes — self-hosted, idle costs nothing | acquireSandbox, HTTP RPC, E2B SDK compat, dor CLI | ⚠️ |
 
 
 ---
