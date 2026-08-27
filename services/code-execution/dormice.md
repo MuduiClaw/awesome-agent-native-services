@@ -19,9 +19,9 @@
 
 ## Official Website
 
-GitHub-only. Repo `homepage` is empty. The daemon serves a small web console at `http://127.0.0.1:3676/console` after install (token → httpOnly session cookie).
-
 https://github.com/BitMiracle-AI/Dormice
+
+GitHub-only. Repo `homepage` is empty. After install the daemon serves a small web console on loopback port 3676 at `/console` (token → httpOnly session cookie).
 
 ---
 

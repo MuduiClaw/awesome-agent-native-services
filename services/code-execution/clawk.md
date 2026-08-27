@@ -19,9 +19,9 @@
 
 ## Official Website
 
-GitHub-only. The repository does not publish a separate product homepage (`homepage` is empty in [repo metadata](https://api.github.com/repos/clawkwork/clawk)).
-
 https://github.com/clawkwork/clawk
+
+GitHub-only. The repository does not publish a separate product homepage (`homepage` is empty in GitHub repo metadata).
 
 ---
 
@@ -37,7 +37,7 @@ GitHub description: **"Give coding agents a disposable Linux VM, not your laptop
 
 **Interaction pattern:** `CLI` (local hypervisor VM)
 
-Requires **macOS 14+ on Apple silicon**. Linux via Firecracker is official but **experimental** ([linux-quickstart](https://github.com/clawkwork/clawk/blob/main/docs/linux-quickstart.md)). No Windows.
+Requires **macOS 14+ on Apple silicon** ([README](https://github.com/clawkwork/clawk#install)). No Windows.
 
 ```bash
 brew install clawkwork/tap/clawk
@@ -45,7 +45,7 @@ cd <repo>
 clawk                      # boot a sandbox for this dir + attach Claude Code
 ```
 
-From-source alternative: `git clone https://github.com/clawkwork/clawk && make install` (Go 1.26+). No Docker daemon, qemu, or sudo — the hypervisor is Virtualization.framework (macOS) or Firecracker (Linux).
+From-source alternative: `git clone https://github.com/clawkwork/clawk && make install` (Go 1.26+). No Docker daemon, qemu, or sudo — the hypervisor is Virtualization.framework (macOS) or Firecracker (Linux). Linux via Firecracker is official but **experimental** ([linux-quickstart](https://github.com/clawkwork/clawk/blob/main/docs/linux-quickstart.md)).
 
 Structured control plane after first boot:
 
