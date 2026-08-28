@@ -11,7 +11,7 @@
     "service_directory": "services",
     "content_digest": {
       "algorithm": "sha256",
-      "value": "848f7794bf0cb39d4c8170876ede75092b6fa076bc9586c973cf227b948c4070",
+      "value": "63cdc9125aedc7a8fba94763dda98868fd8bcb5a411867b0d33ff68abd11eb98",
       "input_paths": [
         "README.md",
         "skill.md",
@@ -6641,7 +6641,7 @@
       "id": "llm-gateway-and-routing/xiurouter",
       "slug": "xiurouter",
       "name": "XiuRouter",
-      "tagline": "One API for leading models, save up to 90%+.",
+      "tagline": "One API for leading models. Selected routes save 90%+.",
       "classification": "agent-native",
       "status": "listed",
       "lifecycle_status": "unknown",
