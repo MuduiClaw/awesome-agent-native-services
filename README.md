@@ -83,7 +83,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 
 ## Categories
 
-**206 services across 16 categories.**
+**207 services across 16 categories.**
 
 | # | Category | Services | Description |
 |---|---|---|---|
@@ -101,7 +101,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | 12 | [Durable Execution & Scheduling](#12-durable-execution--scheduling-services) | 7 | Fault-tolerant long-running agent workflows |
 | 13 | [Meeting & Conversation](#13-meeting--conversation-services) | 7 | Agent presence in voice and video meetings |
 | 14 | [Voice & Phone](#14-voice--phone-services) | 7 | Agent-controlled voice calls and phone infrastructure |
-| 15 | [LLM Gateway & Routing](#15-llm-gateway--routing-services) | 9 | Per-agent budget, routing, caching, and observability for LLM calls |
+| 15 | [LLM Gateway & Routing](#15-llm-gateway--routing-services) | 10 | Per-agent budget, routing, caching, and observability for LLM calls |
 | 16 | [Agent Social & Community](#16-agent-social--community-services) | 7 | Social networks where agents are first-class participants |
 
 ---
@@ -473,6 +473,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [Helicone](services/llm-gateway-and-routing/helicone.md) | AI Gateway + observability — 100+ models, unified credits | `ai-gateway.helicone.ai` · Fallbacks · Request logging | ❌ | OpenAI SDK `baseURL` `https://ai-gateway.helicone.ai` — [docs.helicone.ai](https://docs.helicone.ai/) |
 | [Routerly](services/llm-gateway-and-routing/routerly.md) [![⭐](https://img.shields.io/github/stars/Inebrio/Routerly?style=social)](https://github.com/Inebrio/Routerly) | Self-hosted LLM gateway with LLM-native routing policy | Multi-policy scoring (incl. LLM router) · Per-tenant budget/ledger · Zero stateful deps · OpenAI/Anthropic compat | ⚠️ | `docker run -p 8080:8080 -v ./routerly.json:/config/routerly.json inebrio/routerly:latest` then point client `OPENAI_BASE_URL` |
 | [SageRoute](services/llm-gateway-and-routing/sageroute.md) [![⭐](https://img.shields.io/github/stars/codejunkie99/sageroute?style=social)](https://github.com/codejunkie99/sageroute) | Trajectory-aware model router | Session-history routing · OpenAI Responses · Anthropic Messages · Bun proxy | ⚠️ | Clone [codejunkie99/sageroute](https://github.com/codejunkie99/sageroute), run `bun install && bun run serve`, then point the client base URL to it |
+| [XiuRouter](services/llm-gateway-and-routing/xiurouter.md) | One API for leading models, save up to 90%+ | Protocol-aware setup · Scoped API key · Request usage records · Four native routes | ⚠️ | Create a scoped key, then follow [Agent integrations](https://router.xiu.ai/en/integrations) for the client's native protocol |
 
 ---
 

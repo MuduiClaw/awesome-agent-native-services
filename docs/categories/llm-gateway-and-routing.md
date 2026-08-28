@@ -6,7 +6,7 @@ hero_image: "/assets/images/editorial-routing.webp"
 permalink: /categories/llm-gateway-and-routing/
 page_kind: collection
 collection_number: "15"
-service_count: 9
+service_count: 10
 ---
 
 <p class="collection-source"><a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/README.md">Collection notes ↗</a></p>
@@ -106,6 +106,16 @@ service_count: 9
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/sageroute.md">Open dossier ↗</a>
       <a href="https://github.com/codejunkie99/sageroute">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-sheet--service atlas-visual--10">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">XiuRouter</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/xiurouter.md">Open dossier ↗</a>
     </div>
     </div>
   </article>

@@ -11,7 +11,7 @@
     "service_directory": "services",
     "content_digest": {
       "algorithm": "sha256",
-      "value": "4eec68af300c6d7878f69e362b13667e2232503304e012a4e0508f60a6752c68",
+      "value": "848f7794bf0cb39d4c8170876ede75092b6fa076bc9586c973cf227b948c4070",
       "input_paths": [
         "README.md",
         "skill.md",
@@ -229,6 +229,7 @@
         "services/llm-gateway-and-routing/portkey.md",
         "services/llm-gateway-and-routing/routerly.md",
         "services/llm-gateway-and-routing/sageroute.md",
+        "services/llm-gateway-and-routing/xiurouter.md",
         "services/agent-social-network/README.md",
         "services/agent-social-network/agent-chamber.md",
         "services/agent-social-network/agentgram.md",
@@ -242,7 +243,7 @@
   },
   "counts": {
     "categories": 16,
-    "services": 206
+    "services": 207
   },
   "categories": [
     {
@@ -348,7 +349,7 @@
       "name": "LLM Gateway & Routing",
       "description": "Services that give AI agents a reliable, observable, and cost-controlled interface to LLM providers — with per-agent routing, budget enforcement, fallback logic, and semantic caching as first-class primitives.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/README.md",
-      "service_count": 9
+      "service_count": 10
     },
     {
       "id": "agent-social-network",
@@ -6635,6 +6636,37 @@
       "verification_sources": [
         "https://api.github.com/repos/codejunkie99/sageroute"
       ]
+    },
+    {
+      "id": "llm-gateway-and-routing/xiurouter",
+      "slug": "xiurouter",
+      "name": "XiuRouter",
+      "tagline": "One API for leading models, save up to 90%+.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "unknown",
+      "category": "llm-gateway-and-routing",
+      "website": "https://router.xiu.ai/en",
+      "repository": null,
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/xiurouter.md",
+      "source_path": "services/llm-gateway-and-routing/xiurouter.md",
+      "onboarding": {
+        "type": "cli",
+        "pattern": "scoped API key + the native protocol used by the agent client.",
+        "instruction": "export XIUROUTER_API_KEY=...\n\ncurl https://router-api.xiu.ai/v1/models \\\n  -H \"Authorization: Bearer $XIUROUTER_API_KEY\"",
+        "url": "https://router-api.xiu.ai/v1/models"
+      },
+      "protocols": [
+        "cli",
+        "sdk",
+        "http",
+        "api"
+      ],
+      "mcp_status": "unavailable",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": null,
+      "verified_at": null,
+      "verification_sources": []
     },
     {
       "id": "agent-social-network/agent-chamber",

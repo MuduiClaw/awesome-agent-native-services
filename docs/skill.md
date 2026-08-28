@@ -59,7 +59,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-## Full Catalog — 16 Categories, 206 Services
+## Full Catalog — 16 Categories, 207 Services
 
 ### 1. Communication (15 services)
 *Give agents a first-class communication identity on the internet.*
@@ -363,7 +363,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-### 15. LLM Gateway & Routing (9 services)
+### 15. LLM Gateway & Routing (10 services)
 *Per-agent budget, routing, caching, and observability for LLM calls.*
 
 | Service | Tagline | Onboarding |
@@ -377,6 +377,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Helicone](https://www.helicone.ai) | AI Gateway + observability — `ai-gateway.helicone.ai` | OpenAI SDK `baseURL` per [Helicone quickstart](https://docs.helicone.ai/) |
 | [Routerly](https://github.com/Inebrio/Routerly) | Self-hosted gateway with LLM-native routing policy | Run the official Docker image with `routerly.json`, then point the client base URL to it |
 | [SageRoute](https://github.com/codejunkie99/sageroute) | Trajectory-aware model router | Clone → `bun install` → `bun run serve`, then set the client base URL |
+| [XiuRouter](https://router.xiu.ai/en) | One API for leading models, save up to 90%+ | Create a scoped key, then follow [Agent integrations](https://router.xiu.ai/en/integrations) for the client's native protocol |
 
 ---
 
