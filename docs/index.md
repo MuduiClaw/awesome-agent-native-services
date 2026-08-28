@@ -3,7 +3,7 @@ title: "The Agent-Native Index"
 description: "A curated 2026 collection of agent-native infrastructure: MCP tools, harnesses, identity, memory, sandboxes, browsers, payments, and runtimes."
 image: /assets/images/social-preview.png
 page_kind: home
-service_count: 206
+service_count: 207
 collection_count: 16
 new_arrivals_count: 53
 ---
@@ -455,7 +455,7 @@ new_arrivals_count: 53
   <div class="section-intro">
     <span class="section-number">02</span>
     <h2 class="section-title" id="collections-title">The collections</h2>
-    <p class="section-note">16 fields · 206 dossiers</p>
+    <p class="section-note">16 fields · 207 dossiers</p>
   </div>
   <div class="collection-grid">
     <a class="collection-card atlas-visual--01" href="{{ '/categories/communication/' | relative_url }}">
@@ -575,7 +575,7 @@ new_arrivals_count: 53
       <span class="collection-card__copy">
       <span class="collection-card__number">15</span>
       <span class="collection-card__title">LLM Gateway &amp; Routing</span>
-      <span class="collection-card__count">9</span>
+      <span class="collection-card__count">10</span>
       </span>
     </a>
     <a class="collection-card atlas-visual--16" href="{{ '/categories/agent-social-network/' | relative_url }}">
@@ -606,6 +606,6 @@ new_arrivals_count: 53
   <div>
   <span class="section-number">03</span>
   <h2 class="section-title">Full source.</h2>
-  <a class="source-gateway__link" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/README.md">Open 206 dossiers ↗</a>
+  <a class="source-gateway__link" href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/README.md">Open 207 dossiers ↗</a>
   </div>
 </section>
