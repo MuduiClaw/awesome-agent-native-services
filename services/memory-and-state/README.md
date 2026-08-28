@@ -43,6 +43,8 @@ Agent-native memory services solve this by providing:
 | [TencentDB Agent Memory](tencentdb-agent-memory.md) [![⭐](https://img.shields.io/github/stars/TencentCloud/TencentDB-Agent-Memory?style=social)](https://github.com/TencentCloud/TencentDB-Agent-Memory) | Agents remember,Humans innovate. | OpenClaw plugin, Hermes Gateway, layered + symbolic memory | ⚠️ |
 | [MemPalace](mempalace.md) [![⭐](https://img.shields.io/github/stars/MemPalace/mempalace?style=social)](https://github.com/MemPalace/mempalace) | The best-benchmarked open-source AI memory system. And it's free. | CLI, stdio MCP, Python API, verbatim palace + graph | ✅ |
 | [MemSearch](memsearch.md) [![⭐](https://img.shields.io/github/stars/zilliztech/memsearch?style=social)](https://github.com/zilliztech/memsearch) | Cross-platform semantic memory for AI coding agents | CLI, Python API, Claude/Codex/DSH/OpenClaw/OpenCode plugins | ⚠️ |
+| [Claude-Mem](claude-mem.md) [![⭐](https://img.shields.io/github/stars/thedotmack/claude-mem?style=social)](https://github.com/thedotmack/claude-mem) | Persistent memory compression system for Claude Code | Installer, lifecycle hooks, local worker, MCP search | ✅ |
+| [Engram](engram.md) [![⭐](https://img.shields.io/github/stars/Gentleman-Programming/engram?style=social)](https://github.com/Gentleman-Programming/engram) | Persistent memory for AI coding agents | CLI, stdio MCP, HTTP API, TUI, `engram setup` | ✅ |
 
 
 

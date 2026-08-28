@@ -1,8 +1,8 @@
 {
   "$schema": "https://lihaorui.com/awesome-agent-native-services/catalog.schema.json",
   "schema_version": "1.0.0",
-  "catalog_version": "2026-08-25",
-  "generated_at": "2026-08-25",
+  "catalog_version": "2026-08-27",
+  "generated_at": "2026-08-27",
   "license": "CC0-1.0",
   "source": {
     "repository": "https://github.com/haoruilee/awesome-agent-native-services",
@@ -11,7 +11,7 @@
     "service_directory": "services",
     "content_digest": {
       "algorithm": "sha256",
-      "value": "ecad0f3e36c634b61c8ed0f201333a037022db385a0aa71c0c23675fc85ae646",
+      "value": "4eec68af300c6d7878f69e362b13667e2232503304e012a4e0508f60a6752c68",
       "input_paths": [
         "README.md",
         "skill.md",
@@ -89,6 +89,7 @@
         "services/commerce-and-payments/circle-agent-stack.md",
         "services/commerce-and-payments/coinbase-x402.md",
         "services/commerce-and-payments/cymetica-ai.md",
+        "services/commerce-and-payments/mpp.md",
         "services/commerce-and-payments/nevermined.md",
         "services/commerce-and-payments/openlibx402.md",
         "services/commerce-and-payments/payman-ai.md",
@@ -137,7 +138,9 @@
         "services/agent-harnesses-and-control-planes/ruflo.md",
         "services/memory-and-state/README.md",
         "services/memory-and-state/agentmemory.md",
+        "services/memory-and-state/claude-mem.md",
         "services/memory-and-state/cognee.md",
+        "services/memory-and-state/engram.md",
         "services/memory-and-state/ensue.md",
         "services/memory-and-state/hindsight.md",
         "services/memory-and-state/llm-wiki.md",
@@ -169,8 +172,10 @@
         "services/code-execution/agent-infra-sandbox.md",
         "services/code-execution/agent-sandbox.md",
         "services/code-execution/axern.md",
+        "services/code-execution/clawk.md",
         "services/code-execution/coderunner.md",
         "services/code-execution/daytona.md",
+        "services/code-execution/dormice.md",
         "services/code-execution/e2b.md",
         "services/code-execution/kubernetes-agent-sandbox.md",
         "services/code-execution/opensandbox.md",
@@ -237,7 +242,7 @@
   },
   "counts": {
     "categories": 16,
-    "services": 201
+    "services": 206
   },
   "categories": [
     {
@@ -273,7 +278,7 @@
       "name": "Commerce & Payments",
       "description": "Services that give AI agents a verified financial identity and the ability to transact in the real economy — paying for services, moving money, and being recognized as a legitimate, accountable economic actor.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/README.md",
-      "service_count": 11
+      "service_count": 12
     },
     {
       "id": "agent-runtime-and-infrastructure",
@@ -294,7 +299,7 @@
       "name": "Memory & State",
       "description": "Services that give AI agents persistent, queryable memory across sessions — treating memory as infrastructure rather than application logic, and managing the full lifecycle of what agents remember, forget, and retrieve.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/README.md",
-      "service_count": 19
+      "service_count": 21
     },
     {
       "id": "search-and-web-intelligence",
@@ -308,7 +313,7 @@
       "name": "Code Execution",
       "description": "Services that give AI agents a secure, isolated runtime for executing generated code — without human-side sandbox setup, without risking the host environment, and with output formatted for direct LLM consumption.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/README.md",
-      "service_count": 11
+      "service_count": 13
     },
     {
       "id": "observability-and-tracing",
@@ -2542,6 +2547,40 @@
       "verification_sources": []
     },
     {
+      "id": "commerce-and-payments/mpp",
+      "slug": "mpp",
+      "name": "MPP",
+      "tagline": "MPP lets agents pay for services on the web, extensible to any payment method.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "commerce-and-payments",
+      "website": "https://mpp.dev",
+      "repository": "https://github.com/wevm/mppx",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/mpp.md",
+      "source_path": "services/commerce-and-payments/mpp.md",
+      "onboarding": {
+        "type": "sdk",
+        "pattern": "SDK + HTTP 402",
+        "instruction": "npm i mppx",
+        "url": "https://mpp.dev/quickstart/client.md"
+      },
+      "protocols": [
+        "mcp",
+        "cli",
+        "sdk",
+        "http",
+        "api"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last wevm/mppx push 2026-08-27 (repo metadata); thinner star count than neighboring commerce OSS — still the documented TypeScript SDK",
+      "verified_at": "2026-08-27",
+      "verification_sources": [
+        "https://api.github.com/repos/wevm/mppx"
+      ]
+    },
+    {
       "id": "commerce-and-payments/nevermined",
       "slug": "nevermined",
       "name": "Nevermined",
@@ -3939,6 +3978,40 @@
       ]
     },
     {
+      "id": "memory-and-state/claude-mem",
+      "slug": "claude-mem",
+      "name": "Claude-Mem",
+      "tagline": "Persistent memory compression system for Claude Code",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "memory-and-state",
+      "website": "https://claude-mem.ai",
+      "repository": "https://github.com/thedotmack/claude-mem",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/claude-mem.md",
+      "source_path": "services/memory-and-state/claude-mem.md",
+      "onboarding": {
+        "type": "cli",
+        "pattern": "CLI + coding-agent plugin",
+        "instruction": "npx claude-mem install",
+        "url": "https://docs.claude-mem.ai/installation"
+      },
+      "protocols": [
+        "agent-skill",
+        "mcp",
+        "cli",
+        "http",
+        "api"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-08-26 (repo metadata); npm/plugin installers for Claude Code, Cursor, Windsurf, OpenCode, Codex CLI, Antigravity CLI, OpenClaw",
+      "verified_at": "2026-08-27",
+      "verification_sources": [
+        "https://api.github.com/repos/thedotmack/claude-mem"
+      ]
+    },
+    {
       "id": "memory-and-state/cognee",
       "slug": "cognee",
       "name": "Cognee",
@@ -3967,6 +4040,40 @@
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
+    },
+    {
+      "id": "memory-and-state/engram",
+      "slug": "engram",
+      "name": "Engram",
+      "tagline": "Persistent memory for AI coding agents",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "memory-and-state",
+      "website": "https://gentleman-programming-engram.mintlify.app/introduction",
+      "repository": "https://github.com/Gentleman-Programming/engram",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/engram.md",
+      "source_path": "services/memory-and-state/engram.md",
+      "onboarding": {
+        "type": "mcp",
+        "pattern": "CLI + MCP / plugin",
+        "instruction": "brew install gentleman-programming/tap/engram",
+        "url": "https://github.com/Gentleman-Programming/engram/blob/main/docs/INSTALLATION.md"
+      },
+      "protocols": [
+        "agent-skill",
+        "mcp",
+        "cli",
+        "stdio",
+        "http"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-08-27 (repo metadata); Homebrew tap + engram setup <agent> matrix",
+      "verified_at": "2026-08-27",
+      "verification_sources": [
+        "https://api.github.com/repos/Gentleman-Programming/engram"
+      ]
     },
     {
       "id": "memory-and-state/ensue",
@@ -4897,6 +5004,37 @@
       ]
     },
     {
+      "id": "code-execution/clawk",
+      "slug": "clawk",
+      "name": "Clawk",
+      "tagline": "Give a coding agent its own disposable Linux machine, not yours.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "code-execution",
+      "website": "https://github.com/clawkwork/clawk",
+      "repository": "https://github.com/clawkwork/clawk",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/clawk.md",
+      "source_path": "services/code-execution/clawk.md",
+      "onboarding": {
+        "type": "cli",
+        "pattern": "CLI (local hypervisor VM)",
+        "instruction": "brew install clawkwork/tap/clawk\ncd <repo>\nclawk                      # boot a sandbox for this dir + attach Claude Code",
+        "url": "https://github.com/clawkwork/clawk#install"
+      },
+      "protocols": [
+        "cli",
+        "http"
+      ],
+      "mcp_status": "unknown",
+      "agent_skill_status": "unavailable",
+      "latest_month_signal": "Last GitHub push 2026-08-13 (repo metadata); Homebrew tap clawkwork/tap/clawk",
+      "verified_at": "2026-08-27",
+      "verification_sources": [
+        "https://api.github.com/repos/clawkwork/clawk"
+      ]
+    },
+    {
       "id": "code-execution/coderunner",
       "slug": "coderunner",
       "name": "CodeRunner",
@@ -4958,6 +5096,40 @@
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
+    },
+    {
+      "id": "code-execution/dormice",
+      "slug": "dormice",
+      "name": "Dormice",
+      "tagline": "The SQLite of agent sandboxes — a self-hosted sandbox platform for AI agents. One machine, sandboxes that live forever, idle costs nothing.",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "active",
+      "category": "code-execution",
+      "website": "https://github.com/BitMiracle-AI/Dormice",
+      "repository": "https://github.com/BitMiracle-AI/Dormice",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/code-execution/dormice.md",
+      "source_path": "services/code-execution/dormice.md",
+      "onboarding": {
+        "type": "agent-skill",
+        "pattern": "self-hosted daemon + SDK / CLI / Agent Skill",
+        "instruction": "curl -fsSL https://raw.githubusercontent.com/BitMiracle-AI/Dormice/main/deploy/install.sh | bash",
+        "url": "https://raw.githubusercontent.com/BitMiracle-AI/Dormice/main/deploy/install.sh"
+      },
+      "protocols": [
+        "agent-skill",
+        "cli",
+        "sdk",
+        "http",
+        "api"
+      ],
+      "mcp_status": "unavailable",
+      "agent_skill_status": "available",
+      "latest_month_signal": "Last GitHub push 2026-08-14 (repo metadata); npx skills add BitMiracle-AI/Dormice",
+      "verified_at": "2026-08-27",
+      "verification_sources": [
+        "https://api.github.com/repos/BitMiracle-AI/Dormice"
+      ]
     },
     {
       "id": "code-execution/e2b",

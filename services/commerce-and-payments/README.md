@@ -29,6 +29,7 @@ No legacy payment processor was designed with these requirements. The services i
 | [SecondSign Core](secondsign-core.md) [![⭐](https://img.shields.io/github/stars/Bestpart-Irene/secondsign-core?style=social)](https://github.com/Bestpart-Irene/secondsign-core) | Independent transaction co-signer for financial AI agents | Python API, mTLS gateway/approver channels, execute-once rail, hash-chained receipts | ⚠️ |
 | [UCP](ucp.md) [![⭐](https://img.shields.io/github/stars/Universal-Commerce-Protocol/ucp?style=social)](https://github.com/Universal-Commerce-Protocol/ucp) | The common language for platforms, agents, and businesses | REST/JSON-RPC, MCP, A2A, `ucp-schema`, checkout capabilities | ⚠️ |
 | [AP2](ap2.md) [![⭐](https://img.shields.io/github/stars/google-agentic-commerce/AP2?style=social)](https://github.com/google-agentic-commerce/AP2) | An open protocol for the emerging Agent Economy | VDC mandates, Python/Go/Android samples, A2A/UCP extension | ⚠️ |
+| [MPP](mpp.md) [![⭐](https://img.shields.io/github/stars/wevm/mppx?style=social)](https://github.com/wevm/mppx) | MPP lets agents pay for services on the web, extensible to any payment method | HTTP 402 Challenge/Credential/Receipt, mppx SDK/CLI, MCP transport | ⚠️ |
 
 
 ---

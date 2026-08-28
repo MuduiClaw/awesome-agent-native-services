@@ -83,7 +83,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 
 ## Categories
 
-**201 services across 16 categories.**
+**206 services across 16 categories.**
 
 | # | Category | Services | Description |
 |---|---|---|---|
@@ -91,12 +91,12 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | 2 | [Browser & Web Execution](#2-browser--web-execution-services) | 25 | Remote browser and web data extraction for agents |
 | 3 | [Tool Access & Integration](#3-tool-access--integration-services) | 19 | Runtime tool discovery, auth, and execution |
 | 4 | [Oversight & Approval](#4-oversight--approval-services) | 5 | Human-in-the-loop approval and escalation |
-| 5 | [Commerce & Payments](#5-commerce--payment-services) | 11 | Agent-native wallets, identity, and transactions |
+| 5 | [Commerce & Payments](#5-commerce--payment-services) | 12 | Agent-native wallets, identity, and transactions |
 | 6 | [Agent Runtime & Infrastructure](#6-agent-runtime--infrastructure-services) | 28 | Execution, session isolation, secrets, and gateway |
 | 7 | [Agent Harnesses & Operator Surfaces](#7-agent-harnesses--operator-surfaces) | 10 | Durable agent-loop control and live operator visibility |
-| 8 | [Memory & State](#8-memory--state-services) | 19 | Persistent agent memory across sessions |
+| 8 | [Memory & State](#8-memory--state-services) | 21 | Persistent agent memory across sessions |
 | 9 | [Search & Web Intelligence](#9-search--web-intelligence-services) | 9 | LLM-optimized web search and content retrieval |
-| 10 | [Code Execution](#10-code-execution-services) | 11 | Secure sandboxes for AI-generated code |
+| 10 | [Code Execution](#10-code-execution-services) | 13 | Secure sandboxes for AI-generated code |
 | 11 | [Observability & Tracing](#11-observability--tracing-services) | 12 | Agent trajectory tracing and evaluation |
 | 12 | [Durable Execution & Scheduling](#12-durable-execution--scheduling-services) | 7 | Fault-tolerant long-running agent workflows |
 | 13 | [Meeting & Conversation](#13-meeting--conversation-services) | 7 | Agent presence in voice and video meetings |
@@ -237,6 +237,7 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [SecondSign Core](services/commerce-and-payments/secondsign-core.md) [![⭐](https://img.shields.io/github/stars/Bestpart-Irene/secondsign-core?style=social)](https://github.com/Bestpart-Irene/secondsign-core) | Independent transaction co-signer for financial AI agents | Policy engine · mTLS gateway/approver · execute-once rail · hash-chained receipts | ⚠️ | `pip install secondsign-core` then `python examples/quickstart.py` (pre-1.0 evaluation) |
 | [UCP](services/commerce-and-payments/ucp.md) [![⭐](https://img.shields.io/github/stars/Universal-Commerce-Protocol/ucp?style=social)](https://github.com/Universal-Commerce-Protocol/ucp) | The common language for platforms, agents, and businesses | Capability profiles · checkout sessions · OAuth linking · AP2 payments | ⚠️ | Read [ucp.dev](https://ucp.dev) then `cargo install ucp-schema` — samples/SDKs under [Universal-Commerce-Protocol](https://github.com/orgs/Universal-Commerce-Protocol/repositories) |
 | [AP2](services/commerce-and-payments/ap2.md) [![⭐](https://img.shields.io/github/stars/google-agentic-commerce/AP2?style=social)](https://github.com/google-agentic-commerce/AP2) | An open protocol for the emerging Agent Economy | Checkout/payment mandates · VDC chain · A2A/UCP extension | ⚠️ | `uv pip install git+https://github.com/google-agentic-commerce/AP2.git@main` — last code push 2026-06-17 |
+| [MPP](services/commerce-and-payments/mpp.md) [![⭐](https://img.shields.io/github/stars/wevm/mppx?style=social)](https://github.com/wevm/mppx) | MPP lets agents pay for services on the web, extensible to any payment method | HTTP 402 Challenge/Credential/Receipt · Tempo sessions · MCP transport · `mppx` | ⚠️ | `npm i mppx` then `Mppx.create({ methods: [tempo({ account })] })` — [quickstart](https://mpp.dev/quickstart/client.md) |
 
 ---
 
@@ -329,6 +330,8 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [TencentDB Agent Memory](services/memory-and-state/tencentdb-agent-memory.md) [![⭐](https://img.shields.io/github/stars/TencentCloud/TencentDB-Agent-Memory?style=social)](https://github.com/TencentCloud/TencentDB-Agent-Memory) | Agents remember,Humans innovate. | Symbolic Mermaid canvas · L0–L3 layering · OpenClaw/Hermes plugins | ⚠️ | `openclaw plugins install @tencentdb-agent-memory/memory-tencentdb` then enable `memory-tencentdb` |
 | [MemPalace](services/memory-and-state/mempalace.md) [![⭐](https://img.shields.io/github/stars/MemPalace/mempalace?style=social)](https://github.com/MemPalace/mempalace) | The best-benchmarked open-source AI memory system. And it's free. | Verbatim drawers · wings/rooms · pluggable backends · 44 MCP tools | ✅ | `uv tool install mempalace` then `mempalace init` / `mine` / `search` |
 | [MemSearch](services/memory-and-state/memsearch.md) [![⭐](https://img.shields.io/github/stars/zilliztech/memsearch?style=social)](https://github.com/zilliztech/memsearch) | Cross-platform semantic memory for AI coding agents | Markdown + Milvus hybrid search · progressive recall · harness plugins | ⚠️ | `uv tool install "memsearch[onnx]"` or `/plugin marketplace add zilliztech/memsearch` |
+| [Claude-Mem](services/memory-and-state/claude-mem.md) [![⭐](https://img.shields.io/github/stars/thedotmack/claude-mem?style=social)](https://github.com/thedotmack/claude-mem) | Persistent memory compression system for Claude Code | Auto-firehose observations · compression worker · session priming · MCP search | ✅ | `npx claude-mem install` or `/plugin marketplace add thedotmack/claude-mem` then `/plugin install claude-mem` |
+| [Engram](services/memory-and-state/engram.md) [![⭐](https://img.shields.io/github/stars/Gentleman-Programming/engram?style=social)](https://github.com/Gentleman-Programming/engram) | Persistent memory for AI coding agents | Agent-curated `mem_save`/`mem_search` · SQLite FTS5 · single Go binary | ✅ | `brew install gentleman-programming/tap/engram` then `claude plugin install engram` or `engram setup <agent>` |
 
 ---
 
@@ -371,6 +374,8 @@ Recommended flow for agents: start with `skill.md` for quick discovery, switch t
 | [Agent Sandbox](services/code-execution/agent-sandbox.md) | The trusted runtime for untrusted code | Hosted code sessions · Dependency install · Files/artifacts API · URL onboarding | ⚠️ | Read https://agentsandbox.co/skill.md and follow the instructions |
 | [Riza](services/code-execution/riza.md) | AI writes code. Riza runs it. | Command Exec API · Tools API · Secrets · MCP · Self-hosting | ✅ | `uv add rizaio` then `riza.command.exec(...)` — [docs.riza.io](https://docs.riza.io/) |
 | [Agent Sandbox (Kubernetes SIG)](services/code-execution/kubernetes-agent-sandbox.md) [![⭐](https://img.shields.io/github/stars/kubernetes-sigs/agent-sandbox?style=social)](https://github.com/kubernetes-sigs/agent-sandbox) | Secure isolated execution layer for autonomous agents on Kubernetes | Sandbox CRD · WarmPool/Claim · RuntimeClass · Python/Go SDKs | ⚠️ | `pip install k8s-agent-sandbox` then `SandboxClient().create_sandbox(...)` — not hosted agentsandbox.co |
+| [Clawk](services/code-execution/clawk.md) [![⭐](https://img.shields.io/github/stars/clawkwork/clawk?style=social)](https://github.com/clawkwork/clawk) | Give a coding agent its own disposable Linux machine, not yours | Local hypervisor VM · DNS-aware egress allow-list · `status --json` · snapshot/destroy | ⚠️ | `brew install clawkwork/tap/clawk` then `cd <repo> && clawk` (pre-1.0; macOS Apple silicon) |
+| [Dormice](services/code-execution/dormice.md) [![⭐](https://img.shields.io/github/stars/BitMiracle-AI/Dormice?style=social)](https://github.com/BitMiracle-AI/Dormice) | The SQLite of agent sandboxes — self-hosted, idle costs nothing | Idempotent `acquireSandbox` · freeze/stop/archive · HTTP RPC · E2B SDK compat | ⚠️ | `curl -fsSL https://raw.githubusercontent.com/BitMiracle-AI/Dormice/main/deploy/install.sh \| bash` then `npx skills add BitMiracle-AI/Dormice` (early-dev) |
 
 ---
 
