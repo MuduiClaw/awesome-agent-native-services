@@ -1,6 +1,6 @@
 # XiuRouter
 
-> **"One API for leading models, save up to 90%+."**
+> **"One API for leading models. Selected routes save 90%+."**
 
 | | |
 |---|---|
