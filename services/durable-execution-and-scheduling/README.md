@@ -22,7 +22,6 @@ Durable execution for agents requires:
 |---|---|---|---|
 | [Trigger.dev](trigger-dev.md) | Build and deploy fully-managed AI agents and workflows | TypeScript SDK, REST API, Cron | ❌ |
 | [Inngest](inngest.md) | Durable execution for AI agents in production | TypeScript SDK, Python SDK, REST API | ✅ |
-| [Kitaru](kitaru.md) | Durable execution for AI agents — primitives first, frameworks second | Python SDK, CLI (`--output json`), MCP server | ✅ |
 | [Restate](restate.md) | Durable execution for AI agents — any framework, any cloud | Python SDK, TypeScript SDK, REST API | ✅ |
 | [MCP-Cloud (mcp-agent)](mcp-cloud-mcp-agent.md) [![⭐](https://img.shields.io/github/stars/lastmile-ai/mcp-agent?style=social)](https://github.com/lastmile-ai/mcp-agent) | Host mcp-agents on cloud — Temporal-backed durable MCP servers | `uvx mcp-agent` CLI, HTTPS MCP endpoint, secrets, observability | ✅ |
 | [Inferable](inferable.md) [![⭐](https://img.shields.io/github/stars/inferablehq/inferable?style=social)](https://github.com/inferablehq/inferable) | Reliable AI workflows — humans in the loop, structured outputs, durable execution | TypeScript SDK, Python SDK, REST API, Slack/email HITL | ⚠️ |

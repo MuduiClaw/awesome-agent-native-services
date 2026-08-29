@@ -6,8 +6,8 @@
 |---|---|
 | **Website** | https://smithery.ai |
 | **Docs** | https://smithery.ai/docs |
-| **GitHub** | https://github.com/smithery-ai/cli |
-| **Stars** | [![GitHub Stars](https://img.shields.io/github/stars/smithery-ai/cli?style=social)](https://github.com/smithery-ai/cli) |
+| **GitHub** | https://github.com/arcadeai-labs/smithery-cli |
+| **Stars** | [![GitHub Stars](https://img.shields.io/github/stars/arcadeai-labs/smithery-cli?style=social)](https://github.com/arcadeai-labs/smithery-cli) |
 | **Classification** | `agent-native` |
 | **Category** | [Tool Access & Integration Services](README.md) |
 
@@ -21,11 +21,9 @@ https://smithery.ai
 
 ## Official Repo
 
-https://github.com/smithery-ai/cli — CLI for installing and managing MCP servers and skills
+https://github.com/arcadeai-labs/smithery-cli — CLI for installing and managing MCP servers and skills (transferred from `smithery-ai/cli`)
 
-https://github.com/smithery-ai/sdk — TypeScript SDK for programmatic access
-
-https://github.com/smithery-ai/smithery-cli-mcp — MCP server wrapping Smithery CLI operations
+Arcade.dev acquired Smithery on 2026-08-05 ([Smithery Is Now Part of Arcade.dev](https://arcade.dev/blog/smithery-joins-arcade)). Homepage https://smithery.ai remains live. Former extra repos `smithery-ai/sdk` and `smithery-ai/smithery-cli-mcp` return 404 and are no longer cited.
 
 ---
 
@@ -124,8 +122,8 @@ Results return as MCP tool outputs; no per-call human UI
 | Interface | Detail |
 |---|---|
 | Smithery CLI | `npx @smithery/cli@latest`, global `smithery` |
-| TypeScript SDK | https://github.com/smithery-ai/sdk |
-| MCP | Remote servers in registry; `smithery-cli-mcp` for meta-operations |
+| TypeScript SDK | Former `smithery-ai/sdk` repo is 404; use current [Smithery docs](https://smithery.ai/docs) for programmatic access |
+| MCP | Remote servers in the registry; CLI configures host clients |
 | Docs API | https://smithery.ai/docs |
 
 ---

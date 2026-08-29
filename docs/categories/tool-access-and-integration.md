@@ -172,7 +172,7 @@ service_count: 19
     <h2 class="service-card__title">Smithery</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/smithery.md">Open dossier ↗</a>
-      <a href="https://github.com/smithery-ai/cli">Official repo ↗</a>
+      <a href="https://github.com/arcadeai-labs/smithery-cli">Official repo ↗</a>
     </div>
     </div>
   </article>

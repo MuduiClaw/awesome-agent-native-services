@@ -15,7 +15,9 @@
 ## Official Website
 
 The previously listed `mcpverse.org` website and documentation host no longer
-resolve. No replacement official domain has been verified.
+resolve. Re-checked 2026-08-29: `mcpverse.org` is NXDOMAIN; no official
+replacement domain has been verified. Do not restore mcpverse.org / .com / .ai
+as live website fields.
 
 ---
 

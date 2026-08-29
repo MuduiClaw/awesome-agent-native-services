@@ -19,8 +19,8 @@ Agent-native tool access services solve all three problems with primitives that 
 | [Apify MCP Server](apify-mcp-server.md) [![⭐](https://img.shields.io/github/stars/apify/apify-mcp-server?style=social)](https://github.com/apify/apify-mcp-server) | MCP access to Apify Actors for agent web data tasks | Remote MCP, actor discovery/execution, x402/Skyfire payments | ✅ |
 | [Composio](composio.md) | The tool platform built for agents | Python SDK, TypeScript SDK, 10+ framework integrations | ✅ |
 | [Nango](nango.md) | OAuth and credential layer for AI agents | REST API, Node SDK | ✅ |
-| [Toolhouse](toolhouse.md) | BaaS for AI agents — tools, memory, and execution | CLI, MCP Server, Streaming REST API | ✅ |
-| [Smithery](smithery.md) [![⭐](https://img.shields.io/github/stars/smithery-ai/cli?style=social)](https://github.com/smithery-ai/cli) | Connect agents to thousands of MCP tools and Agent Skills | CLI, TypeScript SDK, remote MCP registry, OAuth brokerage | ✅ |
+| [Toolhouse](toolhouse.md) | Repetitive tasks, done for you, by AI workers | CLI, MCP Server, Streaming REST API | ✅ |
+| [Smithery](smithery.md) [![⭐](https://img.shields.io/github/stars/arcadeai-labs/smithery-cli?style=social)](https://github.com/arcadeai-labs/smithery-cli) | Connect agents to thousands of MCP tools and Agent Skills | CLI, remote MCP registry, OAuth brokerage | ✅ |
 | [MCP Gateway](mcpgateway.md) | The platform for production AI agents — tools, skills, sandboxes | Python SDK (`mcpgateway-sdk`), federated MCP, RBAC | ✅ |
 | [ClawHub](clawhub.md) [![⭐](https://img.shields.io/github/stars/openclaw/clawhub?style=social)](https://github.com/openclaw/clawhub) | OpenClaw skill marketplace — vector search, versioning, CLI install/publish | `npx clawhub@latest` CLI, Convex HTTP/registry API, `SKILL.md` artifact model | ⚠️ |
 | [Arcade](arcade.md) [![⭐](https://img.shields.io/github/stars/ArcadeAI/arcade-mcp?style=social)](https://github.com/ArcadeAI/arcade-mcp) | MCP tools with managed OAuth — secrets isolated from the LLM | MCP, Arcade CLI (`arcade-mcp`), Arcade Cloud | ✅ |

@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| **Website** | https://claude-mem.ai |
+| **Website** | https://cmem.ai/ |
 | **Docs** | https://docs.claude-mem.ai/introduction |
 | **GitHub** | https://github.com/thedotmack/claude-mem |
 | **Stars** | [![GitHub Stars](https://img.shields.io/github/stars/thedotmack/claude-mem?style=social)](https://github.com/thedotmack/claude-mem) |
@@ -18,9 +18,9 @@
 
 ## Official Website
 
-https://claude-mem.ai
+https://cmem.ai/
 
-Homepage positions **claude-mem** as the open-source engine and **CMEM Cloud** as the optional hosted mirror / private MCP link. Official install copy on the homepage: `$ npx claude-mem install`.
+`https://claude-mem.ai` redirects here. Homepage positions **claude-mem** as the open-source engine and **CMEM Cloud** as the optional hosted mirror / private MCP link. Official install copy on the homepage: `$ npx claude-mem install`. Docs remain at https://docs.claude-mem.ai/introduction.
 
 ---
 

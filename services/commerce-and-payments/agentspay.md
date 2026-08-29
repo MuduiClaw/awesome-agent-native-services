@@ -20,7 +20,7 @@ https://agentspay.dev
 
 ## Official Repo
 
-https://github.com/AgentPayy/AgentPayy — Core platform (TypeScript / Python)
+https://github.com/AgentPayy/agentpayy-platform — Core platform (TypeScript / Python; transferred from `AgentPayy/AgentPayy`)
 
 ---
 
@@ -42,7 +42,7 @@ AgentsPay's primary integration surface is the MCP-native API gateway and Base L
 
 ```bash
 # No official install command yet — watch the repo:
-# https://github.com/AgentPayy/AgentPayy
+# https://github.com/AgentPayy/agentpayy-platform
 ```
 
 ---

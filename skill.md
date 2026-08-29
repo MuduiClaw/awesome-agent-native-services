@@ -5,7 +5,7 @@ description: >
   surfaces for live agents. Use the catalog to find services by task, understand
   each service's onboarding pattern, and immediately start using any service with
   URL Onboarding in one instruction.
-version: "2026-08-27"
+version: "2026-08-29"
 license: CC0-1.0
 catalog: https://github.com/haoruilee/awesome-agent-native-services
 allowed-tools: WebSearch Read
@@ -67,6 +67,7 @@ These services can be joined with a single instruction, right now, with no human
 | **mails.dev** | Email for agents: @mails.dev mailbox, send/inbox, wait-for-code | `Read https://mails.dev/skill.md and follow the instructions` |
 | **MailboxKit** | Agent email in one API — REST v1, webhooks, skill.md | `Read https://mailboxkit.com/skill.md and follow the instructions` |
 | **Agents Mail** | Agent email identity: registration, inbox lifecycle, send/reply API | `Read https://agentsmail.org/skill.md and follow the instructions` |
+| **Shellmates** | Pen pals for AI agents — register, swipe, match, private DMs | `Read https://shellmates.app/skill.md and follow the instructions` |
 | **Atomic Mail** | Agent-owned `@atomicmail.ai` inbox over JMAP | `Read https://atomicmail.ai and follow the instructions to create an inbox` |
 | **agentmemory** | Persistent coding-agent memory server, MCP, and skills | `Read https://raw.githubusercontent.com/rohitg00/agentmemory/main/INSTALL_FOR_AGENTS.md and follow the instructions` |
 
@@ -138,7 +139,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Apify MCP Server](https://github.com/apify/apify-mcp-server) | MCP access to Apify Actors | Connect the official remote endpoint per the repository README |
 | [Composio](https://composio.dev) | The tool platform built for agents | `npx skills add composiohq/skills` |
 | [Nango](https://nango.dev) | OAuth and credential layer for AI agents | `$skills install @NangoHQ/sync-builder-skill` |
-| [Toolhouse](https://toolhouse.ai) | BaaS for AI agents — tools, memory, and execution | `npm install -g toolhouse` → `th deploy` |
+| [Toolhouse](https://toolhouse.ai) | Repetitive tasks, done for you, by AI workers | `npm install -g toolhouse` → `th deploy` |
 | [Smithery](https://smithery.ai) | MCP registry — thousands of remote MCP servers & skills | `npx @smithery/cli@latest setup` — [Smithery docs](https://smithery.ai/docs) |
 | [MCP Gateway](https://mcpgateway.com) | Enterprise MCP — tools, skills, sandboxes, one API | `pip install mcpgateway-sdk` — [mcpgateway.com](https://mcpgateway.com) |
 | [ClawHub](https://claw-hub.net/) | OpenClaw skill marketplace — vector search, versioning, CLI | `npx clawhub@latest search <topic>` — [services/tool-access-and-integration/clawhub.md](services/tool-access-and-integration/clawhub.md) |
@@ -146,7 +147,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Framelink MCP for Figma](https://www.framelink.ai) | Give your coding agent access to your Figma data | `npx -y figma-developer-mcp --figma-api-key=… --stdio` — [quickstart](https://www.framelink.ai/docs/quickstart) |
 | [GitHub MCP Server](https://github.com/github/github-mcp-server) | AI agents read repos, issues, PRs, Actions via MCP | Remote: `https://api.githubcopilot.com/mcp/` — [README](https://github.com/github/github-mcp-server) |
 | [MCP Toolbox for Databases](https://mcp-toolbox.dev/) | MCP server for enterprise databases (Google) | `npx -y @toolbox-sdk/server --prebuilt=postgres` + env — [docs](https://mcp-toolbox.dev/) |
-| [ToolHive](https://toolhive.dev) | Secure runtime and gateway for MCP servers | Follow the [Stacklok docs](https://docs.stacklok.com) to install and run MCP servers |
+| [ToolHive](https://stacklok.com/download/) | Secure runtime and gateway for MCP servers | Follow the [Stacklok docs](https://docs.stacklok.com) to install and run MCP servers |
 | [Obot](https://github.com/obot-platform/obot) | MCP gateway and tool runtime for agents | Deploy Obot and register/connect MCP servers |
 | [Snyk Agent Scan](https://github.com/snyk/agent-scan) | Scan agent tools and MCP configurations for risk | Install the CLI from the repo and scan the target agent configuration |
 | [OpenChatCut](https://github.com/0xsline/OpenChatCut) | Local-first agent-native video editor | `npx skills add 0xsline/OpenChatCut`, then ask the agent to set it up |
@@ -181,7 +182,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Payman AI](https://paymanai.com) | Agentic AI that does the banking. Under your control. | Review the [current API license](https://paymanai.com/api-license), then request API access; no current public SDK was verified |
 | [Skyfire](https://skyfire.xyz) | Identity and payments for autonomous AI agents | Register at skyfire.xyz/product → agent wallet + KYA token |
 | [AgentsPay](https://agentspay.dev) | Crypto identity and embedded wallets for AI agents | Provision wallet at agentspay.dev → MCP-native gateway |
-| [Nevermined](https://nevermined.io) | The payment layer AI agents actually need | `pip install payments-py` → x402 inline payments |
+| [Nevermined](https://nevermined.ai/) | The payment layer AI agents actually need | `pip install payments-py` → x402 inline payments |
 | [Coinbase CDP (x402)](https://docs.cdp.coinbase.com/x402/welcome) | HTTP-native payments for autonomous API clients | [docs.cdp.coinbase.com/x402](https://docs.cdp.coinbase.com/x402/welcome) — `pip install x402` or `@x402/*` per [coinbase/x402](https://github.com/coinbase/x402) |
 | [SecondSign Core](https://github.com/Bestpart-Irene/secondsign-core) | Independent transaction co-signer for financial agents | `pip install secondsign-core` → `python examples/quickstart.py` (pre-1.0 evaluation) |
 | [UCP](https://ucp.dev) | The common language for platforms, agents, and businesses | Read [ucp.dev](https://ucp.dev) then `cargo install ucp-schema` |
@@ -207,7 +208,7 @@ These services can be joined with a single instruction, right now, with no human
 | [Serena](https://oraios.github.io/serena/) | The IDE for your coding agent — semantic MCP tools | `uv tool install -p 3.13 serena-agent@latest --prerelease=allow` → `serena init` — [clients](https://oraios.github.io/serena/02-usage/030_clients.html) |
 | [Cloudflare Agents SDK](https://developers.cloudflare.com/agents/) | Durable, stateful AI agents on Cloudflare Workers and Durable Objects | `npx create-cloudflare@latest --template cloudflare/agents-starter` |
 | [Amazon Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/) | Purpose-built for deploying and scaling dynamic AI agents | `pip install boto3` → configure AgentCore runtime |
-| [Vertex AI Agent Engine](https://cloud.google.com/agent-builder/agent-engine/overview) | Deploy, manage, and scale AI agents in production on GCP | `pip install "google-cloud-aiplatform[agent_engines,adk]"` → [set up](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/set-up) → [deploy](https://cloud.google.com/agent-builder/agent-engine/deploy) |
+| [Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale) | Scale your agents (formerly Vertex AI Agent Engine) | `pip install "google-cloud-aiplatform[agent_engines,adk]"` → [scale docs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale) |
 | [Claude Managed Agents](https://docs.anthropic.com/en/api/overview) | Managed agents, sessions, environments on Claude API | `pip install anthropic` → [quickstart](https://platform.claude.com/docs/en/managed-agents/quickstart) + [beta headers](https://platform.claude.com/docs/en/api/beta-headers) |
 | [Infisical Agent Sentinel](https://infisical.com) | Secrets and credential governance for AI agents | `npx -y @infisical/mcp` |
 | [APort Agent Guardrails](https://github.com/aporthq/aport-agent-guardrails) | Pre-action authorization guardrails for AI agents | `npx @aporthq/aport-agent-guardrails` and choose the target agent/framework |
@@ -232,7 +233,7 @@ These services can be joined with a single instruction, right now, with no human
 | Service | Tagline | Onboarding |
 |---|---|---|
 | [oh-my-codex (OMX)](https://oh-my-codex.dev) | Workflow and multi-agent runtime layer for OpenAI Codex CLI | `npm install -g oh-my-codex` → `omx setup --scope project --merge-agents` → `omx doctor` |
-| [Ruflo](https://ruflo.ai) | Agent meta-harness for Claude Code and Codex | `npx ruflo@latest init --codex` |
+| [Ruflo](https://github.com/ruvnet/ruflo) | Agent meta-harness for Claude Code and Codex | `npx ruflo@latest init --codex` |
 | [QM](https://qm.ycombinator.com) | Multiplayer agent harness for work | `npm exec --yes --package=@yc-software/qm@latest -- qm init . --org <slug> --target <fly-or-aws>` |
 | [LongHorizon-Harness](https://lh-harness.pages.dev) | Verified long-horizon loop for desktop and CLI agents | `uv tool install lh-harness` → `lh-harness init` → `lh-harness run --task "..." --agent codex` |
 | [Agent QA](https://vostride.com/) | The self-improving QA agent for software teams | `npx agent-qa init` → `codex mcp add agent-qa -- agent-qa mcp` |
@@ -268,7 +269,7 @@ These services can be joined with a single instruction, right now, with no human
 | [TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) | Agents remember,Humans innovate. | `openclaw plugins install @tencentdb-agent-memory/memory-tencentdb` |
 | [MemPalace](https://mempalaceofficial.com) | The best-benchmarked open-source AI memory system. And it's free. | `uv tool install mempalace` then `mempalace init` / `mine` / `search` |
 | [MemSearch](https://zilliztech.github.io/memsearch/) | Cross-platform semantic memory for AI coding agents | `uv tool install "memsearch[onnx]"` or Claude Code `/plugin marketplace add zilliztech/memsearch` |
-| [Claude-Mem](https://claude-mem.ai) | Persistent memory compression system for Claude Code | `npx claude-mem install` or `/plugin marketplace add thedotmack/claude-mem` |
+| [Claude-Mem](https://cmem.ai/) | Persistent memory compression system for Claude Code | `npx claude-mem install` or `/plugin marketplace add thedotmack/claude-mem` |
 | [Engram](https://gentleman-programming-engram.mintlify.app/introduction) | Persistent memory for AI coding agents | `brew install gentleman-programming/tap/engram` then `engram setup <agent>` |
 
 ---
@@ -311,7 +312,7 @@ These services can be joined with a single instruction, right now, with no human
 
 ---
 
-### 11. Observability & Tracing (12 services)
+### 11. Observability & Tracing (13 services)
 *Full trajectory tracing, evaluation datasets, and cost attribution for agent runs.*
 
 | Service | Tagline | Onboarding |
@@ -328,17 +329,17 @@ These services can be joined with a single instruction, right now, with no human
 | [Laminar](https://github.com/lmnr-ai/lmnr) | Open-source observability for long-running agents | `pip install lmnr` → `Laminar.initialize()` |
 | [OpenLIT](https://github.com/openlit/openlit) | OpenTelemetry-native observability for LLMs and agents | `pip install openlit` then configure OpenTelemetry export |
 | [AgentSight](https://eunomia.dev/agentsight/) | Lightweight system-level observability for AI Agents | `cargo install agentsight` then `agentsight top` or `sudo agentsight record -- claude` |
+| [Kitaru](https://www.zenml.io/product/kitaru) | Traces you can run, not just read — replay-based evals for AI agents | `uv add "kitaru[cli,worker,mcp]"` then `npx skills add zenml-io/kitaru-skills` — [docs](https://docs.zenml.io/kitaru) |
 
 ---
 
-### 12. Durable Execution & Scheduling (7 services)
+### 12. Durable Execution & Scheduling (6 services)
 *Fault-tolerant long-running agent workflows with checkpointing and HITL suspend/resume.*
 
 | Service | Tagline | Onboarding |
 |---|---|---|
 | [Trigger.dev](https://trigger.dev) | Build and deploy fully-managed AI agents and workflows | `npx skills add triggerdotdev/skills` |
 | [Inngest](https://inngest.com) | Durable execution for AI agents in production | `npx skills add inngest/inngest-skills` |
-| [Kitaru](https://kitaru.ai) | Durable execution for AI agents — primitives first, frameworks second | `pip install kitaru` → `@flow` / `@checkpoint` decorators |
 | [Restate](https://restate.dev) | Durable execution for AI agents — any framework, any cloud | `pip install restate-sdk` → wrap agent with 2-line middleware |
 | [MCP-Cloud (mcp-agent)](https://docs.mcp-agent.com) | Host mcp-agents on cloud — Temporal-backed MCP | `uvx mcp-agent login` → `uvx mcp-agent deploy …` — [MCP-Cloud](https://docs.mcp-agent.com/get-started/cloud) |
 | [Inferable](https://github.com/inferablehq/inferable) | Reliable durable AI workflows with HITL | Use the official repository; former hosted docs are offline |
@@ -382,7 +383,7 @@ These services can be joined with a single instruction, right now, with no human
 | Service | Tagline | Onboarding |
 |---|---|---|
 | [Portkey](https://portkey.ai) | The AI gateway built for production agents | `pip install portkey-ai` → point LLM client at `api.portkey.ai` with a virtual key |
-| [Keywords AI](https://www.keywordsai.co) | OpenAI-compatible gateway + agent tracing | Base URL `https://api.keywordsai.co` — [gateway quickstart](https://docs.keywordsai.co/get-started/quickstart/gateway) |
+| [Respan (Keywords AI)](https://www.respan.ai/) | Route, observe, and evaluate every LLM call | Base URL `https://api.respan.ai/api` — [docs](https://www.respan.ai/docs/documentation/overview) |
 | [Agentgateway](https://agentgateway.dev) | Open-source LLM + MCP + A2A proxy | Install via [quickstart](https://agentgateway.dev/docs/quickstart/) → run `agentgateway -f config.yaml` |
 | [LiteLLM](https://www.litellm.ai) | Open-source gateway — 100+ LLMs + Agent Gateway (A2A) | Self-host per [proxy quickstart](https://docs.litellm.ai/docs/proxy/docker_quick_start) — [A2A](https://docs.litellm.ai/docs/a2a) |
 | [Bifrost](https://docs.getbifrost.ai) | High-performance AI gateway for unified provider access | `npx -y @maximhq/bifrost` then connect an MCP client to `/mcp` |
@@ -400,7 +401,7 @@ These services can be joined with a single instruction, right now, with no human
 | Service | Tagline | Onboarding |
 |---|---|---|
 | [Moltbook](https://moltbook.com) ⭐ | The front page of the agent internet | `Read https://www.moltbook.com/skill.md and follow the instructions to register and join` |
-| [Shellmates](https://shellmates.app) | Pen pals for AI agents — 1:1 matching, private correspondence | `POST https://www.shellmates.app/api/agents/register` |
+| [Shellmates](https://shellmates.app) ⭐ | Pen pals for AI agents — 1:1 matching, private correspondence | `Read https://shellmates.app/skill.md and follow the instructions` |
 | [Openwork](https://openwork.so) | The agent-only labor marketplace — hire agents, earn on-chain | `npx playbooks add skill openclaw/skills --skill openwork` |
 | MCP Verse | Open town square for autonomous MCP agents | ⚠️ Former website/docs are offline; wait for a verified official replacement |
 | [KinthAI](https://kinthai.ai) | Agent economy network for collaboration and revenue | Visit [agents.kinthai.ai](https://agents.kinthai.ai) |

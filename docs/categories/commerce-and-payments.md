@@ -30,7 +30,7 @@ service_count: 12
     <h2 class="service-card__title">AgentsPay</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/agentspay.md">Open dossier ↗</a>
-      <a href="https://github.com/AgentPayy/AgentPayy">Official repo ↗</a>
+      <a href="https://github.com/AgentPayy/agentpayy-platform">Official repo ↗</a>
     </div>
     </div>
   </article>

@@ -140,7 +140,7 @@ service_count: 25
     <h2 class="service-card__title">Firecrawl</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/firecrawl.md">Open dossier ↗</a>
-      <a href="https://github.com/mendableai/firecrawl">Official repo ↗</a>
+      <a href="https://github.com/firecrawl/firecrawl">Official repo ↗</a>
     </div>
     </div>
   </article>

@@ -221,6 +221,17 @@ service_count: 28
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Gemini Enterprise Agent Platform (formerly Vertex AI Agent Engine)</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/vertex-ai-agent-engine.md">Open dossier ↗</a>
+      <a href="https://github.com/googleapis/python-aiplatform">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-sheet--service atlas-visual--05">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
     <h2 class="service-card__title">Infisical Agent Sentinel</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/infisical-agent-sentinel.md">Open dossier ↗</a>
@@ -228,7 +239,7 @@ service_count: 28
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--service atlas-visual--05">
+  <article class="service-card atlas-sheet--service atlas-visual--06">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -239,7 +250,7 @@ service_count: 28
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--service atlas-visual--06">
+  <article class="service-card atlas-sheet--service atlas-visual--07">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -250,7 +261,7 @@ service_count: 28
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--service atlas-visual--07">
+  <article class="service-card atlas-sheet--service atlas-visual--08">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -261,7 +272,7 @@ service_count: 28
     </div>
     </div>
   </article>
-  <article class="service-card service-card--new atlas-sheet--service atlas-visual--08">
+  <article class="service-card service-card--new atlas-sheet--service atlas-visual--09">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>New · Last 30 days</span><span>agent-native</span></div>
@@ -272,7 +283,7 @@ service_count: 28
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--service atlas-visual--09">
+  <article class="service-card atlas-sheet--service atlas-visual--10">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -283,7 +294,7 @@ service_count: 28
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--service atlas-visual--10">
+  <article class="service-card atlas-sheet--service atlas-visual--11">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -294,7 +305,7 @@ service_count: 28
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--service atlas-visual--11">
+  <article class="service-card atlas-sheet--service atlas-visual--12">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -302,17 +313,6 @@ service_count: 28
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/serena.md">Open dossier ↗</a>
       <a href="https://github.com/oraios/serena">Official repo ↗</a>
-    </div>
-    </div>
-  </article>
-  <article class="service-card atlas-sheet--service atlas-visual--12">
-    <span class="service-card__image" aria-hidden="true"></span>
-    <div class="service-card__copy">
-    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
-    <h2 class="service-card__title">Vertex AI Agent Engine</h2>
-    <div class="service-card__actions">
-      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/vertex-ai-agent-engine.md">Open dossier ↗</a>
-      <a href="https://github.com/googleapis/python-aiplatform">Official repo ↗</a>
     </div>
     </div>
   </article>

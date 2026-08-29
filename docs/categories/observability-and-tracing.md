@@ -6,7 +6,7 @@ hero_image: "/assets/images/editorial-memory.webp"
 permalink: /categories/observability-and-tracing/
 page_kind: collection
 collection_number: "11"
-service_count: 12
+service_count: 13
 ---
 
 <p class="collection-source"><a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/README.md">Collection notes ↗</a></p>
@@ -93,6 +93,17 @@ service_count: 12
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
+    <h2 class="service-card__title">Kitaru</h2>
+    <div class="service-card__actions">
+      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/kitaru.md">Open dossier ↗</a>
+      <a href="https://github.com/zenml-io/kitaru">Official repo ↗</a>
+    </div>
+    </div>
+  </article>
+  <article class="service-card atlas-sheet--service atlas-visual--09">
+    <span class="service-card__image" aria-hidden="true"></span>
+    <div class="service-card__copy">
+    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
     <h2 class="service-card__title">Laminar</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/laminar.md">Open dossier ↗</a>
@@ -100,7 +111,7 @@ service_count: 12
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--service atlas-visual--09">
+  <article class="service-card atlas-sheet--service atlas-visual--10">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -111,7 +122,7 @@ service_count: 12
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--service atlas-visual--10">
+  <article class="service-card atlas-sheet--service atlas-visual--11">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -122,7 +133,7 @@ service_count: 12
     </div>
     </div>
   </article>
-  <article class="service-card service-card--new atlas-sheet--service atlas-visual--11">
+  <article class="service-card service-card--new atlas-sheet--service atlas-visual--12">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>New · Last 30 days</span><span>agent-native</span></div>
@@ -133,7 +144,7 @@ service_count: 12
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--service atlas-visual--12">
+  <article class="service-card atlas-sheet--service atlas-visual--13">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
