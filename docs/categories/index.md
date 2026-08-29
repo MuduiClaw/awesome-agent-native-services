@@ -91,7 +91,7 @@ page_kind: document
     <span class="collection-card__copy">
     <span class="collection-card__number">11</span>
     <span class="collection-card__title">Observability &amp; Tracing</span>
-    <span class="collection-card__count">12</span>
+    <span class="collection-card__count">13</span>
     </span>
   </a>
   <a class="collection-card atlas-visual--12" href="{{ '/categories/durable-execution-and-scheduling/' | relative_url }}">
@@ -99,7 +99,7 @@ page_kind: document
     <span class="collection-card__copy">
     <span class="collection-card__number">12</span>
     <span class="collection-card__title">Durable Execution &amp; Scheduling</span>
-    <span class="collection-card__count">7</span>
+    <span class="collection-card__count">6</span>
     </span>
   </a>
   <a class="collection-card atlas-visual--13" href="{{ '/categories/meeting-and-conversation/' | relative_url }}">

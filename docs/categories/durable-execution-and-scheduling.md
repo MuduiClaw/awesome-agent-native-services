@@ -6,7 +6,7 @@ hero_image: "/assets/images/editorial-runtime.webp"
 permalink: /categories/durable-execution-and-scheduling/
 page_kind: collection
 collection_number: "12"
-service_count: 7
+service_count: 6
 ---
 
 <p class="collection-source"><a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/durable-execution-and-scheduling/README.md">Collection notes ↗</a></p>
@@ -38,17 +38,6 @@ service_count: 7
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
-    <h2 class="service-card__title">Kitaru</h2>
-    <div class="service-card__actions">
-      <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/durable-execution-and-scheduling/kitaru.md">Open dossier ↗</a>
-      <a href="https://github.com/zenml-io/kitaru">Official repo ↗</a>
-    </div>
-    </div>
-  </article>
-  <article class="service-card atlas-sheet--arrival atlas-visual--04">
-    <span class="service-card__image" aria-hidden="true"></span>
-    <div class="service-card__copy">
-    <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
     <h2 class="service-card__title">MCP-Cloud (mcp-agent)</h2>
     <div class="service-card__actions">
       <a href="https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/durable-execution-and-scheduling/mcp-cloud-mcp-agent.md">Open dossier ↗</a>
@@ -56,7 +45,7 @@ service_count: 7
     </div>
     </div>
   </article>
-  <article class="service-card service-card--new atlas-sheet--arrival atlas-visual--05">
+  <article class="service-card service-card--new atlas-sheet--arrival atlas-visual--04">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>New · Last 30 days</span><span>agent-native</span></div>
@@ -67,7 +56,7 @@ service_count: 7
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--arrival atlas-visual--06">
+  <article class="service-card atlas-sheet--arrival atlas-visual--05">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>
@@ -78,7 +67,7 @@ service_count: 7
     </div>
     </div>
   </article>
-  <article class="service-card atlas-sheet--arrival atlas-visual--07">
+  <article class="service-card atlas-sheet--arrival atlas-visual--06">
     <span class="service-card__image" aria-hidden="true"></span>
     <div class="service-card__copy">
     <div class="service-card__overline"><span>Curated dossier</span><span>agent-native</span></div>

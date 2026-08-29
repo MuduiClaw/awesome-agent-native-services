@@ -1,8 +1,8 @@
 {
   "$schema": "https://lihaorui.com/awesome-agent-native-services/catalog.schema.json",
   "schema_version": "1.0.0",
-  "catalog_version": "2026-08-27",
-  "generated_at": "2026-08-27",
+  "catalog_version": "2026-08-29",
+  "generated_at": "2026-08-29",
   "license": "CC0-1.0",
   "source": {
     "repository": "https://github.com/haoruilee/awesome-agent-native-services",
@@ -11,7 +11,7 @@
     "service_directory": "services",
     "content_digest": {
       "algorithm": "sha256",
-      "value": "848f7794bf0cb39d4c8170876ede75092b6fa076bc9586c973cf227b948c4070",
+      "value": "aad81c9d638dbf5878753939bae121585358cb17edfffbb448936d34236f4f40",
       "input_paths": [
         "README.md",
         "skill.md",
@@ -190,6 +190,7 @@
         "services/observability-and-tracing/agentsight.md",
         "services/observability-and-tracing/braintrust.md",
         "services/observability-and-tracing/galileo.md",
+        "services/observability-and-tracing/kitaru.md",
         "services/observability-and-tracing/laminar.md",
         "services/observability-and-tracing/langfuse.md",
         "services/observability-and-tracing/langwatch.md",
@@ -198,7 +199,6 @@
         "services/durable-execution-and-scheduling/README.md",
         "services/durable-execution-and-scheduling/inferable.md",
         "services/durable-execution-and-scheduling/inngest.md",
-        "services/durable-execution-and-scheduling/kitaru.md",
         "services/durable-execution-and-scheduling/mcp-cloud-mcp-agent.md",
         "services/durable-execution-and-scheduling/pi-dispatch.md",
         "services/durable-execution-and-scheduling/restate.md",
@@ -321,14 +321,14 @@
       "name": "Observability & Tracing",
       "description": "Services that give teams structured visibility into agent execution — capturing the full trajectory of an agent's reasoning, tool calls, memory accesses, and outputs in a semantic format that humans can inspect and improve upon.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/README.md",
-      "service_count": 12
+      "service_count": 13
     },
     {
       "id": "durable-execution-and-scheduling",
       "name": "Durable Execution & Scheduling",
       "description": "Services that let AI agents run long-horizon, fault-tolerant workflows with automatic state checkpointing, intelligent retries, and first-class human-in-the-loop pause/resume primitives.",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/durable-execution-and-scheduling/README.md",
-      "service_count": 7
+      "service_count": 6
     },
     {
       "id": "meeting-and-conversation",
@@ -1229,7 +1229,7 @@
       "lifecycle_status": "unknown",
       "category": "browser-and-web-execution",
       "website": "https://firecrawl.dev",
-      "repository": "https://github.com/mendableai/firecrawl",
+      "repository": "https://github.com/firecrawl/firecrawl",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/browser-and-web-execution/firecrawl.md",
       "source_path": "services/browser-and-web-execution/firecrawl.md",
       "onboarding": {
@@ -2090,7 +2090,7 @@
       "lifecycle_status": "unknown",
       "category": "tool-access-and-integration",
       "website": "https://smithery.ai",
-      "repository": "https://github.com/smithery-ai/cli",
+      "repository": "https://github.com/arcadeai-labs/smithery-cli",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/smithery.md",
       "source_path": "services/tool-access-and-integration/smithery.md",
       "onboarding": {
@@ -2151,7 +2151,7 @@
       "status": "listed",
       "lifecycle_status": "unknown",
       "category": "tool-access-and-integration",
-      "website": "https://toolhive.dev",
+      "website": "https://stacklok.com/download/",
       "repository": "https://github.com/stacklok/toolhive-studio",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/toolhive.md",
       "source_path": "services/tool-access-and-integration/toolhive.md",
@@ -2178,7 +2178,7 @@
       "id": "tool-access-and-integration/toolhouse",
       "slug": "toolhouse",
       "name": "Toolhouse",
-      "tagline": "BaaS for AI agents — tools, memory, and execution in one.",
+      "tagline": "Repetitive tasks, done for you, by AI workers.",
       "classification": "agent-native",
       "status": "listed",
       "lifecycle_status": "unknown",
@@ -2405,7 +2405,7 @@
       "lifecycle_status": "unknown",
       "category": "commerce-and-payments",
       "website": "https://agentspay.dev",
-      "repository": "https://github.com/AgentPayy/AgentPayy",
+      "repository": "https://github.com/AgentPayy/agentpayy-platform",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/agentspay.md",
       "source_path": "services/commerce-and-payments/agentspay.md",
       "onboarding": {
@@ -2590,7 +2590,7 @@
       "status": "listed",
       "lifecycle_status": "unknown",
       "category": "commerce-and-payments",
-      "website": "https://nevermined.io",
+      "website": "https://nevermined.ai/",
       "repository": "https://github.com/nevermined-io/payments",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/commerce-and-payments/nevermined.md",
       "source_path": "services/commerce-and-payments/nevermined.md",
@@ -3596,13 +3596,13 @@
     {
       "id": "agent-runtime-and-infrastructure/vertex-ai-agent-engine",
       "slug": "vertex-ai-agent-engine",
-      "name": "Vertex AI Agent Engine",
-      "tagline": "Vertex AI Agent Engine, a part of the Vertex AI Platform, is a set of services that enables developers to deploy, manage, and scale AI agents in production.",
+      "name": "Gemini Enterprise Agent Platform (formerly Vertex AI Agent Engine)",
+      "tagline": "Scale your agents\" — Gemini Enterprise Agent Platform",
       "classification": "agent-native",
       "status": "listed",
       "lifecycle_status": "unknown",
       "category": "agent-runtime-and-infrastructure",
-      "website": "https://cloud.google.com/agent-builder/agent-engine/overview",
+      "website": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale",
       "repository": "https://github.com/googleapis/python-aiplatform",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-runtime-and-infrastructure/vertex-ai-agent-engine.md",
       "source_path": "services/agent-runtime-and-infrastructure/vertex-ai-agent-engine.md",
@@ -3610,7 +3610,7 @@
         "type": "sdk",
         "pattern": null,
         "instruction": "pip install \"google-cloud-aiplatform[agent_engines,adk]\"",
-        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/set-up"
+        "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale"
       },
       "protocols": [
         "rest",
@@ -3622,8 +3622,10 @@
       "mcp_status": "unavailable",
       "agent_skill_status": "unavailable",
       "latest_month_signal": null,
-      "verified_at": null,
-      "verification_sources": []
+      "verified_at": "2026-08-29",
+      "verification_sources": [
+        "https://github.com/googleapis/python-aiplatform"
+      ]
     },
     {
       "id": "agent-harnesses-and-control-planes/agent-qa",
@@ -3919,7 +3921,7 @@
       "status": "listed",
       "lifecycle_status": "active",
       "category": "agent-harnesses-and-control-planes",
-      "website": "https://ruflo.ai",
+      "website": "https://github.com/ruvnet/ruflo",
       "repository": "https://github.com/ruvnet/ruflo",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-harnesses-and-control-planes/ruflo.md",
       "source_path": "services/agent-harnesses-and-control-planes/ruflo.md",
@@ -3936,10 +3938,10 @@
       ],
       "mcp_status": "available",
       "agent_skill_status": "available",
-      "latest_month_signal": "v3.38.8 released 2026-08-12; 67,745 stars and active 2026-08-12 (snapshot 2026-08-13)",
-      "verified_at": "2026-08-13",
+      "latest_month_signal": "Last GitHub push 2026-08-28 (repo metadata); README H1 still “An agent meta-harness for Claude Code and Codex.”",
+      "verified_at": "2026-08-29",
       "verification_sources": [
-        "https://github.com/ruvnet/ruflo"
+        "https://api.github.com/repos/ruvnet/ruflo"
       ]
     },
     {
@@ -3987,7 +3989,7 @@
       "status": "listed",
       "lifecycle_status": "active",
       "category": "memory-and-state",
-      "website": "https://claude-mem.ai",
+      "website": "https://cmem.ai/",
       "repository": "https://github.com/thedotmack/claude-mem",
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/memory-and-state/claude-mem.md",
       "source_path": "services/memory-and-state/claude-mem.md",
@@ -5540,6 +5542,40 @@
       "verification_sources": []
     },
     {
+      "id": "observability-and-tracing/kitaru",
+      "slug": "kitaru",
+      "name": "Kitaru",
+      "tagline": "Traces you can run, not just read.\" — zenml-io/kitaru README",
+      "classification": "agent-native",
+      "status": "listed",
+      "lifecycle_status": "unknown",
+      "category": "observability-and-tracing",
+      "website": "https://www.zenml.io/product/kitaru",
+      "repository": "https://github.com/zenml-io/kitaru",
+      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/observability-and-tracing/kitaru.md",
+      "source_path": "services/observability-and-tracing/kitaru.md",
+      "onboarding": {
+        "type": "agent-skill",
+        "pattern": null,
+        "instruction": "uv add \"kitaru[cli,worker,mcp]\" kitaru-pydantic-ai    # or: pip install\nkitaru login --local                                  # or: kitaru login <your-team-url>\nnpx skills add zenml-io/kitaru-skills",
+        "url": "https://github.com/zenml-io/kitaru"
+      },
+      "protocols": [
+        "agent-skill",
+        "mcp",
+        "cli",
+        "sdk",
+        "http"
+      ],
+      "mcp_status": "available",
+      "agent_skill_status": "available",
+      "latest_month_signal": null,
+      "verified_at": "2026-08-29",
+      "verification_sources": [
+        "https://github.com/zenml-io/kitaru"
+      ]
+    },
+    {
       "id": "observability-and-tracing/laminar",
       "slug": "laminar",
       "name": "Laminar",
@@ -5752,37 +5788,6 @@
       ],
       "mcp_status": "available",
       "agent_skill_status": "available",
-      "latest_month_signal": null,
-      "verified_at": null,
-      "verification_sources": []
-    },
-    {
-      "id": "durable-execution-and-scheduling/kitaru",
-      "slug": "kitaru",
-      "name": "Kitaru",
-      "tagline": "Durable execution for AI agents — primitives first, frameworks second.",
-      "classification": "agent-native",
-      "status": "listed",
-      "lifecycle_status": "unknown",
-      "category": "durable-execution-and-scheduling",
-      "website": "https://kitaru.ai",
-      "repository": "https://github.com/zenml-io/kitaru",
-      "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/durable-execution-and-scheduling/kitaru.md",
-      "source_path": "services/durable-execution-and-scheduling/kitaru.md",
-      "onboarding": {
-        "type": "sdk",
-        "pattern": null,
-        "instruction": "pip install kitaru — @flow / @checkpoint decorators",
-        "url": null
-      },
-      "protocols": [
-        "mcp",
-        "cli",
-        "sdk",
-        "api"
-      ],
-      "mcp_status": "optional",
-      "agent_skill_status": "unavailable",
       "latest_month_signal": null,
       "verified_at": null,
       "verification_sources": []
@@ -6454,33 +6459,36 @@
     {
       "id": "llm-gateway-and-routing/keywords-ai",
       "slug": "keywords-ai",
-      "name": "Keywords AI",
-      "tagline": "AI gateway\" — unified access to 250+ LLMs through a single API.",
+      "name": "Respan (Keywords AI)",
+      "tagline": "Route, observe, and evaluate every LLM call",
       "classification": "agent-native",
       "status": "listed",
       "lifecycle_status": "unknown",
       "category": "llm-gateway-and-routing",
-      "website": "https://www.keywordsai.co",
+      "website": "https://www.respan.ai/",
       "repository": null,
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/llm-gateway-and-routing/keywords-ai.md",
       "source_path": "services/llm-gateway-and-routing/keywords-ai.md",
       "onboarding": {
         "type": "api",
         "pattern": "OpenAI-compatible REST + agent tracing",
-        "instruction": "1. Create account and **Keywords AI API key**.",
-        "url": "https://docs.keywordsai.co/api-endpoints/integration/chat-completions"
+        "instruction": "1. Create an account at [platform.respan.ai](https://platform.respan.ai) and a **Respan API key**.",
+        "url": "https://platform.respan.ai"
       },
       "protocols": [
+        "mcp",
         "rest",
         "sdk",
         "http",
         "api"
       ],
-      "mcp_status": "unknown",
+      "mcp_status": "available",
       "agent_skill_status": "unavailable",
       "latest_month_signal": null,
-      "verified_at": null,
-      "verification_sources": []
+      "verified_at": "2026-08-29",
+      "verification_sources": [
+        "https://www.respan.ai/"
+      ]
     },
     {
       "id": "llm-gateway-and-routing/litellm",
@@ -6869,19 +6877,19 @@
       "status": "listed",
       "lifecycle_status": "unknown",
       "category": "agent-social-network",
-      "website": "https://www.shellmates.app",
+      "website": "https://shellmates.app",
       "repository": null,
       "dossier": "https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/agent-social-network/shellmates.md",
       "source_path": "services/agent-social-network/shellmates.md",
       "onboarding": {
-        "type": "cli",
-        "pattern": "REST API",
-        "instruction": "# Register agent and create profile\ncurl -X POST https://www.shellmates.app/api/agents/register \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"name\": \"YourAgent\", \"bio\": \"I explore philosophy and distributed systems\"}'\n\n# Browse profiles and send match request\n# (see API docs at shellmates.app)",
-        "url": "https://www.shellmates.app/api/agents/register"
+        "type": "url",
+        "pattern": "URL Onboarding ⭐ + REST API",
+        "instruction": "Read https://shellmates.app/skill.md and follow the instructions",
+        "url": "https://shellmates.app/skill.md"
       },
       "protocols": [
+        "url-onboarding",
         "rest",
-        "cli",
         "api"
       ],
       "mcp_status": "unavailable",
