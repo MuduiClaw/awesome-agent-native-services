@@ -1,6 +1,6 @@
 # Toolhouse
 
-> **"BaaS for AI agents — tools, memory, and execution in one."**
+> **"Repetitive tasks, done for you, by AI workers."**
 
 | | |
 |---|---|
@@ -14,6 +14,8 @@
 ## Official Website
 
 https://toolhouse.ai
+
+Live homepage H1 (2026-08-29): *"Repetitive tasks, done for you, by AI workers."* Docs (`https://docs.toolhouse.ai`) and the documented MCP surface remain live.
 
 ---
 

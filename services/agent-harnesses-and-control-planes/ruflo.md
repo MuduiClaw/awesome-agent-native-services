@@ -4,21 +4,23 @@
 
 | | |
 |---|---|
-| **Website** | https://ruflo.ai |
+| **Website** | https://github.com/ruvnet/ruflo |
 | **Docs** | https://github.com/ruvnet/ruflo/tree/main/docs |
 | **GitHub** | https://github.com/ruvnet/ruflo |
 | **Stars** | [![GitHub Stars](https://img.shields.io/github/stars/ruvnet/ruflo?style=social)](https://github.com/ruvnet/ruflo) |
 | **Classification** | `agent-native` |
 | **Category** | [Agent Harnesses & Operator Surfaces](README.md) |
 | **License** | MIT |
-| **Latest-month signal** | v3.38.8 released 2026-08-12; 67,745 stars and active 2026-08-12 (snapshot 2026-08-13) |
-| **Verified at** | 2026-08-13 |
+| **Latest-month signal** | Last GitHub push 2026-08-28 ([repo metadata](https://api.github.com/repos/ruvnet/ruflo)); README H1 still “An agent meta-harness for Claude Code and Codex.” |
+| **Verified at** | 2026-08-29 |
 
 ---
 
 ## Official Website
 
-https://ruflo.ai
+https://github.com/ruvnet/ruflo
+
+The former marketing domain `https://ruflo.ai` is a Spaceship for-sale listing (title “ruflo.ai for sale | Spaceship.com”, re-checked 2026-08-29) and is **not** the official site. The GitHub repo homepage field is [Cognitum.One](https://Cognitum.One). Optional UI beta, still live and titled RuFlo: https://flo.ruv.io/
 
 ---
 

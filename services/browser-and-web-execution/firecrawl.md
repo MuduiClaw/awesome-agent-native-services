@@ -6,7 +6,7 @@
 |---|---|
 | **Website** | https://firecrawl.dev |
 | **Docs** | https://docs.firecrawl.dev |
-| **GitHub** | https://github.com/mendableai/firecrawl |
+| **GitHub** | https://github.com/firecrawl/firecrawl |
 | **Classification** | `agent-native` |
 | **Category** | [Browser & Web Execution Services](README.md) |
 
@@ -20,7 +20,7 @@ https://firecrawl.dev
 
 ## Official Repo
 
-https://github.com/mendableai/firecrawl
+https://github.com/firecrawl/firecrawl
 
 ---
 
@@ -72,7 +72,7 @@ Firecrawl provides an official MCP server enabling agents to trigger scraping, e
 
 | Detail | Value |
 |---|---|
-| **MCP Repo** | https://github.com/mendableai/firecrawl/tree/main/apps/mcp-server |
+| **MCP Repo** | https://github.com/firecrawl/firecrawl/tree/main/apps/mcp-server |
 | **Transport** | stdio |
 | **Compatible Clients** | Claude Desktop, Cursor, any MCP-compatible client |
 

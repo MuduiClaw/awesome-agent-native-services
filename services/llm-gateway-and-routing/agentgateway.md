@@ -146,7 +146,7 @@ Humans deploy and define **policies** (auth, rate limits, prompt guards). Indivi
 |---|---|
 | **NGINX / Envoy** | Generic L7 proxy; no MCP/A2A semantics, no OpenAPI→MCP, no agentic policy tutorials as first-class |
 | **Managed LLM API** | Single vendor; no cross-protocol agent mesh (MCP + A2A + multi-LLM) in one open control plane |
-| **Portkey / Keywords AI** | Managed SaaS LLM gateways — complementary; Agentgateway is self-hosted protocol infrastructure for MCP/A2A |
+| **Portkey / Respan (Keywords AI)** | Managed SaaS LLM gateways — complementary; Agentgateway is self-hosted protocol infrastructure for MCP/A2A |
 
 ---
 

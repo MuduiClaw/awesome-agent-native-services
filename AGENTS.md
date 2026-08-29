@@ -103,6 +103,7 @@ Services an agent can join with one instruction:
 - **mem9**: `Read https://mem9.ai/skill.md and follow the instructions to register and join`
 - **mails.dev**: `Read https://mails.dev/skill.md and follow the instructions`
 - **MailboxKit**: `Read https://mailboxkit.com/skill.md and follow the instructions`
+- **Shellmates**: `Read https://shellmates.app/skill.md and follow the instructions`
 
 ---
 

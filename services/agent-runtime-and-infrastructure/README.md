@@ -29,7 +29,7 @@ The services in this category were purpose-built to fill this gap.
 | [OpenAI Symphony](openai-symphony.md) [![⭐](https://img.shields.io/github/stars/openai/symphony?style=social)](https://github.com/openai/symphony) | Autonomous issue-to-implementation scheduler with isolated Codex workspaces | Tracker adapters · Codex app server · WORKFLOW.md · JSON status/logs | ❌ |
 | [Cloudflare Agents SDK](cloudflare-agents-sdk.md) [![⭐](https://img.shields.io/github/stars/cloudflare/agents?style=social)](https://github.com/cloudflare/agents) | Durable, stateful AI agents on Cloudflare Workers and Durable Objects | Agents SDK, Durable Objects, MCP, Browser Run, Sandbox, Code Mode, WebSockets | ✅ |
 | [Amazon Bedrock AgentCore](amazon-bedrock-agentcore.md) | Purpose-built for deploying and scaling dynamic AI agents and tools | AWS SDK, REST API, OpenTelemetry | ❌ |
-| [Vertex AI Agent Engine](vertex-ai-agent-engine.md) | Deploy, manage, and scale AI agents in production (Google Cloud) | Vertex AI SDK, REST, OpenTelemetry, A2A | ⚠️ |
+| [Gemini Enterprise Agent Platform](vertex-ai-agent-engine.md) | Scale your agents (formerly Vertex AI Agent Engine) | Vertex AI SDK, REST, OpenTelemetry, A2A | ⚠️ |
 | [Claude Managed Agents](claude-managed-agents.md) | Managed agents, sessions, environments — direct Claude API | REST (`api.anthropic.com`), official SDKs (beta endpoints) | ⚠️ |
 | [Infisical Agent Sentinel](infisical-agent-sentinel.md) | Secrets and credential governance for AI agents | Daemon sidecar, REST API | ✅ |
 | [APort Agent Guardrails](aport-agent-guardrails.md) | Pre-action authorization guardrails for AI agents before tool execution | CLI, npm, PyPI, OAP policy files, framework hooks | ❌ |

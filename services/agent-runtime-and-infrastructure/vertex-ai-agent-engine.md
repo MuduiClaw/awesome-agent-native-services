@@ -1,27 +1,30 @@
-# Vertex AI Agent Engine
+# Gemini Enterprise Agent Platform (formerly Vertex AI Agent Engine)
 
-> **"Vertex AI Agent Engine, a part of the Vertex AI Platform, is a set of services that enables developers to deploy, manage, and scale AI agents in production."**
+> **"Scale your agents"** — [Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale)
 
 | | |
 |---|---|
-| **Website** | https://cloud.google.com/agent-builder/agent-engine/overview |
-| **Docs** | https://cloud.google.com/agent-builder/agent-engine/overview |
+| **Website** | https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale |
+| **Docs** | https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale |
 | **GitHub** | https://github.com/googleapis/python-aiplatform |
 | **Classification** | `agent-native` |
 | **Category** | [Agent Runtime & Infrastructure Services](README.md) |
 | **Provider** | Google Cloud |
+| **Verified at** | 2026-08-29 |
 
 ---
 
 ## Official Website
 
-https://cloud.google.com/agent-builder/agent-engine/overview
+https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale
+
+Former Vertex AI Agent Engine / Agent Builder URLs (including `cloud.google.com/agent-builder/agent-engine/overview` and sibling set-up/deploy pages) redirect here. Live H1: *"Scale your agents"*. Product name: **Gemini Enterprise Agent Platform**.
 
 ---
 
 ## Official Repo
 
-Vertex AI Agent Engine is a managed Google Cloud service. Client integration is through the **Vertex AI SDK for Python** (open source):
+Gemini Enterprise Agent Platform (formerly Vertex AI Agent Engine) is a managed Google Cloud service. Client integration is through the **Vertex AI SDK for Python** (open source):
 
 https://github.com/googleapis/python-aiplatform
 
@@ -37,7 +40,7 @@ Other Google Cloud client libraries (REST, gRPC) apply for non-Python stacks per
 pip install "google-cloud-aiplatform[agent_engines,adk]"
 ```
 
-Then follow [Set up the environment](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/set-up), [Develop an agent](https://cloud.google.com/agent-builder/agent-engine/develop/overview), and [Deploy the agent](https://cloud.google.com/agent-builder/agent-engine/deploy) — deployment uses `client.agent_engines.create(...)` with optional source packages, container image, or [Developer Connect](https://cloud.google.com/developer-connect/docs/connect-repo) Git linkage.
+Then follow [Scale your agents](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale) — former set-up / develop / deploy URLs redirect to this hub. Deployment still uses `client.agent_engines.create(...)` with optional source packages, container image, or [Developer Connect](https://cloud.google.com/developer-connect/docs/connect-repo) Git linkage.
 
 ---
 
@@ -66,7 +69,7 @@ Agents deployed on Agent Engine can call external MCP servers from agent code; G
 
 ## What It Does
 
-Vertex AI Agent Engine is Google Cloud’s managed layer for **running agent workloads in production**: deploy and scale agents, attach **Sessions** and **Memory Bank** for conversational context, run **Code Execution** in an isolated sandbox, and observe behavior through **Cloud Trace**, **Cloud Monitoring**, and **Cloud Logging**. It supports multiple Python agent frameworks (including ADK, LangChain, LangGraph, AG2, LlamaIndex) and the **Agent2Agent (A2A)** open protocol for interoperable multi-agent systems.
+Gemini Enterprise Agent Platform (formerly Vertex AI Agent Engine) is Google Cloud’s managed layer for **running agent workloads in production**. Live docs: *"a fully managed environment for developers to handle testing, release management, and reliability at a global scale"* — **Agent Runtime**, **Sessions**, **Memory Bank**, **Code Execution**, **Computer Use**, plus evaluation and example-store quality loops. Framework guides on the scale page still cover ADK, LangChain, LangGraph, LlamaIndex, AG2, and Agent2Agent (A2A).
 
 ---
 
@@ -74,11 +77,11 @@ Vertex AI Agent Engine is Google Cloud’s managed layer for **running agent wor
 
 | Criterion | Evidence |
 |---|---|
-| **Agent-first positioning** | Google documents Agent Engine as *"a set of services that enables developers to deploy, manage, and scale AI agents in production"* and *"handles the infrastructure to scale agents in production"* — [overview](https://cloud.google.com/agent-builder/agent-engine/overview) |
-| **Agent-specific primitive** | Managed **Agent Engine Runtime**, **Sessions**, **Memory Bank**, **Code Execution** sandbox, **Example Store** (preview), **agent identity** (preview) — not generic VM or batch job abstractions |
-| **Autonomy-compatible control plane** | Autoscaling (`min_instances` / `max_instances`), concurrency, resource limits, VPC-SC, PSC-I, CMEK — agents run without per-turn human clicks once deployed |
-| **M2M integration surface** | Vertex AI SDK (`agent_engines` API), REST, CI/CD and Terraform-style deployment from source — [deploy](https://cloud.google.com/agent-builder/agent-engine/deploy) |
-| **Identity / delegation** | **Agent identity** (preview) ties credentials to the deployed agent resource; optional **custom service account** per deployment — [agent identity](https://cloud.google.com/agent-builder/agent-engine/agent-identity), [IAM setup](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/set-up#identity-and-permissions) |
+| **Agent-first positioning** | Live H1 *"Scale your agents"*; *"Bringing AI agents into production requires a high-performance runtime"* — [scale](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale) |
+| **Agent-specific primitive** | Managed **Agent Runtime**, **Sessions**, **Memory Bank**, **Code Execution** sandbox, **Example Store**, **Evaluation Service**, **agent identity** — not generic VM or batch job abstractions |
+| **Autonomy-compatible control plane** | Fully managed runtime so teams *"focus entirely on application creation"*; agents run without per-turn human clicks once deployed |
+| **M2M integration surface** | Vertex AI SDK (`agent_engines` API), REST, CI/CD-style deployment from source — [scale](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale) |
+| **Identity / delegation** | **IAM agent identity** ties credentials to the deployed agent resource; optional **custom service account** per deployment — [agent identity](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/agent-identity-overview) |
 
 ---
 
@@ -106,7 +109,7 @@ Vertex AI Agent Engine is Google Cloud’s managed layer for **running agent wor
 
 ## Identity and Delegation Model
 
-- **Agent identity (preview):** Identity bound to the Agent Engine resource ID, independent of framework — [create agent identity](https://cloud.google.com/agent-builder/agent-engine/agent-identity#create-agent-identity)
+- **Agent identity:** Identity bound to the Agent Platform resource — [agent identity overview](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/agent-identity-overview)
 - **Custom service account:** Deployed agent runs as a dedicated GCP service account for fine-grained IAM to BigQuery, Cloud SQL, Secret Manager, etc.
 - **Audit:** Cloud Logging and Cloud Trace provide request- and trace-level attribution for operations issued through the managed endpoint
 
@@ -118,14 +121,14 @@ Vertex AI Agent Engine is Google Cloud’s managed layer for **running agent wor
 |---|---|
 | Vertex AI SDK (Python) | `google-cloud-aiplatform` with `agent_engines` — primary path in docs |
 | REST / gRPC | Vertex AI platform APIs for ReasoningEngine / agent resources |
-| OpenTelemetry | Tracing integration per [Agent Engine tracing docs](https://cloud.google.com/agent-builder/agent-engine/manage/tracing) |
-| A2A | [Agent2Agent protocol](https://cloud.google.com/agent-builder/agent-engine/develop/a2a) for cross-framework agent collaboration |
+| OpenTelemetry | Tracing integration per [runtime tracing docs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/tracing) |
+| A2A | Agent2Agent protocol guides remain linked from the [scale hub](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale) |
 
 ---
 
 ## Human-in-the-Loop Support
 
-Optional at application level (your agent code or upstream product). Agent Engine provides governance (IAM, VPC-SC, threat detection preview) and observability, not a built-in approval inbox primitive.
+Optional at application level (your agent code or upstream product). Agent Platform provides governance (IAM, VPC-SC) and observability, not a built-in approval inbox primitive.
 
 ---
 
@@ -133,8 +136,8 @@ Optional at application level (your agent code or upstream product). Agent Engin
 
 | Alternative | Why It Fails |
 |---|---|
-| **Cloud Run / GKE alone** | General container hosting; no first-class Sessions, Memory Bank, agent identity, or Agent Engine evaluation integrations |
-| **Vertex AI (models only)** | Model inference APIs; Agent Engine is the separate production agent runtime and memory/session layer |
+| **Cloud Run / GKE alone** | General container hosting; no first-class Sessions, Memory Bank, agent identity, or Agent Platform evaluation integrations |
+| **Vertex AI (models only)** | Model inference APIs; Agent Platform is the separate production agent runtime and memory/session layer |
 | **Dialogflow / Contact Center AI** | Human-business workflow and bot-builder surfaces; different primary consumer than autonomous tool-using agents |
 
 ---

@@ -17,7 +17,7 @@ Calling an LLM directly is fine for prototyping. Running agents in production �
 | Service | Tagline | Protocol Surface | MCP? |
 |---|---|---|---|
 | [Portkey](portkey.md) | The AI gateway built for production agents | REST API (OpenAI-compatible), Python SDK, TypeScript SDK | ❌ |
-| [Keywords AI](keywords-ai.md) | AI gateway — 250+ models via OpenAI-compatible API | Fallback · Load balancing · OpenAI Agents trace processor | ⚠️ |
+| [Respan (Keywords AI)](keywords-ai.md) | Route, observe, and evaluate every LLM call | Fallback · Caching · `OpenAIAgentsInstrumentor` · MCP | ✅ |
 | [Agentgateway](agentgateway.md) | Connect, secure, and observe agentic workflows (MCP, A2A, LLM) | OpenAI-compatible proxy, MCP gateway, A2A, Kubernetes/bare metal | ✅ |
 | [LiteLLM](litellm.md) [![⭐](https://img.shields.io/github/stars/BerriAI/litellm?style=social)](https://github.com/BerriAI/litellm) | Open-source AI gateway — 100+ LLMs, virtual keys, Agent Gateway (A2A) | OpenAI-compatible proxy, Docker/K8s, A2A JSON-RPC, MCP (gateway) | ✅ |
 | [Bifrost](bifrost.md) [![⭐](https://img.shields.io/github/stars/maximhq/bifrost?style=social)](https://github.com/maximhq/bifrost) | High-performance AI gateway with provider routing, governance, and MCP gateway | OpenAI-compatible REST, Go SDK, MCP gateway, HTTP/SSE | ✅ |

@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| **Website** | https://nevermined.io |
+| **Website** | https://nevermined.ai/ |
 | **Blog** | https://nevermined.ai/blog/the-payment-layer-ai-agents-actually-need-introducing-the-nevermined-x402-facilitator |
 | **Classification** | `agent-native` |
 | **Category** | [Commerce & Payment Services](README.md) |
@@ -14,7 +14,7 @@
 
 ## Official Website
 
-https://nevermined.io
+https://nevermined.ai/
 
 ---
 

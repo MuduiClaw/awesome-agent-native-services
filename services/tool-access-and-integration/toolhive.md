@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| **Website** | https://toolhive.dev |
+| **Website** | https://stacklok.com/download/ |
 | **Docs** | https://docs.stacklok.com |
 | **GitHub** | https://github.com/stacklok/toolhive-studio |
 | **Classification** | `agent-native` |
@@ -14,7 +14,9 @@
 
 ## Official Website
 
-https://toolhive.dev
+https://stacklok.com/download/
+
+`https://toolhive.dev` redirects here. Live page: ToolHive is Stacklok’s open-source MCP platform.
 
 ---
 

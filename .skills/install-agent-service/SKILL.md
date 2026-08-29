@@ -108,7 +108,7 @@ cp -R .skills/install-agent-service ~/.claude/skills/
 | Infisical Agent Sentinel | `npx -y @infisical/mcp` |
 | Memoria | `memoria mcp` |
 | Recall | `uvx ai-recallworks stdio` |
-| Kitaru | Install `kitaru`, then run its MCP server from upstream docs |
+| Kitaru | `uv add "kitaru[cli,worker,mcp]"` then `npx skills add zenml-io/kitaru-skills`; MCP: `kitaru-mcp` per https://docs.zenml.io/kitaru |
 | MCP-Cloud (mcp-agent) | `uvx mcp-agent login` then `uvx mcp-agent deploy ...` |
 | Meeting BaaS | Use `meeting-mcp` from upstream docs |
 | Vexa | Self-host Vexa, then enable its MCP server |

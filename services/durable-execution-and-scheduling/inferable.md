@@ -15,8 +15,10 @@
 
 ## Official Website
 
-The former hosted website and docs domains no longer resolve. Use the official
-open-source repository and its self-hosting material.
+The former hosted website (`inferable.ai`) and docs (`docs.inferable.ai`) no
+longer resolve. Re-checked 2026-08-29: hosted docs remain dead; use the official
+open-source repository (`inferablehq/inferable`) and its self-hosting material.
+This OSS entry is retained; the hosted-docs deprecation stands.
 
 ---
 

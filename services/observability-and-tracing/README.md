@@ -35,6 +35,7 @@ Agent-native observability services capture **agent trajectory** — the semanti
 | [Laminar](laminar.md) [![⭐](https://img.shields.io/github/stars/lmnr-ai/lmnr?style=social)](https://github.com/lmnr-ai/lmnr) | Open-source observability for long-running agents — agent debugger, browser session replay, Signals | OTLP, Python/TS SDK, SQL API, Evals SDK, self-host | ⚠️ |
 | [OpenLIT](openlit.md) [![⭐](https://img.shields.io/github/stars/openlit/openlit?style=social)](https://github.com/openlit/openlit) | OpenTelemetry-native observability for LLMs and AI agents | Agent traces, tool-call spans, cost/token analytics | ✅ |
 | [AgentSight](agentsight.md) [![⭐](https://img.shields.io/github/stars/eunomia-bpf/agentsight?style=social)](https://github.com/eunomia-bpf/agentsight) | Lightweight system-level observability for AI Agents | CLI wrapper, eBPF record, session DBs, OTLP GenAI | ⚠️ |
+| [Kitaru](kitaru.md) [![⭐](https://img.shields.io/github/stars/zenml-io/kitaru?style=social)](https://github.com/zenml-io/kitaru) | Traces you can run, not just read — replay-based evals for AI agents | Python/TS SDKs, CLI, MCP, Agent Skills | ✅ |
 
 
 

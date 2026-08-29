@@ -1,26 +1,29 @@
-# Keywords AI
+# Respan (Keywords AI)
 
-> **"AI gateway" — unified access to 250+ LLMs through a single API.**
+> **"Route, observe, and evaluate every LLM call"**
 
 | | |
 |---|---|
-| **Website** | https://www.keywordsai.co |
-| **Docs** | https://docs.keywordsai.co |
+| **Website** | https://www.respan.ai/ |
+| **Docs** | https://www.respan.ai/docs/documentation/overview |
 | **GitHub** | N/A (hosted platform; integrate via OpenAI-compatible HTTP) |
 | **Classification** | `agent-native` |
 | **Category** | [LLM Gateway & Routing Services](README.md) |
+| **Verified at** | 2026-08-29 |
 
 ---
 
 ## Official Website
 
-https://www.keywordsai.co
+https://www.respan.ai/
+
+Title: *Respan | LLM Engineering Platform*. [About](https://www.respan.ai/about) still says *Respan (formerly Keywords AI)*. Rebrand post: [Announcing our new brand: Respan](https://www.respan.ai/blog/introducing-respan) (“Today, Keywords AI is officially rebranded as Respan.”). Old site `https://www.keywordsai.co` is no longer the official homepage.
 
 ---
 
 ## Official Repo
 
-No primary open-source gateway repo — integration is **OpenAI-compatible** HTTP at `https://api.keywordsai.co` per [gateway quickstart](https://docs.keywordsai.co/get-started/quickstart/gateway).
+No primary open-source gateway repo — integration is **OpenAI-compatible** HTTP. Live gateway copy uses base URL `https://api.respan.ai/api` ([AI Gateway](https://www.respan.ai/ai-gateway), [provider inference docs](https://www.respan.ai/docs/integrations/gateway/model-providers/inference.md)). `https://api.keywordsai.co` still returned HTTP 200 on 2026-08-29; prefer the Respan host the current docs publish.
 
 ---
 
@@ -28,10 +31,12 @@ No primary open-source gateway repo — integration is **OpenAI-compatible** HTT
 
 **Interaction pattern:** `OpenAI-compatible REST` + **agent tracing**
 
-1. Create account and **Keywords AI API key**.
-2. Point the **OpenAI SDK** (or other supported clients) at Keywords AI base URL — see [chat completions](https://docs.keywordsai.co/api-endpoints/integration/chat-completions).
-3. Configure **fallback models**, **load balancing**, **rate limits**, and **prompt management** in the dashboard per docs.
-4. **OpenAI Agents SDK:** use `KeywordsAITraceProcessor` to send **agent traces** — [tracing docs](https://docs.keywordsai.co/integration/development-frameworks/tracing/openai-agents-sdk).
+1. Create an account at [platform.respan.ai](https://platform.respan.ai) and a **Respan API key**.
+2. Point the SDK you already use at `https://api.respan.ai/api` — see [AI Gateway](https://www.respan.ai/ai-gateway) and [docs overview](https://www.respan.ai/docs/documentation/overview).
+3. Configure fallbacks, caching, and spend limits per docs.
+4. **OpenAI Agents SDK:** use `OpenAIAgentsInstrumentor` with `Respan(...)` — [tracing docs](https://www.respan.ai/docs/integrations/openai-agents-sdk).
+
+Former Keywords AI doc paths (`docs.keywordsai.co/get-started/quickstart/gateway`, `…/chat-completions`) 404 after redirect.
 
 ---
 
@@ -40,20 +45,27 @@ No primary open-source gateway repo — integration is **OpenAI-compatible** HTT
 **Status:** ⚠️ No official AgentSkills registry entry documented here.
 
 ```bash
-npx clawhub@latest search keywords ai
+npx clawhub@latest search respan
 ```
+
+Tracing docs also mention `npx @respan/cli setup` for coding-agent setup.
 
 ---
 
 ## MCP
 
-**Status:** ⚠️ No first-party MCP server documented in this entry — agents integrate via **HTTP gateway** from tool code.
+**Status:** ✅ Docs advertise an MCP server for AI clients
+
+| Detail | Value |
+|---|---|
+| **MCP** | `https://respan.ai/_mcp/server` (published on current docs pages) |
+| **Compatible Clients** | Claude Code, Cursor, other MCP clients per docs |
 
 ---
 
 ## What It Does
 
-Keywords AI is an **AI gateway** for production LLM workloads: one endpoint routes to **many models**, adds **traffic management** (fallback, load balancing), **observability**, and **agent-aware tracing** when used with the OpenAI Agents SDK. It targets teams running **autonomous agents** that need reliability and cost control without forking provider SDKs.
+Respan (formerly Keywords AI) is an **LLM engineering platform**: one gateway to **1,000+ models**, plus tracing, metrics, evals, prompt management, and agent security testing on a shared span model. Homepage H1: *"Route, observe, and evaluate every LLM call."* Docs: *"the full-stack AI engineering platform for LLM and agent products."*
 
 ---
 
@@ -61,11 +73,11 @@ Keywords AI is an **AI gateway** for production LLM workloads: one endpoint rout
 
 | Criterion | Evidence |
 |---|---|
-| **Agent-first positioning** | First-class **OpenAI Agents SDK** tracing integration — [tracing](https://docs.keywordsai.co/integration/development-frameworks/tracing/openai-agents-sdk) |
-| **Agent-specific primitive** | **KeywordsAITraceProcessor** for **multi-step agent** telemetry; gateway policies applied per **customer/user** in agent serving stacks |
-| **Autonomy-compatible control plane** | Automatic **fallback** and **load balancing** without human failover |
-| **M2M integration surface** | OpenAI-compatible **REST**, Python/TS/Go/PHP examples in docs |
-| **Identity / delegation** | API keys; per-request **metadata** for user/session attribution (see gateway docs) |
+| **Agent-first positioning** | Homepage closer: *"Built for AI agents. Break less. Ship more."* Docs overview: platform for *"LLM and agent products"*; tracing page covers OpenAI Agents SDK workflows |
+| **Agent-specific primitive** | Agent workflow traces (LLM / tool / retrieval / agent-turn spans); `OpenAIAgentsInstrumentor`; per-customer identifiers and thread IDs |
+| **Autonomy-compatible control plane** | Automatic **fallback**, caching, and spend limits without human failover |
+| **M2M integration surface** | OpenAI-compatible **REST** at `https://api.respan.ai/api`, SDKs, MCP, `npx @respan/cli setup` |
+| **Identity / delegation** | API keys; `customer_identifier` / `thread_identifier` metadata on spans |
 
 ---
 
@@ -73,22 +85,22 @@ Keywords AI is an **AI gateway** for production LLM workloads: one endpoint rout
 
 | Primitive | Description |
 |---|---|
-| **Unified chat endpoint** | Single URL for 250+ models |
-| **Fallback chain** | Model A → B on error or limit |
-| **Load balancing** | Split traffic across providers |
-| **Trace processor** | Agent run spans to Keywords AI |
-| **Rate limits** | Protect agent fleets from runaway spend |
+| **Unified chat endpoint** | Single URL for 1,000+ models |
+| **Fallback chain** | Next model on error or rate limit |
+| **Caching / spend limits** | Repeat-request cache; budgets per key, customer, or org |
+| **Trace instrumentor** | Agent-run spans via `OpenAIAgentsInstrumentor` |
+| **Evals** | LLM judge, code check, or human review on spans |
 
 ---
 
 ## Autonomy Model
 
 ```
-Agent SDK → base URL api.keywordsai.co with Keywords API key
+Agent SDK → base URL https://api.respan.ai/api with Respan API key
     ↓
-Gateway applies routing, limits, fallbacks
+Gateway applies routing, limits, fallbacks, cache
     ↓
-Provider response returned; traces recorded if processor attached
+Provider response returned; traces recorded if instrumentor attached
 ```
 
 ---
@@ -96,7 +108,7 @@ Provider response returned; traces recorded if processor attached
 ## Identity and Delegation Model
 
 - **API keys** scope org access.
-- **Per-end-user metadata** (when sent) supports multi-tenant agent apps.
+- **Per-end-user metadata** (`customer_identifier`) supports multi-tenant agent apps.
 - Rotate keys if an agent leaks credentials.
 
 ---
@@ -105,15 +117,16 @@ Provider response returned; traces recorded if processor attached
 
 | Interface | Detail |
 |---|---|
-| REST | `https://api.keywordsai.co/api/chat/completions` |
-| OpenAI SDK | Drop-in base URL swap |
-| Agents SDK | `KeywordsAITraceProcessor` |
+| REST | `https://api.respan.ai/api/chat/completions` |
+| OpenAI SDK | Drop-in `base_url="https://api.respan.ai/api"` |
+| Agents SDK | `OpenAIAgentsInstrumentor` — [docs](https://www.respan.ai/docs/integrations/openai-agents-sdk) |
+| MCP | `https://respan.ai/_mcp/server` |
 
 ---
 
 ## Human-in-the-Loop Support
 
-Dashboard for prompts, logs, and limits; runtime is automated.
+Dashboard for prompts, logs, evals, and limits; runtime is automated. Evaluators may include a human reviewer.
 
 ---
 
@@ -121,8 +134,8 @@ Dashboard for prompts, logs, and limits; runtime is automated.
 
 | Alternative | Why It Fails |
 |---|---|
-| **Call OpenAI directly** | No **central fallback**, **multi-model** routing, or **agent trace processor** |
-| **LiteLLM (see catalog entry)** | Keywords is a **hosted** product with **dashboard** governance for orgs; LiteLLM is **self-hosted OSS** with overlapping gateway features |
+| **Call OpenAI directly** | No **central fallback**, **multi-model** routing, or **agent trace instrumentor** |
+| **LiteLLM (see catalog entry)** | Respan is a **hosted** product with dashboard governance; LiteLLM is **self-hosted OSS** with overlapping gateway features |
 
 ---
 
